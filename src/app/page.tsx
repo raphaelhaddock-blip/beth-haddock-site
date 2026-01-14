@@ -124,65 +124,67 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <header className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-[#1a1a1a] text-white">
-        <div
-          className="absolute inset-0 opacity-30 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
+      <header className="relative min-h-screen flex items-center px-6 overflow-hidden bg-[#f4f4f0]">
+        {/* Abstract shapes */}
+        <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-[#a88b63]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#a88b63]/5 rounded-full blur-2xl" />
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center mt-10">
-          <p className="animate-fade-in-up text-[#a88b63] font-bold tracking-[0.3em] text-xs md:text-sm uppercase mb-6">
-            Strategic Counsel for Tech Leaders
-          </p>
-          <h1 className="animate-fade-in-up font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl mb-8 leading-[1.1]">
-            Building Companies <br />
-            <span className="italic text-gray-400">That Last.</span>
-          </h1>
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <p className="text-gray-400 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-              25 years helping tech founders navigate growth—from early stage
-              to institutional scale.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <a
-                href="#work"
-                className="px-8 py-4 bg-white text-[#1a1a1a] font-bold text-xs tracking-widest uppercase hover:bg-[#a88b63] hover:text-white transition duration-300"
-              >
-                See How I Help
-              </a>
-              <button
-                onClick={() => setContactModalOpen(true)}
-                className="px-8 py-4 border border-gray-600 text-white font-bold text-xs tracking-widest uppercase hover:border-[#a88b63] hover:text-[#a88b63] transition duration-300"
-              >
-                Let's Talk
-              </button>
+        <div className="relative z-10 max-w-7xl mx-auto w-full pt-32 pb-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="animate-fade-in-up text-[#a88b63] font-bold tracking-[0.2em] text-xs uppercase mb-6">
+                Strategic Counsel for Tech Leaders
+              </p>
+              <h1 className="animate-fade-in-up font-[family-name:var(--font-playfair)] text-5xl md:text-6xl lg:text-7xl mb-8 leading-[1.1] text-[#1a1a1a]">
+                Building <br />
+                Companies <br />
+                <span className="italic text-[#a88b63]">That Last.</span>
+              </h1>
+              <p className="animate-fade-in-up text-gray-600 text-lg md:text-xl font-light mb-10 max-w-lg leading-relaxed">
+                25 years helping tech founders navigate growth—from early stage
+                to institutional scale.
+              </p>
+              <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#work"
+                  className="px-8 py-4 bg-[#1a1a1a] text-white font-bold text-xs tracking-widest uppercase hover:bg-[#a88b63] transition duration-300"
+                >
+                  See How I Help
+                </a>
+                <button
+                  onClick={() => setContactModalOpen(true)}
+                  className="px-8 py-4 border-2 border-[#1a1a1a] text-[#1a1a1a] font-bold text-xs tracking-widest uppercase hover:bg-[#1a1a1a] hover:text-white transition duration-300"
+                >
+                  Let's Talk
+                </button>
+              </div>
+            </div>
+            <div className="hidden md:block relative">
+              <div className="aspect-[3/4] bg-[#1a1a1a] relative overflow-hidden">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/1d98205a-dda2-46e2-9232-041d233fa810/LA3-copy-new3.jpg"
+                  alt="Beth Haddock"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#a88b63]/20 to-transparent" />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-4 border-[#a88b63]" />
             </div>
           </div>
         </div>
       </header>
 
       {/* Logo Bar */}
-      <div className="bg-white border-b border-gray-100 py-8">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition duration-500">
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
-            Grayscale
-          </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
-            Robinhood
-          </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
-            Franklin Templeton
-          </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
-            a16z
-          </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
-            Guggenheim
-          </span>
+      <div className="bg-white border-y border-gray-100 py-6">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-center text-xs text-gray-400 uppercase tracking-widest mb-6">Featured In</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+            <img src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/a4740dcd-243c-48bf-839d-0725ccd99073/logo-coindesk.jpg" alt="CoinDesk" className="h-6 md:h-8 object-contain" />
+            <img src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/8d4ebd14-b540-4805-a03a-71df08687014/logo-nasdaq.jpg" alt="Nasdaq" className="h-6 md:h-8 object-contain" />
+            <img src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/b84bb5cb-ba5a-4212-a048-4c6653969ce6/logo-morningstar.jpg" alt="Morningstar" className="h-6 md:h-8 object-contain" />
+            <img src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/c549ec78-29a9-4d23-8a23-b518df086dbb/logo-financial.jpg" alt="Financial Planning" className="h-6 md:h-8 object-contain" />
+            <img src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/44eccdd3-0669-4548-98eb-40ce09312988/logo-privatewealth.jpg" alt="Private Wealth" className="h-6 md:h-8 object-contain" />
+          </div>
         </div>
       </div>
 
@@ -305,10 +307,12 @@ export default function Home() {
               </div>
             </div>
             <div className="reveal">
-              <div className="bg-[#f4f4f0] aspect-[4/5] flex items-center justify-center">
-                <span className="text-gray-400 text-sm tracking-widest uppercase">
-                  Photo
-                </span>
+              <div className="bg-[#f4f4f0] aspect-[4/5] overflow-hidden">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/c0a60ae1-eb33-4c96-8179-aef1f2fc5120/bethhaddock.com+.jpg"
+                  alt="Beth Haddock"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -341,7 +345,7 @@ export default function Home() {
                 type: "Book",
                 title: "Triple Bottom-Line Compliance: How to Deliver Protection, Productivity, and Impact",
                 image:
-                  "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80",
+                  "https://images.squarespace-cdn.com/content/v1/668a232b9b08a7321bf41326/c7f24b8c-10a2-449a-a8a1-d26618304ec4/Screenshot+2024-07-07+at+13.13.21.png",
               },
               {
                 type: "Framework",
