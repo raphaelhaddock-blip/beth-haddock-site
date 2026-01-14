@@ -23,7 +23,7 @@
       "id": "F001",
       "name": "Homepage with hero + value prop",
       "description": "Landing page with compelling hero section, clear value proposition, and primary CTA",
-      "status": "FAILING",
+      "status": "PASSING",
       "dependencies": ["F000"],
       "test_criteria": [
         "Hero section visible above the fold",
