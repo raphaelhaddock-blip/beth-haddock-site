@@ -87,3 +87,38 @@ Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
 - Wire up contact form to actually send emails (F010, F011)
 
 ---
+
+## SESSION 3 - 2026-01-14
+### Starting State
+- Site live with governance-heavy messaging
+- User feedback: "governance" not appealing for GC/advisory roles
+
+### Work Done
+- Complete messaging repositioning away from "governance"
+- Hero: "Governing the Future of Finance" → "Building Companies That Last"
+- Tagline: "Board Director & Strategic Advisor" → "Strategic Counsel for Tech Leaders"
+- Work cards: "Board & Governance" → "Strategic Counsel", "Warburton Advisory" → "Advisory Roles"
+- About section: Removed compliance/governance language
+- Contact modal: Updated inquiry types (GC/Legal Advisory, Advisory Board Role, etc.)
+- Footer: Removed Warburton branding
+- Deployed to Vercel
+
+### Decisions Made
+- Target audience: Tech founders looking for GC or advisory
+- Removed: governance, compliance, committee, oversight language
+- Added: strategic, counsel, scale, growth, founder-friendly language
+- Keep book title as-is (Triple Bottom-Line Compliance) - it's published
+- Keep "NYC Bar Web3 Subcommittee" - actual org name
+
+### Ending State
+- Site repositioned for GC roles + advisory board seats
+- Live at: https://beth-haddock-site.vercel.app
+- No more bureaucratic governance language
+
+### Next Session Should
+- Add Beth's actual headshot photo
+- Build separate Services pages
+- Wire up contact form
+- Consider adding testimonials/social proof
+
+---
