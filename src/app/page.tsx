@@ -167,18 +167,21 @@ export default function Home() {
 
       {/* Logo Bar */}
       <div className="bg-white border-b border-gray-100 py-8">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition duration-500">
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-tighter">
-            GMO-Z.com
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition duration-500">
+          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
+            Grayscale
           </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-tighter">
-            CoinDesk
+          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
+            Robinhood
           </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-tighter">
-            Nasdaq
+          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
+            Franklin Templeton
           </span>
-          <span className="font-[family-name:var(--font-playfair)] font-bold text-xl tracking-tighter">
-            Forbes
+          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
+            a16z
+          </span>
+          <span className="font-[family-name:var(--font-playfair)] font-bold text-lg tracking-tighter">
+            Guggenheim
           </span>
         </div>
       </div>
@@ -201,23 +204,23 @@ export default function Home() {
                 Strategic Counsel
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Fractional GC and strategic legal advisor to growth-stage tech
-                companies. I help founders make the right calls—without the
-                overhead of full-time legal.
+                CLO at Franklin Templeton subsidiary. CCO at Guggenheim. Head of
+                Legal at Brown Brothers Harriman. I've built and led legal teams
+                at every stage—now I help founders do the same.
               </p>
               <ul className="mb-8 space-y-3 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Fractional / Advisory GC
+                  <span className="text-[#a88b63]">✓</span> Fractional GC for Growth-Stage
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Scaling Without Legal Landmines
+                  <span className="text-[#a88b63]">✓</span> M&A, Fundraising, Licensing
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Founder-Friendly Strategy
+                  <span className="text-[#a88b63]">✓</span> Crypto, Fintech, AI Focus
                 </li>
               </ul>
               <p className="text-xs text-gray-400 uppercase tracking-wider">
-                25+ Years • Wall Street to Web3
+                Clients: Grayscale • Robinhood • World Gold Council
               </p>
             </div>
 
@@ -230,23 +233,23 @@ export default function Home() {
                 Advisory Roles
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Strategic advisor to founders and leadership teams. Advisory
-                board roles at AI, fintech, and growth-stage tech companies.
-                Pattern recognition from decades of scaling.
+                Independent Director at GMO-Z.com Trust (NYDFS-regulated stablecoin
+                issuer). Advisory boards at Balancer, Stablecoin Standard, and
+                emerging tech companies. I bridge Wall Street and Web3.
               </p>
               <ul className="mb-8 space-y-3 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Founder & CEO Advisory
+                  <span className="text-[#a88b63]">✓</span> Board & Advisory Positions
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Advisory Board Positions
+                  <span className="text-[#a88b63]">✓</span> Stablecoin & DeFi Expertise
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> AI, Fintech & Crypto Focus
+                  <span className="text-[#a88b63]">✓</span> a16z Portfolio Companies
                 </li>
               </ul>
               <p className="text-xs text-gray-400 uppercase tracking-wider">
-                Currently: GMO-Z.com Trust • NYC Bar Web3 Subcommittee
+                Board: GMO-Z.com Trust • Balancer • Stablecoin Standard
               </p>
             </div>
           </div>
@@ -265,15 +268,23 @@ export default function Home() {
                 25 Years in the Room
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                From Wall Street to Web3, I've spent my career in the rooms
-                where it matters—helping companies navigate the hardest
-                decisions at every stage of growth.
+                I've been CLO, CCO, and Head of Legal at firms from startups to
+                $10B+ enterprises. Brown Brothers Harriman. Guggenheim. Franklin
+                Templeton. I know what it takes to scale—and what breaks when
+                you don't do it right.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                I work with founders who are building the next generation of
-                tech companies. Whether you need a fractional GC, a strategic
-                advisor, or someone who's seen it all before—let's talk.
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Now I work with founders building the next generation of tech
+                companies. Grayscale. Robinhood. World Gold Council. a16z
+                portfolio companies. Whether you need a fractional GC, a
+                strategic advisor, or someone who's navigated this before.
               </p>
+              <div className="flex flex-wrap gap-3 mb-8 text-xs text-gray-500">
+                <span className="px-3 py-1 bg-gray-100 rounded">JD, Catholic University</span>
+                <span className="px-3 py-1 bg-gray-100 rounded">BA Economics, Bucknell</span>
+                <span className="px-3 py-1 bg-gray-100 rounded">Yale Executive Program</span>
+                <span className="px-3 py-1 bg-gray-100 rounded">Berkeley Law</span>
+              </div>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="https://linkedin.com/in/bethhaddock"
