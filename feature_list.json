@@ -1,0 +1,391 @@
+{
+  "project_name": "beth-haddock-site",
+  "project_type": "web_app",
+  "created_at": "2026-01-14T13:00:00.000Z",
+  "last_updated": "2026-01-14T13:15:00.000Z",
+  "features": [
+    {
+      "id": "F000",
+      "name": "Project runs without errors",
+      "description": "Next.js + Tailwind project scaffolded and deployed to Vercel",
+      "status": "PASSING",
+      "dependencies": [],
+      "test_criteria": [
+        "npm run dev starts without errors",
+        "localhost:3000 returns 200",
+        "Homepage renders without console errors"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F001",
+      "name": "Homepage with hero + value prop",
+      "description": "Landing page with compelling hero section, clear value proposition, and primary CTA",
+      "status": "FAILING",
+      "dependencies": ["F000"],
+      "test_criteria": [
+        "Hero section visible above the fold",
+        "Value proposition text is clear and readable",
+        "Primary CTA button is visible and clickable",
+        "Page is responsive on mobile"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F002",
+      "name": "Navigation + responsive layout",
+      "description": "Site-wide navigation with mobile hamburger menu and consistent layout",
+      "status": "FAILING",
+      "dependencies": ["F001"],
+      "test_criteria": [
+        "Navigation visible on all pages",
+        "Mobile menu toggles correctly",
+        "All nav links work",
+        "Layout is consistent across pages"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F003",
+      "name": "About page with bio + credentials",
+      "description": "About Beth page with professional bio, credentials, and board positions",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Bio section displays correctly",
+        "Credentials/experience listed",
+        "Professional photo displayed",
+        "Page accessible via /about route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F004",
+      "name": "Services overview page",
+      "description": "Services landing page showing three service pillars with CTAs to detail pages",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Three service cards displayed",
+        "Each card links to detail page",
+        "Page accessible via /services route",
+        "Responsive grid layout"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F005",
+      "name": "Board & Advisory service detail",
+      "description": "Detail page for board and advisory services with value prop and CTA",
+      "status": "FAILING",
+      "dependencies": ["F004"],
+      "test_criteria": [
+        "Service description displayed",
+        "Industries/expertise listed",
+        "CTA to discuss opportunity visible",
+        "Page accessible via /services/board-advisory route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F006",
+      "name": "Strategic Advisory service detail",
+      "description": "Detail page for strategic advisory/consulting services",
+      "status": "FAILING",
+      "dependencies": ["F004"],
+      "test_criteria": [
+        "Service description displayed",
+        "Engagement types explained",
+        "CTA to schedule consultation visible",
+        "Page accessible via /services/strategic-advisory route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F007",
+      "name": "Speaking & Training service detail",
+      "description": "Detail page for speaking engagements and corporate training",
+      "status": "FAILING",
+      "dependencies": ["F004"],
+      "test_criteria": [
+        "Speaking topics listed",
+        "Past speaking examples shown",
+        "CTA to book Beth visible",
+        "Page accessible via /services/speaking route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F008",
+      "name": "Email signup component",
+      "description": "Reusable email capture component for newsletter/lead magnet signup",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Email input field renders",
+        "Submit button works",
+        "Validation for email format",
+        "Success message on submit"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F009",
+      "name": "Lead magnet download page",
+      "description": "Page for downloading lead magnet after email signup",
+      "status": "FAILING",
+      "dependencies": ["F008"],
+      "test_criteria": [
+        "Email signup form on page",
+        "Download available after signup",
+        "Thank you message displayed",
+        "Page accessible via /resources/[slug] route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F010",
+      "name": "Contact form with inquiry types",
+      "description": "Contact page with form including dropdown for inquiry type",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Form renders with all fields",
+        "Inquiry type dropdown works",
+        "Required field validation",
+        "Page accessible via /contact route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F011",
+      "name": "Form submission to email/CRM",
+      "description": "Backend handling for form submissions - sends email notification",
+      "status": "FAILING",
+      "dependencies": ["F010"],
+      "test_criteria": [
+        "Form submission triggers API route",
+        "Email sent on successful submission",
+        "Error handling for failed submissions",
+        "Rate limiting in place"
+      ],
+      "test_type": "e2e_api",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F012",
+      "name": "Sanity CMS integration",
+      "description": "Sanity project configured with schemas for blog posts and content",
+      "status": "FAILING",
+      "dependencies": ["F000"],
+      "test_criteria": [
+        "Sanity client configured",
+        "Blog post schema created",
+        "Can fetch posts from Sanity",
+        "Preview mode works"
+      ],
+      "test_type": "e2e_api",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F013",
+      "name": "Blog/Insights listing page",
+      "description": "Page listing all blog posts with pagination",
+      "status": "FAILING",
+      "dependencies": ["F012"],
+      "test_criteria": [
+        "Posts fetched from Sanity displayed",
+        "Post cards show title, excerpt, date",
+        "Links to individual posts work",
+        "Page accessible via /insights route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F014",
+      "name": "Individual blog post page",
+      "description": "Dynamic page for individual blog posts with portable text rendering",
+      "status": "FAILING",
+      "dependencies": ["F013"],
+      "test_criteria": [
+        "Post content renders correctly",
+        "Portable text blocks display",
+        "Author and date shown",
+        "Page accessible via /insights/[slug] route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F015",
+      "name": "Publications/media page",
+      "description": "Page showcasing media appearances, publications, and podcast features",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Publications listed with links",
+        "Media logos displayed",
+        "Podcast appearances shown",
+        "Page accessible via /publications route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F016",
+      "name": "Book page",
+      "description": "Dedicated page for Triple Bottom-Line Compliance book",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Book cover image displayed",
+        "Description and key takeaways",
+        "Buy links work (Amazon, B&N)",
+        "Page accessible via /book route"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F017",
+      "name": "Testimonials component",
+      "description": "Reusable component displaying client testimonials",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Testimonials render with quote text",
+        "Attribution shown (name, title, company)",
+        "Responsive layout",
+        "Can be used on multiple pages"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F018",
+      "name": "Client/media logos bar",
+      "description": "Logo bar component showing client companies and media features",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "Logos display correctly",
+        "Responsive sizing",
+        "Optional link on logos",
+        "Can be used on homepage and about"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F019",
+      "name": "Board positions display",
+      "description": "Component showing current and past board positions",
+      "status": "FAILING",
+      "dependencies": ["F003"],
+      "test_criteria": [
+        "Current positions highlighted",
+        "Past positions listed",
+        "Company names and roles shown",
+        "Dates/duration displayed"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F020",
+      "name": "SEO meta tags + OpenGraph",
+      "description": "Proper SEO meta tags and OpenGraph images for all pages",
+      "status": "FAILING",
+      "dependencies": ["F001"],
+      "test_criteria": [
+        "Title and description on all pages",
+        "OpenGraph image configured",
+        "Twitter card meta tags",
+        "Canonical URLs set"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F021",
+      "name": "Analytics integration",
+      "description": "Analytics tracking set up (Plausible or Vercel Analytics)",
+      "status": "FAILING",
+      "dependencies": ["F001"],
+      "test_criteria": [
+        "Analytics script loads",
+        "Page views tracked",
+        "No console errors from analytics",
+        "GDPR compliant"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F022",
+      "name": "404 and error pages",
+      "description": "Custom 404 and error pages with navigation back to site",
+      "status": "FAILING",
+      "dependencies": ["F002"],
+      "test_criteria": [
+        "404 page shows for invalid routes",
+        "Navigation present on error pages",
+        "Helpful message displayed",
+        "Link back to homepage"
+      ],
+      "test_type": "e2e_browser",
+      "attempted_approaches": [],
+      "notes": ""
+    },
+    {
+      "id": "F023",
+      "name": "Sitemap generation",
+      "description": "Auto-generated sitemap.xml for SEO",
+      "status": "FAILING",
+      "dependencies": ["F001"],
+      "test_criteria": [
+        "sitemap.xml accessible",
+        "All public pages included",
+        "Valid XML format",
+        "robots.txt references sitemap"
+      ],
+      "test_type": "unit",
+      "attempted_approaches": [],
+      "notes": ""
+    }
+  ]
+}

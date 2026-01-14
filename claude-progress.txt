@@ -1,0 +1,46 @@
+# CLAUDE PROGRESS LOG
+# Project: Beth Haddock Website
+# Created: 2026-01-14
+
+## PROJECT OVERVIEW
+Personal brand website for Beth Haddock - thought leadership funnel for board/advisory opportunities.
+Consolidates bethhaddock.com and warburtonadvisers.com into single authoritative domain.
+
+Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
+
+## SESSION 1 - 2026-01-14
+### Starting State
+- Fresh initialization
+- All features FAILING
+- Scaffolding created
+
+### Work Done
+- Researched current sites (bethhaddock.com, warburtonadvisers.com, LinkedIn)
+- Created comprehensive plan with funnel architecture
+- Created feature_list.json with 24 features
+- Created init.sh for Next.js project startup
+- Scaffolding Next.js + Tailwind project
+
+### Decisions Made
+- ONE site (bethhaddock.com) - personal brand wins for board/advisory positioning
+- warburtonadvisers.com will 301 redirect to bethhaddock.com
+- Using Sanity CMS for blog (MCP tools available)
+- ConvertKit for email capture/nurture
+
+### Key Learnings
+- Beth's work spans: crypto/stablecoin compliance, AI governance, board advisory
+- 82% of C-suite more likely to engage with thought leaders
+- Current sites lack any funnel or lead capture
+
+### Ending State
+- F000: IN PROGRESS (scaffolding)
+- All other features: FAILING
+- Ready for Phase 1 development
+
+### Next Session Should
+- Verify F000 (project runs)
+- Build F001 (homepage with hero)
+- Build F002 (navigation)
+- Continue through Phase 1
+
+---
