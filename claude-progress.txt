@@ -122,3 +122,58 @@ Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
 - Consider adding testimonials/social proof
 
 ---
+
+## SESSION 4 - 2026-01-14
+### Starting State
+- User requested complete strategic rethink
+- Previous designs were "generic crap" and "postcard website"
+- Stock photos not working
+
+### Work Done
+- Major strategic pivot: Plan mode to rethink entire positioning
+- Created comprehensive strategy document in plan file
+- KEY INSIGHT: Beth doesn't have a website problem - she has positioning/distribution problem
+- NEW STRATEGY: "Fractional GC" as Trojan Horse to board seats
+  - Fractional GC is more accessible than board seats directly
+  - Builds trusted relationships over 6-12 months
+  - Natural conversion path to board seats
+  - Growing market (startups delaying full-time GC hires)
+- Complete page rebuild with new positioning:
+  - Hero: "Fractional General Counsel" + "Legal leadership for growth-stage tech"
+  - Clear value prop: "$500K/year hire" alternative
+  - Two services: Fractional GC (primary) and Board & Advisory (secondary)
+  - Real photos from bethhaddock.com
+  - Logos: Grayscale, Robinhood, Franklin Templeton, Guggenheim, World Gold Council
+  - Media: CoinDesk, Nasdaq, Morningstar
+  - Career history prominently featured
+- Cleaner, simpler design: white background, substance over style
+- Deployed to Vercel
+
+### Decisions Made
+- STOP saying: "Board Director & Strategic Advisor" (passive)
+- START saying: "Fractional GC for Growth-Stage Tech" (active, clear service)
+- Website is 20% of the work - 80% is LinkedIn, direct outreach, relationships
+- Target: crypto, fintech, AI companies at inflection points
+- Secondary audience: PE/VC firms who place board members
+
+### Strategic Framework (from plan file)
+- Fractional GC engagements ($15-30K/month) → trusted relationship → board seats
+- Board seats come from relationships, not websites
+- The website validates and converts, doesn't generate opportunities
+- Focus metrics: conversations started, proposals sent, engagements closed (not website traffic)
+
+### Ending State
+- F000: PASSING
+- F001: PASSING (completely rebuilt)
+- F002: PASSING (simplified nav)
+- F018: PASSING (logos implemented)
+- Site live at: https://beth-haddock-site.vercel.app
+- Strategic plan documented at: ~/.claude/plans/whimsical-tumbling-pnueli.md
+
+### Next Session Should
+- Consider adding calendar booking integration (Calendly)
+- Wire up contact form to actually send emails
+- Update LinkedIn to match new positioning
+- Create list of target PE/VC firms for outreach
+
+---
