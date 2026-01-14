@@ -136,29 +136,29 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto text-center mt-10">
           <p className="animate-fade-in-up text-[#a88b63] font-bold tracking-[0.3em] text-xs md:text-sm uppercase mb-6">
-            Board Director & Strategic Advisor
+            Strategic Counsel for Tech Leaders
           </p>
           <h1 className="animate-fade-in-up font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl mb-8 leading-[1.1]">
-            Governing the <br />
-            <span className="italic text-gray-400">Future</span> of Finance.
+            Building Companies <br />
+            <span className="italic text-gray-400">That Last.</span>
           </h1>
           <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <p className="text-gray-400 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-              Bridging the gap between institutional Wall Street governance and
-              the digital asset economy.
+              25 years helping tech founders navigate growth—from early stage
+              to institutional scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <a
                 href="#work"
                 className="px-8 py-4 bg-white text-[#1a1a1a] font-bold text-xs tracking-widest uppercase hover:bg-[#a88b63] hover:text-white transition duration-300"
               >
-                View Board Profile
+                See How I Help
               </a>
               <button
                 onClick={() => setContactModalOpen(true)}
                 className="px-8 py-4 border border-gray-600 text-white font-bold text-xs tracking-widest uppercase hover:border-[#a88b63] hover:text-[#a88b63] transition duration-300"
               >
-                Partner with Warburton
+                Let's Talk
               </button>
             </div>
           </div>
@@ -194,59 +194,59 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Board & Governance */}
+            {/* Strategic Counsel */}
             <div className="reveal group bg-white p-10 md:p-14 shadow-sm border-t-4 border-[#1a1a1a] hover:shadow-xl transition duration-500">
               <div className="mb-6 text-[#a88b63] text-4xl">✦</div>
               <h3 className="font-[family-name:var(--font-playfair)] text-3xl mb-4">
-                Board & Governance
+                Strategic Counsel
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Serving as an Independent Director for digital asset
-                organizations and fintech companies. Specializing in compliance
-                committees, regulatory strategy, and AI governance.
+                Fractional GC and strategic legal advisor to growth-stage tech
+                companies. I help founders make the right calls—without the
+                overhead of full-time legal.
               </p>
               <ul className="mb-8 space-y-3 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Audit & Risk Committee Leadership
+                  <span className="text-[#a88b63]">✓</span> Fractional / Advisory GC
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Digital Asset Regulatory Strategy
+                  <span className="text-[#a88b63]">✓</span> Scaling Without Legal Landmines
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> AI & Emerging Technology Governance
+                  <span className="text-[#a88b63]">✓</span> Founder-Friendly Strategy
                 </li>
               </ul>
               <p className="text-xs text-gray-400 uppercase tracking-wider">
-                Current: GMO-Z.com Trust Company • NYC Bar Association • NSCP
+                25+ Years • Wall Street to Web3
               </p>
             </div>
 
-            {/* Warburton Advisory */}
+            {/* Advisory Roles */}
             <div className="reveal group bg-white p-10 md:p-14 shadow-sm border-t-4 border-gray-200 hover:border-[#a88b63] hover:shadow-xl transition duration-500">
               <div className="mb-6 text-gray-400 text-4xl group-hover:text-[#a88b63] transition">
                 ❖
               </div>
               <h3 className="font-[family-name:var(--font-playfair)] text-3xl mb-4">
-                Warburton Advisory
+                Advisory Roles
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Boutique strategic consulting for fintechs and crypto firms. We
-                build the "compliance architecture" that allows innovation to
-                scale without regulatory friction.
+                Strategic advisor to founders and leadership teams. Advisory
+                board roles at AI, fintech, and growth-stage tech companies.
+                Pattern recognition from decades of scaling.
               </p>
               <ul className="mb-8 space-y-3 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> CCO & Regulatory Advisory
+                  <span className="text-[#a88b63]">✓</span> Founder & CEO Advisory
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Sustainable Compliance Frameworks
+                  <span className="text-[#a88b63]">✓</span> Advisory Board Positions
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-[#a88b63]">✓</span> Institutional Licensing Strategy
+                  <span className="text-[#a88b63]">✓</span> AI, Fintech & Crypto Focus
                 </li>
               </ul>
               <p className="text-xs text-gray-400 uppercase tracking-wider">
-                25+ Years Experience • Wall Street to Web3
+                Currently: GMO-Z.com Trust • NYC Bar Web3 Subcommittee
               </p>
             </div>
           </div>
@@ -262,17 +262,17 @@ export default function Home() {
                 About
               </span>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl mb-6">
-                25 Years at the Intersection
+                25 Years in the Room
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                From Wall Street compliance to Web3 governance, I've spent my
-                career helping organizations navigate the most complex regulatory
-                landscapes—and turn compliance into competitive advantage.
+                From Wall Street to Web3, I've spent my career in the rooms
+                where it matters—helping companies navigate the hardest
+                decisions at every stage of growth.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Currently serving as Trustee & Compliance Committee Chair at
-                GMO-Z.com Trust Company, and co-chairing the NYC Bar
-                Association's Web3 Subcommittee.
+                I work with founders who are building the next generation of
+                tech companies. Whether you need a fractional GC, a strategic
+                advisor, or someone who's seen it all before—let's talk.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -334,13 +334,13 @@ export default function Home() {
               },
               {
                 type: "Framework",
-                title: "StableCheck: A Framework for Evaluating Stablecoin Governance",
+                title: "StableCheck: A Framework for Evaluating Stablecoin Quality",
                 image:
                   "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80",
               },
               {
                 type: "Op-Ed",
-                title: "AI Governance for Boards: What Directors Need to Know Now",
+                title: "AI Strategy for Leaders: What Founders Need to Know Now",
                 image:
                   "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
               },
@@ -402,7 +402,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-900 text-center md:text-left text-xs text-gray-600 flex flex-col md:flex-row justify-between">
           <p>© 2026 Beth Haddock. All Rights Reserved.</p>
           <p className="mt-2 md:mt-0">
-            Warburton Advisers is a registered service entity.
+            Strategic Counsel • Advisory • Speaking
           </p>
         </div>
       </footer>
@@ -450,10 +450,10 @@ export default function Home() {
                   Inquiry Type
                 </label>
                 <select className="w-full border-b border-gray-300 py-2 bg-transparent focus:outline-none focus:border-[#a88b63] transition">
-                  <option>Board Opportunity</option>
-                  <option>Warburton Advisory</option>
-                  <option>Speaking Request</option>
-                  <option>Media Inquiry</option>
+                  <option>GC / Legal Advisory</option>
+                  <option>Advisory Board Role</option>
+                  <option>Strategic Consultation</option>
+                  <option>Speaking / Media</option>
                 </select>
               </div>
               <div>
