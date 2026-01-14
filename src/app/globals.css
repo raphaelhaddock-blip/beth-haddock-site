@@ -1,53 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary palette - Deep navy for trust/authority */
-  --slate-950: #0f172a;
-  --slate-900: #1e293b;
-  --slate-800: #334155;
-  --slate-700: #475569;
-  --slate-600: #64748b;
-  --slate-500: #94a3b8;
-  --slate-400: #cbd5e1;
-  --slate-300: #e2e8f0;
-  --slate-200: #f1f5f9;
-  --slate-100: #f8fafc;
-
-  /* Accent - Warm gold for sophistication */
-  --gold-500: #b8860b;
-  --gold-400: #d4a017;
-  --gold-300: #f0c040;
-
-  /* Background and foreground */
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --brand-black: #1a1a1a;
+  --brand-charcoal: #2d2d2d;
+  --brand-cream: #f4f4f0;
+  --brand-bronze: #a88b63;
+  --brand-platinum: #e5e5e5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
-}
-
-/* Typography utilities */
-.font-serif {
-  font-family: var(--font-serif), Georgia, serif;
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--brand-cream);
+  color: var(--brand-black);
+  -webkit-font-smoothing: antialiased;
+}
+
 ::selection {
-  background-color: var(--gold-300);
-  color: var(--slate-950);
+  background-color: var(--brand-bronze);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-bronze);
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Font classes */
+.font-serif {
+  font-family: 'Playfair Display', serif;
 }

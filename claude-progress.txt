@@ -44,3 +44,46 @@ Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
 - Continue through Phase 1
 
 ---
+
+## SESSION 2 - 2026-01-14
+### Starting State
+- F000: PASSING
+- F001: PASSING (multiple design iterations)
+- All other features: FAILING
+
+### Work Done
+- User rejected 4 generic design iterations as "generic crap"
+- User provided HTML template they found online
+- Converted HTML template to Next.js/React
+- Integrated Beth's real content into template
+- Deployed to Vercel: https://beth-haddock-site.vercel.app
+
+### Design System Now
+- Cream background (#f4f4f0)
+- Bronze accents (#a88b63)
+- Playfair Display for headlines
+- Inter for body text
+- Scroll-based navbar transparency
+- Mobile hamburger menu
+- Contact modal form
+- Reveal animations on scroll
+
+### Decisions Made
+- Abandoned generic templates - user found better one
+- Using user-provided template as design foundation
+- Bronze + cream + black color palette locked in
+
+### Ending State
+- F000: PASSING
+- F001: PASSING
+- F002: PASSING (nav + mobile menu implemented)
+- F018: PASSING (logo bar implemented on homepage)
+- Site live at: https://beth-haddock-site.vercel.app
+
+### Next Session Should
+- Add Beth's actual headshot photo
+- Build About page (F003)
+- Build Services pages (F004-F007)
+- Wire up contact form to actually send emails (F010, F011)
+
+---
