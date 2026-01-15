@@ -177,3 +177,75 @@ Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
 - Create list of target PE/VC firms for outreach
 
 ---
+
+## SESSION 5 - 2026-01-14
+### Starting State
+- Previous Fractional GC positioning wasn't validated through brainstorming
+- User pointed out superpowers skills weren't used
+- Needed proper brainstorming to define Beth's positioning
+
+### Work Done
+- Used superpowers:brainstorming skill properly this time
+- 15+ questions asked one at a time to understand Beth's situation
+- Key discoveries:
+  - She wants IMPACT and OPTIONALITY (not just revenue)
+  - Energizes her: strategic conversations, teaching founders, high-stakes moments
+  - Drains her: operational grind, bureaucracy, being ignored, name-on-letterhead roles
+  - "Fractional GC" was WRONG - too operational, drains her
+  - What works: deep relationships, specific expertise asks, warm intros
+  - "Being in the room" (Trojan horse) is actually her LEAST effective path
+  - She's VERY PICKY - chooses opportunities, doesn't need to sell
+  - She's a PEER to top founders, has SHAPED the industry (a16z portfolio companies, SEC negotiations)
+  - Problem: prospects don't know what to do next, she can't/won't sell herself
+
+### Positioning Discovered
+- NOT "Fractional GC" (operational, draining)
+- NOT "Board Director seeking opportunities" (passive)
+- YES: Industry insider who selectively works with founders at the frontier
+- The pitch: "I've helped build the regulatory frameworks that crypto operates under today"
+
+### Content Strategy Added
+- User's formula: blogs on site → post to LinkedIn → drives traffic → converts to calls
+- This solves "she can't sell herself" - content does the selling
+- Multiple posts per week on crypto regulation, AI governance, etc.
+- AI drafts + Beth's perspective = thought leadership at scale
+
+### Technical Implementation
+- Set up Sanity CMS project: kup01top / production dataset
+- Created blog post schema (title, slug, excerpt, publishedAt, body)
+- Installed next-sanity, @sanity/client, @portabletext/react
+- Created Sanity client and queries
+- Rebuilt homepage with validated positioning
+- Created /insights (blog listing page)
+- Created /insights/[slug] (individual post page)
+- Connected Calendly CTAs throughout
+- Added Vercel environment variables
+- Deployed successfully
+
+### Design Document Created
+- docs/plans/2026-01-14-beth-haddock-design.md
+- Complete spec for positioning, content strategy, website structure
+
+### Ending State
+- F000: PASSING
+- F001: PASSING (completely rebuilt with validated positioning)
+- F002: PASSING
+- F012: PASSING (Sanity CMS integration complete)
+- F013: PASSING (blog listing page)
+- F018: PASSING
+- Site live at: https://beth-haddock-site.vercel.app
+- Sanity Studio: https://beth-haddock.sanity.studio (needs setup)
+
+### Key Lesson
+- Using superpowers:brainstorming BEFORE implementation prevents building the wrong thing
+- First attempt (Fractional GC) would have drained Beth
+- Proper brainstorming revealed she needs strategic, high-stakes work - not operational roles
+
+### Next Session Should
+- Create first few blog posts in Sanity
+- Set up Sanity Studio for Beth to manage content
+- Configure Beth's actual Calendly URL
+- Test full content → LinkedIn → conversion flow
+- Consider adding "What's on your mind?" question to Calendly
+
+---
