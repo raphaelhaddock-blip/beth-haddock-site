@@ -19,10 +19,33 @@ const logos = [
   { name: "World Gold Council", logo: "/logos/world-gold-council.svg", width: 150 },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "Beth's regulatory foresight saved us months of headaches. She saw the compliance landscape shifting before anyone else did.",
+    name: "Series B Founder",
+    role: "DeFi Protocol",
+  },
+  {
+    quote:
+      "Having someone who's sat on both sides of the table—institutional finance and crypto—is invaluable. Beth bridges worlds.",
+    name: "CEO",
+    role: "Digital Asset Custodian",
+  },
+  {
+    quote:
+      "She doesn't just tell you what's legal. She helps you build something that will still be standing in five years.",
+    name: "General Partner",
+    role: "Crypto Venture Fund",
+  },
+];
+
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [logosVisible, setLogosVisible] = useState(false);
+  const [testimonialsVisible, setTestimonialsVisible] = useState(false);
   const logoSectionRef = useRef<HTMLDivElement>(null);
+  const testimonialSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetch("/api/posts")
@@ -32,21 +55,38 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const logoObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setLogosVisible(true);
-          observer.disconnect();
+          logoObserver.disconnect();
         }
       },
       { threshold: 0.2 }
     );
 
+    const testimonialObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTestimonialsVisible(true);
+          testimonialObserver.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
     if (logoSectionRef.current) {
-      observer.observe(logoSectionRef.current);
+      logoObserver.observe(logoSectionRef.current);
     }
 
-    return () => observer.disconnect();
+    if (testimonialSectionRef.current) {
+      testimonialObserver.observe(testimonialSectionRef.current);
+    }
+
+    return () => {
+      logoObserver.disconnect();
+      testimonialObserver.disconnect();
+    };
   }, []);
 
   return (
@@ -175,6 +215,57 @@ export default function Home() {
               <p className="font-medium">Stablecoin Standard</p>
               <p className="text-sm text-gray-500">Advisory</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 px-6 bg-[#1a1a1a] text-white overflow-hidden">
+        <div ref={testimonialSectionRef} className="max-w-5xl mx-auto">
+          <p
+            className={`text-center text-xs text-[#a88b63] uppercase tracking-widest mb-12 transition-all duration-700 ${
+              testimonialsVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-4"
+            }`}
+          >
+            What clients say
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className={`relative transition-all duration-700 ${
+                  testimonialsVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{
+                  transitionDelay: testimonialsVisible
+                    ? `${index * 150}ms`
+                    : "0ms",
+                }}
+              >
+                <span className="absolute -top-4 -left-2 text-6xl text-[#a88b63] opacity-30 font-[family-name:var(--font-playfair)]">
+                  "
+                </span>
+                <blockquote className="relative z-10">
+                  <p className="font-[family-name:var(--font-playfair)] text-lg md:text-xl leading-relaxed mb-6 text-gray-100">
+                    {testimonial.quote}
+                  </p>
+                  <footer className="text-sm">
+                    <cite className="not-italic">
+                      <span className="text-white font-medium">
+                        {testimonial.name}
+                      </span>
+                      <span className="text-gray-400 block mt-1">
+                        {testimonial.role}
+                      </span>
+                    </cite>
+                  </footer>
+                </blockquote>
+              </div>
+            ))}
           </div>
         </div>
       </section>
