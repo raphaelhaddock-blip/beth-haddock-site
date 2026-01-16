@@ -118,24 +118,43 @@ export default function Home() {
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[#a88b63] font-medium text-sm mb-3 tracking-wide">
-            BOARD DIRECTOR · STRATEGIC COUNSEL · CRYPTO, FINTECH, AI
-          </p>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight max-w-3xl">
-            I've helped build the regulatory frameworks that crypto operates under today.
-          </h1>
-          <p className="text-gray-500 text-lg mb-8 max-w-2xl">
-            Former CLO (Franklin Templeton) · CCO (Guggenheim) · a16z portfolio companies
-          </p>
-          <a
-            href="https://calendly.com/beth-haddock"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-[#1a1a1a] text-white font-medium hover:bg-[#a88b63] transition"
-          >
-            Book a Conversation
-          </a>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-[1fr,auto] gap-12 md:gap-16 items-center">
+            {/* Text Content */}
+            <div>
+              <p className="text-[#a88b63] font-medium text-sm mb-3 tracking-wide">
+                BOARD DIRECTOR · STRATEGIC COUNSEL · CRYPTO, FINTECH, AI
+              </p>
+              <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+                I've helped build the regulatory frameworks that crypto operates under today.
+              </h1>
+              <p className="text-gray-500 text-lg mb-8 max-w-2xl">
+                Former CLO (Franklin Templeton) · CCO (Guggenheim) · a16z portfolio companies
+              </p>
+              <a
+                href="https://calendly.com/beth-haddock"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-[#1a1a1a] text-white font-medium hover:bg-[#a88b63] transition"
+              >
+                Book a Conversation
+              </a>
+            </div>
+            {/* Headshot */}
+            <div className="order-first md:order-last flex justify-center md:justify-end">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-[#a88b63]/10 rounded-full blur-2xl"></div>
+                <img
+                  src="/headshot.jpg"
+                  alt="Beth Haddock"
+                  className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full object-cover border-4 border-white shadow-xl"
+                  onError={(e) => {
+                    e.currentTarget.src = "/headshot-placeholder.svg";
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
