@@ -70,3 +70,23 @@ body {
 .font-serif {
   font-family: 'Playfair Display', serif;
 }
+
+/* Logo fade-in animation */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}
+
+.animate-logo-fade-in {
+  animation: logoFadeIn 0.6s ease-out forwards;
+}
+
+.animate-logo-fade-in:hover {
+  opacity: 1 !important;
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 type Post = {
@@ -11,14 +11,42 @@ type Post = {
   publishedAt: string;
 };
 
+const logos = [
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 140 },
+  { name: "Robinhood", logo: "/logos/robinhood.svg", width: 130 },
+  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160 },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 150 },
+  { name: "World Gold Council", logo: "/logos/world-gold-council.svg", width: 150 },
+];
+
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
+  const [logosVisible, setLogosVisible] = useState(false);
+  const logoSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetch("/api/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data.slice(0, 3)))
       .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLogosVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (logoSectionRef.current) {
+      observer.observe(logoSectionRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -83,17 +111,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof - Logos */}
-      <section className="py-12 px-6 bg-gray-50 border-y border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-gray-400 text-sm font-medium mb-6">
-            <span>Grayscale</span>
-            <span>Robinhood</span>
-            <span>Franklin Templeton</span>
-            <span>Guggenheim</span>
-            <span>World Gold Council</span>
+      {/* Proof - Logo Bar */}
+      <section className="py-16 px-6 bg-gray-50 border-y border-gray-100 overflow-hidden">
+        <div ref={logoSectionRef} className="max-w-5xl mx-auto">
+          <p
+            className={`text-center text-xs text-gray-400 uppercase tracking-widest mb-10 transition-all duration-700 ${
+              logosVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-4"
+            }`}
+          >
+            Trusted by industry leaders
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 md:gap-x-16 lg:gap-x-20">
+            {logos.map((company, index) => (
+              <div
+                key={company.name}
+                className={`grayscale opacity-0 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ${
+                  logosVisible ? "animate-logo-fade-in" : ""
+                }`}
+                style={{
+                  animationDelay: logosVisible ? `${index * 100}ms` : "0ms",
+                  animationFillMode: "forwards",
+                }}
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  style={{ width: company.width, height: "auto" }}
+                  className="h-8 md:h-10 object-contain"
+                />
+              </div>
+            ))}
           </div>
-          <p className="text-center text-sm text-gray-400">
+          <p
+            className={`text-center text-sm text-gray-400 mt-10 transition-all duration-700 delay-500 ${
+              logosVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-4"
+            }`}
+          >
             Plus portfolio companies of Andreessen Horowitz and other leading crypto investors.
           </p>
         </div>
