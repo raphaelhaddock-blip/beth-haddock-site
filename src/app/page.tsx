@@ -117,56 +117,63 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[1fr,auto] gap-12 md:gap-16 items-center">
-            {/* Text Content */}
-            <div>
-              <p className="text-[#a88b63] font-medium text-sm mb-3 tracking-wide">
-                BOARD DIRECTOR · STRATEGIC COUNSEL · CRYPTO, FINTECH, AI
-              </p>
-              <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-                I've helped build the regulatory frameworks that crypto operates under today.
-              </h1>
-              <p className="text-gray-500 text-lg mb-8 max-w-2xl">
-                Former CLO (Franklin Templeton) · CCO (Guggenheim) · a16z portfolio companies
-              </p>
-              <a
-                href="https://calendly.com/beth-haddock"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#1a1a1a] text-white font-medium hover:bg-[#a88b63] transition"
-              >
-                Book a Conversation
-              </a>
-            </div>
-            {/* Headshot */}
-            <div className="order-first md:order-last flex justify-center md:justify-end">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-[#a88b63]/10 rounded-full blur-2xl"></div>
-                <img
-                  src="/headshot.jpg"
-                  alt="Beth Haddock"
-                  className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full object-cover border-4 border-white shadow-xl"
-                  onError={(e) => {
-                    e.currentTarget.src = "/headshot-placeholder.svg";
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-[#a88b63] font-medium text-sm mb-4 tracking-wide">
+            STRATEGIC ADVISOR · BOARD DIRECTOR
+          </p>
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+            I help crypto and fintech founders turn ambition into lasting companies.
+          </h1>
+          <p className="text-gray-600 text-xl md:text-2xl mb-4 max-w-3xl leading-relaxed">
+            From first institutional check to IPO-readiness—I've guided founders through the moments that define whether a company scales or stalls.
+          </p>
+          <p className="text-gray-500 text-lg mb-8 max-w-2xl">
+            20+ years at Franklin Templeton, Guggenheim, and with a16z portfolio companies. I know what institutions need to say yes—and how to build companies they want to back.
+          </p>
+          <a
+            href="https://calendly.com/beth-haddock"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-[#1a1a1a] text-white font-medium hover:bg-[#a88b63] transition"
+          >
+            Book a Conversation
+          </a>
         </div>
       </section>
 
       {/* What I Do */}
       <section className="py-16 px-6 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xl leading-relaxed text-gray-700 max-w-2xl">
-            I work with founders at regulatory inflection points—raising, scaling,
-            entering new markets, or getting ahead of what's coming. Board seats,
-            advisory roles, strategic counsel. If you're building at the frontier
-            of finance, let's talk.
-          </p>
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6">
+            How I Help
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-medium text-lg mb-2">Strategic Positioning</h3>
+              <p className="text-gray-600 leading-relaxed">
+                I help you see your company the way institutional investors and acquirers see it—and close the gaps before they become dealbreakers.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-lg mb-2">Board & Governance</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Building the governance structures that signal maturity to partners, investors, and regulators. The foundation that lets you move fast without breaking things.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-lg mb-2">Regulatory Navigation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Crypto and fintech live in a shifting landscape. I've been on both sides—writing the rules and helping companies thrive within them.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-lg mb-2">Institutional Relationships</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Two decades of relationships with the firms that write the biggest checks. I know what gets you in the room—and what closes the deal.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
