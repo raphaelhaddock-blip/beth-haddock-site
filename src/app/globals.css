@@ -2,11 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --brand-black: #1a1a1a;
-  --brand-charcoal: #2d2d2d;
-  --brand-cream: #f4f4f0;
-  --brand-bronze: #a88b63;
-  --brand-platinum: #e5e5e5;
+  /* Quiet Luxury palette */
+  --brand-navy: #1e293b;      /* Deep navy for headings (slate-800) */
+  --brand-charcoal: #334155;  /* Secondary text (slate-700) */
+  --brand-cream: #faf9f7;     /* Warm off-white background */
+  --brand-bronze: #9a7b4f;    /* Muted bronze accent */
+  --brand-muted: #64748b;     /* Muted body text (slate-500) */
+  --brand-border: #e2e8f0;    /* Hairline borders (slate-200) */
+
+  /* Legacy compatibility */
+  --brand-black: #1e293b;
+  --brand-platinum: #f1f5f9;
 }
 
 html {
@@ -78,7 +84,7 @@ body {
     transform: translateY(20px);
   }
   100% {
-    opacity: 0.5;
+    opacity: 0.6;
     transform: translateY(0);
   }
 }

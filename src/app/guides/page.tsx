@@ -9,9 +9,9 @@ export const metadata = {
 
 export default function GuidesPage() {
   return (
-    <div className="bg-white text-[#1a1a1a] min-h-screen">
+    <div className="bg-[#faf9f7] text-slate-900 min-h-screen">
       {/* Nav */}
-      <nav className="fixed w-full z-50 bg-white/95 backdrop-blur border-b border-gray-100 px-6 py-4">
+      <nav className="fixed w-full z-50 bg-[#faf9f7]/95 backdrop-blur border-b border-slate-200 px-6 py-4">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
           <Link
             href="/"
@@ -22,19 +22,19 @@ export default function GuidesPage() {
           <div className="flex items-center gap-6">
             <Link
               href="/work"
-              className="text-sm text-gray-600 hover:text-[#1a1a1a] transition"
+              className="text-sm text-slate-500 hover:text-slate-900 transition"
             >
               Work
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-[#1a1a1a] font-medium"
+              className="text-sm text-slate-900 font-medium"
             >
               Guides
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-gray-600 hover:text-[#1a1a1a] transition"
+              className="text-sm text-slate-500 hover:text-slate-900 transition"
             >
               Insights
             </Link>
@@ -42,7 +42,7 @@ export default function GuidesPage() {
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-[#1a1a1a] text-white text-sm font-medium hover:bg-[#a88b63] transition"
+              className="px-4 py-2 bg-slate-900 text-white text-sm font-medium hover:bg-[#9a7b4f] transition"
             >
               Book a Conversation
             </a>
@@ -51,15 +51,15 @@ export default function GuidesPage() {
       </nav>
 
       {/* Header */}
-      <section className="pt-32 pb-12 px-6">
+      <section className="pt-40 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="text-[#a88b63] font-medium text-sm mb-4 tracking-wide">
+          <p className="text-[#9a7b4f] font-medium text-sm mb-6 tracking-wide">
             INDUSTRY GUIDES
           </p>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl mb-6 leading-tight">
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl mb-8 leading-tight text-slate-900">
             Crypto & Fintech—Explained
           </h1>
-          <p className="text-gray-600 text-lg max-w-2xl leading-relaxed">
+          <p className="text-slate-600 text-lg max-w-2xl leading-relaxed">
             In-depth guides on the topics that matter for institutional investors
             and traditional finance professionals entering the digital asset space.
             Written from 25 years of experience on both sides of the table.
@@ -68,31 +68,31 @@ export default function GuidesPage() {
       </section>
 
       {/* Guide Grid */}
-      <section className="pb-20 px-6">
+      <section className="pb-32 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="grid gap-6">
+          <div className="grid gap-8">
             {guides.map((guide) => (
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
-                className="block p-8 border border-gray-200 hover:border-[#a88b63] transition group"
+                className="block p-8 border border-slate-200 hover:border-[#9a7b4f] transition group"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
-                    <h2 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl mb-2 group-hover:text-[#a88b63] transition">
+                    <h2 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl mb-3 group-hover:text-[#9a7b4f] transition text-slate-900">
                       {guide.title}
                     </h2>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-slate-600 mb-4 leading-relaxed">
                       {guide.subtitle}
                     </p>
-                    <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <div className="flex items-center gap-4 text-sm text-slate-400">
                       <span>{guide.readTime}</span>
                       <span>·</span>
                       <span>Updated {guide.lastUpdated}</span>
                     </div>
                   </div>
                   <div className="md:ml-8 flex-shrink-0">
-                    <span className="text-[#a88b63] text-sm font-medium group-hover:translate-x-1 inline-block transition-transform">
+                    <span className="text-[#9a7b4f] text-sm font-medium group-hover:translate-x-1 inline-block transition-transform">
                       Read guide →
                     </span>
                   </div>
@@ -104,12 +104,12 @@ export default function GuidesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-gray-50 border-t border-gray-100">
+      <section className="py-24 px-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6 text-slate-900">
             Need specific guidance?
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-slate-600 mb-10 leading-relaxed">
             These guides cover the fundamentals. For strategic advice tailored to
             your situation—regulatory navigation, institutional readiness, or
             market entry—let's talk.
@@ -118,7 +118,7 @@ export default function GuidesPage() {
             href="https://calendly.com/beth-haddock"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-[#1a1a1a] text-white font-medium hover:bg-[#a88b63] transition"
+            className="inline-block px-6 py-3 bg-slate-900 text-white font-medium hover:bg-[#9a7b4f] transition"
           >
             Book a Conversation
           </a>
@@ -126,21 +126,21 @@ export default function GuidesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-gray-100">
+      <footer className="py-12 px-6 border-t border-slate-200">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">© 2026 Beth Haddock</p>
+          <p className="text-sm text-slate-400">© 2026 Beth Haddock</p>
           <div className="flex gap-6 text-sm">
             <a
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-[#1a1a1a] transition"
+              className="text-slate-500 hover:text-slate-900 transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-gray-500 hover:text-[#1a1a1a] transition"
+              className="text-slate-500 hover:text-slate-900 transition"
             >
               Email
             </a>
