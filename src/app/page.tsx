@@ -11,12 +11,22 @@ type Post = {
   publishedAt: string;
 };
 
-const logos = [
-  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 140 },
-  { name: "Robinhood", logo: "/logos/robinhood.svg", width: 130 },
+// Traditional Finance
+const tradFiLogos = [
   { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160 },
-  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 150 },
-  { name: "World Gold Council", logo: "/logos/world-gold-council.svg", width: 150 },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140 },
+  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 130 },
+  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 170 },
+  { name: "AXA", logo: "/logos/axa.svg", width: 70 },
+];
+
+// Crypto & Fintech
+const cryptoLogos = [
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130 },
+  { name: "Robinhood", logo: "/logos/robinhood.svg", width: 120 },
+  { name: "Ondo", logo: "/logos/ondo.svg", width: 90 },
+  { name: "Balancer", logo: "/logos/balancer.svg", width: 110 },
+  { name: "Orca", logo: "/logos/orca.svg", width: 80 },
 ];
 
 const testimonials = [
@@ -120,16 +130,16 @@ export default function Home() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#a88b63] font-medium text-sm mb-4 tracking-wide">
-            STRATEGIC ADVISOR · BOARD DIRECTOR
+            GENERAL COUNSEL · BOARD DIRECTOR · ADVISOR
           </p>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-            I help crypto and fintech founders turn ambition into lasting companies.
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight">
+            The institutions have their playbook. So do the founders. I know both.
           </h1>
-          <p className="text-gray-600 text-xl md:text-2xl mb-4 max-w-3xl leading-relaxed">
-            From first institutional check to IPO-readiness—I've guided founders through the moments that define whether a company scales or stalls.
+          <p className="text-gray-700 text-lg md:text-xl mb-4 max-w-3xl leading-relaxed">
+            General Counsel at AdvisorEngine. Board at GMO-Z Trust. Advisor to Grayscale, Balancer, Orca, and the teams building what's next.
           </p>
-          <p className="text-gray-500 text-lg mb-8 max-w-2xl">
-            20+ years at Franklin Templeton, Guggenheim, and with a16z portfolio companies. I know what institutions need to say yes—and how to build companies they want to back.
+          <p className="text-gray-500 text-base md:text-lg mb-8 max-w-2xl leading-relaxed">
+            25 years inside Franklin Templeton, Guggenheim, and Brown Brothers Harriman taught me what institutions need. The last decade in crypto taught me what founders need. I bridge the gap.
           </p>
           <a
             href="https://calendly.com/beth-haddock"
@@ -142,35 +152,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I Do */}
+      {/* How I Work */}
       <section className="py-16 px-6 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6">
-            How I Help
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8">
+            How I Work
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
             <div>
-              <h3 className="font-medium text-lg mb-2">Strategic Positioning</h3>
+              <h3 className="font-medium text-lg mb-3 text-[#1a1a1a]">Get Institutional-Ready</h3>
               <p className="text-gray-600 leading-relaxed">
-                I help you see your company the way institutional investors and acquirers see it—and close the gaps before they become dealbreakers.
+                I see your company the way a pension fund's investment committee sees it. Let's close the gaps before they become dealbreakers.
               </p>
             </div>
             <div>
-              <h3 className="font-medium text-lg mb-2">Board & Governance</h3>
+              <h3 className="font-medium text-lg mb-3 text-[#1a1a1a]">Build the Structure</h3>
               <p className="text-gray-600 leading-relaxed">
-                Building the governance structures that signal maturity to partners, investors, and regulators. The foundation that lets you move fast without breaking things.
+                I've sat on both sides. I know what boards need to greenlight—and what trips up companies that move too fast without the right foundation.
               </p>
             </div>
             <div>
-              <h3 className="font-medium text-lg mb-2">Regulatory Navigation</h3>
+              <h3 className="font-medium text-lg mb-3 text-[#1a1a1a]">Stay Ahead of the Rules</h3>
               <p className="text-gray-600 leading-relaxed">
-                Crypto and fintech live in a shifting landscape. I've been on both sides—writing the rules and helping companies thrive within them.
+                NYDFS, SEC, global frameworks—I've shaped policy and helped companies thrive within it. The landscape shifts. I help you stay ahead.
               </p>
             </div>
             <div>
-              <h3 className="font-medium text-lg mb-2">Institutional Relationships</h3>
+              <h3 className="font-medium text-lg mb-3 text-[#1a1a1a]">Open the Right Doors</h3>
               <p className="text-gray-600 leading-relaxed">
-                Two decades of relationships with the firms that write the biggest checks. I know what gets you in the room—and what closes the deal.
+                Traditional finance speaks a different language. I translate—and open doors that founders can't reach alone.
               </p>
             </div>
           </div>
@@ -180,67 +190,144 @@ export default function Home() {
       {/* Proof - Logo Bar */}
       <section className="py-16 px-6 bg-gray-50 border-y border-gray-100 overflow-hidden">
         <div ref={logoSectionRef} className="max-w-5xl mx-auto">
-          <p
-            className={`text-center text-xs text-gray-400 uppercase tracking-widest mb-10 transition-all duration-700 ${
-              logosVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            }`}
-          >
-            Trusted by industry leaders
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 md:gap-x-16 lg:gap-x-20">
-            {logos.map((company, index) => (
-              <div
-                key={company.name}
-                className={`grayscale opacity-0 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ${
-                  logosVisible ? "animate-logo-fade-in" : ""
-                }`}
-                style={{
-                  animationDelay: logosVisible ? `${index * 100}ms` : "0ms",
-                  animationFillMode: "forwards",
-                }}
-              >
-                <img
-                  src={company.logo}
-                  alt={company.name}
-                  style={{ width: company.width, height: "auto" }}
-                  className="h-8 md:h-10 object-contain"
-                />
-              </div>
-            ))}
+          {/* Traditional Finance Row */}
+          <div className="mb-10">
+            <p
+              className={`text-center text-xs text-gray-400 uppercase tracking-widest mb-6 transition-all duration-700 ${
+                logosVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
+              Traditional Finance
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-14 lg:gap-x-16">
+              {tradFiLogos.map((company, index) => (
+                <div
+                  key={company.name}
+                  className={`grayscale opacity-0 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ${
+                    logosVisible ? "animate-logo-fade-in" : ""
+                  }`}
+                  style={{
+                    animationDelay: logosVisible ? `${index * 80}ms` : "0ms",
+                    animationFillMode: "forwards",
+                  }}
+                >
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    style={{ width: company.width, height: "auto" }}
+                    className="h-7 md:h-8 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          <p
-            className={`text-center text-sm text-gray-400 mt-10 transition-all duration-700 delay-500 ${
-              logosVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            }`}
-          >
-            Plus portfolio companies of Andreessen Horowitz and other leading crypto investors.
-          </p>
+
+          {/* Crypto & Fintech Row */}
+          <div>
+            <p
+              className={`text-center text-xs text-gray-400 uppercase tracking-widest mb-6 transition-all duration-700 delay-300 ${
+                logosVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
+              Crypto & Fintech
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-14 lg:gap-x-16">
+              {cryptoLogos.map((company, index) => (
+                <div
+                  key={company.name}
+                  className={`grayscale opacity-0 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ${
+                    logosVisible ? "animate-logo-fade-in" : ""
+                  }`}
+                  style={{
+                    animationDelay: logosVisible ? `${(index + 5) * 80}ms` : "0ms",
+                    animationFillMode: "forwards",
+                  }}
+                >
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    style={{ width: company.width, height: "auto" }}
+                    className="h-7 md:h-8 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Current Roles */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8">
-            Current Roles
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-10">
+            Where I'm Active
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="border-l-2 border-[#a88b63] pl-4">
-              <p className="font-medium">GMO-Z.com Trust</p>
-              <p className="text-sm text-gray-500">Board of Directors</p>
+
+          {/* Primary Role */}
+          <div className="mb-10">
+            <p className="text-xs text-[#a88b63] uppercase tracking-widest mb-4">Primary Role</p>
+            <div className="border-l-2 border-[#a88b63] pl-5">
+              <p className="font-medium text-lg">AdvisorEngine</p>
+              <p className="text-gray-600">General Counsel & Head of Compliance</p>
+              <p className="text-sm text-gray-400 mt-1">Franklin Templeton's advisor technology platform</p>
             </div>
-            <div className="border-l-2 border-[#a88b63] pl-4">
-              <p className="font-medium">Balancer</p>
-              <p className="text-sm text-gray-500">Advisory</p>
+          </div>
+
+          {/* Board */}
+          <div className="mb-10">
+            <p className="text-xs text-[#a88b63] uppercase tracking-widest mb-4">Board</p>
+            <div className="border-l-2 border-[#a88b63] pl-5">
+              <p className="font-medium text-lg">GMO-Z Trust Company</p>
+              <p className="text-gray-600">Board of Directors</p>
+              <p className="text-sm text-gray-400 mt-1">NYDFS-regulated stablecoin issuer</p>
             </div>
-            <div className="border-l-2 border-[#a88b63] pl-4">
-              <p className="font-medium">Stablecoin Standard</p>
-              <p className="text-sm text-gray-500">Advisory</p>
+          </div>
+
+          {/* Advisory */}
+          <div>
+            <p className="text-xs text-[#a88b63] uppercase tracking-widest mb-4">Advisory</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="border-l-2 border-gray-200 pl-5">
+                <p className="font-medium">Balancer</p>
+                <p className="text-sm text-gray-500">DeFi Protocol</p>
+              </div>
+              <div className="border-l-2 border-gray-200 pl-5">
+                <p className="font-medium">Orca</p>
+                <p className="text-sm text-gray-500">Solana DEX</p>
+              </div>
+              <div className="border-l-2 border-gray-200 pl-5">
+                <p className="font-medium">The Stablecoin Standard</p>
+                <p className="text-sm text-gray-500">Policy & Standards</p>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Thought Leadership */}
+      <section className="py-12 px-6 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p className="text-gray-600">
+                <span className="font-medium text-[#1a1a1a]">CoinDesk contributor</span>
+                <span className="mx-2 text-gray-300">·</span>
+                Author of <em className="text-[#1a1a1a]">Triple Bottom-Line Compliance</em>
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Frequent speaker on crypto regulation, fintech compliance, and the future of digital assets.
+              </p>
+            </div>
+            <Link
+              href="/insights"
+              className="text-sm text-[#a88b63] hover:text-[#1a1a1a] transition whitespace-nowrap"
+            >
+              Read insights →
+            </Link>
           </div>
         </div>
       </section>
