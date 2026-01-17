@@ -124,7 +124,7 @@ export default function Home() {
               General Counsel · Board Director · Strategic Advisor
             </p>
             <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-[3.5rem] mb-10 leading-[1.15] text-stone-900">
-              Bridging the gap between Institutional Finance and the Digital Frontier.
+              Bridging the divide between Institutional Finance and the Digital Frontier.
             </h1>
             <p className="text-stone-600 text-lg leading-relaxed mb-12 max-w-2xl">
               Strategic counsel for boards and founders navigating the future of regulated markets.
@@ -167,7 +167,7 @@ export default function Home() {
             {clientLogos.map((company) => (
               <div
                 key={company.name}
-                className="grayscale opacity-40"
+                className="grayscale opacity-50"
               >
                 <img
                   src={company.logo}
