@@ -2,17 +2,20 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  /* Quiet Luxury palette */
-  --brand-navy: #1e293b;      /* Deep navy for headings (slate-800) */
-  --brand-charcoal: #334155;  /* Secondary text (slate-700) */
-  --brand-cream: #faf9f7;     /* Warm off-white background */
-  --brand-bronze: #9a7b4f;    /* Muted bronze accent */
-  --brand-muted: #64748b;     /* Muted body text (slate-500) */
-  --brand-border: #e2e8f0;    /* Hairline borders (slate-200) */
+  /* Editorial / Institutional Authority palette */
+  --brand-paper: #FDFCF8;       /* Warm paper-like off-white */
+  --brand-charcoal: #1C1917;    /* Deep charcoal for headers (stone-900) */
+  --brand-body: #57534e;        /* Softer gray for body text (stone-600) */
+  --brand-muted: #a8a29e;       /* Muted text (stone-400) */
+  --brand-border: #e7e5e4;      /* Subtle borders (stone-200) */
+  --brand-accent: #44403c;      /* Muted dark accent (stone-700) */
 
   /* Legacy compatibility */
-  --brand-black: #1e293b;
-  --brand-platinum: #f1f5f9;
+  --brand-navy: #1C1917;
+  --brand-cream: #FDFCF8;
+  --brand-bronze: #78716c;      /* stone-500 as muted accent */
+  --brand-black: #1C1917;
+  --brand-platinum: #f5f5f4;
 }
 
 html {
@@ -21,36 +24,38 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--brand-cream);
-  color: var(--brand-black);
+  background: var(--brand-paper);
+  color: var(--brand-charcoal);
   -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 ::selection {
-  background-color: var(--brand-bronze);
+  background-color: var(--brand-charcoal);
   color: white;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - subtle */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f4f4f0;
+  background: #fafaf9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #d6d3d1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-bronze);
+  background: #a8a29e;
 }
 
-/* Reveal animations */
+/* Reveal animations - more subtle */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
 }
 .reveal.active {
   opacity: 1;
@@ -61,7 +66,7 @@ body {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   100% {
     opacity: 1;
@@ -69,7 +74,7 @@ body {
   }
 }
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.7s ease-out forwards;
 }
 
 /* Font classes */
@@ -77,22 +82,34 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
-/* Logo fade-in animation */
+/* Logo fade-in animation - very subtle */
 @keyframes logoFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   100% {
-    opacity: 0.6;
+    opacity: 0.4;
     transform: translateY(0);
   }
 }
 
 .animate-logo-fade-in {
-  animation: logoFadeIn 0.6s ease-out forwards;
+  animation: logoFadeIn 0.5s ease-out forwards;
 }
 
-.animate-logo-fade-in:hover {
-  opacity: 1 !important;
+/* Typography refinements for editorial feel */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+}
+
+/* Prose overrides for editorial content */
+.prose {
+  --tw-prose-body: #57534e;
+  --tw-prose-headings: #1C1917;
+  --tw-prose-links: #44403c;
+  --tw-prose-bold: #1C1917;
+  --tw-prose-quotes: #57534e;
+  --tw-prose-quote-borders: #d6d3d1;
 }

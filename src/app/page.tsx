@@ -11,22 +11,14 @@ type Post = {
   publishedAt: string;
 };
 
-// Traditional Finance
-const tradFiLogos = [
-  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160 },
-  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140 },
-  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 130 },
-  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 170 },
-  { name: "AXA", logo: "/logos/axa.svg", width: 70 },
-];
-
-// Crypto & Fintech
-const cryptoLogos = [
-  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130 },
-  { name: "Robinhood", logo: "/logos/robinhood.svg", width: 120 },
-  { name: "Ondo", logo: "/logos/ondo.svg", width: 90 },
-  { name: "Balancer", logo: "/logos/balancer.svg", width: 110 },
-  { name: "Orca", logo: "/logos/orca.svg", width: 80 },
+// All logos combined for a single subtle row
+const clientLogos = [
+  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 140 },
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 110 },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 120 },
+  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 110 },
+  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 140 },
+  { name: "Robinhood", logo: "/logos/robinhood.svg", width: 100 },
 ];
 
 const testimonials = [
@@ -52,9 +44,7 @@ const testimonials = [
 
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [logosVisible, setLogosVisible] = useState(false);
   const [testimonialsVisible, setTestimonialsVisible] = useState(false);
-  const logoSectionRef = useRef<HTMLDivElement>(null);
   const testimonialSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -65,16 +55,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const logoObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setLogosVisible(true);
-          logoObserver.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
     const testimonialObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -85,44 +65,42 @@ export default function Home() {
       { threshold: 0.15 }
     );
 
-    if (logoSectionRef.current) {
-      logoObserver.observe(logoSectionRef.current);
-    }
-
     if (testimonialSectionRef.current) {
       testimonialObserver.observe(testimonialSectionRef.current);
     }
 
     return () => {
-      logoObserver.disconnect();
       testimonialObserver.disconnect();
     };
   }, []);
 
   return (
-    <div className="bg-[#faf9f7] text-slate-900 min-h-screen">
+    <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
       {/* Nav */}
-      <nav className="fixed w-full z-50 bg-[#faf9f7]/95 backdrop-blur border-b border-slate-200 px-6 py-4">
+      <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <span className="font-[family-name:var(--font-playfair)] text-lg font-semibold">
+          <Link
+            href="/"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
+          >
             Beth Haddock
-          </span>
-          <div className="flex items-center gap-6">
+          </Link>
+          <div className="flex items-center gap-8">
             <Link
               href="/work"
-              className="text-sm text-slate-500 hover:text-slate-900 transition"
+              className="text-sm text-stone-500 hover:text-stone-900 transition"
             >
               Work
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-slate-500 hover:text-slate-900 transition"
+              className="text-sm text-stone-500 hover:text-stone-900 transition"
             >
               Guides
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-slate-500 hover:text-slate-900 transition"
+              className="text-sm text-stone-500 hover:text-stone-900 transition"
             >
               Insights
             </Link>
@@ -130,237 +108,209 @@ export default function Home() {
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-slate-900 text-white text-sm font-medium hover:bg-[#9a7b4f] transition"
+              className="px-4 py-2 border border-stone-900 text-stone-900 text-sm font-medium hover:bg-stone-900 hover:text-white transition"
             >
-              Book a Conversation
+              Contact
             </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero - Left Aligned, Editorial Style */}
       <section className="pt-40 pb-32 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[#9a7b4f] font-medium text-sm mb-6 tracking-wide">
-            GENERAL COUNSEL · BOARD DIRECTOR · ADVISOR
-          </p>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-10 leading-tight text-slate-900">
-            The institutions have their playbook. So do the founders. I know both.
-          </h1>
-          <p className="text-slate-600 text-lg md:text-xl mb-6 leading-relaxed">
-            General Counsel at AdvisorEngine. Board at GMO-Z Trust. Advisor to Grayscale, Balancer, Orca, and the teams building what's next.
-          </p>
-          <p className="text-slate-500 text-base md:text-lg mb-10 leading-relaxed">
-            25 years inside Franklin Templeton, Guggenheim, and Brown Brothers Harriman taught me what institutions need. The last decade in crypto taught me what founders need. I bridge the gap.
-          </p>
-          <a
-            href="https://calendly.com/beth-haddock"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-slate-900 text-white font-medium hover:bg-[#9a7b4f] transition"
-          >
-            Book a Conversation
-          </a>
+        <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl">
+            <p className="text-stone-400 text-sm mb-8 tracking-wide uppercase">
+              General Counsel · Board Director · Strategic Advisor
+            </p>
+            <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-[3.5rem] mb-10 leading-[1.15] text-stone-900">
+              Bridging the gap between Institutional Finance and the Digital Frontier.
+            </h1>
+            <p className="text-stone-600 text-lg leading-relaxed mb-12 max-w-2xl">
+              Strategic counsel for boards and founders navigating the future of regulated markets.
+            </p>
+            <div className="flex items-center gap-6">
+              <a
+                href="https://calendly.com/beth-haddock"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border-2 border-stone-900 text-stone-900 font-medium hover:bg-stone-900 hover:text-white transition"
+              >
+                Book a Conversation
+              </a>
+              <Link
+                href="/work"
+                className="text-stone-500 hover:text-stone-900 transition text-sm"
+              >
+                View selected work →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* How I Work */}
-      <section className="py-24 px-6 border-t border-slate-200">
+      {/* Brief Bio / Credibility Line */}
+      <section className="py-16 px-6 border-t border-stone-200">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-12 text-slate-900">
-            How I Work
+          <p className="text-stone-600 leading-relaxed max-w-3xl">
+            General Counsel at AdvisorEngine (Franklin Templeton). Board Director at GMO-Z Trust (NYDFS-regulated stablecoin issuer).
+            Former counsel at Guggenheim Partners, T. Rowe Price, and Brown Brothers Harriman.
+            Advisor to Grayscale, Balancer, Orca, and emerging protocols building the next generation of financial infrastructure.
+          </p>
+        </div>
+      </section>
+
+      {/* Logo Bar - Subtle, Grayscale, Background Noise */}
+      <section className="py-16 px-6 border-t border-stone-200">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 md:gap-x-16">
+            {clientLogos.map((company) => (
+              <div
+                key={company.name}
+                className="grayscale opacity-40"
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  style={{ width: company.width, height: "auto" }}
+                  className="h-6 md:h-7 object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Areas of Focus */}
+      <section className="py-32 px-6 border-t border-stone-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-16 text-stone-900">
+            Areas of Focus
           </h2>
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+          <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
             <div>
-              <h3 className="font-medium text-lg mb-3 text-slate-900">Get Institutional-Ready</h3>
-              <p className="text-slate-600 leading-relaxed">
-                I see your company the way a pension fund's investment committee sees it. Let's close the gaps before they become dealbreakers.
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-4 text-stone-900">
+                Institutional Readiness
+              </h3>
+              <p className="text-stone-600 leading-relaxed text-[15px]">
+                Preparing digital asset companies for institutional scrutiny.
+                Understanding what pension funds, endowments, and asset managers
+                require before they can allocate.
               </p>
             </div>
             <div>
-              <h3 className="font-medium text-lg mb-3 text-slate-900">Build the Structure</h3>
-              <p className="text-slate-600 leading-relaxed">
-                I've sat on both sides. I know what boards need to greenlight—and what trips up companies that move too fast without the right foundation.
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-4 text-stone-900">
+                Regulatory Strategy
+              </h3>
+              <p className="text-stone-600 leading-relaxed text-[15px]">
+                Navigating SEC, NYDFS, and emerging global frameworks.
+                Building compliance architectures that anticipate
+                rather than react to regulatory evolution.
               </p>
             </div>
             <div>
-              <h3 className="font-medium text-lg mb-3 text-slate-900">Stay Ahead of the Rules</h3>
-              <p className="text-slate-600 leading-relaxed">
-                NYDFS, SEC, global frameworks—I've shaped policy and helped companies thrive within it. The landscape shifts. I help you stay ahead.
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-4 text-stone-900">
+                Board Governance
+              </h3>
+              <p className="text-stone-600 leading-relaxed text-[15px]">
+                Structuring governance for companies operating at the
+                intersection of traditional finance and decentralized systems.
+                Fiduciary guidance for emerging asset classes.
               </p>
             </div>
             <div>
-              <h3 className="font-medium text-lg mb-3 text-slate-900">Open the Right Doors</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Traditional finance speaks a different language. I translate—and open doors that founders can't reach alone.
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-4 text-stone-900">
+                Strategic Counsel
+              </h3>
+              <p className="text-stone-600 leading-relaxed text-[15px]">
+                Advising founders on growth, partnerships, and market entry.
+                Translating between the language of innovation and the
+                requirements of institutional capital.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Proof - Logo Bar */}
-      <section className="py-24 px-6 bg-slate-50 border-y border-slate-200 overflow-hidden">
-        <div ref={logoSectionRef} className="max-w-5xl mx-auto">
-          {/* Traditional Finance Row */}
-          <div className="mb-12">
-            <p
-              className={`text-center text-xs text-slate-400 uppercase tracking-widest mb-8 transition-all duration-700 ${
-                logosVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-            >
-              Traditional Finance
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-14 lg:gap-x-16">
-              {tradFiLogos.map((company, index) => (
-                <div
-                  key={company.name}
-                  className={`grayscale opacity-0 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ${
-                    logosVisible ? "animate-logo-fade-in" : ""
-                  }`}
-                  style={{
-                    animationDelay: logosVisible ? `${index * 80}ms` : "0ms",
-                    animationFillMode: "forwards",
-                  }}
-                >
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    style={{ width: company.width, height: "auto" }}
-                    className="h-7 md:h-8 object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Crypto & Fintech Row */}
-          <div>
-            <p
-              className={`text-center text-xs text-slate-400 uppercase tracking-widest mb-8 transition-all duration-700 delay-300 ${
-                logosVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-            >
-              Crypto & Fintech
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-14 lg:gap-x-16">
-              {cryptoLogos.map((company, index) => (
-                <div
-                  key={company.name}
-                  className={`grayscale opacity-0 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ${
-                    logosVisible ? "animate-logo-fade-in" : ""
-                  }`}
-                  style={{
-                    animationDelay: logosVisible ? `${(index + 5) * 80}ms` : "0ms",
-                    animationFillMode: "forwards",
-                  }}
-                >
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    style={{ width: company.width, height: "auto" }}
-                    className="h-7 md:h-8 object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Current Roles */}
-      <section className="py-24 px-6">
+      {/* Current Positions */}
+      <section className="py-32 px-6 bg-stone-50 border-t border-stone-200">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-12 text-slate-900">
-            Where I'm Active
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-16 text-stone-900">
+            Current Positions
           </h2>
 
           {/* Primary Role */}
-          <div className="mb-12">
-            <p className="text-xs text-[#9a7b4f] uppercase tracking-widest mb-4">Primary Role</p>
-            <div className="border-l-2 border-[#9a7b4f] pl-5">
-              <p className="font-medium text-lg text-slate-900">AdvisorEngine</p>
-              <p className="text-slate-600">General Counsel & Head of Compliance</p>
-              <p className="text-sm text-slate-400 mt-1">Franklin Templeton's advisor technology platform</p>
+          <div className="mb-16">
+            <p className="text-xs text-stone-400 uppercase tracking-widest mb-6">
+              Primary Role
+            </p>
+            <div className="border-l-2 border-stone-300 pl-6">
+              <p className="font-[family-name:var(--font-playfair)] text-xl text-stone-900 mb-1">
+                AdvisorEngine
+              </p>
+              <p className="text-stone-600 mb-2">General Counsel & Head of Compliance</p>
+              <p className="text-sm text-stone-400">
+                Franklin Templeton's advisor technology platform
+              </p>
             </div>
           </div>
 
           {/* Board */}
-          <div className="mb-12">
-            <p className="text-xs text-[#9a7b4f] uppercase tracking-widest mb-4">Board</p>
-            <div className="border-l-2 border-[#9a7b4f] pl-5">
-              <p className="font-medium text-lg text-slate-900">GMO-Z Trust Company</p>
-              <p className="text-slate-600">Board of Directors</p>
-              <p className="text-sm text-slate-400 mt-1">NYDFS-regulated stablecoin issuer</p>
+          <div className="mb-16">
+            <p className="text-xs text-stone-400 uppercase tracking-widest mb-6">
+              Board
+            </p>
+            <div className="border-l-2 border-stone-300 pl-6">
+              <p className="font-[family-name:var(--font-playfair)] text-xl text-stone-900 mb-1">
+                GMO-Z Trust Company
+              </p>
+              <p className="text-stone-600 mb-2">Board of Directors</p>
+              <p className="text-sm text-stone-400">
+                NYDFS-regulated stablecoin issuer
+              </p>
             </div>
           </div>
 
           {/* Advisory */}
           <div>
-            <p className="text-xs text-[#9a7b4f] uppercase tracking-widest mb-4">Advisory</p>
+            <p className="text-xs text-stone-400 uppercase tracking-widest mb-6">
+              Advisory
+            </p>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="border-l-2 border-slate-200 pl-5">
-                <p className="font-medium text-slate-900">Balancer</p>
-                <p className="text-sm text-slate-500">DeFi Protocol</p>
+              <div className="border-l border-stone-200 pl-6">
+                <p className="font-medium text-stone-900">Balancer</p>
+                <p className="text-sm text-stone-500">DeFi Protocol</p>
               </div>
-              <div className="border-l-2 border-slate-200 pl-5">
-                <p className="font-medium text-slate-900">Orca</p>
-                <p className="text-sm text-slate-500">Solana DEX</p>
+              <div className="border-l border-stone-200 pl-6">
+                <p className="font-medium text-stone-900">Orca</p>
+                <p className="text-sm text-stone-500">Solana DEX</p>
               </div>
-              <div className="border-l-2 border-slate-200 pl-5">
-                <p className="font-medium text-slate-900">The Stablecoin Standard</p>
-                <p className="text-sm text-slate-500">Policy & Standards</p>
+              <div className="border-l border-stone-200 pl-6">
+                <p className="font-medium text-stone-900">The Stablecoin Standard</p>
+                <p className="text-sm text-stone-500">Policy & Standards</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Thought Leadership */}
-      <section className="py-16 px-6 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <p className="text-slate-600">
-                <span className="font-medium text-slate-900">CoinDesk contributor</span>
-                <span className="mx-2 text-slate-300">·</span>
-                Author of <em className="text-slate-900">Triple Bottom-Line Compliance</em>
-              </p>
-              <p className="text-sm text-slate-500 mt-1">
-                Frequent speaker on crypto regulation, fintech compliance, and the future of digital assets.
-              </p>
-            </div>
-            <Link
-              href="/insights"
-              className="text-sm text-[#9a7b4f] hover:text-slate-900 transition whitespace-nowrap"
-            >
-              Read insights →
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 px-6 bg-slate-900 text-white overflow-hidden">
-        <div ref={testimonialSectionRef} className="max-w-5xl mx-auto">
+      <section className="py-32 px-6 bg-stone-900 text-white overflow-hidden">
+        <div ref={testimonialSectionRef} className="max-w-4xl mx-auto">
           <p
-            className={`text-center text-xs text-[#9a7b4f] uppercase tracking-widest mb-16 transition-all duration-700 ${
+            className={`text-xs text-stone-500 uppercase tracking-widest mb-16 transition-all duration-700 ${
               testimonialsVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
-            What clients say
+            Client Perspectives
           </p>
-          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
+          <div className="space-y-16">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`relative transition-all duration-700 ${
+                className={`max-w-3xl transition-all duration-700 ${
                   testimonialsVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -371,19 +321,17 @@ export default function Home() {
                     : "0ms",
                 }}
               >
-                <span className="absolute -top-4 -left-2 text-6xl text-[#9a7b4f] opacity-30 font-[family-name:var(--font-playfair)]">
-                  "
-                </span>
-                <blockquote className="relative z-10">
-                  <p className="font-[family-name:var(--font-playfair)] text-lg md:text-xl leading-relaxed mb-6 text-slate-100">
-                    {testimonial.quote}
+                <blockquote>
+                  <p className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl leading-relaxed mb-6 text-stone-100">
+                    "{testimonial.quote}"
                   </p>
                   <footer className="text-sm">
                     <cite className="not-italic">
-                      <span className="text-white font-medium">
+                      <span className="text-stone-300">
                         {testimonial.name}
                       </span>
-                      <span className="text-slate-400 block mt-1">
+                      <span className="text-stone-500 mx-2">·</span>
+                      <span className="text-stone-500">
                         {testimonial.role}
                       </span>
                     </cite>
@@ -395,17 +343,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Writing & Speaking */}
+      <section className="py-24 px-6 border-t border-stone-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <div className="max-w-2xl">
+              <h2 className="font-[family-name:var(--font-playfair)] text-xl mb-4 text-stone-900">
+                Writing & Speaking
+              </h2>
+              <p className="text-stone-600 leading-relaxed">
+                CoinDesk contributor. Author of{" "}
+                <em className="text-stone-900">Triple Bottom-Line Compliance</em>.
+                Regular speaker on crypto regulation, fintech compliance, and
+                the evolution of digital asset markets.
+              </p>
+            </div>
+            <Link
+              href="/insights"
+              className="text-sm border border-stone-300 px-4 py-2 text-stone-600 hover:border-stone-900 hover:text-stone-900 transition whitespace-nowrap"
+            >
+              Read insights →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Latest Insights */}
       {posts.length > 0 && (
-        <section className="py-24 px-6 bg-slate-50 border-t border-slate-200">
+        <section className="py-32 px-6 bg-stone-50 border-t border-stone-200">
           <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between items-center mb-12">
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl text-slate-900">
-                Latest Insights
+            <div className="flex justify-between items-center mb-16">
+              <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl text-stone-900">
+                Recent Writing
               </h2>
               <Link
                 href="/insights"
-                className="text-sm text-[#9a7b4f] hover:text-slate-900 transition"
+                className="text-sm text-stone-500 hover:text-stone-900 transition"
               >
                 View all →
               </Link>
@@ -415,18 +388,20 @@ export default function Home() {
                 <Link
                   key={post._id}
                   href={`/insights/${post.slug}`}
-                  className="block bg-white p-6 border border-slate-200 hover:border-[#9a7b4f] transition"
+                  className="block bg-[#FDFCF8] p-6 border border-stone-200 hover:border-stone-400 transition group"
                 >
-                  <p className="text-xs text-slate-400 mb-2">
+                  <p className="text-xs text-stone-400 mb-3">
                     {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                      month: "short",
+                      month: "long",
                       day: "numeric",
                       year: "numeric",
                     })}
                   </p>
-                  <h3 className="font-medium mb-2 line-clamp-2 text-slate-900">{post.title}</h3>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-lg mb-3 line-clamp-2 text-stone-900 group-hover:text-stone-600 transition">
+                    {post.title}
+                  </h3>
                   {post.excerpt && (
-                    <p className="text-sm text-slate-500 line-clamp-2">
+                    <p className="text-sm text-stone-500 line-clamp-2 leading-relaxed">
                       {post.excerpt}
                     </p>
                   )}
@@ -437,46 +412,53 @@ export default function Home() {
         </section>
       )}
 
-      {/* CTA */}
-      <section className="py-32 px-6 border-t border-slate-200">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl mb-6 text-slate-900">
-            Let's see if there's a fit.
-          </h2>
-          <p className="text-slate-600 mb-10 leading-relaxed">
-            If you're a founder building at the frontier of finance and need
-            strategic counsel, board expertise, or regulatory guidance—I'd like
-            to hear what you're working on.
-          </p>
-          <a
-            href="https://calendly.com/beth-haddock"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-slate-900 text-white font-medium hover:bg-[#9a7b4f] transition"
-          >
-            Book a Conversation
-          </a>
+      {/* CTA - Editorial, Not Salesy */}
+      <section className="py-32 px-6 border-t border-stone-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="max-w-2xl">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-6 text-stone-900">
+              Let's discuss your situation.
+            </h2>
+            <p className="text-stone-600 mb-10 leading-relaxed">
+              Whether you're preparing for institutional investment, navigating
+              regulatory complexity, or building governance frameworks for emerging
+              asset classes—I welcome the conversation.
+            </p>
+            <a
+              href="https://calendly.com/beth-haddock"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border-2 border-stone-900 text-stone-900 font-medium hover:bg-stone-900 hover:text-white transition"
+            >
+              Schedule a Conversation
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-400">
-            © 2026 Beth Haddock
-          </p>
-          <div className="flex gap-6 text-sm">
+      <footer className="py-16 px-6 border-t border-stone-200">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div>
+            <p className="font-[family-name:var(--font-playfair)] text-lg text-stone-900 mb-2">
+              Beth Haddock
+            </p>
+            <p className="text-sm text-stone-400">
+              © 2026. All rights reserved.
+            </p>
+          </div>
+          <div className="flex gap-8 text-sm">
             <a
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-900 transition"
+              className="text-stone-500 hover:text-stone-900 transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-slate-500 hover:text-slate-900 transition"
+              className="text-stone-500 hover:text-stone-900 transition"
             >
               Email
             </a>
