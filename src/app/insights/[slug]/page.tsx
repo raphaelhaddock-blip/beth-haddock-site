@@ -40,6 +40,18 @@ export default async function PostPage({
           </Link>
           <div className="flex items-center gap-6">
             <Link
+              href="/work"
+              className="text-sm text-gray-600 hover:text-[#1a1a1a] transition"
+            >
+              Work
+            </Link>
+            <Link
+              href="/guides"
+              className="text-sm text-gray-600 hover:text-[#1a1a1a] transition"
+            >
+              Guides
+            </Link>
+            <Link
               href="/insights"
               className="text-sm text-gray-600 hover:text-[#1a1a1a] transition"
             >
