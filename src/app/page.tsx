@@ -71,7 +71,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
           >
-            Strategic Advisor · Regulatory Analyst
+            Strategic Advisor
           </motion.p>
 
           <div className="space-y-2">
@@ -115,8 +115,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-[#A1A1AA] text-xl md:text-2xl mt-12 max-w-2xl leading-relaxed"
           >
-            Expert analysis of where regulation is heading—and strategic counsel
-            for those navigating it.
+            I&apos;ve built the compliance infrastructure that passes regulatory scrutiny.
+            Now I build it for others.
           </motion.p>
         </div>
 
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Latest Analysis */}
+      {/* Latest Insights */}
       <section className="py-32 px-6 border-t border-[#262626]">
         <div className="max-w-5xl mx-auto">
           <motion.p
@@ -196,7 +196,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
           >
-            Latest Analysis
+            Latest Insights
           </motion.p>
 
           <motion.h2
@@ -205,8 +205,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
           >
-            What&apos;s happening in regulation—
-            <span className="italic text-[#D4AF37]">and what it means.</span>
+            Perspectives from the front lines—
+            <span className="italic text-[#D4AF37]">where I&apos;ve built and operated.</span>
           </motion.h2>
 
           {loading ? (
@@ -276,10 +276,10 @@ export default function Home() {
               className="py-12 text-center"
             >
               <p className="text-[#A1A1AA] text-lg mb-4">
-                Analysis coming soon.
+                Insights coming soon.
               </p>
               <p className="text-[#71717A]">
-                Follow me on LinkedIn for the latest regulatory insights.
+                Follow me on LinkedIn for perspectives from 25+ years in the field.
               </p>
             </motion.div>
           )}
@@ -295,7 +295,7 @@ export default function Home() {
                 href="/insights"
                 className="inline-flex items-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition-colors"
               >
-                View all analysis
+                View all insights
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -333,17 +333,17 @@ export default function Home() {
             </div>
             <div className="space-y-8">
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl leading-tight">
-                When regulators write new rules,
-                <span className="text-[#D4AF37] italic"> I see what&apos;s coming next.</span>
+                I&apos;ve been in the room
+                <span className="text-[#D4AF37] italic"> when it mattered.</span>
               </h2>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                After 25 years at the intersection of traditional finance and emerging technology,
-                I don&apos;t just track regulatory changes—I analyze where they&apos;re heading
-                and what they mean for institutions building in this space.
+                Board seats at regulated stablecoin issuers. GC roles at companies raising institutional capital.
+                Advisory positions through enforcement actions and IPO preparations.
+                <span className="text-[#FAFAFA]"> I&apos;ve built the infrastructure that survives scrutiny.</span>
               </p>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                From NYDFS stablecoin frameworks to SEC enforcement patterns to the GENIUS Act—
-                <span className="text-[#FAFAFA]">I help you understand the road ahead.</span>
+                When you work with me, you get someone who has done the work—not just studied it.
+                <span className="text-[#FAFAFA]"> That&apos;s the difference between advice and execution.</span>
               </p>
             </div>
           </div>
