@@ -53,8 +53,8 @@ export default async function CaseStudyPage({
     .filter(Boolean);
 
   return (
-    <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
-      <Nav active="work" />
+    <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
+      <Nav active="work" alwaysVisible />
 
       {/* Article */}
       <article className="pt-32 md:pt-48 pb-24 px-6">
@@ -62,64 +62,68 @@ export default async function CaseStudyPage({
           {/* Back link */}
           <Link
             href="/work"
-            className="text-sm text-[#57534E] hover:text-[#1C1917] transition mb-12 inline-block"
+            className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition mb-12 inline-flex items-center gap-2"
           >
-            ← Work
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Work
           </Link>
 
           {/* Header */}
           <header className="mb-16">
-            <p className="text-sm text-[#57534E] mb-4">
+            <p className="text-sm text-[#D4AF37] tracking-[0.2em] uppercase mb-4">
               {study.category} · {study.period}
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight text-[#1C1917]">
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
               {study.company}
             </h1>
-            <p className="text-[#57534E] mb-4">{study.role}</p>
-            <p className="text-xl text-[#57534E] leading-relaxed">
+            <p className="text-[#A1A1AA] mb-4">{study.role}</p>
+            <p className="text-xl text-[#A1A1AA] leading-relaxed">
               {study.headline}
             </p>
           </header>
 
           {/* Summary */}
           <section className="mb-16">
-            <p className="text-[#57534E] text-lg leading-relaxed">
+            <p className="text-[#A1A1AA] text-lg leading-relaxed">
               {study.summary}
             </p>
           </section>
 
           {/* Challenge */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
               The Challenge
             </h2>
-            <p className="text-[#57534E] leading-relaxed">{study.challenge}</p>
+            <p className="text-[#A1A1AA] leading-relaxed">{study.challenge}</p>
           </section>
 
           {/* Approach */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
               Approach
             </h2>
-            <p className="text-[#57534E] leading-relaxed">{study.approach}</p>
+            <p className="text-[#A1A1AA] leading-relaxed">{study.approach}</p>
           </section>
 
           {/* Outcome */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
               Outcome
             </h2>
-            <p className="text-[#57534E] leading-relaxed">{study.outcome}</p>
+            <p className="text-[#A1A1AA] leading-relaxed">{study.outcome}</p>
           </section>
 
           {/* Key Contributions */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6 text-[#1C1917]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6">
               Key Contributions
             </h2>
             <ul className="space-y-3">
               {study.keyContributions.map((contribution, index) => (
-                <li key={index} className="text-[#57534E] leading-relaxed">
+                <li key={index} className="text-[#A1A1AA] leading-relaxed flex gap-3">
+                  <span className="text-[#D4AF37]">—</span>
                   {contribution}
                 </li>
               ))}
@@ -128,8 +132,8 @@ export default async function CaseStudyPage({
 
           {/* Related Guides */}
           {study.relatedGuides.length > 0 && (
-            <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-[#1C1917]">
+            <section className="mt-24 pt-12 border-t border-[#262626]">
+              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8">
                 Related Guides
               </h2>
               <div className="space-y-6">
@@ -142,10 +146,10 @@ export default async function CaseStudyPage({
                       href={`/guides/${guide.slug}`}
                       className="block group"
                     >
-                      <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
+                      <p className="text-[#FAFAFA] group-hover:text-[#D4AF37] transition">
                         {guide.title}
                       </p>
-                      <p className="text-sm text-[#57534E]">
+                      <p className="text-sm text-[#A1A1AA]">
                         {related.linkText}
                       </p>
                     </Link>
@@ -156,12 +160,12 @@ export default async function CaseStudyPage({
           )}
 
           {/* Contact */}
-          <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
+          <section className="mt-24 pt-12 border-t border-[#262626]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
               Facing similar challenges?
             </h2>
-            <p className="text-[#57534E] leading-relaxed mb-6">
-              Whether you're navigating regulatory complexity, preparing for
+            <p className="text-[#A1A1AA] leading-relaxed mb-6">
+              Whether you&apos;re navigating regulatory complexity, preparing for
               institutional growth, or building at the intersection of
               traditional finance and crypto.
             </p>
@@ -169,7 +173,7 @@ export default async function CaseStudyPage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1C1917] hover:text-[#57534E] transition border-b border-[#1C1917] hover:border-[#57534E] pb-1"
+              className="btn-gold inline-block"
             >
               Schedule a conversation
             </a>
@@ -179,9 +183,9 @@ export default async function CaseStudyPage({
 
       {/* More Work */}
       {relatedStudies.length > 0 && (
-        <section className="py-24 px-6 border-t border-[#E7E5E4]">
+        <section className="py-24 px-6 border-t border-[#262626]">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-[#1C1917]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8">
               More Work
             </h2>
             <div className="space-y-8">
@@ -191,10 +195,10 @@ export default async function CaseStudyPage({
                   href={`/work/${related.slug}`}
                   className="block group"
                 >
-                  <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
+                  <p className="text-[#FAFAFA] group-hover:text-[#D4AF37] transition">
                     {related.company}
                   </p>
-                  <p className="text-sm text-[#57534E]">
+                  <p className="text-sm text-[#A1A1AA]">
                     {related.role}
                   </p>
                 </Link>

@@ -30,8 +30,8 @@ export default async function PostPage({
   }
 
   return (
-    <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
-      <Nav active="insights" />
+    <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
+      <Nav active="insights" alwaysVisible />
 
       {/* Article */}
       <article className="pt-32 md:pt-48 pb-24 px-6">
@@ -39,14 +39,17 @@ export default async function PostPage({
           {/* Back link */}
           <Link
             href="/insights"
-            className="text-sm text-[#57534E] hover:text-[#1C1917] transition mb-12 inline-block"
+            className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition mb-12 inline-flex items-center gap-2"
           >
-            ← Insights
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Insights
           </Link>
 
           {/* Header */}
           <header className="mb-16">
-            <p className="text-sm text-[#57534E] mb-4">
+            <p className="text-sm text-[#D4AF37] tracking-[0.2em] uppercase mb-4">
               {post.publishedAt &&
                 new Date(post.publishedAt).toLocaleDateString("en-US", {
                   month: "long",
@@ -54,31 +57,31 @@ export default async function PostPage({
                   year: "numeric",
                 })}
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-[#1C1917]">
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight">
               {post.title}
             </h1>
             {post.excerpt && (
-              <p className="text-xl text-[#57534E] leading-relaxed">{post.excerpt}</p>
+              <p className="text-xl text-[#A1A1AA] leading-relaxed">{post.excerpt}</p>
             )}
           </header>
 
           {/* Body */}
           {post.body && (
-            <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-a:text-[#57534E] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1C1917] prose-p:text-[#57534E] prose-p:leading-relaxed prose-li:text-[#57534E]">
+            <div className="prose prose-lg prose-invert max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-a:text-[#D4AF37] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#FAFAFA] prose-p:text-[#A1A1AA] prose-p:leading-relaxed prose-li:text-[#A1A1AA]">
               <PortableText value={post.body} />
             </div>
           )}
 
           {/* Contact */}
-          <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
-            <p className="text-[#57534E] mb-6">
+          <section className="mt-24 pt-12 border-t border-[#262626]">
+            <p className="text-[#A1A1AA] mb-6">
               Want to discuss how this applies to your situation?
             </p>
             <a
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1C1917] hover:text-[#57534E] transition border-b border-[#1C1917] hover:border-[#57534E] pb-1"
+              className="btn-gold inline-block"
             >
               Schedule a conversation
             </a>
