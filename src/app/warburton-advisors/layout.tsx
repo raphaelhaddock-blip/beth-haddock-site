@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Warburton Advisors | Beth Haddock",
     description:
       "Strategic counsel for boards and founders navigating the intersection of institutional finance and digital assets.",

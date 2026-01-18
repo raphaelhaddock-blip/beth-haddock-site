@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beth Haddock | Strategic Leadership",
+    description:
+      "Board Director & Strategic Advisor. Bridging institutional governance and the digital asset economy.",
+  },
 };
 
 export default function RootLayout({
