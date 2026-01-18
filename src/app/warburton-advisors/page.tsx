@@ -2,8 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+
+const publications = [
+  { name: "Nasdaq", logo: "/logos/publications/nasdaq.jpg", width: 100, height: 24 },
+  { name: "CoinDesk", logo: "/logos/publications/coindesk.jpg", width: 110, height: 20 },
+  { name: "Morningstar", logo: "/logos/publications/morningstar.jpg", width: 120, height: 24 },
+  { name: "Stablecoin Standard", logo: "/logos/publications/stablecoin-standard.png", width: 130, height: 28 },
+];
 
 export default function WarburtonAdvisorsPage() {
   return (
@@ -231,6 +239,45 @@ export default function WarburtonAdvisorsPage() {
             <span className="text-sm text-[#71717A] border border-[#262626] px-4 py-2 rounded">
               Blockchain
             </span>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* As Seen In */}
+      <section className="py-16 px-6 border-t border-[#262626]">
+        <div className="max-w-4xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#71717A] text-xs tracking-[0.2em] uppercase mb-8 text-center"
+          >
+            As Seen In
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
+          >
+            {publications.map((pub, index) => (
+              <motion.div
+                key={pub.name}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="opacity-50 hover:opacity-80 transition-opacity grayscale"
+              >
+                <Image
+                  src={pub.logo}
+                  alt={pub.name}
+                  width={pub.width}
+                  height={pub.height}
+                  className="h-6 md:h-7 w-auto brightness-200 invert"
+                />
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
