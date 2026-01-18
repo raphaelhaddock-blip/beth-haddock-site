@@ -94,8 +94,12 @@ export default function Nav({ active }: NavProps) {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden mt-4 pb-4 border-t border-[#E7E5E4] pt-4">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="mt-4 pb-4 border-t border-[#E7E5E4] pt-4">
           <div className="flex flex-col gap-4">
             <Link
               href="/work"
@@ -140,7 +144,7 @@ export default function Nav({ active }: NavProps) {
             </a>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
