@@ -163,7 +163,7 @@ export default function Home() {
                 src="/images/beth/hero-bw.jpeg"
                 alt="Beth Haddock"
                 fill
-                className="object-cover object-[25%_top]"
+                className="object-cover object-top"
                 priority
               />
               {/* Subtle gradient overlay on left edge for text readability */}
