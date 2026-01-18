@@ -38,7 +38,7 @@ const selectedWork = [
   {
     number: "01",
     company: "AdvisorEngine",
-    role: "General Counsel & Head of Compliance",
+    role: "Chief Legal Officer",
     slug: "advisorengine",
   },
   {
@@ -193,7 +193,7 @@ export default function Home() {
           </div>
           <div className="space-y-8">
             <p className="text-[#A1A1AA] text-xl leading-relaxed">
-              General Counsel at{" "}
+              Chief Legal Officer at{" "}
               <span className="text-[#FAFAFA]">AdvisorEngine</span>, a Franklin
               Templeton company. Board Director at{" "}
               <span className="text-[#FAFAFA]">GMO-Z Trust</span>, a

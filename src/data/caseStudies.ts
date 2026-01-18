@@ -23,12 +23,12 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "advisorengine",
     company: "AdvisorEngine",
-    role: "General Counsel & Head of Compliance",
+    role: "Chief Legal Officer",
     period: "2021–Present",
     category: "Primary",
     headline: "Leading legal strategy for Franklin Templeton's bet on advisor technology",
     summary:
-      "AdvisorEngine is a wealth management technology platform backed by Franklin Templeton, serving thousands of financial advisors managing over $600 billion in assets. As General Counsel and Head of Compliance, I lead all legal, regulatory, and compliance functions during a period when the SEC has dramatically increased scrutiny of digital advice—with robo-advisor enforcement actions rising and new regulations like Reg BI reshaping fiduciary standards across the industry.",
+      "AdvisorEngine is a wealth management technology platform backed by Franklin Templeton, serving thousands of financial advisors managing over $600 billion in assets. As Chief Legal Officer, I lead all legal, regulatory, and compliance functions during a period when the SEC has dramatically increased scrutiny of digital advice—with robo-advisor enforcement actions rising and new regulations like Reg BI reshaping fiduciary standards across the industry.",
     challenge:
       "Franklin Templeton's acquisition of AdvisorEngine created an opportunity—and a challenge. The company needed to scale its legal and compliance infrastructure to match the expectations of a $1.5 trillion asset manager parent while maintaining the agility of a fintech. This came at a particularly fraught moment for the industry: the SEC under Chair Gensler pursued 125 enforcement actions totaling $6.05 billion in penalties—a dramatic increase from the prior administration's 70 actions and $1.52 billion. Meanwhile, the fintech model itself was under scrutiny. The Synapse bankruptcy exposed $85 million in missing customer funds and revealed regulatory gaps in the Banking-as-a-Service model that underpins much of fintech. While AdvisorEngine operates differently as a registered investment advisor technology platform, the broader message was clear: regulators were examining every corner of fintech with new intensity.",
     approach:
