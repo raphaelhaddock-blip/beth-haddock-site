@@ -1,19 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const credentials = [
-  "Franklin Templeton",
-  "Guggenheim",
-  "T. Rowe Price",
-  "Brown Brothers Harriman",
-  "Grayscale",
-  "Ondo",
-  "Balancer",
-  "Orca",
+  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 180 },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 150 },
+  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 130 },
+  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 200 },
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130 },
+  { name: "Ondo", logo: "/logos/ondo.svg", width: 80 },
+  { name: "Balancer", logo: "/logos/balancer.svg", width: 100 },
+  { name: "Orca", logo: "/logos/orca.svg", width: 80 },
 ];
 
 const focusAreas = [
@@ -153,24 +154,30 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="py-20 px-6 border-t border-[#262626]"
+        className="py-16 px-6 border-t border-[#262626]"
       >
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-10 text-center">
             Trusted By
           </p>
-          <div className="flex flex-wrap gap-x-8 gap-y-4">
-            {credentials.map((name, index) => (
-              <motion.span
-                key={name}
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-12 lg:gap-x-16">
+            {credentials.map((cred, index) => (
+              <motion.div
+                key={cred.name}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="text-[#A1A1AA] text-lg"
+                className="flex-shrink-0"
               >
-                {name}
-              </motion.span>
+                <Image
+                  src={cred.logo}
+                  alt={cred.name}
+                  width={cred.width}
+                  height={40}
+                  className="h-8 md:h-10 w-auto"
+                />
+              </motion.div>
             ))}
           </div>
         </div>
@@ -198,16 +205,17 @@ export default function Home() {
               Templeton company. Board Director at{" "}
               <span className="text-[#FAFAFA]">GMO-Z Trust</span>, a
               NYDFS-regulated stablecoin issuer. Advisor to{" "}
-              <span className="text-[#FAFAFA]">Grayscale</span>,{" "}
-              <span className="text-[#FAFAFA]">Balancer</span>,{" "}
-              <span className="text-[#FAFAFA]">Orca</span>, and emerging
+              <span className="text-[#FAFAFA]">Balancer</span> and emerging
               protocols building the next generation of financial
               infrastructure.
             </p>
             <p className="text-[#A1A1AA] text-xl leading-relaxed">
               Twenty-five years navigating the space between what regulators
               require and what innovation demands. Former counsel at Guggenheim
-              Partners, T. Rowe Price, and Brown Brothers Harriman.
+              Partners, T. Rowe Price, and Brown Brothers Harriman. Former advisor to{" "}
+              <span className="text-[#FAFAFA]">Grayscale</span>,{" "}
+              <span className="text-[#FAFAFA]">Ondo</span>, and{" "}
+              <span className="text-[#FAFAFA]">Orca</span>.
             </p>
           </div>
         </div>

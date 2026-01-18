@@ -204,7 +204,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "orca",
     company: "Orca",
     role: "Strategic Advisor",
-    period: "2022–Present",
+    period: "2022–2024",
     category: "Advisory",
     headline: "Strategic advisory for Solana's leading DEX through ecosystem turbulence and recovery",
     summary:
