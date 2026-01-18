@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
-import { getCaseStudyBySlug } from "@/data/caseStudies";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -42,10 +41,6 @@ export default async function GuidePage({
   }
 
   const relatedGuides = guides.filter((g) => g.slug !== slug).slice(0, 2);
-
-  const relatedCaseStudies = guide.relatedCaseStudies
-    .map((related) => getCaseStudyBySlug(related.slug))
-    .filter(Boolean);
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
@@ -108,35 +103,6 @@ export default async function GuidePage({
               </section>
             ))}
           </div>
-
-          {/* Related Work */}
-          {guide.relatedCaseStudies.length > 0 && (
-            <section className="mt-24 pt-12 border-t border-[#262626]">
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8">
-                Related Work
-              </h2>
-              <div className="space-y-6">
-                {guide.relatedCaseStudies.map((related) => {
-                  const study = relatedCaseStudies.find(s => s?.slug === related.slug);
-                  if (!study) return null;
-                  return (
-                    <Link
-                      key={related.slug}
-                      href={`/work/${study.slug}`}
-                      className="block group"
-                    >
-                      <p className="text-[#FAFAFA] group-hover:text-[#D4AF37] transition">
-                        {study.company}
-                      </p>
-                      <p className="text-sm text-[#A1A1AA]">
-                        {related.linkText}
-                      </p>
-                    </Link>
-                  );
-                })}
-              </div>
-            </section>
-          )}
 
           {/* Contact */}
           <section className="mt-24 pt-12 border-t border-[#262626]">

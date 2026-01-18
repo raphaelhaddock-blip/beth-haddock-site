@@ -1,69 +1,103 @@
 # Beth Haddock Website - Content Standards
 
-## Voice: Insider, Not Educator
+## CRITICAL: Client Confidentiality
 
-Beth is not explaining crypto to beginners. She's sharing what she learned INSIDE the companies.
+**Beth CANNOT reference specific client work in any content.**
 
-**Wrong:** "Stablecoins are cryptocurrencies designed to maintain stable value..."
-**Right:** "When I joined the GMO-Z Trust board, the first question I asked was about reserve audit cadence..."
+This is absolute. The site exists to position Beth as an industry expert, NOT to reveal what she did for specific clients. Clients would rightfully be upset if details of their work appeared in public content.
 
-**Wrong:** "DeFi, or decentralized finance, refers to..."
-**Right:** "I've sat in rooms where DeFi founders debated whether to add KYC. Here's what I learned about that tension..."
+## What Beth CAN Reference
 
-## Required Elements for Any Guide/Case Study
+- Her general expertise areas (25+ years in financial services compliance)
+- Her roles (board member, GC, advisor) without specifics
+- Industry-wide regulatory developments
+- Public information (press releases, SEC filings, legislation text)
+- Patterns observed across the industry
+- Her analysis and perspective on where things are heading
+
+## What Beth CANNOT Reference
+
+- Specific work done for any client
+- Client strategies, decisions, or outcomes
+- Internal processes observed at any company
+- Metrics not publicly disclosed
+- Board discussions or advisory conversations
+- "When I was at X..." or "At Company Y, we..." narratives
+
+## Voice: Expert, Not Insider
+
+Beth writes as an industry expert with 25+ years of experience, NOT as someone revealing insider information from specific companies.
+
+**Wrong:** "When I joined the GMO-Z Trust board, the first question I asked..."
+**Right:** "The first question any board member should ask a stablecoin issuer..."
+
+**Wrong:** "At Grayscale, I helped build the documentation that..."
+**Right:** "Institutional crypto products require documentation that..."
+
+**Wrong:** "I've sat in rooms where DeFi founders debated..."
+**Right:** "The DeFi industry faces a fundamental tension between..."
+
+## Content Types
+
+### 1. News Analysis
+- What just happened (regulatory announcement, legislation, enforcement)
+- What it means (implications for the industry)
+- What operators should do next
+
+### 2. Road Ahead
+- Where regulation is heading
+- What patterns suggest about future requirements
+- How to prepare
+
+### 3. Operator Guidance
+- Practical frameworks for compliance
+- Questions to ask vendors/partners
+- Red flags to avoid
+
+### 4. Pattern Recognition
+- What history tells us about crypto regulation
+- Parallels to previous financial technology adoption
+- Cycles and precedents
+
+## Required Elements for Any Content
 
 Before publishing, verify:
-1. [ ] Opens with war story or specific experience (not definition)
-2. [ ] Uses "I" at least 5 times with specific experience
-3. [ ] Names at least one company Beth has worked with
-4. [ ] Includes at least one mistake/failure pattern she witnessed
-5. [ ] Actionable: reader knows what to DO
-6. [ ] No section that could appear on CoinDesk verbatim
+1. [ ] Zero references to specific client work
+2. [ ] Passes "Could any client be upset?" test
+3. [ ] Authority comes from expertise, not insider access
+4. [ ] Actionable for readers
+5. [ ] Grounded in verifiable facts or public information
+6. [ ] Has a clear "so what" - why this matters NOW
 
-## Expertise Boundaries
+## Expertise Framework
 
-### CAN Make Bold Claims About (Direct Case Study Evidence):
-- **NYDFS/stablecoin regulation** - GMO-Z Trust board seat
-- **SEC compliance for crypto** - Grayscale advisory, AdvisorEngine GC role
-- **FINRA examinations** - AdvisorEngine "navigated multiple examinations successfully"
-- **DeFi + institutional adoption** - Balancer, Orca ongoing advisory
-- **Tokenized securities** - Ondo advisory on securities law implications
-- **Wealth management tech** - AdvisorEngine GC & Head of Compliance since 2021
+Beth has expertise in these areas through 25+ years in financial services:
 
-### CANNOT Claim Expertise In (Be Transparent):
-- **AI regulation** - No case study evidence, position as "watching this frontier"
-- **CFTC/commodities** - Knowledge only, no hands-on implementation
-- **International frameworks (MiCA, GDPR)** - Mentioned, no implementation claimed
-- **State MSB licensing** - Discussed conceptually, not walked through
-- **FinCEN/AML** - Discussed conceptually, no hands-on claim
+**Deep Expertise (Can Make Bold Claims):**
+- Financial services compliance architecture
+- Regulatory strategy for emerging technology
+- SEC, FINRA, NYDFS frameworks
+- Institutional adoption of new asset classes
+- Stablecoin regulation
+- DeFi compliance tension
 
-### The Three-Tier Framework:
-
-**Tier 1 - Deep Expertise (Can Make Bold Claims):**
-- NYDFS and stablecoin regulation
-- SEC compliance architecture for crypto
-- Institutional adoption frameworks
-- DeFi + compliance tension
-
-**Tier 2 - Informed Perspective (Can Analyze, Can't Claim Expertise):**
-- CFTC and commodities classification
+**Informed Perspective (Can Analyze):**
+- CFTC jurisdiction questions
 - State money transmission
 - International frameworks (MiCA)
-- The political landscape (Operation Chokepoint 2.0, regulatory shifts)
+- Crypto political landscape
+- Tokenization regulatory paths
 
-**Tier 3 - Watching & Learning (Should Be Transparent):**
+**Watching & Analyzing (Should Note Uncertainty):**
 - AI regulation in financial services
-- Voice AI fraud and authentication
-- AI agents + crypto wallets
 - EU AI Act implications
+- Voice AI and authentication
 
 ## Audience
 
-Institutional operators, not crypto beginners.
+Institutional operators, GCs, compliance officers, board members.
 
-If a section explains "what is X" for more than one paragraph, it's wrong.
-
-The reader already knows what Bitcoin is. They want to know what Beth learned inside the companies that dealt with regulators.
+They already know what Bitcoin is. They want expert analysis of regulatory developments and practical guidance.
 
 ## Fact-Checking Requirements
 
@@ -74,46 +108,59 @@ Any regulatory claims must be verifiable. No speculation about legislation timin
 Crypto Politics:
 - SEC enforcement under Gensler: $6.05B penalties, 125 cases (Georgetown Law)
 - SEC enforcement under Clayton: $1.52B penalties, 70 cases
-- SBF donated $39.7 million to Democrats in 2022 (CBS News)
-- 310 politicians strongly pro-crypto (238 R, 68 D) (CryptoSlate)
-- Crypto industry spent $238 million in 2024 elections
+- GENIUS Act signed July 2025 (68-30 Senate, 308-122 House)
+- CLARITY Act passed House July 2025, pending Senate
 
 Operation Chokepoint 2.0:
 - January 2023: Joint regulatory statement warning banks
 - March 2023: Silvergate, SVB, Signature collapsed/closed
-- 30+ crypto companies documented losing banking access
+- November 2025: House Financial Services Committee documented pattern
+
+Stablecoins:
+- Market exceeds $170B (Tether $115B+, USDC $35B+)
+- GENIUS Act requirements: 100% reserves, monthly attestations, federal supervision for $10B+ issuers
+- Terra collapse: $40B lost, Do Kwon sentenced 15 years
+
+Institutional Crypto:
+- Bitcoin ETF AUM: $115B+
+- BlackRock IBIT: $75B
+- December 2025: OCC trust bank charters to BitGo, Circle, Fidelity, Paxos, Ripple
 
 AI/Fintech:
 - EU AI Act high-risk requirements hit financial services August 2026
 - Deepfake fraud attempts up 1,300% in 2024 (Pindrop)
 - 91% of US banks reconsidering voice verification
-- Synapse: $85M customer fund shortfall, no regulatory authority
-
-## Linking Philosophy
-
-Links between guides and case studies must feel narrative, not arbitrary.
-
-**Bad:**
-> Related Work
-> - GMO-Z Trust
-
-**Good:**
-> "In the stablecoins section above, I mentioned NYDFS reserve requirements. I know these requirements intimately because I sit on the board of a company that lives them every day."
->
-> **→ See how this actually works at GMO-Z Trust**
+- Synapse: $85M customer fund shortfall
 
 ## Quality Tests
 
-Before publishing any content, apply these tests:
+Before publishing any content:
 
-1. **Voice Test:** Read out loud - does it sound like Beth or Wikipedia?
-2. **Name Test:** Remove Beth's name - would you know it was written by an insider?
-3. **CoinDesk Test:** Could this paragraph appear on a news site? If yes, rewrite.
-4. **Link Test:** Does the connection feel narrative or arbitrary?
-5. **Claim Test:** Is every regulatory claim backed by her case study experience?
+1. **Client Test:** Could ANY of Beth's clients be upset by this content? If yes, rewrite.
+2. **Source Test:** Is every claim based on public information or general expertise?
+3. **Expert Test:** Would this content work if written by any expert, not just Beth?
+4. **Actionable Test:** Does the reader know what to DO after reading?
+5. **Timing Test:** Why does this matter NOW?
 
-## The Core Insight
+## LinkedIn Post Format
 
-Beth's content should answer: **"What did you learn inside that I can't learn from the news?"**
+For LinkedIn thought leadership:
 
-If a piece of content can't answer that question, it shouldn't exist on this site.
+**Structure:**
+1. Hook (arresting first line about news or regulatory development)
+2. Context (why this matters)
+3. Analysis (Beth's expert perspective)
+4. Action (what readers should do)
+5. Engagement question (optional)
+
+**Length:** 1,200-1,300 characters optimal for LinkedIn
+
+**Tone:** Authoritative but accessible. No jargon without context. No hedging.
+
+## The Core Principle
+
+Beth's content demonstrates expertise through analysis, not through revealing client work.
+
+Her credibility = her roles + her track record + the quality of her analysis
+
+NOT = what she did inside specific companies

@@ -6,7 +6,6 @@ import {
   getCaseStudyBySlug,
   getAllCaseStudySlugs,
 } from "@/data/caseStudies";
-import { getGuideBySlug } from "@/data/guides";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -23,7 +22,7 @@ export async function generateMetadata({
   const study = getCaseStudyBySlug(slug);
 
   if (!study) {
-    return { title: "Case Study Not Found | Beth Haddock" };
+    return { title: "Work | Beth Haddock" };
   }
 
   return {
@@ -46,11 +45,7 @@ export default async function CaseStudyPage({
 
   const relatedStudies = caseStudies
     .filter((s) => s.slug !== slug)
-    .slice(0, 2);
-
-  const relatedGuides = study.relatedGuides
-    .map((related) => getGuideBySlug(related.slug))
-    .filter(Boolean);
+    .slice(0, 3);
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
@@ -78,104 +73,29 @@ export default async function CaseStudyPage({
             <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
               {study.company}
             </h1>
-            <p className="text-[#A1A1AA] mb-4">{study.role}</p>
+            <p className="text-[#A1A1AA] mb-8">{study.role}</p>
             <p className="text-xl text-[#A1A1AA] leading-relaxed">
               {study.headline}
             </p>
           </header>
 
-          {/* Summary */}
-          <section className="mb-16">
-            <p className="text-[#A1A1AA] text-lg leading-relaxed">
-              {study.summary}
-            </p>
-          </section>
-
-          {/* Challenge */}
-          <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-              The Challenge
-            </h2>
-            <p className="text-[#A1A1AA] leading-relaxed">{study.challenge}</p>
-          </section>
-
-          {/* Approach */}
-          <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-              Approach
-            </h2>
-            <p className="text-[#A1A1AA] leading-relaxed">{study.approach}</p>
-          </section>
-
-          {/* Outcome */}
-          <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-              Outcome
-            </h2>
-            <p className="text-[#A1A1AA] leading-relaxed">{study.outcome}</p>
-          </section>
-
-          {/* Key Contributions */}
-          <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6">
-              Key Contributions
-            </h2>
-            <ul className="space-y-3">
-              {study.keyContributions.map((contribution, index) => (
-                <li key={index} className="text-[#A1A1AA] leading-relaxed flex gap-3">
-                  <span className="text-[#D4AF37]">—</span>
-                  {contribution}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Related Guides */}
-          {study.relatedGuides.length > 0 && (
-            <section className="mt-24 pt-12 border-t border-[#262626]">
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8">
-                Related Guides
-              </h2>
-              <div className="space-y-6">
-                {study.relatedGuides.map((related) => {
-                  const guide = relatedGuides.find(g => g?.slug === related.slug);
-                  if (!guide) return null;
-                  return (
-                    <Link
-                      key={related.slug}
-                      href={`/guides/${guide.slug}`}
-                      className="block group"
-                    >
-                      <p className="text-[#FAFAFA] group-hover:text-[#D4AF37] transition">
-                        {guide.title}
-                      </p>
-                      <p className="text-sm text-[#A1A1AA]">
-                        {related.linkText}
-                      </p>
-                    </Link>
-                  );
-                })}
-              </div>
-            </section>
-          )}
-
           {/* Contact CTA */}
-          <section className="mt-24 pt-12 border-t border-[#262626]">
+          <section className="mt-16 pt-12 border-t border-[#262626]">
             <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
               {study.roleType === "fractional-gc" && "Need institutional-grade legal leadership?"}
-              {study.roleType === "board" && "Building a board for the crypto x TradFi edge?"}
-              {study.roleType === "advisor" && "Facing similar challenges?"}
+              {study.roleType === "board" && "Looking for board expertise?"}
+              {study.roleType === "advisor" && "Need strategic advisory?"}
             </h2>
             <p className="text-[#A1A1AA] leading-relaxed mb-6">
               {study.roleType === "fractional-gc" &&
-                "I embed with teams to build compliance infrastructure that satisfies institutional scrutiny—without the overhead of a full-time hire."}
+                "I work with teams to build compliance infrastructure that satisfies institutional scrutiny."}
               {study.roleType === "board" &&
-                "I bring regulatory foresight, institutional credibility, and a network that opens doors for companies seeking NYDFS licensing, institutional partnerships, or IPO readiness."}
+                "I bring regulatory foresight and institutional credibility to board governance."}
               {study.roleType === "advisor" &&
-                "Whether you're navigating regulatory complexity, preparing for institutional growth, or building at the intersection of traditional finance and crypto."}
+                "Whether you're navigating regulatory complexity or preparing for institutional growth."}
             </p>
             <a
-              href={`https://calendly.com/beth-haddock${study.roleType === "fractional-gc" ? "?type=fractional-gc" : study.roleType === "board" ? "?type=board" : "?type=advisory"}`}
+              href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold inline-flex items-center gap-2"
