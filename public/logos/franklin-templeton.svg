@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
-  <text x="0" y="28" font-family="Georgia, serif" font-size="18" font-weight="400" letter-spacing="0.5" fill="#00539B">Franklin Templeton</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <!-- Franklin Templeton - Navy blue wordmark with Ben Franklin silhouette icon -->
+  <g fill="#001E62">
+    <!-- Simplified medallion/coin icon -->
+    <circle cx="20" cy="25" r="18" fill="none" stroke="#001E62" stroke-width="2"/>
+    <circle cx="20" cy="25" r="14" fill="none" stroke="#001E62" stroke-width="1"/>
+    <!-- Simplified Franklin profile -->
+    <path d="M15 32 C15 28, 17 24, 20 22 C18 22, 16 20, 16 18 C16 15, 18 13, 21 13 C24 13, 26 15, 26 18 C26 20, 25 21, 24 22 C27 24, 28 28, 27 32 Z" fill="#001E62"/>
+    <!-- Wordmark -->
+    <text x="45" y="22" font-family="Georgia, serif" font-size="12" font-weight="400" letter-spacing="0.5">FRANKLIN</text>
+    <text x="45" y="38" font-family="Georgia, serif" font-size="12" font-weight="400" letter-spacing="0.5">TEMPLETON</text>
+  </g>
 </svg>

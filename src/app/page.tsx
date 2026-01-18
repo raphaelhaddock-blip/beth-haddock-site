@@ -7,14 +7,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const credentials = [
-  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 180 },
-  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 150 },
-  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 130 },
-  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 200 },
-  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130 },
-  { name: "Ondo", logo: "/logos/ondo.svg", width: 80 },
-  { name: "Balancer", logo: "/logos/balancer.svg", width: 100 },
-  { name: "Orca", logo: "/logos/orca.svg", width: 80 },
+  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160, height: 40 },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140, height: 32 },
+  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 150, height: 42 },
+  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 80, height: 40 },
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130, height: 32 },
+  { name: "Ondo", logo: "/logos/ondo.svg", width: 100, height: 32 },
+  { name: "Balancer", logo: "/logos/balancer.svg", width: 120, height: 32 },
+  { name: "Orca", logo: "/logos/orca.svg", width: 110, height: 38 },
 ];
 
 const focusAreas = [
@@ -174,8 +174,8 @@ export default function Home() {
                   src={cred.logo}
                   alt={cred.name}
                   width={cred.width}
-                  height={40}
-                  className="h-8 md:h-10 w-auto"
+                  height={cred.height}
+                  className="h-7 md:h-9 w-auto"
                 />
               </motion.div>
             ))}

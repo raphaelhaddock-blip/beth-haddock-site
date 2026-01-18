@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40">
-  <text x="0" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.5" fill="#003087">T. Rowe Price</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50">
+  <!-- T. Rowe Price - Bighorn sheep icon + wordmark -->
+  <g fill="#004668">
+    <!-- Simplified bighorn sheep head -->
+    <path d="M8 35 C5 30, 4 25, 6 20 C8 15, 12 12, 18 12 C22 12, 26 14, 28 18 C32 14, 36 12, 40 14 C44 16, 45 22, 42 28 C40 32, 36 35, 32 35 L8 35 Z" fill="#004668"/>
+    <!-- Curved horn left -->
+    <path d="M6 20 C2 18, 0 14, 2 10 C4 6, 8 5, 12 8" fill="none" stroke="#004668" stroke-width="3" stroke-linecap="round"/>
+    <!-- Curved horn right -->
+    <path d="M42 18 C46 16, 50 14, 52 10 C54 6, 52 4, 48 6" fill="none" stroke="#004668" stroke-width="3" stroke-linecap="round"/>
+    <!-- Wordmark -->
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#004668">T. ROWE PRICE</text>
+  </g>
 </svg>

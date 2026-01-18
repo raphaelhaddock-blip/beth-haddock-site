@@ -1,3 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40">
-  <text x="0" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#4A4A4A">GRAYSCALE</text>
+  <!-- Grayscale - Modern wordmark with triangular cuts -->
+  <defs>
+    <clipPath id="triangleCut">
+      <rect x="0" y="0" width="160" height="40"/>
+    </clipPath>
+  </defs>
+  <g fill="#2E234B">
+    <!-- G with triangle cut -->
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3" fill="#2E234B">GRAYSCALE</text>
+    <!-- Triangle accent marks -->
+    <polygon points="45,8 50,8 47.5,14" fill="#FFB198"/>
+  </g>
 </svg>

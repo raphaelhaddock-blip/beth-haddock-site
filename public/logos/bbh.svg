@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40">
-  <text x="0" y="28" font-family="Georgia, serif" font-size="15" font-weight="400" letter-spacing="0.5" fill="#1C3144">Brown Brothers Harriman</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+  <!-- Brown Brothers Harriman - BBH monogram -->
+  <g fill="#366A91">
+    <!-- Stylized BBH letters -->
+    <text x="0" y="38" font-family="Georgia, serif" font-size="32" font-weight="700" letter-spacing="2" fill="#366A91">BBH</text>
+  </g>
 </svg>
