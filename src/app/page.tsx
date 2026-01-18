@@ -78,7 +78,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1]"
+              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1]"
             >
               Bridging
             </motion.h1>
@@ -86,7 +86,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1] text-[#A1A1AA]"
+              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1] text-[#A1A1AA]"
             >
               Institutional Finance
             </motion.h1>
@@ -94,7 +94,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1]"
+              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1]"
             >
               and the
             </motion.h1>
@@ -102,7 +102,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1] italic text-[#D4AF37]"
+              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1] italic text-[#D4AF37]"
             >
               Digital Frontier.
             </motion.h1>
