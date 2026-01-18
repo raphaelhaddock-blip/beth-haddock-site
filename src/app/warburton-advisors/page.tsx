@@ -150,20 +150,20 @@ export default function WarburtonAdvisorsPage() {
             Services
           </motion.p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-8 bg-[#141414] border border-[#262626]"
+              className="p-6 bg-[#141414] border border-[#262626]"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-                Build & Audit Programs
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3">
+                Fractional GC
               </h3>
-              <p className="text-[#A1A1AA] leading-relaxed">
-                Design and implement compliance programs from the ground up,
-                or audit existing frameworks for gaps and improvements.
+              <p className="text-[#A1A1AA] text-sm leading-relaxed">
+                Institutional-grade legal leadership without full-time overhead.
+                Embedded partnership for compliance infrastructure.
               </p>
             </motion.div>
 
@@ -172,14 +172,14 @@ export default function WarburtonAdvisorsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="p-8 bg-[#141414] border border-[#262626]"
+              className="p-6 bg-[#141414] border border-[#262626]"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-                Compliance Outsourcing
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3">
+                Board & Governance
               </h3>
-              <p className="text-[#A1A1AA] leading-relaxed">
-                Fractional compliance leadership for companies that need
-                institutional-grade oversight without full-time overhead.
+              <p className="text-[#A1A1AA] text-sm leading-relaxed">
+                Strategic guidance on regulatory matters, board composition,
+                and organizational design for growth.
               </p>
             </motion.div>
 
@@ -188,14 +188,30 @@ export default function WarburtonAdvisorsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="p-8 bg-[#141414] border border-[#262626]"
+              className="p-6 bg-[#141414] border border-[#262626]"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-                Advisory & Governance
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3">
+                Program Builds
               </h3>
-              <p className="text-[#A1A1AA] leading-relaxed">
-                Strategic guidance on regulatory matters, board governance,
-                and organizational design for growth.
+              <p className="text-[#A1A1AA] text-sm leading-relaxed">
+                Design and implement compliance programs from the ground up,
+                or audit existing frameworks for gaps.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="p-6 bg-[#141414] border border-[#262626]"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3">
+                Special Projects
+              </h3>
+              <p className="text-[#A1A1AA] text-sm leading-relaxed">
+                Cybersecurity incident response, cross-border M&A integration,
+                RegTech development, and crisis navigation.
               </p>
             </motion.div>
           </div>

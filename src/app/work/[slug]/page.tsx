@@ -162,12 +162,12 @@ export default async function CaseStudyPage({
           {/* Contact CTA */}
           <section className="mt-24 pt-12 border-t border-[#262626]">
             <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-              {study.roleType === "fractional-clo" && "Need institutional-grade legal leadership?"}
+              {study.roleType === "fractional-gc" && "Need institutional-grade legal leadership?"}
               {study.roleType === "board" && "Building a board for the crypto x TradFi edge?"}
               {study.roleType === "advisor" && "Facing similar challenges?"}
             </h2>
             <p className="text-[#A1A1AA] leading-relaxed mb-6">
-              {study.roleType === "fractional-clo" &&
+              {study.roleType === "fractional-gc" &&
                 "I embed with teams to build compliance infrastructure that satisfies institutional scrutiny—without the overhead of a full-time hire."}
               {study.roleType === "board" &&
                 "I bring regulatory foresight, institutional credibility, and a network that opens doors for companies seeking NYDFS licensing, institutional partnerships, or IPO readiness."}
@@ -175,7 +175,7 @@ export default async function CaseStudyPage({
                 "Whether you're navigating regulatory complexity, preparing for institutional growth, or building at the intersection of traditional finance and crypto."}
             </p>
             <a
-              href={`https://calendly.com/beth-haddock${study.roleType === "fractional-clo" ? "?type=fractional-clo" : study.roleType === "board" ? "?type=board" : "?type=advisory"}`}
+              href={`https://calendly.com/beth-haddock${study.roleType === "fractional-gc" ? "?type=fractional-gc" : study.roleType === "board" ? "?type=board" : "?type=advisory"}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold inline-flex items-center gap-2"

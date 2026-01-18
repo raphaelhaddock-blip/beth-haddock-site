@@ -10,7 +10,7 @@ export type CaseStudy = {
   role: string;
   period: string;
   category: "Primary" | "Board" | "Advisory" | "Project";
-  roleType: "fractional-clo" | "board" | "advisor";
+  roleType: "fractional-gc" | "board" | "advisor";
   isCurrent: boolean;
   headline: string;
   summary: string;
@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Chief Legal Officer",
     period: "2021–Present",
     category: "Primary",
-    roleType: "fractional-clo",
+    roleType: "fractional-gc",
     isCurrent: true,
     headline: "Leading legal strategy for Franklin Templeton's bet on advisor technology",
     summary:
