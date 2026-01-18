@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50">
-  <!-- T. Rowe Price - Bighorn sheep icon + wordmark -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 55">
+  <!-- T. Rowe Price - Bighorn sheep icon + bold wordmark -->
   <g fill="#004668">
-    <!-- Simplified bighorn sheep head -->
-    <path d="M8 35 C5 30, 4 25, 6 20 C8 15, 12 12, 18 12 C22 12, 26 14, 28 18 C32 14, 36 12, 40 14 C44 16, 45 22, 42 28 C40 32, 36 35, 32 35 L8 35 Z" fill="#004668"/>
-    <!-- Curved horn left -->
-    <path d="M6 20 C2 18, 0 14, 2 10 C4 6, 8 5, 12 8" fill="none" stroke="#004668" stroke-width="3" stroke-linecap="round"/>
-    <!-- Curved horn right -->
-    <path d="M42 18 C46 16, 50 14, 52 10 C54 6, 52 4, 48 6" fill="none" stroke="#004668" stroke-width="3" stroke-linecap="round"/>
-    <!-- Wordmark -->
-    <text x="60" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#004668">T. ROWE PRICE</text>
+    <!-- Simplified bighorn sheep head - larger -->
+    <path d="M10 40 C6 34, 5 28, 7 22 C10 16, 15 12, 22 12 C27 12, 32 15, 35 20 C40 15, 45 13, 50 16 C55 19, 56 26, 52 34 C49 38, 44 42, 38 42 L10 42 Z" fill="#004668"/>
+    <!-- Curved horn left - thicker -->
+    <path d="M7 22 C2 19, -1 14, 2 8 C5 3, 11 2, 16 6" fill="none" stroke="#004668" stroke-width="4" stroke-linecap="round"/>
+    <!-- Curved horn right - thicker -->
+    <path d="M52 20 C58 17, 63 14, 66 8 C68 3, 65 1, 60 4" fill="none" stroke="#004668" stroke-width="4" stroke-linecap="round"/>
+    <!-- Bold Wordmark -->
+    <text x="75" y="36" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#004668">T. ROWE PRICE</text>
   </g>
 </svg>

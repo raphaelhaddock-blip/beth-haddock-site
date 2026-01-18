@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 45">
-  <!-- Orca - Whale icon + wordmark -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 50">
+  <!-- Orca - Bold whale icon + wordmark -->
   <g>
-    <!-- Simplified orca whale -->
-    <ellipse cx="20" cy="22" rx="16" ry="12" fill="#1C1C24"/>
+    <!-- Simplified orca whale - larger -->
+    <ellipse cx="24" cy="25" rx="20" ry="15" fill="#1C1C24"/>
     <!-- White belly patch -->
-    <ellipse cx="22" cy="26" rx="8" ry="5" fill="#FFFFFF"/>
-    <!-- Dorsal fin -->
-    <path d="M20 10 L22 22 L18 22 Z" fill="#1C1C24"/>
+    <ellipse cx="27" cy="30" rx="10" ry="6" fill="#FFFFFF"/>
+    <!-- Dorsal fin - taller -->
+    <path d="M24 8 L27 25 L21 25 Z" fill="#1C1C24"/>
     <!-- Tail -->
-    <path d="M4 18 L8 22 L4 26 L10 22 Z" fill="#1C1C24"/>
-    <!-- Eye -->
-    <circle cx="28" cy="18" r="2" fill="#FFD15C"/>
-    <!-- Wordmark -->
-    <text x="42" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1" fill="#1C1C24">ORCA</text>
+    <path d="M4 20 L10 25 L4 30 L12 25 Z" fill="#1C1C24"/>
+    <!-- Eye - bigger -->
+    <circle cx="34" cy="20" r="3" fill="#FFD15C"/>
+    <!-- Bold Wordmark -->
+    <text x="52" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="2" fill="#1C1C24">ORCA</text>
   </g>
 </svg>

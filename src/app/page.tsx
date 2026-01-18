@@ -175,7 +175,7 @@ export default function Home() {
                   alt={cred.name}
                   width={cred.width}
                   height={cred.height}
-                  className="h-7 md:h-9 w-auto"
+                  className="h-10 md:h-14 w-auto"
                 />
               </motion.div>
             ))}
