@@ -62,62 +62,114 @@ export default function Home() {
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
       <Nav />
 
-      {/* Hero - Full Height */}
-      <section className="min-h-screen flex flex-col justify-center px-6 relative">
-        <div className="max-w-5xl mx-auto w-full">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
-          >
-            Strategic Advisor
-          </motion.p>
+      {/* Hero - Split Screen with Large Portrait */}
+      <section className="min-h-screen relative">
+        <div className="grid lg:grid-cols-2 min-h-screen">
+          {/* Left: Text Content */}
+          <div className="flex flex-col justify-center px-6 lg:px-12 xl:px-20 py-24 lg:py-12">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
+            >
+              Strategic Advisor
+            </motion.p>
 
-          <div className="space-y-2">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+            <div className="space-y-1 md:space-y-2">
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
+              >
+                Bridging
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] text-[#A1A1AA]"
+              >
+                Institutional Finance
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
+              >
+                and the
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] italic text-[#D4AF37]"
+              >
+                Digital Frontier.
+              </motion.h1>
+            </div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1]"
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-[#A1A1AA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed"
             >
-              Bridging
-            </motion.h1>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              I&apos;ve built the compliance infrastructure that passes regulatory scrutiny.
+              Now I build it for others.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1] text-[#A1A1AA]"
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-10"
             >
-              Institutional Finance
-            </motion.h1>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1]"
-            >
-              and the
-            </motion.h1>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.1] italic text-[#D4AF37]"
-            >
-              Digital Frontier.
-            </motion.h1>
+              <a
+                href="https://calendly.com/beth-haddock"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-[#D4AF37] hover:text-[#F5D77A] transition-colors group"
+              >
+                <span className="text-sm tracking-wide">Start a conversation</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </motion.div>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-[#A1A1AA] text-xl md:text-2xl mt-12 max-w-2xl leading-relaxed"
+          {/* Right: Large Portrait */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative hidden lg:block"
           >
-            I&apos;ve built the compliance infrastructure that passes regulatory scrutiny.
-            Now I build it for others.
-          </motion.p>
+            <div className="absolute inset-0">
+              <Image
+                src="/images/beth/hero-bw.jpeg"
+                alt="Beth Haddock"
+                fill
+                className="object-cover object-[25%_top]"
+                priority
+              />
+              {/* Subtle gradient overlay on left edge for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-transparent to-transparent w-1/4" />
+            </div>
+          </motion.div>
         </div>
 
         {/* Scroll Indicator */}
@@ -125,7 +177,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-6 lg:left-12 xl:left-20"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -312,6 +364,58 @@ export default function Home() {
               </Link>
             </motion.div>
           )}
+        </div>
+      </section>
+
+      {/* Speaking - One Powerful Image */}
+      <section className="py-32 px-6 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            On the Stage
+          </motion.p>
+
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* The photo - she's commanding the room */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative aspect-[3/4] overflow-hidden rounded-lg"
+            >
+              <Image
+                src="/images/beth/speaking-dc-summit-1.png"
+                alt="Beth Haddock speaking at DC Blockchain Summit"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/40 via-transparent to-transparent" />
+            </motion.div>
+
+            {/* The message */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight">
+                Building infrastructure isn&apos;t just boardroom work.
+                <span className="text-[#D4AF37] italic"> It&apos;s sharing what I&apos;ve learned.</span>
+              </h2>
+              <p className="text-[#A1A1AA] text-lg leading-relaxed mb-6">
+                Regular speaker at DC Blockchain Summit, Stablecon, and industry conferences on compliance, governance, and regulatory strategy.
+              </p>
+              <p className="text-[#71717A] text-sm">
+                DC Blockchain Summit 2025
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
