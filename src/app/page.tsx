@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const credentials = [
   "Franklin Templeton",
@@ -16,48 +18,10 @@ const credentials = [
 export default function Home() {
   return (
     <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
-      {/* Nav */}
-      <nav className="fixed w-full z-50 bg-[#FAFAF9]/95 backdrop-blur border-b border-[#E7E5E4] px-6 py-4">
-        <div className="max-w-3xl mx-auto flex justify-between items-center">
-          <Link
-            href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#1C1917]"
-          >
-            Beth Haddock
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link
-              href="/work"
-              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
-            >
-              Work
-            </Link>
-            <Link
-              href="/guides"
-              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
-            >
-              Guides
-            </Link>
-            <Link
-              href="/insights"
-              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
-            >
-              Insights
-            </Link>
-            <a
-              href="https://calendly.com/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Hero - Left Aligned, Serif H1 */}
-      <section className="pt-48 pb-32 px-6">
+      <section className="pt-32 md:pt-48 pb-20 md:pb-32 px-6">
         <div className="max-w-3xl mx-auto">
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-[3.25rem] mb-8 leading-[1.2] text-[#1C1917]">
             Bridging the divide between Institutional Finance and the Digital Frontier.
@@ -138,8 +102,8 @@ export default function Home() {
           <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-12 text-[#1C1917]">
             Selected Work
           </h2>
-          <div className="space-y-6">
-            <Link href="/work/advisorengine" className="block group">
+          <div className="space-y-2">
+            <Link href="/work/advisorengine" className="block group py-3">
               <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                 AdvisorEngine
               </p>
@@ -147,7 +111,7 @@ export default function Home() {
                 General Counsel & Head of Compliance
               </p>
             </Link>
-            <Link href="/work/gmo-z-trust" className="block group">
+            <Link href="/work/gmo-z-trust" className="block group py-3">
               <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                 GMO-Z Trust Company
               </p>
@@ -155,7 +119,7 @@ export default function Home() {
                 Board of Directors
               </p>
             </Link>
-            <Link href="/work/grayscale" className="block group">
+            <Link href="/work/grayscale" className="block group py-3">
               <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                 Grayscale Investments
               </p>
@@ -164,10 +128,10 @@ export default function Home() {
               </p>
             </Link>
           </div>
-          <div className="mt-12">
+          <div className="mt-8">
             <Link
               href="/work"
-              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
+              className="inline-block py-3 text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               View all work →
             </Link>
@@ -195,30 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-[#E7E5E4]">
-        <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-sm text-[#57534E]">
-            © 2026 Beth Haddock
-          </p>
-          <div className="flex gap-8 text-sm">
-            <a
-              href="https://linkedin.com/in/bethhaddock"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#57534E] hover:text-[#1C1917] transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:beth@warburtonadvisers.com"
-              className="text-[#57534E] hover:text-[#1C1917] transition"
-            >
-              Email
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
