@@ -46,32 +46,32 @@ export default async function GuidePage({
     .filter(Boolean);
 
   return (
-    <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
+    <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
       {/* Nav */}
-      <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
+      <nav className="fixed w-full z-50 bg-[#FAFAF9]/95 backdrop-blur border-b border-[#E7E5E4] px-6 py-4">
         <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#1C1917]"
           >
             Beth Haddock
           </Link>
           <div className="flex items-center gap-8">
             <Link
               href="/work"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Work
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-stone-900"
+              className="text-sm text-[#1C1917]"
             >
               Guides
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Insights
             </Link>
@@ -79,7 +79,7 @@ export default async function GuidePage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Contact
             </a>
@@ -93,33 +93,33 @@ export default async function GuidePage({
           {/* Back link */}
           <Link
             href="/guides"
-            className="text-sm text-stone-400 hover:text-stone-900 transition mb-12 inline-block"
+            className="text-sm text-[#57534E] hover:text-[#1C1917] transition mb-12 inline-block"
           >
             ← Guides
           </Link>
 
           {/* Header */}
           <header className="mb-16">
-            <p className="text-sm text-stone-400 mb-4">
+            <p className="text-sm text-[#57534E] mb-4">
               {guide.readTime} · Updated {guide.lastUpdated}
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-stone-900">
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-[#1C1917]">
               {guide.title}
             </h1>
-            <p className="text-xl text-stone-600 leading-relaxed">
+            <p className="text-xl text-[#57534E] leading-relaxed">
               {guide.subtitle}
             </p>
           </header>
 
           {/* Table of Contents */}
-          <nav className="mb-16 pb-8 border-b border-stone-200">
-            <p className="text-sm text-stone-400 mb-4">Contents</p>
+          <nav className="mb-16 pb-8 border-b border-[#E7E5E4]">
+            <p className="text-sm text-[#57534E] mb-4">Contents</p>
             <ul className="space-y-2">
               {guide.sections.map((section, index) => (
                 <li key={index}>
                   <a
                     href={`#section-${index}`}
-                    className="text-stone-600 hover:text-stone-900 transition"
+                    className="text-[#57534E] hover:text-[#1C1917] transition"
                   >
                     {section.title}
                   </a>
@@ -132,10 +132,10 @@ export default async function GuidePage({
           <div className="space-y-16">
             {guide.sections.map((section, index) => (
               <section key={index} id={`section-${index}`} className="scroll-mt-32">
-                <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-6 text-stone-900">
+                <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-6 text-[#1C1917]">
                   {section.title}
                 </h2>
-                <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-a:text-stone-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-stone-900 prose-p:text-stone-600 prose-p:leading-relaxed prose-li:text-stone-600">
+                <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-a:text-[#57534E] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1C1917] prose-p:text-[#57534E] prose-p:leading-relaxed prose-li:text-[#57534E]">
                   <ReactMarkdown>{section.content}</ReactMarkdown>
                 </div>
               </section>
@@ -144,8 +144,8 @@ export default async function GuidePage({
 
           {/* Related Work */}
           {guide.relatedCaseStudies.length > 0 && (
-            <section className="mt-24 pt-12 border-t border-stone-200">
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-stone-900">
+            <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
+              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-[#1C1917]">
                 Related Work
               </h2>
               <div className="space-y-6">
@@ -158,10 +158,10 @@ export default async function GuidePage({
                       href={`/work/${study.slug}`}
                       className="block group"
                     >
-                      <p className="text-stone-900 group-hover:text-stone-600 transition">
+                      <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                         {study.company}
                       </p>
-                      <p className="text-sm text-stone-500">
+                      <p className="text-sm text-[#57534E]">
                         {related.linkText}
                       </p>
                     </Link>
@@ -172,18 +172,18 @@ export default async function GuidePage({
           )}
 
           {/* Contact */}
-          <section className="mt-24 pt-12 border-t border-stone-200">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-stone-900">
+          <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
               {guide.cta.title}
             </h2>
-            <p className="text-stone-600 leading-relaxed mb-6">
+            <p className="text-[#57534E] leading-relaxed mb-6">
               {guide.cta.description}
             </p>
             <a
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-900 hover:text-stone-600 transition border-b border-stone-900 hover:border-stone-600 pb-1"
+              className="text-[#1C1917] hover:text-[#57534E] transition border-b border-[#1C1917] hover:border-[#57534E] pb-1"
             >
               Schedule a conversation
             </a>
@@ -193,9 +193,9 @@ export default async function GuidePage({
 
       {/* More Guides */}
       {relatedGuides.length > 0 && (
-        <section className="py-24 px-6 border-t border-stone-200">
+        <section className="py-24 px-6 border-t border-[#E7E5E4]">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-stone-900">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-[#1C1917]">
               More Guides
             </h2>
             <div className="space-y-8">
@@ -205,10 +205,10 @@ export default async function GuidePage({
                   href={`/guides/${related.slug}`}
                   className="block group"
                 >
-                  <p className="text-stone-900 group-hover:text-stone-600 transition">
+                  <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                     {related.title}
                   </p>
-                  <p className="text-sm text-stone-500">
+                  <p className="text-sm text-[#57534E]">
                     {related.readTime}
                   </p>
                 </Link>
@@ -219,9 +219,9 @@ export default async function GuidePage({
       )}
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-stone-200">
+      <footer className="py-16 px-6 border-t border-[#E7E5E4]">
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-sm text-stone-400">
+          <p className="text-sm text-[#57534E]">
             © 2026 Beth Haddock
           </p>
           <div className="flex gap-8 text-sm">
@@ -229,13 +229,13 @@ export default async function GuidePage({
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               Email
             </a>

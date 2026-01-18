@@ -51,32 +51,32 @@ export default async function CaseStudyPage({
     .filter(Boolean);
 
   return (
-    <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
+    <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
       {/* Nav */}
-      <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
+      <nav className="fixed w-full z-50 bg-[#FAFAF9]/95 backdrop-blur border-b border-[#E7E5E4] px-6 py-4">
         <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#1C1917]"
           >
             Beth Haddock
           </Link>
           <div className="flex items-center gap-8">
             <Link
               href="/work"
-              className="text-sm text-stone-900"
+              className="text-sm text-[#1C1917]"
             >
               Work
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Guides
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Insights
             </Link>
@@ -84,7 +84,7 @@ export default async function CaseStudyPage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Contact
             </a>
@@ -98,64 +98,64 @@ export default async function CaseStudyPage({
           {/* Back link */}
           <Link
             href="/work"
-            className="text-sm text-stone-400 hover:text-stone-900 transition mb-12 inline-block"
+            className="text-sm text-[#57534E] hover:text-[#1C1917] transition mb-12 inline-block"
           >
             ← Work
           </Link>
 
           {/* Header */}
           <header className="mb-16">
-            <p className="text-sm text-stone-400 mb-4">
+            <p className="text-sm text-[#57534E] mb-4">
               {study.category} · {study.period}
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight text-stone-900">
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight text-[#1C1917]">
               {study.company}
             </h1>
-            <p className="text-stone-500 mb-4">{study.role}</p>
-            <p className="text-xl text-stone-600 leading-relaxed">
+            <p className="text-[#57534E] mb-4">{study.role}</p>
+            <p className="text-xl text-[#57534E] leading-relaxed">
               {study.headline}
             </p>
           </header>
 
           {/* Summary */}
           <section className="mb-16">
-            <p className="text-stone-600 text-lg leading-relaxed">
+            <p className="text-[#57534E] text-lg leading-relaxed">
               {study.summary}
             </p>
           </section>
 
           {/* Challenge */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-stone-900">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
               The Challenge
             </h2>
-            <p className="text-stone-600 leading-relaxed">{study.challenge}</p>
+            <p className="text-[#57534E] leading-relaxed">{study.challenge}</p>
           </section>
 
           {/* Approach */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-stone-900">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
               Approach
             </h2>
-            <p className="text-stone-600 leading-relaxed">{study.approach}</p>
+            <p className="text-[#57534E] leading-relaxed">{study.approach}</p>
           </section>
 
           {/* Outcome */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-stone-900">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
               Outcome
             </h2>
-            <p className="text-stone-600 leading-relaxed">{study.outcome}</p>
+            <p className="text-[#57534E] leading-relaxed">{study.outcome}</p>
           </section>
 
           {/* Key Contributions */}
           <section className="mb-16">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6 text-stone-900">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-6 text-[#1C1917]">
               Key Contributions
             </h2>
             <ul className="space-y-3">
               {study.keyContributions.map((contribution, index) => (
-                <li key={index} className="text-stone-600 leading-relaxed">
+                <li key={index} className="text-[#57534E] leading-relaxed">
                   {contribution}
                 </li>
               ))}
@@ -164,8 +164,8 @@ export default async function CaseStudyPage({
 
           {/* Related Guides */}
           {study.relatedGuides.length > 0 && (
-            <section className="mt-24 pt-12 border-t border-stone-200">
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-stone-900">
+            <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
+              <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-[#1C1917]">
                 Related Guides
               </h2>
               <div className="space-y-6">
@@ -178,10 +178,10 @@ export default async function CaseStudyPage({
                       href={`/guides/${guide.slug}`}
                       className="block group"
                     >
-                      <p className="text-stone-900 group-hover:text-stone-600 transition">
+                      <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                         {guide.title}
                       </p>
-                      <p className="text-sm text-stone-500">
+                      <p className="text-sm text-[#57534E]">
                         {related.linkText}
                       </p>
                     </Link>
@@ -192,11 +192,11 @@ export default async function CaseStudyPage({
           )}
 
           {/* Contact */}
-          <section className="mt-24 pt-12 border-t border-stone-200">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-stone-900">
+          <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-[#1C1917]">
               Facing similar challenges?
             </h2>
-            <p className="text-stone-600 leading-relaxed mb-6">
+            <p className="text-[#57534E] leading-relaxed mb-6">
               Whether you're navigating regulatory complexity, preparing for
               institutional growth, or building at the intersection of
               traditional finance and crypto.
@@ -205,7 +205,7 @@ export default async function CaseStudyPage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-900 hover:text-stone-600 transition border-b border-stone-900 hover:border-stone-600 pb-1"
+              className="text-[#1C1917] hover:text-[#57534E] transition border-b border-[#1C1917] hover:border-[#57534E] pb-1"
             >
               Schedule a conversation
             </a>
@@ -215,9 +215,9 @@ export default async function CaseStudyPage({
 
       {/* More Work */}
       {relatedStudies.length > 0 && (
-        <section className="py-24 px-6 border-t border-stone-200">
+        <section className="py-24 px-6 border-t border-[#E7E5E4]">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-stone-900">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-[#1C1917]">
               More Work
             </h2>
             <div className="space-y-8">
@@ -227,10 +227,10 @@ export default async function CaseStudyPage({
                   href={`/work/${related.slug}`}
                   className="block group"
                 >
-                  <p className="text-stone-900 group-hover:text-stone-600 transition">
+                  <p className="text-[#1C1917] group-hover:text-[#57534E] transition">
                     {related.company}
                   </p>
-                  <p className="text-sm text-stone-500">
+                  <p className="text-sm text-[#57534E]">
                     {related.role}
                   </p>
                 </Link>
@@ -241,9 +241,9 @@ export default async function CaseStudyPage({
       )}
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-stone-200">
+      <footer className="py-16 px-6 border-t border-[#E7E5E4]">
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-sm text-stone-400">
+          <p className="text-sm text-[#57534E]">
             © 2026 Beth Haddock
           </p>
           <div className="flex gap-8 text-sm">
@@ -251,13 +251,13 @@ export default async function CaseStudyPage({
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               Email
             </a>

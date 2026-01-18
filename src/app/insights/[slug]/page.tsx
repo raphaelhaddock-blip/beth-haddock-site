@@ -28,32 +28,32 @@ export default async function PostPage({
   }
 
   return (
-    <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
+    <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
       {/* Nav */}
-      <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
+      <nav className="fixed w-full z-50 bg-[#FAFAF9]/95 backdrop-blur border-b border-[#E7E5E4] px-6 py-4">
         <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#1C1917]"
           >
             Beth Haddock
           </Link>
           <div className="flex items-center gap-8">
             <Link
               href="/work"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Work
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Guides
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-stone-900"
+              className="text-sm text-[#1C1917]"
             >
               Insights
             </Link>
@@ -61,7 +61,7 @@ export default async function PostPage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Contact
             </a>
@@ -75,14 +75,14 @@ export default async function PostPage({
           {/* Back link */}
           <Link
             href="/insights"
-            className="text-sm text-stone-400 hover:text-stone-900 transition mb-12 inline-block"
+            className="text-sm text-[#57534E] hover:text-[#1C1917] transition mb-12 inline-block"
           >
             ← Insights
           </Link>
 
           {/* Header */}
           <header className="mb-16">
-            <p className="text-sm text-stone-400 mb-4">
+            <p className="text-sm text-[#57534E] mb-4">
               {post.publishedAt &&
                 new Date(post.publishedAt).toLocaleDateString("en-US", {
                   month: "long",
@@ -90,31 +90,31 @@ export default async function PostPage({
                   year: "numeric",
                 })}
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-stone-900">
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-[#1C1917]">
               {post.title}
             </h1>
             {post.excerpt && (
-              <p className="text-xl text-stone-600 leading-relaxed">{post.excerpt}</p>
+              <p className="text-xl text-[#57534E] leading-relaxed">{post.excerpt}</p>
             )}
           </header>
 
           {/* Body */}
           {post.body && (
-            <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-a:text-stone-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-stone-900 prose-p:text-stone-600 prose-p:leading-relaxed prose-li:text-stone-600">
+            <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-a:text-[#57534E] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1C1917] prose-p:text-[#57534E] prose-p:leading-relaxed prose-li:text-[#57534E]">
               <PortableText value={post.body} />
             </div>
           )}
 
           {/* Contact */}
-          <section className="mt-24 pt-12 border-t border-stone-200">
-            <p className="text-stone-600 mb-6">
+          <section className="mt-24 pt-12 border-t border-[#E7E5E4]">
+            <p className="text-[#57534E] mb-6">
               Want to discuss how this applies to your situation?
             </p>
             <a
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-900 hover:text-stone-600 transition border-b border-stone-900 hover:border-stone-600 pb-1"
+              className="text-[#1C1917] hover:text-[#57534E] transition border-b border-[#1C1917] hover:border-[#57534E] pb-1"
             >
               Schedule a conversation
             </a>
@@ -123,9 +123,9 @@ export default async function PostPage({
       </article>
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-stone-200">
+      <footer className="py-16 px-6 border-t border-[#E7E5E4]">
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-sm text-stone-400">
+          <p className="text-sm text-[#57534E]">
             © 2026 Beth Haddock
           </p>
           <div className="flex gap-8 text-sm">
@@ -133,13 +133,13 @@ export default async function PostPage({
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               Email
             </a>

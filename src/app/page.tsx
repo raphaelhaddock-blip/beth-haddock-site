@@ -1,17 +1,16 @@
 import Link from "next/link";
 
-// Exact logo array from user specifications
-const logos = [
-  { name: "Franklin Templeton", url: "https://logo.clearbit.com/franklintempleton.com" },
-  { name: "Guggenheim", url: "https://logo.clearbit.com/guggenheimpartners.com" },
-  { name: "T. Rowe Price", url: "https://logo.clearbit.com/troweprice.com" },
-  { name: "Brown Brothers Harriman", url: "https://logo.clearbit.com/bbh.com" },
-  { name: "AXA", url: "https://logo.clearbit.com/axa.com" },
-  { name: "Grayscale", url: "https://logo.clearbit.com/grayscale.com" },
-  { name: "Robinhood", url: "https://logo.clearbit.com/robinhood.com" },
-  { name: "Ondo", url: "https://logo.clearbit.com/ondo.finance" },
-  { name: "Balancer", url: "https://logo.clearbit.com/balancer.fi" },
-  { name: "Orca", url: "https://logo.clearbit.com/orca.so" }
+const credentials = [
+  "Franklin Templeton",
+  "Guggenheim",
+  "T. Rowe Price",
+  "Brown Brothers Harriman",
+  "AXA",
+  "Grayscale",
+  "Robinhood",
+  "Ondo",
+  "Balancer",
+  "Orca"
 ];
 
 export default function Home() {
@@ -69,19 +68,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logo Section - Grayscale, Opacity 50, Hover Effect */}
-      <section className="py-16 px-6 border-t border-[#E7E5E4]">
+      {/* Credentials Section */}
+      <section className="py-12 px-6 border-t border-[#E7E5E4]">
         <div className="max-w-3xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {logos.map((logo) => (
-              <img
-                key={logo.name}
-                src={logo.url}
-                alt={logo.name}
-                className="h-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-              />
-            ))}
-          </div>
+          <p className="text-center text-sm text-[#57534E]">
+            {credentials.join(" · ")}
+          </p>
         </div>
       </section>
 

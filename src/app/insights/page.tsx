@@ -16,32 +16,32 @@ export default async function InsightsPage() {
   const posts: Post[] = await client.fetch(POSTS_QUERY);
 
   return (
-    <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
+    <div className="bg-[#FAFAF9] text-[#1C1917] min-h-screen">
       {/* Nav */}
-      <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
+      <nav className="fixed w-full z-50 bg-[#FAFAF9]/95 backdrop-blur border-b border-[#E7E5E4] px-6 py-4">
         <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-[#1C1917]"
           >
             Beth Haddock
           </Link>
           <div className="flex items-center gap-8">
             <Link
               href="/work"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Work
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Guides
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-stone-900"
+              className="text-sm text-[#1C1917]"
             >
               Insights
             </Link>
@@ -49,7 +49,7 @@ export default async function InsightsPage() {
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-stone-500 hover:text-stone-900 transition"
+              className="text-sm text-[#57534E] hover:text-[#1C1917] transition"
             >
               Contact
             </a>
@@ -60,10 +60,10 @@ export default async function InsightsPage() {
       {/* Header */}
       <section className="pt-48 pb-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl mb-6 leading-tight text-stone-900">
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl mb-6 leading-tight text-[#1C1917]">
             Insights
           </h1>
-          <p className="text-stone-600 text-lg leading-relaxed">
+          <p className="text-[#57534E] text-lg leading-relaxed">
             Perspectives on crypto regulation, fintech compliance, and the
             evolution of digital asset markets.
           </p>
@@ -81,7 +81,7 @@ export default async function InsightsPage() {
                   href={`/insights/${post.slug}`}
                   className="block group"
                 >
-                  <p className="text-sm text-stone-400 mb-2">
+                  <p className="text-sm text-[#57534E] mb-2">
                     {post.publishedAt &&
                       new Date(post.publishedAt).toLocaleDateString("en-US", {
                         month: "long",
@@ -89,25 +89,25 @@ export default async function InsightsPage() {
                         year: "numeric",
                       })}
                   </p>
-                  <h2 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl mb-2 group-hover:text-stone-600 transition text-stone-900">
+                  <h2 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl mb-2 group-hover:text-[#57534E] transition text-[#1C1917]">
                     {post.title}
                   </h2>
                   {post.excerpt && (
-                    <p className="text-stone-600 leading-relaxed">{post.excerpt}</p>
+                    <p className="text-[#57534E] leading-relaxed">{post.excerpt}</p>
                   )}
                 </Link>
               ))}
             </div>
           ) : (
-            <p className="text-stone-500">No posts yet.</p>
+            <p className="text-[#57534E]">No posts yet.</p>
           )}
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-stone-200">
+      <footer className="py-16 px-6 border-t border-[#E7E5E4]">
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-sm text-stone-400">
+          <p className="text-sm text-[#57534E]">
             © 2026 Beth Haddock
           </p>
           <div className="flex gap-8 text-sm">
@@ -115,13 +115,13 @@ export default async function InsightsPage() {
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-stone-400 hover:text-stone-900 transition"
+              className="text-[#57534E] hover:text-[#1C1917] transition"
             >
               Email
             </a>
