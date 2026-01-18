@@ -117,7 +117,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-[#FAFAFA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed font-medium"
             >
-              General Counsel Services. Special Projects. Board Member.
+              General Counsel Services. Strategic Advisor. Board Member.
             </motion.p>
 
             <motion.p
