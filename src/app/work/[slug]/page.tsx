@@ -159,23 +159,31 @@ export default async function CaseStudyPage({
             </section>
           )}
 
-          {/* Contact */}
+          {/* Contact CTA */}
           <section className="mt-24 pt-12 border-t border-[#262626]">
             <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-              Facing similar challenges?
+              {study.roleType === "fractional-clo" && "Need institutional-grade legal leadership?"}
+              {study.roleType === "board" && "Building a board for the crypto x TradFi edge?"}
+              {study.roleType === "advisor" && "Facing similar challenges?"}
             </h2>
             <p className="text-[#A1A1AA] leading-relaxed mb-6">
-              Whether you&apos;re navigating regulatory complexity, preparing for
-              institutional growth, or building at the intersection of
-              traditional finance and crypto.
+              {study.roleType === "fractional-clo" &&
+                "I embed with teams to build compliance infrastructure that satisfies institutional scrutiny—without the overhead of a full-time hire."}
+              {study.roleType === "board" &&
+                "I bring regulatory foresight, institutional credibility, and a network that opens doors for companies seeking NYDFS licensing, institutional partnerships, or IPO readiness."}
+              {study.roleType === "advisor" &&
+                "Whether you're navigating regulatory complexity, preparing for institutional growth, or building at the intersection of traditional finance and crypto."}
             </p>
             <a
-              href="https://calendly.com/beth-haddock"
+              href={`https://calendly.com/beth-haddock${study.roleType === "fractional-clo" ? "?type=fractional-clo" : study.roleType === "board" ? "?type=board" : "?type=advisory"}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold inline-block"
+              className="btn-gold inline-flex items-center gap-2"
             >
-              Schedule a conversation
+              Let&apos;s talk
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </section>
         </div>

@@ -10,6 +10,8 @@ export type CaseStudy = {
   role: string;
   period: string;
   category: "Primary" | "Board" | "Advisory" | "Project";
+  roleType: "fractional-clo" | "board" | "advisor";
+  isCurrent: boolean;
   headline: string;
   summary: string;
   challenge: string;
@@ -26,6 +28,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Chief Legal Officer",
     period: "2021–Present",
     category: "Primary",
+    roleType: "fractional-clo",
+    isCurrent: true,
     headline: "Leading legal strategy for Franklin Templeton's bet on advisor technology",
     summary:
       "AdvisorEngine is a wealth management technology platform backed by Franklin Templeton, serving thousands of financial advisors managing over $600 billion in assets. As Chief Legal Officer, I lead all legal, regulatory, and compliance functions during a period when the SEC has dramatically increased scrutiny of digital advice—with robo-advisor enforcement actions rising and new regulations like Reg BI reshaping fiduciary standards across the industry.",
@@ -62,6 +66,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Strategic Advisor",
     period: "2019–2022",
     category: "Advisory",
+    roleType: "advisor",
+    isCurrent: false,
     headline: "Advising on the compliance architecture that made Bitcoin ETFs possible",
     summary:
       "Grayscale created the first SEC-reporting Bitcoin investment vehicle, opening digital assets to institutional investors for the first time. I advised on regulatory strategy and compliance architecture during the critical period when Grayscale was establishing the template for institutional crypto investment. The frameworks we built became the foundation for an industry that now manages over $115 billion in ETF assets—with BlackRock's IBIT alone holding $75 billion.",
@@ -98,6 +104,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Board of Directors",
     period: "2022–Present",
     category: "Board",
+    roleType: "board",
+    isCurrent: true,
     headline: "Board governance for a NYDFS-regulated stablecoin issuer in the GENIUS Act era",
     summary:
       "GMO-Z Trust is a New York-chartered trust company regulated by the New York Department of Financial Services (NYDFS), issuing the GYEN stablecoin—the first regulated Japanese yen stablecoin. As a board member, I provide governance oversight for one of the few fully regulated stablecoin issuers in the United States. The stablecoin market has grown to $170+ billion, dominated by USDT ($115B) and USDC ($35B), with new federal legislation—the GENIUS Act, signed July 2025—creating the first federal framework for stablecoin issuers.",
@@ -134,6 +142,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Strategic Advisor",
     period: "2021–Present",
     category: "Advisory",
+    roleType: "advisor",
+    isCurrent: true,
     headline: "Navigating decentralization and compliance as DeFi faces regulatory reckoning",
     summary:
       "Balancer is one of the largest decentralized exchange protocols, enabling automated portfolio management and liquidity provision through its unique weighted pool mechanism—the constant product formula (x * y = k) that powers automated market makers. I advise on the complex intersection of decentralized protocol governance, regulatory compliance, and institutional engagement during the most intense period of DeFi regulatory scrutiny in history. DeFi TVL peaked at $180 billion in late 2021, crashed to $40 billion post-Terra, and has recovered to $100B+. Throughout, the regulatory question has loomed: who's responsible for a permissionless protocol?",
@@ -170,6 +180,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Project Advisor",
     period: "2023–2024",
     category: "Project",
+    roleType: "advisor",
+    isCurrent: false,
     headline: "Advising on the regulatory architecture behind $1.6 billion in tokenized assets",
     summary:
       "Ondo Finance is a pioneer in tokenizing real-world assets, bringing US Treasury exposure on-chain through products like USDY (yield-bearing stablecoin-like product) and OUSG (tokenized short-term Treasuries). I advised on regulatory strategy and institutional positioning during the company's growth from early stage to $1.6 billion in assets—making Ondo one of the largest tokenized Treasury issuers alongside BlackRock's BUIDL ($2.8B). The entire tokenized Treasury market has grown from under $100 million to ~$7.3-9 billion, a 50x increase since January 2024.",
@@ -206,6 +218,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Strategic Advisor",
     period: "2022–2024",
     category: "Advisory",
+    roleType: "advisor",
+    isCurrent: false,
     headline: "Strategic advisory for Solana's leading DEX through ecosystem turbulence and recovery",
     summary:
       "Orca is the most-used decentralized exchange on Solana, known for its user-friendly interface and efficient concentrated liquidity pools (CLMMs). I advise on regulatory strategy, institutional partnerships, and long-term positioning in the evolving DEX landscape. Solana's journey has been dramatic: the FTX collapse in November 2022 (SBF was Solana's most prominent backer) sent SOL from $35 to under $10, devastating the ecosystem. By late 2024, SOL had recovered to $200+. Through it all, Orca maintained its position as the ecosystem's leading DEX—a testament to building for the long term.",

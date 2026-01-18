@@ -41,18 +41,21 @@ const selectedWork = [
     company: "AdvisorEngine",
     role: "Chief Legal Officer",
     slug: "advisorengine",
+    isCurrent: true,
   },
   {
     number: "02",
     company: "GMO-Z Trust Company",
     role: "Board of Directors",
     slug: "gmo-z-trust",
+    isCurrent: true,
   },
   {
     number: "03",
-    company: "Grayscale Investments",
+    company: "Balancer",
     role: "Strategic Advisor",
-    slug: "grayscale",
+    slug: "balancer",
+    isCurrent: true,
   },
 ];
 
@@ -223,6 +226,156 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* How I Work */}
+      <section id="how-i-work" className="py-32 px-6 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            How I Work
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[#A1A1AA] text-xl mb-16 max-w-2xl"
+          >
+            I take on a limited number of engagements each year to ensure deep partnership with every client.
+          </motion.p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Fractional CLO Card */}
+            <motion.a
+              href="https://calendly.com/beth-haddock?type=fractional-clo"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="group card-hover p-8 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 group-hover:text-[#D4AF37] transition-colors">
+                Fractional CLO
+              </h3>
+              <p className="text-[#A1A1AA] leading-relaxed mb-4">
+                Institutional-grade legal leadership without the full-time overhead. I embed with your team to build compliance infrastructure and prepare you for institutional scrutiny.
+              </p>
+              <p className="text-sm text-[#71717A] italic mb-6">
+                Best for: Series A-C crypto/fintech companies scaling into regulated markets
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.a>
+
+            {/* Board Director Card */}
+            <motion.a
+              href="https://calendly.com/beth-haddock?type=board"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group card-hover p-8 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 group-hover:text-[#D4AF37] transition-colors">
+                Board Director
+              </h3>
+              <p className="text-[#A1A1AA] leading-relaxed mb-4">
+                Independent governance for companies at the intersection of traditional finance and decentralized systems. I bring regulatory foresight and institutional credibility.
+              </p>
+              <p className="text-sm text-[#71717A] italic mb-6">
+                Best for: Companies seeking NYDFS licensing, institutional partnerships, or IPO readiness
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.a>
+
+            {/* Strategic Advisor Card */}
+            <motion.a
+              href="https://calendly.com/beth-haddock?type=advisory"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group card-hover p-8 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 group-hover:text-[#D4AF37] transition-colors">
+                Strategic Advisor
+              </h3>
+              <p className="text-[#A1A1AA] leading-relaxed mb-4">
+                Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. Retainer or project-based engagements for specific challenges.
+              </p>
+              <p className="text-sm text-[#71717A] italic mb-6">
+                Best for: Specific regulatory questions, M&A due diligence, enforcement response
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.a>
+          </div>
+
+          {/* Qualification Statement */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[#A1A1AA] text-lg mt-16 max-w-3xl mx-auto text-center leading-relaxed"
+          >
+            I work with founders, boards, and executives building infrastructure for institutional digital assets.
+            If you&apos;re navigating <span className="text-[#FAFAFA]">SEC, NYDFS, or emerging AI/crypto regulatory frameworks</span>—we should talk.
+          </motion.p>
+        </div>
+      </section>
+
       {/* Focus Areas */}
       <section className="py-32 px-6 border-t border-[#262626]">
         <div className="max-w-5xl mx-auto">
@@ -302,9 +455,16 @@ export default function Home() {
                       {work.number}
                     </span>
                     <div className="flex-1">
-                      <p className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl group-hover:text-[#D4AF37] transition-colors">
-                        {work.company}
-                      </p>
+                      <div className="flex flex-wrap items-center gap-2 md:gap-3">
+                        <p className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl md:text-3xl group-hover:text-[#D4AF37] transition-colors">
+                          {work.company}
+                        </p>
+                        {work.isCurrent && (
+                          <span className="text-[10px] sm:text-xs tracking-[0.15em] uppercase text-[#D4AF37] border border-[#D4AF37]/30 px-1.5 sm:px-2 py-0.5 rounded whitespace-nowrap">
+                            Current
+                          </span>
+                        )}
+                      </div>
                       <p className="text-[#A1A1AA] mt-1">{work.role}</p>
                     </div>
                     <svg
@@ -362,12 +522,22 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-8"
+            className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl lg:text-6xl mb-6"
           >
             Ready to navigate the
             <br />
-            <span className="italic text-[#D4AF37]">future of markets?</span>
+            <span className="italic text-[#D4AF37]">future of regulated markets?</span>
           </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-[#A1A1AA] text-lg mb-10 max-w-xl mx-auto"
+          >
+            Whether you need fractional legal leadership, board governance, or strategic advice—let&apos;s discuss your challenge.
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -381,7 +551,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn-gold inline-flex items-center gap-3"
             >
-              Schedule a Conversation
+              Discuss Your Challenge
               <svg
                 className="w-5 h-5"
                 fill="none"
