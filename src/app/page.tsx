@@ -73,7 +73,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
             >
-              Strategic Advisor
+              25+ Years in Financial Services
             </motion.p>
 
             <div className="space-y-1 md:space-y-2">
@@ -115,10 +115,18 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-[#A1A1AA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed"
+              className="text-[#FAFAFA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed font-medium"
             >
-              I&apos;ve built the compliance infrastructure that passes regulatory scrutiny—and unlocks institutional capital.
-              Now I build it for others.
+              Fractional General Counsel. Board Director. Strategic Advisor.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="text-[#A1A1AA] text-lg md:text-xl mt-4 max-w-lg leading-relaxed"
+            >
+              I&apos;ve built the compliance infrastructure that passes regulatory scrutiny—for stablecoin issuers, DeFi protocols, and companies preparing for institutional capital. Now I build it for others.
             </motion.p>
 
             <motion.div
