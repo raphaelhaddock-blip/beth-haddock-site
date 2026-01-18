@@ -5,12 +5,10 @@ import ReactMarkdown from "react-markdown";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
 import { getCaseStudyBySlug } from "@/data/caseStudies";
 
-// Generate static params for all guides
 export function generateStaticParams() {
   return getAllGuideSlugs().map((slug) => ({ slug }));
 }
 
-// Generate metadata for each guide
 export async function generateMetadata({
   params,
 }: {
@@ -41,10 +39,8 @@ export default async function GuidePage({
     notFound();
   }
 
-  // Find related guides (exclude current)
   const relatedGuides = guides.filter((g) => g.slug !== slug).slice(0, 2);
 
-  // Get related case studies - fetch full data for each connection
   const relatedCaseStudies = guide.relatedCaseStudies
     .map((related) => getCaseStudyBySlug(related.slug))
     .filter(Boolean);
@@ -53,10 +49,10 @@ export default async function GuidePage({
     <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
       {/* Nav */}
       <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
+        <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
           >
             Beth Haddock
           </Link>
@@ -69,7 +65,7 @@ export default async function GuidePage({
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-stone-900 font-medium"
+              className="text-sm text-stone-900"
             >
               Guides
             </Link>
@@ -83,7 +79,7 @@ export default async function GuidePage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-stone-900 text-stone-900 text-sm font-medium hover:bg-stone-900 hover:text-white transition"
+              className="text-sm text-stone-500 hover:text-stone-900 transition"
             >
               Contact
             </a>
@@ -92,24 +88,22 @@ export default async function GuidePage({
       </nav>
 
       {/* Article */}
-      <article className="pt-40 pb-24 px-6">
+      <article className="pt-48 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
           {/* Back link */}
           <Link
             href="/guides"
-            className="text-sm text-stone-500 hover:text-stone-900 transition mb-8 inline-block"
+            className="text-sm text-stone-400 hover:text-stone-900 transition mb-12 inline-block"
           >
-            ← All Guides
+            ← Guides
           </Link>
 
           {/* Header */}
-          <header className="mb-12">
-            <div className="flex items-center gap-4 text-sm text-stone-400 mb-4">
-              <span>{guide.readTime}</span>
-              <span>·</span>
-              <span>Updated {guide.lastUpdated}</span>
-            </div>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight text-stone-900">
+          <header className="mb-16">
+            <p className="text-sm text-stone-400 mb-4">
+              {guide.readTime} · Updated {guide.lastUpdated}
+            </p>
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-stone-900">
               {guide.title}
             </h1>
             <p className="text-xl text-stone-600 leading-relaxed">
@@ -118,16 +112,14 @@ export default async function GuidePage({
           </header>
 
           {/* Table of Contents */}
-          <nav className="mb-12 p-6 bg-stone-50 border border-stone-200">
-            <p className="text-sm font-medium text-stone-500 uppercase tracking-wide mb-4">
-              In this guide
-            </p>
+          <nav className="mb-16 pb-8 border-b border-stone-200">
+            <p className="text-sm text-stone-400 mb-4">Contents</p>
             <ul className="space-y-2">
               {guide.sections.map((section, index) => (
                 <li key={index}>
                   <a
                     href={`#section-${index}`}
-                    className="text-stone-600 hover:text-stone-900 transition text-sm"
+                    className="text-stone-600 hover:text-stone-900 transition"
                   >
                     {section.title}
                   </a>
@@ -137,7 +129,7 @@ export default async function GuidePage({
           </nav>
 
           {/* Content Sections */}
-          <div className="space-y-12">
+          <div className="space-y-16">
             {guide.sections.map((section, index) => (
               <section key={index} id={`section-${index}`} className="scroll-mt-32">
                 <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-6 text-stone-900">
@@ -150,87 +142,75 @@ export default async function GuidePage({
             ))}
           </div>
 
-          {/* Related Work - Narrative Connections */}
+          {/* Related Work */}
           {guide.relatedCaseStudies.length > 0 && (
-            <section className="mt-20 pt-12 border-t border-stone-200">
+            <section className="mt-24 pt-12 border-t border-stone-200">
               <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-stone-900">
-                See This in Practice
+                Related Work
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {guide.relatedCaseStudies.map((related) => {
                   const study = relatedCaseStudies.find(s => s?.slug === related.slug);
                   if (!study) return null;
                   return (
-                    <div key={related.slug} className="border-l-2 border-stone-300 pl-6">
-                      <p className="text-stone-600 mb-4 leading-relaxed">
-                        {related.connectionText}
+                    <Link
+                      key={related.slug}
+                      href={`/work/${study.slug}`}
+                      className="block group"
+                    >
+                      <p className="text-stone-900 group-hover:text-stone-600 transition">
+                        {study.company}
                       </p>
-                      <Link
-                        href={`/work/${study.slug}`}
-                        className="inline-flex items-center gap-2 text-stone-600 font-medium hover:text-stone-900 transition group"
-                      >
-                        <span className="text-xs uppercase tracking-widest text-stone-400 mr-2">
-                          {study.category}
-                        </span>
-                        <span className="font-[family-name:var(--font-playfair)] text-lg">
-                          {study.company}
-                        </span>
-                      </Link>
-                      <p className="text-sm text-stone-500 mt-2">
+                      <p className="text-sm text-stone-500">
                         {related.linkText}
                       </p>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
             </section>
           )}
 
-          {/* CTA */}
-          <div className="mt-20 pt-12 border-t border-stone-200">
-            <div className="bg-stone-900 text-white p-8 md:p-10">
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4">
-                {guide.cta.title}
-              </h3>
-              <p className="text-stone-300 mb-6 leading-relaxed">
-                {guide.cta.description}
-              </p>
-              <a
-                href="https://calendly.com/beth-haddock"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-white text-stone-900 font-medium hover:bg-stone-100 transition"
-              >
-                Schedule a Conversation
-              </a>
-            </div>
-          </div>
+          {/* Contact */}
+          <section className="mt-24 pt-12 border-t border-stone-200">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 text-stone-900">
+              {guide.cta.title}
+            </h2>
+            <p className="text-stone-600 leading-relaxed mb-6">
+              {guide.cta.description}
+            </p>
+            <a
+              href="https://calendly.com/beth-haddock"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-stone-900 hover:text-stone-600 transition border-b border-stone-900 hover:border-stone-600 pb-1"
+            >
+              Schedule a conversation
+            </a>
+          </section>
         </div>
       </article>
 
-      {/* Related Guides */}
+      {/* More Guides */}
       {relatedGuides.length > 0 && (
-        <section className="py-24 px-6 bg-stone-50 border-t border-stone-200">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-24 px-6 border-t border-stone-200">
+          <div className="max-w-3xl mx-auto">
             <h2 className="font-[family-name:var(--font-playfair)] text-2xl mb-8 text-stone-900">
               More Guides
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-8">
               {relatedGuides.map((related) => (
                 <Link
                   key={related.slug}
                   href={`/guides/${related.slug}`}
-                  className="block p-6 bg-[#FDFCF8] border border-stone-200 hover:border-stone-400 transition group"
+                  className="block group"
                 >
-                  <h3 className="font-medium text-lg mb-2 group-hover:text-stone-600 transition line-clamp-2 text-stone-900">
+                  <p className="text-stone-900 group-hover:text-stone-600 transition">
                     {related.title}
-                  </h3>
-                  <p className="text-sm text-stone-500 mb-3 line-clamp-2">
-                    {related.subtitle}
                   </p>
-                  <span className="text-sm text-stone-400">
+                  <p className="text-sm text-stone-500">
                     {related.readTime}
-                  </span>
+                  </p>
                 </Link>
               ))}
             </div>
@@ -240,25 +220,22 @@ export default async function GuidePage({
 
       {/* Footer */}
       <footer className="py-16 px-6 border-t border-stone-200">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div>
-            <p className="font-[family-name:var(--font-playfair)] text-lg text-stone-900 mb-2">
-              Beth Haddock
-            </p>
-            <p className="text-sm text-stone-400">© 2026. All rights reserved.</p>
-          </div>
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <p className="text-sm text-stone-400">
+            © 2026 Beth Haddock
+          </p>
           <div className="flex gap-8 text-sm">
             <a
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-500 hover:text-stone-900 transition"
+              className="text-stone-400 hover:text-stone-900 transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-stone-500 hover:text-stone-900 transition"
+              className="text-stone-400 hover:text-stone-900 transition"
             >
               Email
             </a>

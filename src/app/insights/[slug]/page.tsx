@@ -31,10 +31,10 @@ export default async function PostPage({
     <div className="bg-[#FDFCF8] text-stone-900 min-h-screen">
       {/* Nav */}
       <nav className="fixed w-full z-50 bg-[#FDFCF8]/95 backdrop-blur border-b border-stone-200 px-6 py-4">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
+        <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-semibold"
+            className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-stone-900"
           >
             Beth Haddock
           </Link>
@@ -53,7 +53,7 @@ export default async function PostPage({
             </Link>
             <Link
               href="/insights"
-              className="text-sm text-stone-900 font-medium"
+              className="text-sm text-stone-900"
             >
               Insights
             </Link>
@@ -61,7 +61,7 @@ export default async function PostPage({
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-stone-900 text-stone-900 text-sm font-medium hover:bg-stone-900 hover:text-white transition"
+              className="text-sm text-stone-500 hover:text-stone-900 transition"
             >
               Contact
             </a>
@@ -70,18 +70,18 @@ export default async function PostPage({
       </nav>
 
       {/* Article */}
-      <article className="pt-40 pb-24 px-6">
+      <article className="pt-48 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
           {/* Back link */}
           <Link
             href="/insights"
-            className="text-sm text-stone-500 hover:text-stone-900 transition mb-8 inline-block"
+            className="text-sm text-stone-400 hover:text-stone-900 transition mb-12 inline-block"
           >
-            ← Back to Insights
+            ← Insights
           </Link>
 
           {/* Header */}
-          <header className="mb-12">
+          <header className="mb-16">
             <p className="text-sm text-stone-400 mb-4">
               {post.publishedAt &&
                 new Date(post.publishedAt).toLocaleDateString("en-US", {
@@ -90,7 +90,7 @@ export default async function PostPage({
                   year: "numeric",
                 })}
             </p>
-            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight text-stone-900">
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight text-stone-900">
               {post.title}
             </h1>
             {post.excerpt && (
@@ -105,44 +105,41 @@ export default async function PostPage({
             </div>
           )}
 
-          {/* CTA */}
-          <div className="mt-20 pt-12 border-t border-stone-200">
-            <p className="text-stone-600 mb-6 text-lg">
-              Want to discuss how this applies to your company?
+          {/* Contact */}
+          <section className="mt-24 pt-12 border-t border-stone-200">
+            <p className="text-stone-600 mb-6">
+              Want to discuss how this applies to your situation?
             </p>
             <a
               href="https://calendly.com/beth-haddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-stone-900 text-stone-900 font-medium hover:bg-stone-900 hover:text-white transition"
+              className="text-stone-900 hover:text-stone-600 transition border-b border-stone-900 hover:border-stone-600 pb-1"
             >
-              Schedule a Conversation
+              Schedule a conversation
             </a>
-          </div>
+          </section>
         </div>
       </article>
 
       {/* Footer */}
       <footer className="py-16 px-6 border-t border-stone-200">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div>
-            <p className="font-[family-name:var(--font-playfair)] text-lg text-stone-900 mb-2">
-              Beth Haddock
-            </p>
-            <p className="text-sm text-stone-400">© 2026. All rights reserved.</p>
-          </div>
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <p className="text-sm text-stone-400">
+            © 2026 Beth Haddock
+          </p>
           <div className="flex gap-8 text-sm">
             <a
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-500 hover:text-stone-900 transition"
+              className="text-stone-400 hover:text-stone-900 transition"
             >
               LinkedIn
             </a>
             <a
               href="mailto:beth@warburtonadvisers.com"
-              className="text-stone-500 hover:text-stone-900 transition"
+              className="text-stone-400 hover:text-stone-900 transition"
             >
               Email
             </a>
