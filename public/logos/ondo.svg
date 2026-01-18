@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 45">
-  <!-- Ondo Finance - Bold logo with O symbol -->
-  <g fill="#000000">
-    <!-- Distinctive O with line through it - thicker -->
-    <circle cx="20" cy="22" r="16" fill="none" stroke="#000000" stroke-width="4"/>
-    <line x1="20" y1="4" x2="20" y2="40" stroke="#000000" stroke-width="4"/>
+  <!-- Ondo Finance - Bold logo with O symbol - Light for dark bg -->
+  <g>
+    <!-- Distinctive O with line through it -->
+    <circle cx="20" cy="22" r="16" fill="none" stroke="#0052FF" stroke-width="4"/>
+    <line x1="20" y1="4" x2="20" y2="40" stroke="#0052FF" stroke-width="4"/>
     <!-- Bold Wordmark -->
-    <text x="45" y="32" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="2" fill="#000000">ONDO</text>
+    <text x="45" y="32" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="2" fill="#0052FF">ONDO</text>
   </g>
 </svg>

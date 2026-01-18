@@ -7,14 +7,14 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const credentials = [
-  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160, height: 40 },
-  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140, height: 32 },
-  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 150, height: 42 },
-  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 80, height: 40 },
-  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130, height: 32 },
-  { name: "Ondo", logo: "/logos/ondo.svg", width: 100, height: 32 },
-  { name: "Balancer", logo: "/logos/balancer.svg", width: 120, height: 32 },
-  { name: "Orca", logo: "/logos/orca.svg", width: 110, height: 38 },
+  { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160, height: 40, url: "https://www.franklintempleton.com" },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140, height: 32, url: "https://www.guggenheimpartners.com" },
+  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 150, height: 42, url: "https://www.troweprice.com" },
+  { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 80, height: 40, url: "https://www.bbh.com" },
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 130, height: 32, url: "https://www.grayscale.com" },
+  { name: "Ondo", logo: "/logos/ondo.svg", width: 100, height: 32, url: "https://ondo.finance" },
+  { name: "Balancer", logo: "/logos/balancer.svg", width: 120, height: 32, url: "https://balancer.fi" },
+  { name: "Orca", logo: "/logos/orca.svg", width: 110, height: 38, url: "https://www.orca.so" },
 ];
 
 const focusAreas = [
@@ -162,13 +162,16 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-12 lg:gap-x-16">
             {credentials.map((cred, index) => (
-              <motion.div
+              <motion.a
                 key={cred.name}
+                href={cred.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="flex-shrink-0"
+                className="flex-shrink-0 opacity-80 hover:opacity-100 transition-opacity"
               >
                 <Image
                   src={cred.logo}
@@ -177,13 +180,13 @@ export default function Home() {
                   height={cred.height}
                   className="h-10 md:h-14 w-auto"
                 />
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
       </motion.section>
 
-      {/* Bio */}
+      {/* Value Proposition */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -191,32 +194,31 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         className="py-32 px-6"
       >
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20">
-          <div>
-            <p className="font-[family-name:var(--font-playfair)] text-7xl md:text-8xl text-[#D4AF37] italic">
-              25+
-            </p>
-            <p className="text-[#A1A1AA] text-lg mt-2">Years of Experience</p>
-          </div>
-          <div className="space-y-8">
-            <p className="text-[#A1A1AA] text-xl leading-relaxed">
-              Chief Legal Officer at{" "}
-              <span className="text-[#FAFAFA]">AdvisorEngine</span>, a Franklin
-              Templeton company. Board Director at{" "}
-              <span className="text-[#FAFAFA]">GMO-Z Trust</span>, a
-              NYDFS-regulated stablecoin issuer. Advisor to{" "}
-              <span className="text-[#FAFAFA]">Balancer</span> and emerging
-              protocols building the next generation of financial
-              infrastructure.
-            </p>
-            <p className="text-[#A1A1AA] text-xl leading-relaxed">
-              Twenty-five years navigating the space between what regulators
-              require and what innovation demands. Former counsel at Guggenheim
-              Partners, T. Rowe Price, and Brown Brothers Harriman. Former advisor to{" "}
-              <span className="text-[#FAFAFA]">Grayscale</span>,{" "}
-              <span className="text-[#FAFAFA]">Ondo</span>, and{" "}
-              <span className="text-[#FAFAFA]">Orca</span>.
-            </p>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 items-start">
+            <div>
+              <p className="font-[family-name:var(--font-playfair)] text-7xl md:text-8xl text-[#D4AF37] italic">
+                25+
+              </p>
+              <p className="text-[#A1A1AA] text-lg mt-2">Years Shaping the Industry</p>
+            </div>
+            <div className="space-y-8">
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl leading-tight">
+                When regulators write new rules,
+                <span className="text-[#D4AF37] italic"> I&apos;ve already built the playbook.</span>
+              </h2>
+              <p className="text-[#A1A1AA] text-xl leading-relaxed">
+                I don&apos;t just advise on compliance—I architect the frameworks that
+                define how institutions enter digital assets. From building the legal
+                infrastructure behind the first Bitcoin ETF approvals to governing
+                NYDFS-regulated stablecoins, I operate at the intersection where
+                trillion-dollar institutions meet frontier technology.
+              </p>
+              <p className="text-[#A1A1AA] text-xl leading-relaxed">
+                The companies I work with don&apos;t react to regulation.
+                <span className="text-[#FAFAFA]"> They shape it.</span>
+              </p>
+            </div>
           </div>
         </div>
       </motion.section>
