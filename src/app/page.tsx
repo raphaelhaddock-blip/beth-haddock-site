@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -35,31 +36,28 @@ const focusAreas = [
   },
 ];
 
-const selectedWork = [
-  {
-    number: "01",
-    company: "AdvisorEngine",
-    role: "Chief Legal Officer",
-    slug: "advisorengine",
-    isCurrent: true,
-  },
-  {
-    number: "02",
-    company: "GMO-Z Trust Company",
-    role: "Board of Directors",
-    slug: "gmo-z-trust",
-    isCurrent: true,
-  },
-  {
-    number: "03",
-    company: "Balancer",
-    role: "Strategic Advisor",
-    slug: "balancer",
-    isCurrent: true,
-  },
-];
+type Post = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  excerpt?: string;
+  publishedAt: string;
+};
 
 export default function Home() {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/posts')
+      .then(res => res.json())
+      .then(data => {
+        setPosts(data.slice(0, 3));
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
       <Nav />
@@ -73,7 +71,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
           >
-            Strategic Advisor
+            Strategic Advisor · Regulatory Analyst
           </motion.p>
 
           <div className="space-y-2">
@@ -117,8 +115,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-[#A1A1AA] text-xl md:text-2xl mt-12 max-w-2xl leading-relaxed"
           >
-            Strategic counsel for boards and founders navigating the future of
-            regulated markets.
+            Expert analysis of where regulation is heading—and strategic counsel
+            for those navigating it.
           </motion.p>
         </div>
 
@@ -189,13 +187,141 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Latest Analysis */}
+      <section className="py-32 px-6 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            Latest Analysis
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
+          >
+            What&apos;s happening in regulation—
+            <span className="italic text-[#D4AF37]">and what it means.</span>
+          </motion.h2>
+
+          {loading ? (
+            <div className="space-y-6">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="py-8 border-b border-[#262626] animate-pulse">
+                  <div className="h-6 bg-[#262626] rounded w-3/4 mb-3"></div>
+                  <div className="h-4 bg-[#262626] rounded w-1/2"></div>
+                </div>
+              ))}
+            </div>
+          ) : posts.length > 0 ? (
+            <div className="space-y-0">
+              {posts.map((post, index) => (
+                <motion.div
+                  key={post._id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Link
+                    href={`/insights/${post.slug.current}`}
+                    className="group block py-8 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
+                  >
+                    <div className="flex items-start justify-between gap-8">
+                      <div className="flex-1">
+                        <p className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl group-hover:text-[#D4AF37] transition-colors">
+                          {post.title}
+                        </p>
+                        {post.excerpt && (
+                          <p className="text-[#A1A1AA] mt-2 line-clamp-2">
+                            {post.excerpt}
+                          </p>
+                        )}
+                        <p className="text-[#71717A] text-sm mt-3">
+                          {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </p>
+                      </div>
+                      <svg
+                        className="w-6 h-6 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-2 transition-all mt-2 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="py-12 text-center"
+            >
+              <p className="text-[#A1A1AA] text-lg mb-4">
+                Analysis coming soon.
+              </p>
+              <p className="text-[#71717A]">
+                Follow me on LinkedIn for the latest regulatory insights.
+              </p>
+            </motion.div>
+          )}
+
+          {posts.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <Link
+                href="/insights"
+                className="inline-flex items-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition-colors"
+              >
+                View all analysis
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </motion.div>
+          )}
+        </div>
+      </section>
+
       {/* Value Proposition */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="py-32 px-6"
+        className="py-32 px-6 border-t border-[#262626]"
       >
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 items-start">
@@ -208,18 +334,16 @@ export default function Home() {
             <div className="space-y-8">
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl leading-tight">
                 When regulators write new rules,
-                <span className="text-[#D4AF37] italic"> I&apos;ve already built the playbook.</span>
+                <span className="text-[#D4AF37] italic"> I see what&apos;s coming next.</span>
               </h2>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                I don&apos;t just advise on compliance—I architect the frameworks that
-                define how institutions enter digital assets. From building the legal
-                infrastructure behind the first Bitcoin ETF approvals to governing
-                NYDFS-regulated stablecoins, I operate at the intersection where
-                trillion-dollar institutions meet frontier technology.
+                After 25 years at the intersection of traditional finance and emerging technology,
+                I don&apos;t just track regulatory changes—I analyze where they&apos;re heading
+                and what they mean for institutions building in this space.
               </p>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                The companies I work with don&apos;t react to regulation.
-                <span className="text-[#FAFAFA]"> They shape it.</span>
+                From NYDFS stablecoin frameworks to SEC enforcement patterns to the GENIUS Act—
+                <span className="text-[#FAFAFA]">I help you understand the road ahead.</span>
               </p>
             </div>
           </div>
@@ -460,96 +584,6 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Selected Work */}
-      <section className="py-32 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-16"
-          >
-            Selected Work
-          </motion.p>
-
-          <div className="space-y-0">
-            {selectedWork.map((work, index) => (
-              <motion.div
-                key={work.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link
-                  href={`/work/${work.slug}`}
-                  className="group block py-8 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
-                >
-                  <div className="flex items-start gap-8">
-                    <span className="number-accent text-2xl">
-                      {work.number}
-                    </span>
-                    <div className="flex-1">
-                      <div className="flex flex-wrap items-center gap-2 md:gap-3">
-                        <p className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl md:text-3xl group-hover:text-[#D4AF37] transition-colors">
-                          {work.company}
-                        </p>
-                        {work.isCurrent && (
-                          <span className="text-[10px] sm:text-xs tracking-[0.15em] uppercase text-[#D4AF37] border border-[#D4AF37]/30 px-1.5 sm:px-2 py-0.5 rounded whitespace-nowrap">
-                            Current
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-[#A1A1AA] mt-1">{work.role}</p>
-                    </div>
-                    <svg
-                      className="w-6 h-6 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-2 transition-all mt-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-12"
-          >
-            <Link
-              href="/work"
-              className="inline-flex items-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition-colors"
-            >
-              View all work
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-          </motion.div>
         </div>
       </section>
 

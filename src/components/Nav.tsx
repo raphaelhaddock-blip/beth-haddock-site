@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 type NavProps = {
-  active?: "work" | "guides" | "insights";
+  active?: "guides" | "insights";
   alwaysVisible?: boolean;
 };
 
@@ -49,16 +49,6 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
 
               {/* Desktop Nav */}
               <div className="hidden md:flex items-center gap-8">
-                <Link
-                  href="/work"
-                  className={`text-sm transition-colors link-gold ${
-                    active === "work"
-                      ? "text-[#D4AF37]"
-                      : "text-[#A1A1AA] hover:text-[#FAFAFA]"
-                  }`}
-                >
-                  Work
-                </Link>
                 <Link
                   href="/guides"
                   className={`text-sm transition-colors link-gold ${
@@ -140,23 +130,6 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
                 transition={{ delay: 0.1 }}
               >
                 <Link
-                  href="/work"
-                  onClick={() => setIsOpen(false)}
-                  className={`text-3xl font-[family-name:var(--font-playfair)] transition-colors ${
-                    active === "work"
-                      ? "text-[#D4AF37]"
-                      : "text-[#FAFAFA] hover:text-[#D4AF37]"
-                  }`}
-                >
-                  Work
-                </Link>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-                <Link
                   href="/guides"
                   onClick={() => setIsOpen(false)}
                   className={`text-3xl font-[family-name:var(--font-playfair)] transition-colors ${
@@ -171,7 +144,7 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.2 }}
               >
                 <Link
                   href="/insights"
@@ -188,7 +161,7 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.3 }}
               >
                 <a
                   href="https://calendly.com/beth-haddock"
