@@ -46,65 +46,6 @@ type Post = {
   publishedAt: string;
 };
 
-function SpeakingCollage() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="relative w-full max-w-2xl"
-    >
-      {/* TEDx Banner on top - full width */}
-      <div className="relative w-full aspect-[3.5/1] overflow-hidden rounded-t-xl">
-        <Image
-          src="/images/beth/tedx-banner.png"
-          alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
-          fill
-          sizes="(max-width: 768px) 100vw, 672px"
-          quality={95}
-          className="object-cover object-center"
-        />
-      </div>
-
-      {/* Two photos below */}
-      <div className="grid grid-cols-2 gap-1.5 mt-1.5">
-        {/* DC Blockchain Summit */}
-        <div className="relative aspect-square overflow-hidden rounded-bl-xl">
-          <Image
-            src="/images/beth/speaking-dc-summit-1.png"
-            alt="Beth Haddock speaking at DC Blockchain Summit"
-            fill
-            sizes="(max-width: 768px) 50vw, 336px"
-            quality={95}
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
-          <p className="absolute bottom-4 left-4 text-sm text-white/90 font-medium">
-            DC Blockchain Summit
-          </p>
-        </div>
-
-        {/* Stablecon */}
-        <div className="relative aspect-square overflow-hidden rounded-br-xl">
-          <Image
-            src="/images/beth/speaking-stablecon.png"
-            alt="Beth Haddock on main stage at Stablecon"
-            fill
-            sizes="(max-width: 768px) 50vw, 336px"
-            quality={95}
-            className="object-cover object-left"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
-          <p className="absolute bottom-4 left-4 text-sm text-white/90 font-medium">
-            Stablecon Main Stage
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
@@ -436,9 +377,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speaking - One Powerful Image */}
-      <section className="py-32 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
+      {/* Speaking - Full Width TEDx + Gallery */}
+      <section className="pt-32 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto px-6">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -448,27 +389,96 @@ export default function Home() {
             On the Stage
           </motion.p>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Speaking collage */}
-            <SpeakingCollage />
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight max-w-3xl"
+          >
+            Building infrastructure isn&apos;t just boardroom work.
+            <span className="text-[#D4AF37] italic"> It&apos;s sharing what I&apos;ve learned.</span>
+          </motion.h2>
 
-            {/* The message */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight">
-                Building infrastructure isn&apos;t just boardroom work.
-                <span className="text-[#D4AF37] italic"> It&apos;s sharing what I&apos;ve learned.</span>
-              </h2>
-              <p className="text-[#A1A1AA] text-lg leading-relaxed">
-                Regular speaker at DC Blockchain Summit, Stablecon, TEDx, and industry conferences on compliance, governance, and regulatory strategy.
-              </p>
-            </motion.div>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-[#A1A1AA] text-lg leading-relaxed mb-16 max-w-2xl"
+          >
+            Regular speaker at DC Blockchain Summit, Stablecon, TEDx, and industry conferences on compliance, governance, and regulatory strategy.
+          </motion.p>
         </div>
+
+        {/* TEDx Banner - Full Width */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="relative w-full aspect-[4/1] overflow-hidden"
+        >
+          <Image
+            src="/images/beth/tedx-banner.png"
+            alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
+            fill
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/30 via-transparent to-[#0A0A0A]/30" />
+        </motion.div>
+
+        {/* Two Conference Photos */}
+        <div className="grid grid-cols-2">
+          {/* DC Blockchain Summit */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="relative aspect-[4/3] overflow-hidden"
+          >
+            <Image
+              src="/images/beth/speaking-dc-summit-1.png"
+              alt="Beth Haddock speaking at DC Blockchain Summit"
+              fill
+              sizes="50vw"
+              quality={95}
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+            <div className="absolute bottom-6 left-6">
+              <p className="text-white text-lg font-medium">DC Blockchain Summit</p>
+              <p className="text-white/60 text-sm">2025</p>
+            </div>
+          </motion.div>
+
+          {/* Stablecon */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="relative aspect-[4/3] overflow-hidden"
+          >
+            <Image
+              src="/images/beth/speaking-stablecon.png"
+              alt="Beth Haddock on main stage at Stablecon"
+              fill
+              sizes="50vw"
+              quality={95}
+              className="object-cover object-left"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+            <div className="absolute bottom-6 left-6">
+              <p className="text-white text-lg font-medium">Stablecon</p>
+              <p className="text-white/60 text-sm">Main Stage</p>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="h-32"></div>
       </section>
 
       {/* Value Proposition */}
