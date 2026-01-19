@@ -377,9 +377,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speaking - Two Powerful Photos */}
-      <section className="py-32 border-t border-[#262626]">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* Speaking - TEDx Header + Gallery */}
+      <section className="border-t border-[#262626]">
+        {/* TEDx Banner - Full Width Header */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="relative w-full aspect-[4/1] overflow-hidden"
+        >
+          <Image
+            src="/images/beth/tedx-banner.png"
+            alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
+            fill
+            sizes="100vw"
+            quality={95}
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/40 via-transparent to-[#0A0A0A]/60" />
+        </motion.div>
+
+        <div className="max-w-6xl mx-auto px-6 py-24">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
             <div>
               <motion.p
@@ -408,7 +426,7 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="text-[#A1A1AA] text-lg leading-relaxed"
               >
-                Regular speaker at DC Blockchain Summit, Stablecon, and industry conferences on regulatory strategy, compliance architecture, and institutional adoption.
+                Regular speaker at TEDx, DC Blockchain Summit, Stablecon, and industry conferences on regulatory strategy, compliance architecture, and institutional adoption.
               </motion.p>
             </div>
 
