@@ -7,6 +7,12 @@ import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
+const speakingPhotos = [
+  { src: "/images/beth/speaking-dc-summit-1.png", alt: "Beth Haddock speaking at DC Blockchain Summit", event: "DC Blockchain Summit 2025" },
+  { src: "/images/beth/speaking-stablecon.png", alt: "Beth Haddock on main stage at Stablecon", event: "Stablecon Main Stage" },
+  { src: "/images/beth/tedx-banner.png", alt: "Beth Haddock TEDx talk on Compliance as Competitive Advantage", event: "TEDx: Compliance as Competitive Advantage" },
+];
+
 const credentials = [
   { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160, height: 40, url: "https://www.franklintempleton.com" },
   { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140, height: 32, url: "https://www.guggenheimpartners.com" },
@@ -44,6 +50,64 @@ type Post = {
   excerpt?: string;
   publishedAt: string;
 };
+
+function SpeakingCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % speakingPhotos.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="relative"
+    >
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+        {speakingPhotos.map((photo, index) => (
+          <div
+            key={photo.src}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent" />
+          </div>
+        ))}
+      </div>
+
+      {/* Event name */}
+      <p className="text-[#71717A] text-sm mt-4">
+        {speakingPhotos[currentIndex].event}
+      </p>
+
+      {/* Dots indicator */}
+      <div className="flex gap-2 mt-3">
+        {speakingPhotos.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === currentIndex ? "bg-[#D4AF37]" : "bg-[#404040]"
+            }`}
+          />
+        ))}
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -389,22 +453,8 @@ export default function Home() {
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* The photo - she's commanding the room */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative aspect-[3/4] overflow-hidden rounded-lg"
-            >
-              <Image
-                src="/images/beth/speaking-dc-summit-1.png"
-                alt="Beth Haddock speaking at DC Blockchain Summit"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/40 via-transparent to-transparent" />
-            </motion.div>
+            {/* Speaking carousel */}
+            <SpeakingCarousel />
 
             {/* The message */}
             <motion.div
@@ -417,11 +467,8 @@ export default function Home() {
                 Building infrastructure isn&apos;t just boardroom work.
                 <span className="text-[#D4AF37] italic"> It&apos;s sharing what I&apos;ve learned.</span>
               </h2>
-              <p className="text-[#A1A1AA] text-lg leading-relaxed mb-6">
-                Regular speaker at DC Blockchain Summit, Stablecon, and industry conferences on compliance, governance, and regulatory strategy.
-              </p>
-              <p className="text-[#71717A] text-sm">
-                DC Blockchain Summit 2025
+              <p className="text-[#A1A1AA] text-lg leading-relaxed">
+                Regular speaker at DC Blockchain Summit, Stablecon, TEDx, and industry conferences on compliance, governance, and regulatory strategy.
               </p>
             </motion.div>
           </div>
