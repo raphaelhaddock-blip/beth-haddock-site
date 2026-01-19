@@ -388,13 +388,19 @@ export default function Home() {
         >
           <Image
             src="/images/beth/tedx-banner.png"
-            alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
+            alt="Beth Haddock TEDx talk on the evolution of crypto"
             fill
             sizes="100vw"
             quality={95}
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/30 via-transparent to-[#0A0A0A]/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-[#0A0A0A]/40 to-transparent" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="px-8 md:px-16 lg:px-24">
+              <p className="text-white text-2xl md:text-3xl lg:text-4xl font-medium">Beth Haddock</p>
+              <p className="text-[#D4AF37] text-lg md:text-xl lg:text-2xl mt-2">TEDx <span className="text-white/70">on the Evolution of Crypto</span></p>
+            </div>
+          </div>
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-6 py-20">
