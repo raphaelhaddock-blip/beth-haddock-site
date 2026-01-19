@@ -377,7 +377,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speaking - TEDx Header + Gallery */}
+      {/* Speaking - 4 Events Collage */}
       <section className="border-t border-[#262626]">
         {/* TEDx Banner - Full Width Header */}
         <motion.div
@@ -394,88 +394,102 @@ export default function Home() {
             quality={95}
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/40 via-transparent to-[#0A0A0A]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/30 via-transparent to-[#0A0A0A]/50" />
         </motion.div>
 
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-            <div>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-              >
-                On the Stage
-              </motion.p>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight"
-              >
-                Building infrastructure isn&apos;t just boardroom work.
-                <span className="text-[#D4AF37] italic"> It&apos;s sharing what I&apos;ve learned.</span>
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="text-[#A1A1AA] text-lg leading-relaxed"
-              >
-                Regular speaker at TEDx, DC Blockchain Summit, Stablecon, and industry conferences on regulatory strategy, compliance architecture, and institutional adoption.
-              </motion.p>
-            </div>
-
-            {/* DC Blockchain Summit - Large */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-12">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="group relative aspect-[3/4] overflow-hidden rounded-2xl"
+              className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+            >
+              On the Stage
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight max-w-3xl mx-auto"
+            >
+              Building infrastructure isn&apos;t just boardroom work.
+              <span className="text-[#D4AF37] italic"> It&apos;s sharing what I&apos;ve learned.</span>
+            </motion.h2>
+          </div>
+
+          {/* 3-Photo Grid */}
+          <div className="grid md:grid-cols-3 gap-4">
+            {/* DC Blockchain Summit */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group relative aspect-[4/5] overflow-hidden rounded-2xl"
             >
               <Image
                 src="/images/beth/speaking-dc-summit-1.png"
                 alt="Beth Haddock speaking at DC Blockchain Summit"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 quality={95}
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent" />
-              <div className="absolute bottom-8 left-8">
-                <p className="text-white text-2xl font-medium">DC Blockchain Summit</p>
-                <p className="text-white/60 text-base mt-1">2025</p>
+              <div className="absolute bottom-6 left-6">
+                <p className="text-white text-xl font-medium">DC Blockchain Summit</p>
+                <p className="text-white/60 text-sm mt-1">2025</p>
+              </div>
+            </motion.div>
+
+            {/* Stablecoin Standard / State Street */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group relative aspect-[4/5] overflow-hidden rounded-2xl"
+            >
+              <Image
+                src="/images/beth/speaking-stablecoin-standard.jpg"
+                alt="Beth Haddock at Stablecoin Standard with State Street and Solana"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={95}
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <p className="text-white text-xl font-medium">Stablecoin Standard</p>
+                <p className="text-white/60 text-sm mt-1">State Street · Solana</p>
+              </div>
+            </motion.div>
+
+            {/* Stablecon */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="group relative aspect-[4/5] overflow-hidden rounded-2xl"
+            >
+              <Image
+                src="/images/beth/speaking-stablecon.png"
+                alt="Beth Haddock on main stage at Stablecon"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={95}
+                className="object-cover object-left transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <p className="text-white text-xl font-medium">Stablecon</p>
+                <p className="text-white/60 text-sm mt-1">Main Stage</p>
               </div>
             </motion.div>
           </div>
-
-          {/* Stablecon - Full Width */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="group relative aspect-[21/9] overflow-hidden rounded-2xl"
-          >
-            <Image
-              src="/images/beth/speaking-stablecon.png"
-              alt="Beth Haddock on main stage at Stablecon"
-              fill
-              sizes="(max-width: 1152px) 100vw, 1152px"
-              quality={95}
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/10 to-transparent" />
-            <div className="absolute bottom-8 left-8">
-              <p className="text-white text-2xl font-medium">Stablecon</p>
-              <p className="text-white/60 text-base mt-1">Main Stage</p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
