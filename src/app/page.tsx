@@ -38,6 +38,57 @@ const focusAreas = [
   },
 ];
 
+const publications = [
+  {
+    outlet: "CoinDesk",
+    title: "Crypto Week: What Does it Mean for Advisors?",
+    date: "July 2025",
+    url: "https://www.coindesk.com/coindesk-indices/2025/07/16/crypto-for-advisors-crypto-week-what-does-it-mean-for-advisors",
+  },
+  {
+    outlet: "CoinDesk",
+    title: "Trump: What's Changed for Crypto?",
+    date: "February 2025",
+    url: "https://www.coindesk.com/coindesk-indices/2025/02/19/crypto-for-advisors-trump-what-s-changed-for-crypto",
+  },
+  {
+    outlet: "CoinDesk",
+    title: "Planning for Inevitable Regulatory Change",
+    date: "October 2024",
+    url: "https://www.coindesk.com/business/2024/10/16/planning-for-inevitable-regulatory-change",
+  },
+  {
+    outlet: "Morningstar",
+    title: "How to Integrate AI to Your Practice",
+    date: "June 2024",
+    url: "https://www.morningstar.com/",
+  },
+  {
+    outlet: "Financial Planning",
+    title: "3 AI Insights for Advisory Firms",
+    date: "May 2024",
+    url: "https://www.financial-planning.com/opinion/3-need-to-know-ai-insights-for-advisory-firms",
+  },
+  {
+    outlet: "Nasdaq",
+    title: "Crypto Had Reputational Issues. 2024 Will Change That",
+    date: "December 2023",
+    url: "https://www.nasdaq.com/articles/crypto-had-reputational-issues-this-year.-2024-will-change-that",
+  },
+  {
+    outlet: "CoinDesk",
+    title: "Crypto Must Take Fraud Prevention Seriously",
+    date: "July 2023",
+    url: "https://www.coindesk.com/policy/2023/07/26/crypto-must-take-fraud-prevention-seriously-crypto-long-short",
+  },
+  {
+    outlet: "Forbes",
+    title: "Is The Decentralized Crypto Case In Trouble?",
+    date: "March 2022",
+    url: "https://www.forbes.com/",
+  },
+];
+
 type Post = {
   _id: string;
   title: string;
@@ -489,6 +540,93 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Published In */}
+      <section className="py-24 px-6 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            Published In
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
+          >
+            Industry analysis and regulatory perspectives—
+            <span className="italic text-[#D4AF37]">featured in leading publications.</span>
+          </motion.h2>
+
+          <div className="grid gap-0">
+            {publications.map((pub, index) => (
+              <motion.a
+                key={`${pub.outlet}-${index}`}
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="group flex items-start justify-between gap-8 py-6 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
+              >
+                <div className="flex-1">
+                  <p className="text-[#D4AF37] text-sm font-medium mb-1">{pub.outlet}</p>
+                  <p className="font-[family-name:var(--font-playfair)] text-lg sm:text-xl group-hover:text-[#D4AF37] transition-colors">
+                    {pub.title}
+                  </p>
+                  <p className="text-[#71717A] text-sm mt-2">{pub.date}</p>
+                </div>
+                <svg
+                  className="w-5 h-5 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-1 transition-all mt-2 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </motion.a>
+            ))}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#71717A] text-sm mt-8 text-center"
+          >
+            View all publications on{" "}
+            <a
+              href="https://www.coindesk.com/author/beth-haddock"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4AF37] hover:underline"
+            >
+              CoinDesk
+            </a>{" "}
+            ·{" "}
+            <a
+              href="https://warburtonadvisers.com/media/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4AF37] hover:underline"
+            >
+              Warburton Advisers Media
+            </a>
+          </motion.p>
         </div>
       </section>
 
