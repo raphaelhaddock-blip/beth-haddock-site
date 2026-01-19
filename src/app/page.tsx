@@ -12,7 +12,7 @@ const credentials = [
   { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140, height: 32, url: "https://www.guggenheimpartners.com" },
   { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 150, height: 42, url: "https://www.troweprice.com" },
   { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 80, height: 40, url: "https://www.bbh.com" },
-  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 160, height: 32, url: "https://www.grayscale.com" },
+  { name: "Grayscale", logo: "/logos/grayscale.svg", width: 180, height: 32, url: "https://www.grayscale.com" },
   { name: "Ondo", logo: "/logos/ondo.svg", width: 100, height: 32, url: "https://ondo.finance" },
   { name: "Balancer", logo: "/logos/balancer.svg", width: 120, height: 32, url: "https://balancer.fi" },
   { name: "Orca", logo: "/logos/orca.svg", width: 110, height: 38, url: "https://www.orca.so" },
