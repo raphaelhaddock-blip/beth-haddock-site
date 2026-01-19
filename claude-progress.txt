@@ -249,3 +249,115 @@ Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
 - Consider adding "What's on your mind?" question to Calendly
 
 ---
+
+## SESSION 6 - 2026-01-19
+### Starting State
+- Site live with basic structure
+- Hero section needed copy refinement per Beth's feedback
+- TEDx banner image needed cropping
+- Warburton site still separate
+
+### Work Done
+1. **Hero Section Redesign**
+   - Updated eyebrow: "25+ Years in Financial Services"
+   - Subtitle now two-part: roles + what she's built
+   - More descriptive of Beth's scope (stablecoins, DeFi, institutional capital)
+
+2. **TEDx Banner Cropping**
+   - Used Python PIL to crop banner image
+   - Removed right side with "Compliance as a Competitive Advantage" text
+   - Final: 1200x752px from left side
+
+3. **Published In Section (NEW)**
+   - Added new section after Speaking
+   - 8 featured articles: CoinDesk (4), Nasdaq, Morningstar, Forbes, Financial Planning
+   - Links to CoinDesk author page and Warburton media archive
+   - Full catalog available from 2022-2025
+
+4. **Site Consolidation: Warburton → /practice**
+   - Deep marketing analysis: Beth is the brand, Warburton is the vehicle
+   - Created enhanced /practice page with:
+     - Philosophy section (how Beth works)
+     - 4 services with Calendly CTAs
+     - Team section (Mary Toumpas, Mark Roszak)
+     - Notable engagements (4 case studies)
+     - Industries served
+   - Updated Nav: Practice · Guides · Insights · Contact
+   - Added redirects: /warburton-advisors, /warburton-advisers, /warburton → /practice
+   - Removed old /warburton-advisors page
+
+5. **Content Agent System Planning**
+   - Discussed multi-agent content creation system
+   - Existing skills: linkedin-writer, deep-diver, voice-validator
+   - Target cadence: 3x900w + 3x300-500w + 3xLinkedIn per week
+   - 12 domain research files already exist in /research/
+
+### Decisions Made
+- Beth Haddock = brand, Warburton Advisers = practice (how she engages)
+- Domain redirect (warburtonadvisers.com) blocked until Beth approves site
+- Content pipeline needs Beth/Raphy review before publish
+
+### Ending State
+- F001-F007: PASSING (homepage fully built out)
+- F004: PASSING (practice page complete)
+- F022: IN_PROGRESS (content agent system)
+- F023: BLOCKED (domain redirect pending approval)
+- Site live at: https://beth-haddock-site.vercel.app
+
+### Next Session Should
+- Get Beth's approval on site changes
+- Build content agent system (F022)
+- Create first batch of content for review
+- Consider: Book page (F015), Testimonials (F016), Analytics (F019)
+
+---
+
+## SESSION 7 - 2026-01-19
+### Starting State
+- F022 (Content agent system): IN_PROGRESS
+- Three existing skills: linkedin-writer, deep-diver, voice-validator
+- 12 domain research files in /research/
+- Content pipeline structure existed but no orchestration
+
+### Work Done
+1. **Built Content Agent System (F022)**
+   - Created `news-monitor.md` skill - finds regulatory news hooks
+   - Created `article-writer.md` skill - writes 300-500w hot takes and 900w deep analysis
+   - Created `content-orchestrator.md` skill - coordinates weekly pipeline
+   - Updated `linkedin-writer.md` with integration notes
+   - Created `/content/calendar/` directory for tracking
+
+2. **Tested Full Pipeline**
+   - Ran news scan (SEC, OCC, GENIUS Act)
+   - Found OCC trust charter news hook (5 crypto firms approved Dec 2025)
+   - Created news brief at `/content/research/news-2026-01-19-occ-trust-charters.md`
+   - Created weekly calendar at `/content/calendar/week-2026-01-20.md`
+   - Generated LinkedIn draft at `/content/drafts/2026-01-19-occ-trust-charters.md`
+   - Ran voice validation - APPROVED
+
+### Decisions Made
+- Pipeline architecture: news-monitor → content-orchestrator → writers → voice-validator → /content/drafts/
+- Target cadence: 3x900w + 3x300-500w + 3xLinkedIn per week
+- Calendar system for weekly planning at /content/calendar/
+
+### Ending State
+- F022: PASSING (content agent system complete)
+- 6 skills now available for content creation
+- Full pipeline tested end-to-end
+- 2 drafts in /content/drafts/ ready for review
+
+### Skills Built/Updated
+- /.claude/skills/news-monitor.md (NEW)
+- /.claude/skills/article-writer.md (NEW)
+- /.claude/skills/content-orchestrator.md (NEW)
+- /.claude/skills/linkedin-writer.md (updated with integration)
+- /.claude/skills/deep-diver.md (existing)
+- /.claude/skills/voice-validator.md (existing)
+
+### Next Session Should
+- Generate full week of content using orchestrator
+- Get Beth/Raphy review on drafts
+- Consider: Book page (F015), Testimonials (F016), Analytics (F019)
+- Domain consolidation (F023) still blocked pending Beth approval
+
+---

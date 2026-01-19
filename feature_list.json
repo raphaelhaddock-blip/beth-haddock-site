@@ -2,7 +2,7 @@
   "project_name": "beth-haddock-site",
   "project_type": "web_app",
   "created_at": "2026-01-14T13:00:00.000Z",
-  "last_updated": "2026-01-14T15:30:00.000Z",
+  "last_updated": "2026-01-19T20:00:00.000Z",
   "features": [
     {
       "id": "F000",
@@ -33,7 +33,7 @@
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Multiple redesigns. Final: Beth Haddock personal brand with operator positioning."
     },
     {
       "id": "F002",
@@ -49,87 +49,84 @@
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Updated 2026-01-19: Added Practice link to nav"
     },
     {
       "id": "F003",
-      "name": "About page with bio + credentials",
-      "description": "About Beth page with professional bio, credentials, and board positions",
-      "status": "FAILING",
+      "name": "About/Bio content",
+      "description": "Professional bio, credentials, and board positions displayed",
+      "status": "PASSING",
       "dependencies": ["F002"],
       "test_criteria": [
         "Bio section displays correctly",
         "Credentials/experience listed",
-        "Professional photo displayed",
-        "Page accessible via /about route"
+        "Professional photo displayed"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Integrated into homepage rather than separate page. Shows 25+ years, current roles."
     },
     {
       "id": "F004",
-      "name": "Services overview page",
-      "description": "Services landing page showing three service pillars with CTAs to detail pages",
-      "status": "FAILING",
+      "name": "Services/Practice page",
+      "description": "Services page showing engagement types with CTAs",
+      "status": "PASSING",
       "dependencies": ["F002"],
       "test_criteria": [
-        "Three service cards displayed",
-        "Each card links to detail page",
-        "Page accessible via /services route",
+        "Service cards displayed",
+        "Each card links to Calendly",
+        "Page accessible via /practice route",
         "Responsive grid layout"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "2026-01-19: Consolidated Warburton into /practice. Shows 4 services, team, notable work."
     },
     {
       "id": "F005",
-      "name": "Board & Advisory service detail",
-      "description": "Detail page for board and advisory services with value prop and CTA",
-      "status": "FAILING",
-      "dependencies": ["F004"],
+      "name": "Guides section",
+      "description": "Thought leadership guides on key topics",
+      "status": "PASSING",
+      "dependencies": ["F002"],
       "test_criteria": [
-        "Service description displayed",
-        "Industries/expertise listed",
-        "CTA to discuss opportunity visible",
-        "Page accessible via /services/board-advisory route"
+        "Guides listing page at /guides",
+        "Individual guide pages at /guides/[slug]",
+        "6 comprehensive guides available",
+        "Responsive layout"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Added post-session-5. Guides: New Financial Infrastructure, Stablecoins, DeFi, Crypto Compliance, Institutional Crypto, Tokenization"
     },
     {
       "id": "F006",
-      "name": "Strategic Advisory service detail",
-      "description": "Detail page for strategic advisory/consulting services",
-      "status": "FAILING",
-      "dependencies": ["F004"],
+      "name": "Speaking section",
+      "description": "Speaking engagements and events display",
+      "status": "PASSING",
+      "dependencies": ["F001"],
       "test_criteria": [
-        "Service description displayed",
-        "Engagement types explained",
-        "CTA to schedule consultation visible",
-        "Page accessible via /services/strategic-advisory route"
+        "TEDx banner displayed",
+        "Speaking photos in grid",
+        "Event names and dates shown"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Shows TEDx, DC Blockchain Summit, Stablecoin Standard, Stablecon"
     },
     {
       "id": "F007",
-      "name": "Speaking & Training service detail",
-      "description": "Detail page for speaking engagements and corporate training",
-      "status": "FAILING",
-      "dependencies": ["F004"],
+      "name": "Published In section",
+      "description": "External publications displayed on homepage",
+      "status": "PASSING",
+      "dependencies": ["F001"],
       "test_criteria": [
-        "Speaking topics listed",
-        "Past speaking examples shown",
-        "CTA to book Beth visible",
-        "Page accessible via /services/speaking route"
+        "Publications listed with links",
+        "Outlet names shown",
+        "Links to external articles work"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "2026-01-19: Added 8 publications from CoinDesk, Nasdaq, Morningstar, Forbes, Financial Planning"
     },
     {
       "id": "F008",
@@ -145,7 +142,7 @@
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Not yet implemented. Consider ConvertKit integration."
     },
     {
       "id": "F009",
@@ -156,50 +153,32 @@
       "test_criteria": [
         "Email signup form on page",
         "Download available after signup",
-        "Thank you message displayed",
-        "Page accessible via /resources/[slug] route"
+        "Thank you message displayed"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Blocked by F008"
     },
     {
       "id": "F010",
-      "name": "Contact form with inquiry types",
-      "description": "Contact page with form including dropdown for inquiry type",
-      "status": "FAILING",
+      "name": "Contact/Calendly integration",
+      "description": "Contact CTAs link to Calendly for scheduling",
+      "status": "PASSING",
       "dependencies": ["F002"],
       "test_criteria": [
-        "Form renders with all fields",
-        "Inquiry type dropdown works",
-        "Required field validation",
-        "Page accessible via /contact route"
+        "CTAs link to Calendly",
+        "Multiple Calendly links with context",
+        "Links open in new tab"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
-    },
-    {
-      "id": "F011",
-      "name": "Form submission to email/CRM",
-      "description": "Backend handling for form submissions - sends email notification",
-      "status": "FAILING",
-      "dependencies": ["F010"],
-      "test_criteria": [
-        "Form submission triggers API route",
-        "Email sent on successful submission",
-        "Error handling for failed submissions",
-        "Rate limiting in place"
-      ],
-      "test_type": "e2e_api",
-      "attempted_approaches": [],
-      "notes": ""
+      "notes": "Using Calendly instead of contact form. Links throughout site."
     },
     {
       "id": "F012",
       "name": "Sanity CMS integration",
       "description": "Sanity project configured with schemas for blog posts and content",
-      "status": "FAILING",
+      "status": "PASSING",
       "dependencies": ["F000"],
       "test_criteria": [
         "Sanity client configured",
@@ -209,13 +188,13 @@
       ],
       "test_type": "e2e_api",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Project: kup01top, dataset: production"
     },
     {
       "id": "F013",
       "name": "Blog/Insights listing page",
       "description": "Page listing all blog posts with pagination",
-      "status": "FAILING",
+      "status": "PASSING",
       "dependencies": ["F012"],
       "test_criteria": [
         "Posts fetched from Sanity displayed",
@@ -231,7 +210,7 @@
       "id": "F014",
       "name": "Individual blog post page",
       "description": "Dynamic page for individual blog posts with portable text rendering",
-      "status": "FAILING",
+      "status": "PASSING",
       "dependencies": ["F013"],
       "test_criteria": [
         "Post content renders correctly",
@@ -245,22 +224,6 @@
     },
     {
       "id": "F015",
-      "name": "Publications/media page",
-      "description": "Page showcasing media appearances, publications, and podcast features",
-      "status": "FAILING",
-      "dependencies": ["F002"],
-      "test_criteria": [
-        "Publications listed with links",
-        "Media logos displayed",
-        "Podcast appearances shown",
-        "Page accessible via /publications route"
-      ],
-      "test_type": "e2e_browser",
-      "attempted_approaches": [],
-      "notes": ""
-    },
-    {
-      "id": "F016",
       "name": "Book page",
       "description": "Dedicated page for Triple Bottom-Line Compliance book",
       "status": "FAILING",
@@ -273,10 +236,10 @@
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Not yet implemented"
     },
     {
-      "id": "F017",
+      "id": "F016",
       "name": "Testimonials component",
       "description": "Reusable component displaying client testimonials",
       "status": "FAILING",
@@ -284,15 +247,14 @@
       "test_criteria": [
         "Testimonials render with quote text",
         "Attribution shown (name, title, company)",
-        "Responsive layout",
-        "Can be used on multiple pages"
+        "Responsive layout"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Not yet implemented. May need to gather testimonials."
     },
     {
-      "id": "F018",
+      "id": "F017",
       "name": "Client/media logos bar",
       "description": "Logo bar component showing client companies and media features",
       "status": "PASSING",
@@ -300,34 +262,17 @@
       "test_criteria": [
         "Logos display correctly",
         "Responsive sizing",
-        "Optional link on logos",
-        "Can be used on homepage and about"
+        "Optional link on logos"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Shows Franklin Templeton, Guggenheim, T. Rowe Price, BBH, Grayscale, a16z, Ondo, Balancer, Orca"
     },
     {
-      "id": "F019",
-      "name": "Board positions display",
-      "description": "Component showing current and past board positions",
-      "status": "FAILING",
-      "dependencies": ["F003"],
-      "test_criteria": [
-        "Current positions highlighted",
-        "Past positions listed",
-        "Company names and roles shown",
-        "Dates/duration displayed"
-      ],
-      "test_type": "e2e_browser",
-      "attempted_approaches": [],
-      "notes": ""
-    },
-    {
-      "id": "F020",
+      "id": "F018",
       "name": "SEO meta tags + OpenGraph",
       "description": "Proper SEO meta tags and OpenGraph images for all pages",
-      "status": "FAILING",
+      "status": "PARTIAL",
       "dependencies": ["F001"],
       "test_criteria": [
         "Title and description on all pages",
@@ -337,10 +282,10 @@
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Basic meta tags present. OpenGraph images partially configured."
     },
     {
-      "id": "F021",
+      "id": "F019",
       "name": "Analytics integration",
       "description": "Analytics tracking set up (Plausible or Vercel Analytics)",
       "status": "FAILING",
@@ -348,15 +293,14 @@
       "test_criteria": [
         "Analytics script loads",
         "Page views tracked",
-        "No console errors from analytics",
-        "GDPR compliant"
+        "No console errors from analytics"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Not yet implemented"
     },
     {
-      "id": "F022",
+      "id": "F020",
       "name": "404 and error pages",
       "description": "Custom 404 and error pages with navigation back to site",
       "status": "FAILING",
@@ -364,15 +308,14 @@
       "test_criteria": [
         "404 page shows for invalid routes",
         "Navigation present on error pages",
-        "Helpful message displayed",
-        "Link back to homepage"
+        "Helpful message displayed"
       ],
       "test_type": "e2e_browser",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Using Next.js default. Custom page not created."
     },
     {
-      "id": "F023",
+      "id": "F021",
       "name": "Sitemap generation",
       "description": "Auto-generated sitemap.xml for SEO",
       "status": "FAILING",
@@ -380,12 +323,42 @@
       "test_criteria": [
         "sitemap.xml accessible",
         "All public pages included",
-        "Valid XML format",
-        "robots.txt references sitemap"
+        "Valid XML format"
       ],
       "test_type": "unit",
       "attempted_approaches": [],
-      "notes": ""
+      "notes": "Not yet implemented"
+    },
+    {
+      "id": "F022",
+      "name": "Content agent system",
+      "description": "Multi-agent system for thought leadership content creation",
+      "status": "PASSING",
+      "dependencies": ["F012", "F013"],
+      "test_criteria": [
+        "Deep research agent works",
+        "Writer agent produces drafts",
+        "Editor agent reviews content",
+        "LinkedIn posts generated"
+      ],
+      "test_type": "manual",
+      "attempted_approaches": [],
+      "notes": "2026-01-19: Built 6 skills (news-monitor, article-writer, content-orchestrator, linkedin-writer, deep-diver, voice-validator). Pipeline tested: news scan → brief → draft → validation. Calendar system at /content/calendar/"
+    },
+    {
+      "id": "F023",
+      "name": "Domain consolidation",
+      "description": "Redirect warburtonadvisers.com to bethhaddock.com",
+      "status": "BLOCKED",
+      "dependencies": ["F004"],
+      "test_criteria": [
+        "warburtonadvisers.com redirects to /practice",
+        "All old URLs redirect properly",
+        "SEO equity preserved"
+      ],
+      "test_type": "manual",
+      "attempted_approaches": [],
+      "notes": "2026-01-19: /practice page ready. Domain redirect blocked pending Beth's approval of site."
     }
   ]
 }

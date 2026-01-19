@@ -213,3 +213,16 @@ Save completed drafts to:
 ## After Writing
 
 Run voice-validator skill to check quality. If passes, draft is ready for Beth's review.
+
+## Integration with Content Pipeline
+
+This skill is part of the content agent system:
+
+```
+news-monitor → content-orchestrator → linkedin-writer → voice-validator → /content/drafts/
+```
+
+The orchestrator coordinates weekly content:
+- 3x LinkedIn posts per week target
+- Use news briefs from `/content/research/news-*.md`
+- Reference domain research from `/research/domain-*.md`
