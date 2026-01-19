@@ -126,7 +126,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="text-[#A1A1AA] text-lg md:text-xl mt-4 max-w-lg leading-relaxed"
             >
-              I&apos;ve built the compliance infrastructure that passes regulatory scrutiny—for stablecoin issuers, DeFi protocols, and companies preparing for institutional capital. Now I build it for others.
+              I&apos;ve built the operational foundations that let stablecoin issuers, DeFi protocols, and digital asset firms get licensed, raise institutional capital, and scale. Now I build them for others.
             </motion.p>
 
             <motion.div
