@@ -53,44 +53,50 @@ function SpeakingCollage() {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="relative"
+      className="relative w-full max-w-2xl"
     >
       {/* TEDx Banner on top - full width */}
-      <div className="relative w-full aspect-[4/1] overflow-hidden rounded-t-lg">
+      <div className="relative w-full aspect-[3.5/1] overflow-hidden rounded-t-xl">
         <Image
           src="/images/beth/tedx-banner.png"
           alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
           fill
+          sizes="(max-width: 768px) 100vw, 672px"
+          quality={95}
           className="object-cover object-center"
         />
       </div>
 
       {/* Two photos below */}
-      <div className="grid grid-cols-2 gap-1 mt-1">
+      <div className="grid grid-cols-2 gap-1.5 mt-1.5">
         {/* DC Blockchain Summit */}
-        <div className="relative aspect-[3/4] overflow-hidden rounded-bl-lg">
+        <div className="relative aspect-square overflow-hidden rounded-bl-xl">
           <Image
             src="/images/beth/speaking-dc-summit-1.png"
             alt="Beth Haddock speaking at DC Blockchain Summit"
             fill
+            sizes="(max-width: 768px) 50vw, 336px"
+            quality={95}
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/70 via-transparent to-transparent" />
-          <p className="absolute bottom-3 left-3 text-xs text-white/80 font-medium">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
+          <p className="absolute bottom-4 left-4 text-sm text-white/90 font-medium">
             DC Blockchain Summit
           </p>
         </div>
 
         {/* Stablecon */}
-        <div className="relative aspect-[3/4] overflow-hidden rounded-br-lg">
+        <div className="relative aspect-square overflow-hidden rounded-br-xl">
           <Image
             src="/images/beth/speaking-stablecon.png"
             alt="Beth Haddock on main stage at Stablecon"
             fill
+            sizes="(max-width: 768px) 50vw, 336px"
+            quality={95}
             className="object-cover object-left"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/70 via-transparent to-transparent" />
-          <p className="absolute bottom-3 left-3 text-xs text-white/80 font-medium">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
+          <p className="absolute bottom-4 left-4 text-sm text-white/90 font-medium">
             Stablecon Main Stage
           </p>
         </div>
