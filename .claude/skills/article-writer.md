@@ -31,6 +31,19 @@ Create thought leadership articles for Beth's website/blog. Two formats:
 2. **Read relevant domain files** - `/research/domain-*.md`
 3. **Check CLAUDE.md** - Voice requirements, forbidden patterns
 4. **Check content/README.md** - Template and frontmatter requirements
+5. **Gather primary sources** - Every claim needs a Tier 1-3 source (see research-validator)
+
+## Research Standards (CRITICAL)
+
+**Every factual claim must have a source.** No exceptions.
+
+**Source Tiers:**
+- **Tier 1 (Required for key claims):** Legislation text, regulatory releases, court filings, SEC EDGAR
+- **Tier 2 (Context):** Law firm alerts, research institutions, Big 4 reports
+- **Tier 3 (Carefully):** Reuters, Bloomberg, CoinDesk, WSJ
+- **FORBIDDEN:** Wikipedia, blogs, social media, "according to reports"
+
+**If you can't link to where you learned it, don't write it.**
 
 ## Article Structure: Hot Take (300-500 words)
 
@@ -225,16 +238,24 @@ linkedin_ready: false
 
 Before submitting draft:
 
+**Voice (checked by voice-validator):**
 1. [ ] Frontmatter complete
 2. [ ] Word count in range
 3. [ ] Minimum 5 "I" statements
 4. [ ] Zero client references
-5. [ ] All claims sourced
-6. [ ] Clear position (no hedging)
-7. [ ] Actionable guidance
-8. [ ] No AI patterns
-9. [ ] Passes "CoinDesk test" (would they publish this?)
-10. [ ] News hook is current (if applicable)
+5. [ ] Clear position (no hedging)
+6. [ ] Actionable guidance
+7. [ ] No AI patterns
+8. [ ] Passes "CoinDesk test" (would they publish this?)
+
+**Research (checked by research-validator):**
+9. [ ] Every claim has a cited source
+10. [ ] Key claims use Tier 1 sources (official documents)
+11. [ ] Statistics include source + date
+12. [ ] No speculation presented as fact
+13. [ ] Data is current (not stale)
+14. [ ] No hallucinated facts (verify each claim exists)
+15. [ ] News hook verified as real and recent
 
 ## Integration
 

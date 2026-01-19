@@ -30,6 +30,22 @@ Authority comes from expertise and analysis, NOT from revealing insider informat
 1. Read `/Users/raphyhaddock/beth-haddock-site/CLAUDE.md`
 2. Have a topic and recent news hook ready
 3. Focus on regulatory developments, market events, or industry patterns
+4. **Gather primary sources for every claim** (see research-validator)
+
+## Research Standards (CRITICAL)
+
+**Every factual claim must have a source.** Even in a LinkedIn post.
+
+- Statistics need source + date
+- Regulatory claims need official document citation
+- Quotes need speaker + date
+- "Breaking news" must be verified
+
+**Source Tiers:**
+- **Tier 1:** sec.gov, occ.gov, congress.gov, court filings
+- **Tier 2:** Law firm alerts, research institutions
+- **Tier 3:** Reuters, Bloomberg, CoinDesk
+- **FORBIDDEN:** Wikipedia, blogs, "according to reports"
 
 ## LinkedIn Post Constraints
 
@@ -194,14 +210,21 @@ What's the first question you'd ask any stablecoin issuer before working with th
 
 ## Post-Writing Checklist
 
-After writing, validate against voice-validator skill:
+After writing, validate against BOTH validators:
 
+**Voice (voice-validator):**
 - [ ] Zero references to specific client work
 - [ ] Authority through expertise, not insider access
-- [ ] Tied to recent news or regulatory development
 - [ ] Reader knows what to DO
-- [ ] All claims verifiable from public sources
 - [ ] No AI detection flags
+
+**Research (research-validator):**
+- [ ] Every statistic has source + date
+- [ ] Regulatory claims cite official documents
+- [ ] News hook verified as real and recent
+- [ ] No speculation presented as fact
+- [ ] No hallucinated facts (verify each claim)
+- [ ] All sources are Tier 1-3 (no Wikipedia/blogs)
 
 ## Saving
 
@@ -219,8 +242,10 @@ Run voice-validator skill to check quality. If passes, draft is ready for Beth's
 This skill is part of the content agent system:
 
 ```
-news-monitor → content-orchestrator → linkedin-writer → voice-validator → /content/drafts/
+news-monitor → content-orchestrator → linkedin-writer → voice-validator → research-validator → /content/drafts/
 ```
+
+**Both validators must pass before content moves to human review.**
 
 The orchestrator coordinates weekly content:
 - 3x LinkedIn posts per week target

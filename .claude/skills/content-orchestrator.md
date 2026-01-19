@@ -22,8 +22,9 @@ Coordinate Beth's thought leadership content pipeline. Target cadence:
 
 ### Tuesday-Thursday: Production
 - Generate drafts using article-writer and linkedin-writer
-- Run voice-validator on each draft
-- Move validated drafts to `/content/drafts/`
+- Run voice-validator on each draft (AI patterns, client refs, voice)
+- Run research-validator on each draft (source quality, fact verification)
+- Only move to `/content/drafts/` if BOTH validators pass
 
 ### Friday: Review Prep
 - Compile all drafts for Beth/Raphy review
@@ -225,7 +226,12 @@ Before moving content through pipeline:
             │
             ▼
    ┌────────────────┐
-   │ voice-validator│ ─── Quality check
+   │ voice-validator│ ─── Voice/AI check
+   └────────┬───────┘
+            │
+            ▼
+   ┌────────────────┐
+   │research-validator│ ─── Source/fact check
    └────────┬───────┘
             │
             ▼
@@ -233,6 +239,21 @@ Before moving content through pipeline:
    │ /content/drafts│ ─── Human review
    └────────────────┘
 ```
+
+## Validation Gates (BOTH must pass)
+
+**Gate 1: voice-validator**
+- No AI patterns
+- No client references
+- Expertise "I" statements
+- Actionable content
+
+**Gate 2: research-validator**
+- All claims have sources
+- Sources are Tier 1-3 (no Wikipedia, no blogs)
+- Data is current
+- No speculation as fact
+- No hallucinated facts
 
 ## Troubleshooting
 
