@@ -7,11 +7,6 @@ import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const speakingPhotos = [
-  { src: "/images/beth/speaking-dc-summit-1.png", alt: "Beth Haddock speaking at DC Blockchain Summit", event: "DC Blockchain Summit 2025" },
-  { src: "/images/beth/speaking-stablecon.png", alt: "Beth Haddock on main stage at Stablecon", event: "Stablecon Main Stage" },
-  { src: "/images/beth/tedx-banner.png", alt: "Beth Haddock TEDx talk on Compliance as Competitive Advantage", event: "TEDx: Compliance as Competitive Advantage" },
-];
 
 const credentials = [
   { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160, height: 40, url: "https://www.franklintempleton.com" },
@@ -51,16 +46,7 @@ type Post = {
   publishedAt: string;
 };
 
-function SpeakingCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % speakingPhotos.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
+function SpeakingCollage() {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -69,41 +55,45 @@ function SpeakingCarousel() {
       transition={{ duration: 0.6 }}
       className="relative"
     >
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-        {speakingPhotos.map((photo, index) => (
-          <div
-            key={photo.src}
-            className={`absolute inset-0 transition-opacity duration-700 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent" />
-          </div>
-        ))}
+      {/* TEDx Banner on top - full width */}
+      <div className="relative w-full aspect-[4/1] overflow-hidden rounded-t-lg">
+        <Image
+          src="/images/beth/tedx-banner.png"
+          alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
+          fill
+          className="object-cover object-center"
+        />
       </div>
 
-      {/* Event name */}
-      <p className="text-[#71717A] text-sm mt-4">
-        {speakingPhotos[currentIndex].event}
-      </p>
-
-      {/* Dots indicator */}
-      <div className="flex gap-2 mt-3">
-        {speakingPhotos.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex ? "bg-[#D4AF37]" : "bg-[#404040]"
-            }`}
+      {/* Two photos below */}
+      <div className="grid grid-cols-2 gap-1 mt-1">
+        {/* DC Blockchain Summit */}
+        <div className="relative aspect-[3/4] overflow-hidden rounded-bl-lg">
+          <Image
+            src="/images/beth/speaking-dc-summit-1.png"
+            alt="Beth Haddock speaking at DC Blockchain Summit"
+            fill
+            className="object-cover"
           />
-        ))}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/70 via-transparent to-transparent" />
+          <p className="absolute bottom-3 left-3 text-xs text-white/80 font-medium">
+            DC Blockchain Summit
+          </p>
+        </div>
+
+        {/* Stablecon */}
+        <div className="relative aspect-[3/4] overflow-hidden rounded-br-lg">
+          <Image
+            src="/images/beth/speaking-stablecon.png"
+            alt="Beth Haddock on main stage at Stablecon"
+            fill
+            className="object-cover object-left"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/70 via-transparent to-transparent" />
+          <p className="absolute bottom-3 left-3 text-xs text-white/80 font-medium">
+            Stablecon Main Stage
+          </p>
+        </div>
       </div>
     </motion.div>
   );
@@ -453,8 +443,8 @@ export default function Home() {
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Speaking carousel */}
-            <SpeakingCarousel />
+            {/* Speaking collage */}
+            <SpeakingCollage />
 
             {/* The message */}
             <motion.div
