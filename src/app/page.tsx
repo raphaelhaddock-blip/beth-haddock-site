@@ -377,9 +377,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speaking - Full Width TEDx + Gallery */}
-      <section className="pt-32 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto px-6">
+      {/* Speaking - Clean Gallery */}
+      <section className="py-32 border-t border-[#262626]">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -404,81 +404,83 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[#A1A1AA] text-lg leading-relaxed mb-16 max-w-2xl"
+            className="text-[#A1A1AA] text-lg leading-relaxed mb-12 max-w-2xl"
           >
             Regular speaker at DC Blockchain Summit, Stablecon, TEDx, and industry conferences on compliance, governance, and regulatory strategy.
           </motion.p>
-        </div>
 
-        {/* TEDx Banner - Full Width */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="relative w-full aspect-[4/1] overflow-hidden"
-        >
-          <Image
-            src="/images/beth/tedx-banner.png"
-            alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
-            fill
-            sizes="100vw"
-            quality={95}
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/30 via-transparent to-[#0A0A0A]/30" />
-        </motion.div>
-
-        {/* Two Conference Photos */}
-        <div className="grid grid-cols-2">
-          {/* DC Blockchain Summit */}
+          {/* TEDx Banner - Hero Moment */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="relative aspect-[4/3] overflow-hidden"
+            transition={{ delay: 0.2 }}
+            className="relative w-full aspect-[2.5/1] overflow-hidden rounded-xl mb-4"
           >
             <Image
-              src="/images/beth/speaking-dc-summit-1.png"
-              alt="Beth Haddock speaking at DC Blockchain Summit"
+              src="/images/beth/tedx-banner.png"
+              alt="Beth Haddock TEDx talk: Compliance as Competitive Advantage"
               fill
-              sizes="50vw"
+              sizes="(max-width: 1152px) 100vw, 1152px"
               quality={95}
-              className="object-cover"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6">
-              <p className="text-white text-lg font-medium">DC Blockchain Summit</p>
-              <p className="text-white/60 text-sm">2025</p>
+              <p className="text-white text-xl font-medium">TEDx</p>
+              <p className="text-white/70 text-sm">Compliance as a Competitive Advantage</p>
             </div>
           </motion.div>
 
-          {/* Stablecon */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="relative aspect-[4/3] overflow-hidden"
-          >
-            <Image
-              src="/images/beth/speaking-stablecon.png"
-              alt="Beth Haddock on main stage at Stablecon"
-              fill
-              sizes="50vw"
-              quality={95}
-              className="object-cover object-left"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
-            <div className="absolute bottom-6 left-6">
-              <p className="text-white text-lg font-medium">Stablecon</p>
-              <p className="text-white/60 text-sm">Main Stage</p>
-            </div>
-          </motion.div>
+          {/* Two Conference Photos - Square */}
+          <div className="grid grid-cols-2 gap-4">
+            {/* DC Blockchain Summit */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="group relative aspect-square overflow-hidden rounded-xl"
+            >
+              <Image
+                src="/images/beth/speaking-dc-summit-1.png"
+                alt="Beth Haddock speaking at DC Blockchain Summit"
+                fill
+                sizes="(max-width: 768px) 50vw, 560px"
+                quality={95}
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <p className="text-white text-xl font-medium">DC Blockchain Summit</p>
+                <p className="text-white/70 text-sm">2025</p>
+              </div>
+            </motion.div>
+
+            {/* Stablecon */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="group relative aspect-square overflow-hidden rounded-xl"
+            >
+              <Image
+                src="/images/beth/speaking-stablecon.png"
+                alt="Beth Haddock on main stage at Stablecon"
+                fill
+                sizes="(max-width: 768px) 50vw, 560px"
+                quality={95}
+                className="object-cover object-left transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+              <div className="absolute bottom-6 left-6">
+                <p className="text-white text-xl font-medium">Stablecon</p>
+                <p className="text-white/70 text-sm">Main Stage</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
-
-        <div className="h-32"></div>
       </section>
 
       {/* Value Proposition */}
