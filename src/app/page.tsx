@@ -384,15 +384,15 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="relative w-full aspect-[3/1] overflow-hidden"
+          className="relative w-full aspect-[2.2/1] overflow-hidden"
         >
           <Image
-            src="/images/beth/tedx-banner.png"
+            src="/images/beth/tedx-banner-cropped.png"
             alt="Beth Haddock TEDx talk"
             fill
             sizes="100vw"
             quality={95}
-            className="object-cover object-[left_center] scale-[1.3]"
+            className="object-cover"
           />
         </motion.div>
 
