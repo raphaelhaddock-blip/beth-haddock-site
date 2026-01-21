@@ -695,8 +695,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-[#A1A1AA] text-lg mt-16 max-w-3xl mx-auto text-center leading-relaxed"
           >
-            I work with founders, boards, and executives building infrastructure for institutional digital assets.
-            If you&apos;re navigating <span className="text-[#FAFAFA]">SEC, NYDFS, or emerging AI/crypto regulatory frameworks</span>—we should talk.
+            I work with founders, boards, and executives building infrastructure for digital finance, AI and FinTech.
+            If you&apos;re navigating <span className="text-[#FAFAFA]">SEC, OCC, NYDFS, or emerging AI/crypto regulatory frameworks</span>—we should talk.
           </motion.p>
         </div>
       </section>
