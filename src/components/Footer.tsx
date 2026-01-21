@@ -8,10 +8,10 @@ export default function Footer() {
           <p className="text-sm text-[#A1A1AA]">© 2026 Beth Haddock</p>
           <span className="hidden sm:inline text-[#262626]">·</span>
           <Link
-            href="/warburton-advisors"
+            href="/warburton"
             className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition"
           >
-            Warburton Advisors
+            Warburton Advisers
           </Link>
         </div>
         <div className="flex gap-8 text-sm">
