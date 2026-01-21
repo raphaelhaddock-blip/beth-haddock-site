@@ -21,7 +21,7 @@ export const guides: Guide[] = [
     slug: "new-financial-infrastructure",
     title: "The Big Picture: Where Old Finance Meets New Technology",
     subtitle: "How crypto, AI, and fintech are colliding with a system built for another era",
-    description: "A comprehensive guide to understanding how blockchain, artificial intelligence, and fintech are reshaping financial infrastructure, with analysis from 25+ years in financial services compliance.",
+    description: "A comprehensive guide to understanding how blockchain, artificial intelligence, and fintech are reshaping financial infrastructure, with expert analysis in financial services compliance.",
     keywords: [
       "crypto regulation",
       "SEC Bitcoin ETF",
@@ -46,7 +46,7 @@ On the other side: crypto, DeFi, stablecoins, and now AI—technologies built on
 
 The future isn't one system replacing the other—it's the messy, contentious, profitable merger of both.
 
-Here's what 25 years in financial services compliance reveals about this collision.`
+Here's what experience in financial services compliance reveals about this collision.`
       },
       {
         title: "The Old System: Why It Costs So Much",
@@ -216,7 +216,7 @@ The companies that build for this uncertainty—with redundant systems, clear ac
       },
       {
         title: "Where It's All Heading",
-        content: `Based on 25 years watching new technologies hit regulatory walls, here's where the collision resolves:
+        content: `Based on watching new technologies hit regulatory walls, here's where the collision resolves:
 
 **Technology Trajectories**
 
@@ -256,7 +256,7 @@ Crypto in 2025-2026 is moving from stage 3 to stage 4. The companies that built 
     ],
     cta: {
       title: "Navigating the Collision?",
-      description: "With 25+ years in financial services compliance, I help institutions exploring digital assets and crypto companies preparing for regulation navigate the intersection of old and new systems. Let's talk."
+      description: "With deep experience in financial services compliance, I help institutions exploring digital assets and crypto companies preparing for regulation navigate the intersection of old and new systems. Let's talk."
     }
   },
   {
@@ -724,7 +724,7 @@ What's acceptable today may not be tomorrow. Build flexibility into your approac
   {
     slug: "crypto-compliance",
     title: "Crypto Compliance: What Regulators Actually Want",
-    subtitle: "25 years of regulatory conversations distilled",
+    subtitle: "Regulatory conversations distilled",
     description: "A guide to cryptocurrency compliance covering what regulators actually look for, the recent regulatory shift, and how to build crypto compliance that works.",
     keywords: [
       "SEC enforcement",
@@ -741,7 +741,7 @@ What's acceptable today may not be tomorrow. Build flexibility into your approac
     sections: [
       {
         title: "What Regulators Actually Want",
-        content: `After 25 years in financial services compliance, one thing is clear: regulators want the same things they've always wanted: investor protection, market integrity, and systemic stability.
+        content: `After years in financial services compliance, one thing is clear: regulators want the same things they've always wanted: investor protection, market integrity, and systemic stability.
 
 **The Historical Context Matters**
 

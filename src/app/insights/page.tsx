@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Insights | Crypto Regulation & Fintech Analysis | Beth Haddock",
   description:
-    "Perspectives on crypto regulation, fintech compliance, and the evolution of digital asset markets from a 25-year financial services veteran.",
+    "Perspectives on crypto regulation, fintech compliance, and the evolution of digital asset markets from deep experience in financial services.",
   keywords: [
     "crypto regulation analysis",
     "fintech insights",
