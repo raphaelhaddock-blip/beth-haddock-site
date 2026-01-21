@@ -5,17 +5,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/warburton-advisors",
-        destination: "/practice",
+        destination: "/warburton",
         permanent: true,
       },
       {
         source: "/warburton-advisers",
-        destination: "/practice",
+        destination: "/warburton",
         permanent: true,
       },
       {
-        source: "/warburton",
-        destination: "/practice",
+        source: "/practice",
+        destination: "/warburton",
         permanent: true,
       },
     ];
