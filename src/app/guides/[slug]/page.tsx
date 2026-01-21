@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import LeadCapture from "@/components/LeadCapture";
 
 export function generateStaticParams() {
   return getAllGuideSlugs().map((slug) => ({ slug }));
@@ -120,6 +121,11 @@ export default async function GuidePage({
             >
               Schedule a conversation
             </a>
+          </section>
+
+          {/* Lead Capture */}
+          <section className="mt-16">
+            <LeadCapture />
           </section>
         </div>
       </article>
