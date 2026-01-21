@@ -147,39 +147,45 @@ export default function Home() {
               25+ Years in Financial Services
             </motion.p>
 
-            <div className="space-y-1 md:space-y-2">
-              <motion.h1
+            {/* Semantic H1 for SEO - visually hidden */}
+            <h1 className="sr-only">
+              Bridging Institutional Finance and the Digital Frontier
+            </h1>
+
+            {/* Visual presentation of headline - hidden from screen readers */}
+            <div className="space-y-1 md:space-y-2" aria-hidden="true">
+              <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
+                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
               >
                 Bridging
-              </motion.h1>
-              <motion.h1
+              </motion.span>
+              <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] text-[#A1A1AA]"
+                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] text-[#A1A1AA]"
               >
                 Institutional Finance
-              </motion.h1>
-              <motion.h1
+              </motion.span>
+              <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
+                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
               >
                 and the
-              </motion.h1>
-              <motion.h1
+              </motion.span>
+              <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] italic text-[#D4AF37]"
+                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] italic text-[#D4AF37]"
               >
                 Digital Frontier.
-              </motion.h1>
+              </motion.span>
             </div>
 
             <motion.p

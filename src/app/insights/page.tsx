@@ -1,8 +1,30 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { client } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Insights | Crypto Regulation & Fintech Analysis | Beth Haddock",
+  description:
+    "Perspectives on crypto regulation, fintech compliance, and the evolution of digital asset markets from a 25-year financial services veteran.",
+  keywords: [
+    "crypto regulation analysis",
+    "fintech insights",
+    "digital asset commentary",
+    "regulatory perspective",
+    "crypto compliance news",
+    "stablecoin regulation",
+    "DeFi regulation",
+  ],
+  openGraph: {
+    title: "Insights | Crypto Regulation & Fintech Analysis | Beth Haddock",
+    description:
+      "Perspectives on crypto regulation, fintech compliance, and the evolution of digital asset markets.",
+    type: "website",
+  },
+};
 
 type Post = {
   _id: string;

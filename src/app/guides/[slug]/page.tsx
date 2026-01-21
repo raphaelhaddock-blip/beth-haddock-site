@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import { guides, getGuideBySlug, getAllGuideSlugs } from "@/data/guides";
+import { getRelatedGuides } from "@/data/guideRelationships";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import LeadCapture from "@/components/LeadCapture";
@@ -26,6 +27,12 @@ export async function generateMetadata({
   return {
     title: `${guide.title} | Beth Haddock`,
     description: guide.description,
+    keywords: guide.keywords,
+    openGraph: {
+      title: guide.title,
+      description: guide.description,
+      type: "article",
+    },
   };
 }
 
@@ -41,7 +48,11 @@ export default async function GuidePage({
     notFound();
   }
 
-  const relatedGuides = guides.filter((g) => g.slug !== slug).slice(0, 2);
+  // Get semantically related guides instead of random selection
+  const relatedSlugs = getRelatedGuides(slug, 2);
+  const relatedGuides = relatedSlugs
+    .map((s) => guides.find((g) => g.slug === s))
+    .filter((g): g is NonNullable<typeof g> => g !== undefined);
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">

@@ -46,6 +46,37 @@ export const metadata: Metadata = {
   },
 };
 
+// Schema.org JSON-LD structured data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://bethhaddock.com/#person",
+      name: "Beth Haddock",
+      jobTitle: "Board Director & Strategic Advisor",
+      description:
+        "25+ years in financial services, bridging institutional finance and digital assets",
+      url: "https://bethhaddock.com",
+      sameAs: ["https://linkedin.com/in/bethhaddock"],
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bethhaddock.com/#organization",
+      name: "Warburton Advisers",
+      url: "https://bethhaddock.com/warburton",
+      founder: { "@id": "https://bethhaddock.com/#person" },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bethhaddock.com/#website",
+      url: "https://bethhaddock.com",
+      name: "Beth Haddock",
+      publisher: { "@id": "https://bethhaddock.com/#person" },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,6 +84,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {children}
       </body>

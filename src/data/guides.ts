@@ -3,6 +3,7 @@ export type Guide = {
   title: string;
   subtitle: string;
   description: string; // For SEO meta
+  keywords: string[]; // For SEO meta keywords
   lastUpdated: string;
   readTime: string;
   sections: {
@@ -21,6 +22,15 @@ export const guides: Guide[] = [
     title: "The Big Picture: Where Old Finance Meets New Technology",
     subtitle: "How crypto, AI, and fintech are colliding with a system built for another era",
     description: "A comprehensive guide to understanding how blockchain, artificial intelligence, and fintech are reshaping financial infrastructure, with analysis from 25+ years in financial services compliance.",
+    keywords: [
+      "crypto regulation",
+      "SEC Bitcoin ETF",
+      "institutional adoption",
+      "fintech infrastructure",
+      "blockchain integration",
+      "financial services compliance",
+      "digital asset regulation",
+    ],
     lastUpdated: "January 2026",
     readTime: "22 min read",
     sections: [
@@ -254,6 +264,16 @@ Crypto in 2025-2026 is moving from stage 3 to stage 4. The companies that built 
     title: "Stablecoins: How They Actually Work",
     subtitle: "Reserve management, regulatory requirements, and evaluating stablecoin risk",
     description: "A guide to stablecoins covering how reserves actually work, what regulators examine, the GENIUS Act requirements, and how to evaluate stablecoin risk.",
+    keywords: [
+      "stablecoin regulation",
+      "GENIUS Act",
+      "reserve backing",
+      "USDC",
+      "Tether",
+      "payment rails",
+      "NYDFS stablecoin",
+      "fiat-backed stablecoin",
+    ],
     lastUpdated: "January 2026",
     readTime: "16 min read",
     sections: [
@@ -483,6 +503,16 @@ The fundamental value proposition—programmable dollars that settle instantly, 
     title: "DeFi for Institutions: What You Need to Know",
     subtitle: "How decentralized finance works, the real risks, and navigating the compliance tension",
     description: "A guide to decentralized finance for institutions covering how DeFi works, the real risks, and how to think about the tension between permissionless protocols and regulatory expectations.",
+    keywords: [
+      "DeFi protocol",
+      "decentralized finance",
+      "liquidity pools",
+      "AMM",
+      "governance tokens",
+      "yield farming",
+      "Aave",
+      "Uniswap",
+    ],
     lastUpdated: "January 2026",
     readTime: "18 min read",
     sections: [
@@ -696,6 +726,16 @@ What's acceptable today may not be tomorrow. Build flexibility into your approac
     title: "Crypto Compliance: What Regulators Actually Want",
     subtitle: "25 years of regulatory conversations distilled",
     description: "A guide to cryptocurrency compliance covering what regulators actually look for, the recent regulatory shift, and how to build crypto compliance that works.",
+    keywords: [
+      "SEC enforcement",
+      "Howey Test",
+      "NYDFS licensing",
+      "crypto compliance",
+      "AML KYC",
+      "regulatory framework",
+      "Operation Chokepoint",
+      "money transmission",
+    ],
     lastUpdated: "January 2026",
     readTime: "20 min read",
     sections: [
@@ -904,6 +944,16 @@ The question is no longer "will crypto be regulated?" It's "how do you position 
     title: "Institutional Crypto: What You Need to Know",
     subtitle: "How institutions actually get into crypto—infrastructure, risk frameworks, and operational requirements",
     description: "How institutional investors are approaching cryptocurrency allocation. Learn the real infrastructure, risk frameworks, and operational requirements for institutional crypto investment.",
+    keywords: [
+      "institutional adoption",
+      "Bitcoin ETF",
+      "crypto custody",
+      "risk management",
+      "IBIT",
+      "Grayscale",
+      "qualified custodian",
+      "crypto investment",
+    ],
     lastUpdated: "January 2026",
     readTime: "18 min read",
     sections: [
@@ -1110,6 +1160,16 @@ The 2-3% allocation across institutional pools represents $3-4 trillion in poten
     title: "Tokenization: What Actually Works",
     subtitle: "Real-world asset tokenization—what succeeds, what fails, and how to evaluate opportunities",
     description: "A guide to asset tokenization covering what makes tokenization succeed, the regulatory realities, and how to evaluate opportunities in a market that's grown 50x since January 2024.",
+    keywords: [
+      "tokenized assets",
+      "RWA",
+      "real world assets",
+      "securities tokenization",
+      "Treasury tokens",
+      "Reg D",
+      "BlackRock BUIDL",
+      "asset tokenization",
+    ],
     lastUpdated: "January 2026",
     readTime: "16 min read",
     sections: [

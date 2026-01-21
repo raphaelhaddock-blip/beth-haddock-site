@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import { client } from "@/sanity/lib/client";
 import { POST_QUERY } from "@/sanity/lib/queries";
 import { PortableText } from "@portabletext/react";
@@ -16,6 +17,31 @@ type Post = {
 };
 
 export const revalidate = 60;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post: Post | null = await client.fetch(POST_QUERY, { slug });
+
+  if (!post) {
+    return { title: "Insight Not Found | Beth Haddock" };
+  }
+
+  return {
+    title: `${post.title} | Beth Haddock`,
+    description: post.excerpt || `Insights on ${post.title} from Beth Haddock`,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || `Insights on ${post.title}`,
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: ["Beth Haddock"],
+    },
+  };
+}
 
 export default async function PostPage({
   params,
