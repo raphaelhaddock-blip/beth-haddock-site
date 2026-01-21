@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Warburton Advisers | Governance & Compliance for Digital Assets",
   description:
-    "Sustainable governance and compliance solutions for blockchain and financial services. Fractional GC, Board Services, and Strategic Advisory from 25+ years of institutional experience.",
+    "Sustainable governance and compliance solutions for blockchain and financial services. Fractional GC, Board Services, and Strategic Advisory from deep institutional experience.",
   keywords: [
     "warburton advisers",
     "crypto compliance firm",

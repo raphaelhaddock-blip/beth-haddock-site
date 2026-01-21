@@ -498,10 +498,9 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 items-start">
             <div>
-              <p className="font-[family-name:var(--font-playfair)] text-7xl md:text-8xl text-[#D4AF37] italic">
-                25+
+              <p className="font-[family-name:var(--font-playfair)] text-5xl md:text-6xl text-[#D4AF37] italic leading-tight">
+                Deep<br />Experience
               </p>
-              <p className="text-[#A1A1AA] text-lg mt-2">Years Shaping the Industry</p>
             </div>
             <div className="space-y-8">
               <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl leading-tight">

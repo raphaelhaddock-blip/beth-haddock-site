@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Industry Guides | Crypto, DeFi & Fintech | Beth Haddock",
   description:
-    "In-depth guides on stablecoins, DeFi, crypto compliance, institutional adoption, and tokenization. Expert analysis from 25+ years in financial services.",
+    "In-depth guides on stablecoins, DeFi, crypto compliance, institutional adoption, and tokenization. Expert analysis from deep experience in financial services.",
   keywords: [
     "crypto guides",
     "stablecoin guide",

@@ -173,7 +173,7 @@ export default function WarburtonPage() {
                 client gets the depth of attention these challenges require.
               </p>
               <p>
-                My background includes 25+ years at{" "}
+                My background includes leadership roles at{" "}
                 <span className="text-[#FAFAFA]">AXA</span>,{" "}
                 <span className="text-[#FAFAFA]">Brown Brothers Harriman</span>, and{" "}
                 <span className="text-[#FAFAFA]">Guggenheim Investments</span>—plus

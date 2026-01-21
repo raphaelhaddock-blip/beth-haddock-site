@@ -57,7 +57,7 @@ const jsonLd = {
       name: "Beth Haddock",
       jobTitle: "Board Director & Strategic Advisor",
       description:
-        "25+ years in financial services, bridging institutional finance and digital assets",
+        "Strategic counsel bridging institutional finance and digital assets",
       url: "https://bethhaddock.com",
       sameAs: ["https://linkedin.com/in/bethhaddock"],
     },
