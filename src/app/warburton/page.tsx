@@ -185,7 +185,7 @@ export default function WarburtonPage() {
                 as Global Policy Lead at the{" "}
                 <span className="text-[#FAFAFA]">Stablecoin Standard</span>.
               </p>
-              <p className="italic text-[#71717A] border-l-2 border-[#D4AF37] pl-6">
+              <p className="italic text-[#8B8B94] border-l-2 border-[#D4AF37] pl-6">
                 &ldquo;Governance isn&apos;t a checkbox—it&apos;s a strategic growth lever.
                 Done right, it helps you scale responsibly while anticipating
                 regulatory shifts and building stakeholder trust.&rdquo;
@@ -233,7 +233,7 @@ export default function WarburtonPage() {
                 <p className="text-[#A1A1AA] leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <p className="text-xs text-[#71717A] italic mb-6">
+                <p className="text-xs text-[#8B8B94] italic mb-6">
                   Ideal for: {service.idealFor}
                 </p>
                 <div className="flex items-center gap-2 text-[#D4AF37]">

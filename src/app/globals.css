@@ -8,6 +8,7 @@
   --border: #262626;
   --text-primary: #FAFAFA;
   --text-secondary: #A1A1AA;
+  --text-tertiary: #8B8B94; /* WCAG AA compliant - was #71717A (revert here if needed) */
   --accent: #D4AF37;
   --accent-hover: #F5D77A;
   --accent-glow: rgba(212, 175, 55, 0.3);

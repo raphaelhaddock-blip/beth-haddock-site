@@ -440,7 +440,7 @@ export default function Home() {
                   <p className="font-[family-name:var(--font-playfair)] text-lg sm:text-xl group-hover:text-[#D4AF37] transition-colors">
                     {pub.title}
                   </p>
-                  <p className="text-[#71717A] text-sm mt-2">{pub.date}</p>
+                  <p className="text-[#8B8B94] text-sm mt-2">{pub.date}</p>
                 </div>
                 <svg
                   className="w-5 h-5 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-1 transition-all mt-2 flex-shrink-0"
@@ -463,7 +463,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-[#71717A] text-sm mt-8 text-center"
+            className="text-[#8B8B94] text-sm mt-8 text-center"
           >
             View all publications on{" "}
             <a
@@ -558,7 +558,7 @@ export default function Home() {
               <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
                 Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure.
               </p>
-              <p className="text-xs text-[#71717A] italic mb-4">
+              <p className="text-xs text-[#8B8B94] italic mb-4">
                 Series A-C crypto/fintech companies
               </p>
               <div className="flex items-center gap-2 text-[#D4AF37]">
@@ -594,7 +594,7 @@ export default function Home() {
               <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
                 Independent governance for companies bridging traditional finance and blockchain innovation.
               </p>
-              <p className="text-xs text-[#71717A] italic mb-4">
+              <p className="text-xs text-[#8B8B94] italic mb-4">
                 NYDFS licensing, IPO readiness
               </p>
               <div className="flex items-center gap-2 text-[#D4AF37]">
@@ -630,7 +630,7 @@ export default function Home() {
               <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
                 Targeted guidance on regulatory strategy, deal structuring, or crisis navigation.
               </p>
-              <p className="text-xs text-[#71717A] italic mb-4">
+              <p className="text-xs text-[#8B8B94] italic mb-4">
                 M&A, enforcement response
               </p>
               <div className="flex items-center gap-2 text-[#D4AF37]">
@@ -666,7 +666,7 @@ export default function Home() {
               <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
                 Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds.
               </p>
-              <p className="text-xs text-[#71717A] italic mb-4">
+              <p className="text-xs text-[#8B8B94] italic mb-4">
                 Complex, high-stakes engagements
               </p>
               <div className="flex items-center gap-2 text-[#D4AF37]">

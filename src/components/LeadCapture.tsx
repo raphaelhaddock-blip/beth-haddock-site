@@ -127,7 +127,7 @@ export default function LeadCapture({
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
           required
-          className="flex-1 px-4 py-3 bg-[#0A0A0A] border border-[#262626] text-[#FAFAFA] placeholder-[#71717A] focus:outline-none focus:border-[#D4AF37] transition-colors"
+          className="flex-1 px-4 py-3 bg-[#0A0A0A] border border-[#262626] text-[#FAFAFA] placeholder-[#8B8B94] focus:outline-none focus:border-[#D4AF37] transition-colors"
         />
         <button
           type="submit"
@@ -166,7 +166,7 @@ export default function LeadCapture({
         </p>
       )}
 
-      <p className="text-[#71717A] text-xs mt-4">
+      <p className="text-[#8B8B94] text-xs mt-4">
         No spam. Unsubscribe anytime. Your email stays private.
       </p>
     </div>
