@@ -6,7 +6,15 @@ export const POSTS_QUERY = defineQuery(`
     title,
     "slug": slug.current,
     excerpt,
-    publishedAt
+    publishedAt,
+    category,
+    mainImage {
+      asset-> {
+        _id,
+        url
+      },
+      alt
+    }
   }
 `)
 
@@ -17,7 +25,15 @@ export const POST_QUERY = defineQuery(`
     "slug": slug.current,
     excerpt,
     publishedAt,
-    body
+    category,
+    body,
+    mainImage {
+      asset-> {
+        _id,
+        url
+      },
+      alt
+    }
   }
 `)
 
@@ -27,6 +43,14 @@ export const LATEST_POSTS_QUERY = defineQuery(`
     title,
     "slug": slug.current,
     excerpt,
-    publishedAt
+    publishedAt,
+    category,
+    mainImage {
+      asset-> {
+        _id,
+        url
+      },
+      alt
+    }
   }
 `)

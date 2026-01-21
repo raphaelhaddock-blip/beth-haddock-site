@@ -13,7 +13,15 @@ type Post = {
   slug: string;
   excerpt: string;
   publishedAt: string;
+  category: string;
   body: any[];
+  mainImage?: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+    alt?: string;
+  };
 };
 
 export const revalidate = 60;
@@ -30,15 +38,33 @@ export async function generateMetadata({
     return { title: "Insight Not Found | Beth Haddock" };
   }
 
+  const baseUrl = "https://bethhaddock.com";
+
   return {
     title: `${post.title} | Beth Haddock`,
     description: post.excerpt || `Insights on ${post.title} from Beth Haddock`,
+    alternates: {
+      canonical: `${baseUrl}/insights/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt || `Insights on ${post.title}`,
       type: "article",
       publishedTime: post.publishedAt,
       authors: ["Beth Haddock"],
+      url: `${baseUrl}/insights/${slug}`,
+      images: post.mainImage?.asset?.url ? [
+        {
+          url: post.mainImage.asset.url,
+          alt: post.mainImage.alt || post.title,
+        }
+      ] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt || `Insights on ${post.title}`,
+      images: post.mainImage?.asset?.url ? [post.mainImage.asset.url] : [],
     },
   };
 }
@@ -55,8 +81,39 @@ export default async function PostPage({
     notFound();
   }
 
+  const baseUrl = "https://bethhaddock.com";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.mainImage?.asset?.url,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: "Beth Haddock",
+      url: baseUrl,
+      jobTitle: "Crypto Regulatory & Compliance Expert",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Beth Haddock",
+      url: baseUrl,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${baseUrl}/insights/${post.slug}`,
+    },
+  };
+
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Nav active="insights" alwaysVisible />
 
       {/* Article */}
@@ -90,6 +147,17 @@ export default async function PostPage({
               <p className="text-xl text-[#A1A1AA] leading-relaxed">{post.excerpt}</p>
             )}
           </header>
+
+          {/* Featured Image */}
+          {post.mainImage?.asset?.url && (
+            <div className="mb-12">
+              <img
+                src={post.mainImage.asset.url}
+                alt={post.mainImage.alt || post.title}
+                className="w-full rounded-lg"
+              />
+            </div>
+          )}
 
           {/* Body */}
           {post.body && (

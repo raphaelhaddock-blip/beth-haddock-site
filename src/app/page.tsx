@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -107,27 +105,7 @@ const publications = [
   },
 ];
 
-type Post = {
-  _id: string;
-  title: string;
-  slug: { current: string };
-  excerpt?: string;
-  publishedAt: string;
-};
-
 export default function Home() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('/api/posts')
-      .then(res => res.json())
-      .then(data => {
-        setPosts(data.slice(0, 3));
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
@@ -323,134 +301,6 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
-
-      {/* Latest Insights */}
-      <section className="py-32 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-          >
-            Latest Insights
-          </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
-          >
-            Perspectives from the front lines—
-            <span className="italic text-[#D4AF37]">where I&apos;ve built and operated.</span>
-          </motion.h2>
-
-          {loading ? (
-            <div className="space-y-6">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="py-8 border-b border-[#262626] animate-pulse">
-                  <div className="h-6 bg-[#262626] rounded w-3/4 mb-3"></div>
-                  <div className="h-4 bg-[#262626] rounded w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          ) : posts.length > 0 ? (
-            <div className="space-y-0">
-              {posts.map((post, index) => (
-                <motion.div
-                  key={post._id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link
-                    href={`/insights/${post.slug.current}`}
-                    className="group block py-8 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
-                  >
-                    <div className="flex items-start justify-between gap-8">
-                      <div className="flex-1">
-                        <p className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl group-hover:text-[#D4AF37] transition-colors">
-                          {post.title}
-                        </p>
-                        {post.excerpt && (
-                          <p className="text-[#A1A1AA] mt-2 line-clamp-2">
-                            {post.excerpt}
-                          </p>
-                        )}
-                        <p className="text-[#71717A] text-sm mt-3">
-                          {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                          })}
-                        </p>
-                      </div>
-                      <svg
-                        className="w-6 h-6 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-2 transition-all mt-2 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="py-12 text-center"
-            >
-              <p className="text-[#A1A1AA] text-lg mb-4">
-                Insights coming soon.
-              </p>
-              <p className="text-[#71717A]">
-                Follow me on LinkedIn for perspectives from 25+ years in the field.
-              </p>
-            </motion.div>
-          )}
-
-          {posts.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="mt-12"
-            >
-              <Link
-                href="/insights"
-                className="inline-flex items-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition-colors"
-              >
-                View all insights
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </motion.div>
-          )}
-        </div>
-      </section>
 
       {/* Speaking - 4 Events Collage */}
       <section className="border-t border-[#262626]">

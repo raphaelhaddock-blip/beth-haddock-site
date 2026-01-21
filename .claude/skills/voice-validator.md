@@ -9,6 +9,49 @@ description: Validate content meets Beth Haddock's voice and quality standards b
 
 This skill validates that content written for Beth Haddock meets the voice standards in CLAUDE.md. Run this BEFORE content goes to Beth for review.
 
+**CRITICAL: Apply voice patterns from `voice-matching-rules.md` for authentic Beth voice.**
+
+## Voice Requirements (from voice-matching-rules.md)
+
+### Minimum Requirements
+
+| Element | Requirement |
+|---------|-------------|
+| **"I" statements** | Minimum 5 per piece |
+| **Signature phrases** | 1-2 per piece |
+| **Rhetorical moves** | At least 1 from patterns |
+| **Forbidden phrases** | Zero tolerance |
+| **Hedge words** | Zero tolerance |
+| **Practitioner action** | Required in every piece |
+
+### Signature Phrases to Include (1-2 per piece)
+
+**Governance & Compliance:**
+- "sustainable governance"
+- "Triple Bottom-Line"
+- "compliance as competitive advantage"
+- "the compliance bar"
+- "compliance infrastructure"
+
+**Industry Framing:**
+- "institutional operators"
+- "institutional capital"
+- "the road ahead"
+- "at the frontier"
+
+**Time & Pattern:**
+- "25 years in financial services"
+- "previous regulatory cycles"
+- "the pattern is remarkably consistent"
+
+### "I" Statement Formulas (Minimum 5)
+
+**Pattern A - Experience:** "In 25 years of financial services compliance..."
+**Pattern B - Opinion:** "What I tell institutional operators is..."
+**Pattern C - Prediction:** "Based on previous regulatory cycles, I expect..."
+**Pattern D - Analysis:** "The way I read this is..."
+**Pattern E - Observation:** "I've watched this pattern..."
+
 ## CRITICAL: Client Confidentiality Check
 
 **THE FIRST CHECK IS ALWAYS: Does this content reference ANY specific client work?**
@@ -80,19 +123,41 @@ If YES → AUTOMATIC REJECTION. Rewrite without client references.
 
 If YES → needs more expert perspective (without client examples)
 
-## AI Detection Flags
+## AI Detection Flags (from voice-matching-rules.md)
 
 These phrases trigger AUTOMATIC REJECTION:
 
+**AI Cliches (Never Use):**
 - "In this article, we will explore..."
 - "It is important to note that..."
 - "In conclusion..."
 - "Let's delve into..."
-- "On one hand... on the other hand..." (perfectly balanced)
+- "On one hand... on the other hand..."
 - "There are several factors to consider..."
 - "It's worth noting that..."
 - "This begs the question..."
 - "Moving forward..."
+- "In today's rapidly evolving landscape..."
+- "At the end of the day..."
+- "It goes without saying..."
+- "Key takeaways include..."
+
+**Generic Compliance Speak (Never Use):**
+- "Best practices suggest..."
+- "Organizations should consider..."
+- "It is recommended that..."
+- "Compliance is important..."
+- "Stakeholders should be aware..."
+- "Companies need to evaluate..."
+
+**Hedge Words (Remove or Replace):**
+- "might" → "will" or remove
+- "perhaps" → state directly
+- "could potentially" → "will" or "expect"
+- "may want to consider" → "should"
+- "it seems that" → state directly
+- "arguably" → state the argument
+- "somewhat" / "fairly" → remove or be specific
 
 ## Validation Output Format
 
@@ -102,7 +167,28 @@ After running validation, output:
 ## Voice Validation Report
 
 **Content:** [Title or first line]
-**Type:** [linkedin | long-form | news-analysis | road-ahead]
+**Type:** [linkedin | hot-take | deep-analysis | guide]
+**Validator:** voice-validator
+**Date:** YYYY-MM-DD
+
+### Voice Pattern Check (from voice-matching-rules.md)
+
+| Element | Required | Actual | Pass? |
+|---------|----------|--------|-------|
+| "I" statements | 5+ | [count] | ✅/❌ |
+| Signature phrases | 1-2 | [count] | ✅/❌ |
+| Rhetorical moves | 1+ | [count] | ✅/❌ |
+| Practitioner action | Yes | [present?] | ✅/❌ |
+
+### "I" Statements Found
+
+1. [quote] - Pattern: [A/B/C/D/E]
+2. [quote] - Pattern: [A/B/C/D/E]
+3. [etc.]
+
+### Signature Phrases Found
+
+- [phrase used]
 
 ### Checklist Results
 
@@ -115,6 +201,12 @@ After running validation, output:
 | Verifiable claims | ✅/❌ | [sources?] |
 | Passes CoinDesk test | ✅/❌ | [any generic sections?] |
 | No AI flags | ✅/❌ | [any flagged phrases?] |
+| No hedge words | ✅/❌ | [any hedging?] |
+| No generic compliance speak | ✅/❌ | [any generic phrases?] |
+
+### Forbidden Phrases Found
+
+[List any AI flags, hedge words, or generic compliance speak - MUST be zero]
 
 ### Verdict
 
@@ -124,7 +216,15 @@ After running validation, output:
 
 ### Revision Guidance (if needed)
 
-[Specific instructions for what to change]
+**Voice patterns to add:**
+- [specific "I" statement suggestion]
+- [signature phrase to incorporate]
+
+**Phrases to remove:**
+- [specific phrase] → [replacement]
+
+**Transformations needed:**
+- [generic sentence] → [Beth voice version]
 ```
 
 ## Example Validation
@@ -176,3 +276,18 @@ This skill should be invoked:
 3. Before any content is shown to Beth
 
 If validation fails, content returns to the writing agent with specific revision guidance.
+
+## Related Rule Files
+
+- `voice-matching-rules.md` - Full patterns, signature phrases, transformation examples
+- `research-sufficiency-rules.md` - Source requirements (validated by research-validator)
+- `news-gathering-rules.md` - Beth expertise tiers for framing
+
+## Transformation Examples
+
+When revision is needed, refer to `voice-matching-rules.md` for 10+ transformation examples showing:
+- Generic → Beth Voice conversions
+- News Summary → Expert Analysis
+- Passive Recommendation → Active Guidance
+- Hedged Prediction → Confident Analysis
+- Client Reference → Industry Analysis (critical for confidentiality)

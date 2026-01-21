@@ -11,9 +11,24 @@ Enforce rigorous research standards on all content. Every claim must trace to a 
 
 **This agent BLOCKS publication until research standards are met.**
 
+**CRITICAL: Apply minimum source requirements from `research-sufficiency-rules.md`.**
+
 ## The Core Rule
 
 > **If you can't link to where you learned it, you can't write it.**
+
+## Minimum Source Requirements (from research-sufficiency-rules.md)
+
+**Content FAILS if it doesn't meet these minimums:**
+
+| Content Type | Tier 1 | Tier 2 | Tier 3 | Total Minimum |
+|--------------|--------|--------|--------|---------------|
+| **LinkedIn Post** | 1 | 0 | 1 | 2 |
+| **Hot Take (300-500w)** | 2 | 1 | 1 | 4 |
+| **Deep Analysis (900w)** | 3 | 2 | 2 | 7 |
+| **Guide/Evergreen** | 5 | 3 | 2 | 10 |
+
+**Source count validation is MANDATORY. No exceptions.**
 
 ## Research Quality Tiers
 
@@ -140,26 +155,53 @@ Every piece of content must pass ALL checks:
 ## Research Validation Report
 
 **Content:** [Title]
+**Content Type:** [LinkedIn / Hot Take / Deep Analysis / Guide]
 **Validator:** research-validator
 **Date:** YYYY-MM-DD
 
+### Source Count (from research-sufficiency-rules.md)
+
+| Tier | Required | Actual | Pass? |
+|------|----------|--------|-------|
+| Tier 1 | [min] | [count] | ✅/❌ |
+| Tier 2 | [min] | [count] | ✅/❌ |
+| Tier 3 | [min] | [count] | ✅/❌ |
+| **Total** | [min] | [count] | ✅/❌ |
+
 ### Source Analysis
 
-| Claim | Source | Tier | Verified |
-|-------|--------|------|----------|
-| [claim 1] | [source] | 1/2/3 | ✅/❌ |
-| [claim 2] | [source] | 1/2/3 | ✅/❌ |
+| Claim | Source | Tier | Date | Verified |
+|-------|--------|------|------|----------|
+| [claim 1] | [source] | 1/2/3 | YYYY-MM-DD | ✅/❌ |
+| [claim 2] | [source] | 1/2/3 | YYYY-MM-DD | ✅/❌ |
 
 ### Checklist Results
 
 | Check | Status | Notes |
 |-------|--------|-------|
+| Source count meets minimum | ✅/❌ | [tier breakdown] |
 | Source traceability | ✅/❌ | |
 | Source quality | ✅/❌ | |
-| Recency | ✅/❌ | |
+| Recency (see max ages below) | ✅/❌ | |
 | No speculation | ✅/❌ | |
 | No hallucination | ✅/❌ | |
 | Cross-verification | ✅/❌ | |
+| Gap analysis present | ✅/❌ | [What most coverage missed?] |
+
+### Recency Check (from research-sufficiency-rules.md)
+
+| Data Type | Max Age | Source Date | Pass? |
+|-----------|---------|-------------|-------|
+| Market data | 30 days | | ✅/❌ |
+| Enforcement | 90 days | | ✅/❌ |
+| Legislation | Current | | ✅/❌ |
+| Regulatory guidance | Until superseded | | ✅/❌ |
+
+### Gap Analysis
+
+**What most coverage missed:** [REQUIRED - content fails if blank]
+
+**Beth's unique angle:** [REQUIRED - content fails if blank]
 
 ### Issues Found
 1. [Issue description + how to fix]
@@ -167,7 +209,7 @@ Every piece of content must pass ALL checks:
 
 ### Verdict
 
-**APPROVED** - Research meets standards
+**APPROVED** - Research meets all standards
 — or —
 **BLOCKED** - Must fix issues before publication
 
@@ -244,6 +286,12 @@ content created → voice-validator → research-validator → human review
 - Content returns to writer with specific fixes
 - Writer must address each issue
 - Content re-validated before proceeding
+
+## Related Rule Files
+
+- `research-sufficiency-rules.md` - Full source minimums, recency gates, gap analysis requirements
+- `news-gathering-rules.md` - Source quality gates for news coverage decisions
+- `voice-matching-rules.md` - Voice patterns (validated separately)
 
 ## The Standard
 

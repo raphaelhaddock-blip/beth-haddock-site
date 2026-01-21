@@ -361,3 +361,61 @@ Tech Stack: Next.js 14 + Tailwind + Sanity CMS + ConvertKit
 - Domain consolidation (F023) still blocked pending Beth approval
 
 ---
+
+## SESSION 8 - 2026-01-21
+### Starting State
+- F022: PASSING (content agent system)
+- Content was passing voice checks but lacked systematic rules
+- Problem: Content followed templates but could sound AI-generated
+- Missing: News filtering rules, research thresholds, authentic voice patterns
+
+### Work Done
+1. **Created Three Rule-Based Content Systems**
+   - `news-gathering-rules.md` - 5-rule scoring matrix (audience impact, expertise match, source quality, timeliness, differentiation)
+   - `research-sufficiency-rules.md` - Minimum source counts by content type, recency gates, gap analysis requirements
+   - `voice-matching-rules.md` - Beth's signature phrases, 5 "I" statement formulas, 6 rhetorical moves, 8 transformation examples
+
+2. **Updated Existing Validators**
+   - `news-monitor.md` - Integrated scoring matrix, timeliness windows, expertise tiers
+   - `research-validator.md` - Added source count minimums, recency checks, gap analysis requirements
+   - `voice-validator.md` - Added voice pattern counts, signature phrase checks, forbidden phrase detection
+
+3. **Tested Systems Against Existing Articles**
+   - Validated "GENIUS Act" article through all 3 systems
+   - Results: News (7/7 PASS), Research (needs explicit citations), Voice (6 "I" statements, PASS)
+   - Validated "SEC's Reset" article - also passes voice test
+   - Finding: Existing articles already have strong Beth voice
+
+### Key Files Created
+- `/.claude/skills/news-gathering-rules.md` (NEW)
+- `/.claude/skills/research-sufficiency-rules.md` (NEW)
+- `/.claude/skills/voice-matching-rules.md` (NEW)
+- `/content/validation/genius-act-article-validation.md` (test report)
+
+### Decisions Made
+- News scoring: 6-7 = MUST COVER, 4-5 = SHOULD COVER, 2-3 = MAYBE, 0-1 = SKIP
+- Research minimums: LinkedIn (2), Hot Take (4), Deep Analysis (7), Guide (10)
+- Voice minimums: 5 "I" statements, 1-2 signature phrases, 1+ rhetorical moves
+- Existing articles don't need rewrites - voice was already strong
+
+### Ending State
+- 3 new rule files created with complete rubrics
+- 3 existing validators updated to reference rules
+- Pipeline now: news-gathering-rules → research-sufficiency-rules → voice-matching-rules → validation
+- 9 total skills in content system
+
+### Skills Built/Updated
+- news-gathering-rules.md (NEW)
+- research-sufficiency-rules.md (NEW)
+- voice-matching-rules.md (NEW)
+- news-monitor.md (UPDATED - scoring matrix)
+- research-validator.md (UPDATED - minimums)
+- voice-validator.md (UPDATED - patterns)
+
+### Next Session Should
+- Add explicit source citations to existing Sanity articles
+- Generate new content using full 3-system pipeline
+- Test with a brand new article end-to-end
+- Consider adding source footer component to article template
+
+---

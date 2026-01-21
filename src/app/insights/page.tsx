@@ -18,11 +18,15 @@ export const metadata: Metadata = {
     "stablecoin regulation",
     "DeFi regulation",
   ],
+  alternates: {
+    canonical: "https://bethhaddock.com/insights",
+  },
   openGraph: {
     title: "Insights | Crypto Regulation & Fintech Analysis | Beth Haddock",
     description:
       "Perspectives on crypto regulation, fintech compliance, and the evolution of digital asset markets.",
     type: "website",
+    url: "https://bethhaddock.com/insights",
   },
 };
 
@@ -32,6 +36,14 @@ type Post = {
   slug: string;
   excerpt: string;
   publishedAt: string;
+  category: string;
+  mainImage?: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+    alt?: string;
+  };
 };
 
 export const revalidate = 60;
@@ -70,20 +82,33 @@ export default async function InsightsPage() {
                   href={`/insights/${post.slug}`}
                   className="group block py-8 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
                 >
-                  <p className="text-sm text-[#D4AF37] tracking-[0.1em] uppercase mb-3">
-                    {post.publishedAt &&
-                      new Date(post.publishedAt).toLocaleDateString("en-US", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
-                  </p>
-                  <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-3 group-hover:text-[#D4AF37] transition">
-                    {post.title}
-                  </h2>
-                  {post.excerpt && (
-                    <p className="text-[#A1A1AA] leading-relaxed">{post.excerpt}</p>
-                  )}
+                  <div className="flex gap-6 items-start">
+                    {post.mainImage?.asset?.url && (
+                      <div className="hidden md:block flex-shrink-0 w-48 h-32 overflow-hidden rounded-lg">
+                        <img
+                          src={post.mainImage.asset.url}
+                          alt={post.mainImage.alt || post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <p className="text-sm text-[#D4AF37] tracking-[0.1em] uppercase mb-3">
+                        {post.publishedAt &&
+                          new Date(post.publishedAt).toLocaleDateString("en-US", {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                      </p>
+                      <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl mb-3 group-hover:text-[#D4AF37] transition">
+                        {post.title}
+                      </h2>
+                      {post.excerpt && (
+                        <p className="text-[#A1A1AA] leading-relaxed">{post.excerpt}</p>
+                      )}
+                    </div>
+                  </div>
                 </Link>
               ))}
             </div>

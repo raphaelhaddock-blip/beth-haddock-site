@@ -9,13 +9,36 @@ description: Use to find current regulatory news, legislation updates, and enfor
 
 Find timely news hooks that Beth can write expert analysis about. Focus on regulatory developments, legislation, and enforcement actions in crypto, fintech, and AI governance.
 
+**CRITICAL: Apply the scoring matrix from `news-gathering-rules.md` to every potential story.**
+
 ## The Core Question
 
 **"What happened in the last 7 days that Beth's audience (institutional operators, GCs, compliance officers) needs her analysis on?"**
 
+## Scoring Matrix (from news-gathering-rules.md)
+
+**Before creating a news brief, score against all five rules:**
+
+| Rule | Score | Criteria |
+|------|-------|----------|
+| Audience Impact | 0-2 | 0=SKIP, 1=SHOULD cover, 2=MUST cover |
+| Beth Expertise | 0-2 | 0=Tier 3, 1=Tier 2, 2=Tier 1 |
+| Source Quality | 0-1 | 0=Tier 2-3 only, 1=Tier 1 confirmed |
+| Timeliness | 0-1 | 0=Outside window, 1=Within window |
+| Differentiation | 0-1 | 0=Could be news, 1=Unique angle clear |
+
+### Score Interpretation
+
+| Total Score | Verdict | Action |
+|-------------|---------|--------|
+| 6-7 points | **MUST COVER** | Prioritize immediately |
+| 4-5 points | **SHOULD COVER** | Queue for this week |
+| 2-3 points | **MAYBE** | Only if content calendar has gap |
+| 0-1 points | **SKIP** | Do not cover |
+
 ## News Sources by Priority
 
-### Tier 1: Primary Sources (Check First)
+### Tier 1: Primary Sources (Check First - REQUIRED for coverage decision)
 - **SEC.gov** - Enforcement releases, speeches, guidance
 - **CFTC.gov** - Enforcement, orders, speeches
 - **OCC.gov** - Guidance, interpretive letters
@@ -35,33 +58,45 @@ Find timely news hooks that Beth can write expert analysis about. Focus on regul
 - **Financial Times** - International perspective
 - **Reuters** - Wire service speed
 
-## What to Look For
+## Timeliness Windows (from news-gathering-rules.md)
 
-### High-Priority News Hooks (Act Within 24-48 Hours)
-- New SEC enforcement action against crypto company
-- Major legislation passing committee or floor vote
-- Regulatory agency issues new guidance
-- Significant court ruling affecting crypto/fintech
-- Major company compliance failure or scandal
+| News Type | Coverage Window | After Window |
+|-----------|-----------------|--------------|
+| Enforcement Action | 24-48 hours | Only long-term angle |
+| Legislation Passed | 1 week | Implementation focus only |
+| Guidance Issued | 2 weeks | Operational implications focus |
+| Agency Speech | 1 week | Only if signaling policy shift |
+| Court Ruling | 48-72 hours | Precedent analysis only |
 
-### Medium-Priority (Within 1 Week)
-- Agency speeches signaling policy direction
-- International regulatory developments (MiCA, etc.)
-- Industry reports with regulatory implications
-- Personnel changes at regulatory agencies
+## Beth Expertise Tiers (from news-gathering-rules.md)
 
-### Evergreen (Can Schedule)
-- Regulatory deadlines approaching
-- Anniversary of significant events
-- Quarterly compliance calendar items
-- Predictable regulatory cycles
+| Tier | Topics | Coverage Rule |
+|------|--------|---------------|
+| **Tier 1 (Deep)** | Stablecoin regulation, SEC/FINRA/NYDFS, Compliance architecture, Institutional adoption, DeFi governance | MUST have Beth's unique angle |
+| **Tier 2 (Informed)** | CFTC jurisdiction, State MTL, MiCA, Crypto politics, Tokenization | Can analyze with framing |
+| **Tier 3 (Watching)** | AI regulation, EU AI Act, Voice AI | Note uncertainty explicitly |
 
 ## Output Format
 
-When you find news worth writing about, create a brief:
+When you find news worth writing about, FIRST score it, THEN create a brief:
 
 ```markdown
 # News Brief: [Topic]
+
+## Scoring (from news-gathering-rules.md)
+
+| Rule | Score | Reasoning |
+|------|-------|-----------|
+| Audience Impact | /2 | [Does audience need to act?] |
+| Beth Expertise | /2 | [Which tier? See expertise matrix] |
+| Source Quality | /1 | [Tier 1 confirmed?] |
+| Timeliness | /1 | [Within coverage window?] |
+| Differentiation | /1 | [Unique angle beyond news?] |
+| **TOTAL** | /7 | |
+
+**VERDICT:** [ ] MUST COVER (6-7) [ ] SHOULD COVER (4-5) [ ] MAYBE (2-3) [ ] SKIP (0-1)
+
+---
 
 ## What Happened
 [2-3 sentences on the news itself]
@@ -71,10 +106,12 @@ When you find news worth writing about, create a brief:
 
 ## Beth's Angle
 [What specific expertise can Beth bring? Check domain files.]
+[Reference expertise tier: Tier 1/2/3]
 
 ## Timing
 - Priority: HIGH / MEDIUM / EVERGREEN
-- Window: [How long until this is stale?]
+- Window: [Based on news type - see timeliness windows]
+- Coverage deadline: [Date]
 
 ## Suggested Content
 - [ ] LinkedIn post (quick reaction)
@@ -83,16 +120,19 @@ When you find news worth writing about, create a brief:
 - [ ] Multiple pieces in sequence
 
 ## Key Facts (Verified)
-- [Fact 1 with source]
-- [Fact 2 with source]
-- [Fact 3 with source]
+- [Fact 1 with Tier 1 source]
+- [Fact 2 with Tier 1 source]
+- [Fact 3 with Tier 1 source]
+
+## Gap Analysis (What Most Coverage Missed)
+[Beth's unique angle - required per research-sufficiency-rules.md]
 
 ## Related Domain Research
 - domain-XX-[topic].md (sections: ...)
 
-## Primary Sources
-- [Link 1]
-- [Link 2]
+## Primary Sources (Tier 1 Required)
+- [Link 1 - agency/official source]
+- [Link 2 - agency/official source]
 ```
 
 ## Execution Steps
@@ -172,7 +212,17 @@ Bitcoin reached $150,000...
 
 After finding news hooks:
 
-1. Create news brief in `/content/research/`
-2. Use `content-orchestrator` skill to assign to writers
-3. Writers use news brief + domain research to create drafts
-4. Voice validator checks before human review
+1. **Score against rules** - Apply `news-gathering-rules.md` scoring matrix
+2. Create news brief in `/content/research/` (only if score >= 4)
+3. Use `content-orchestrator` skill to assign to writers
+4. Writers check `research-sufficiency-rules.md` for minimum sources
+5. Writers apply `voice-matching-rules.md` patterns
+6. Voice validator checks against `voice-validator.md` checklist
+7. Research validator checks against `research-validator.md` standards
+8. Human review
+
+## Related Rule Files
+
+- `news-gathering-rules.md` - Full scoring matrix, timeliness windows, expertise tiers
+- `research-sufficiency-rules.md` - Source minimums before writing
+- `voice-matching-rules.md` - Beth's patterns for drafting
