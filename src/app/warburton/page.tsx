@@ -8,38 +8,71 @@ import Footer from "@/components/Footer";
 const services = [
   {
     title: "Fractional GC",
-    description: "Institutional-grade legal leadership without full-time overhead.",
-    href: "/practice",
+    description:
+      "Institutional-grade legal leadership without full-time overhead. I embed with your team to build compliance infrastructure that passes regulatory scrutiny and unlocks institutional capital.",
+    idealFor: "Series A-C crypto/fintech companies",
+    calendlyType: "fractional-gc",
   },
   {
     title: "Board & Governance",
-    description: "Independent governance for regulated digital asset companies.",
-    href: "/practice",
+    description:
+      "Independent governance for companies bridging traditional finance and decentralized systems. I bring operator experience to board-level oversight—not just a name on letterhead.",
+    idealFor: "NYDFS licensing, IPO readiness, institutional adoption",
+    calendlyType: "board",
   },
   {
     title: "Strategic Advisory",
-    description: "Targeted guidance on regulatory strategy and deal structuring.",
-    href: "/practice",
+    description:
+      "Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. For moments when you need someone who has been in the room before.",
+    idealFor: "M&A, enforcement response, fundraising",
+    calendlyType: "advisory",
   },
   {
     title: "Special Projects",
-    description: "Complex, high-stakes engagements with defined scope.",
-    href: "/practice",
+    description:
+      "Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements with defined scope.",
+    idealFor: "Incident response, program builds, RegTech",
+    calendlyType: "special-projects",
   },
 ];
 
-const valueProps = [
+const team = [
   {
-    title: "Regulatory Expertise",
-    description: "25+ years navigating SEC, FINRA, NYDFS, and emerging crypto frameworks.",
+    name: "Mary Toumpas",
+    title: "Compliance Advisor",
+    bio: "Seasoned chief compliance officer providing practical, risk-managed guidance. Mary brings decades of experience building and running compliance programs at scale.",
   },
   {
-    title: "Institutional Credibility",
-    description: "Board seats and GC roles at regulated stablecoin issuers and asset managers.",
+    name: "Mark Roszak",
+    title: "Legal Partner",
+    bio: "Specializes in structuring and corporate advisory work. Mark handles complex transaction structures and corporate governance matters.",
+  },
+];
+
+const notableWork = [
+  {
+    number: "01",
+    title: "Cybersecurity Incident Response",
+    description:
+      "Led responses to cybersecurity incidents in digital assets, coordinating regulatory notifications, stakeholder communications, and remediation strategies under compressed timelines.",
   },
   {
-    title: "Operator Experience",
-    description: "Built compliance programs that pass regulatory scrutiny and unlock institutional capital.",
+    number: "02",
+    title: "Cross-Border M&A Integration",
+    description:
+      "Guided cross-border M&A compliance integration for financial services and fintech companies, harmonizing regulatory frameworks across jurisdictions.",
+  },
+  {
+    number: "03",
+    title: "RegTech Platform Development",
+    description:
+      "Developed a patented RegTech platform for policy automation, streamlining compliance workflows and reducing manual oversight burden.",
+  },
+  {
+    number: "04",
+    title: "Stablecoin Issuer Governance",
+    description:
+      "Built compliance committee structure and governance framework for NYDFS-regulated stablecoin issuers, establishing institutional-grade oversight.",
   },
 ];
 
@@ -114,36 +147,54 @@ export default function WarburtonPage() {
         </div>
       </section>
 
-      {/* Value Propositions */}
+      {/* Philosophy */}
       <section className="py-24 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-[1fr_2fr] gap-12 items-start"
           >
-            Why Warburton
-          </motion.p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {valueProps.map((prop, index) => (
-              <motion.div
-                key={prop.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-8 bg-[#141414] border border-[#262626]"
-              >
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-4 text-[#FAFAFA]">
-                  {prop.title}
-                </h3>
-                <p className="text-[#A1A1AA] leading-relaxed">
-                  {prop.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+            <div>
+              <p className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-4">
+                How I Work
+              </p>
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl">
+                Deep Partnership,
+                <br />
+                <span className="italic text-[#D4AF37]">Not Surface Advice</span>
+              </h2>
+            </div>
+            <div className="space-y-6 text-[#A1A1AA] text-lg leading-relaxed">
+              <p>
+                I take on a{" "}
+                <span className="text-[#FAFAFA]">limited number of engagements</span>{" "}
+                each year. This isn&apos;t scarcity marketing—it&apos;s how I ensure every
+                client gets the depth of attention these challenges require.
+              </p>
+              <p>
+                My background includes 25+ years at{" "}
+                <span className="text-[#FAFAFA]">AXA</span>,{" "}
+                <span className="text-[#FAFAFA]">Brown Brothers Harriman</span>, and{" "}
+                <span className="text-[#FAFAFA]">Guggenheim Investments</span>—plus
+                board and advisory roles at regulated stablecoin issuers, DeFi
+                protocols, and institutional digital asset companies.
+              </p>
+              <p>
+                I currently serve as Chair of the Compliance Committee at{" "}
+                <span className="text-[#FAFAFA]">GMO-Z.com Trust Company</span> and
+                as Global Policy Lead at the{" "}
+                <span className="text-[#FAFAFA]">Stablecoin Standard</span>.
+              </p>
+              <p className="italic text-[#71717A] border-l-2 border-[#D4AF37] pl-6">
+                &ldquo;Governance isn&apos;t a checkbox—it&apos;s a strategic growth lever.
+                Done right, it helps you scale responsibly while anticipating
+                regulatory shifts and building stakeholder trust.&rdquo;
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -158,6 +209,7 @@ export default function WarburtonPage() {
           >
             Services
           </motion.p>
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -166,45 +218,150 @@ export default function WarburtonPage() {
           >
             How we can work together
           </motion.h2>
+
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <motion.div
+              <motion.a
                 key={service.title}
+                href={`https://calendly.com/beth-haddock?type=${service.calendlyType}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                className="group p-8 bg-[#0A0A0A] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
               >
-                <Link
-                  href={service.href}
-                  className="group block p-8 bg-[#0A0A0A] border border-[#262626] hover:border-[#D4AF37] transition-colors h-full"
-                >
-                  <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 group-hover:text-[#D4AF37] transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#A1A1AA] leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <div className="flex items-center gap-2 text-[#D4AF37]">
-                    <span className="text-sm">Learn more</span>
-                    <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </div>
-                </Link>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 group-hover:text-[#D4AF37] transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-[#A1A1AA] leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                <p className="text-xs text-[#71717A] italic mb-6">
+                  Ideal for: {service.idealFor}
+                </p>
+                <div className="flex items-center gap-2 text-[#D4AF37]">
+                  <span className="text-sm">Discuss</span>
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-24 px-6 border-t border-[#262626]">
+        <div className="max-w-4xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            The Team
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-4"
+          >
+            I work with trusted specialists
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[#A1A1AA] text-lg mb-12 max-w-2xl"
+          >
+            For certain engagements, I bring in experts who complement my
+            background. Together, we cover the full spectrum of governance,
+            compliance, and legal needs.
+          </motion.p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-8 bg-[#141414] border border-[#262626]"
+              >
+                <div className="w-16 h-16 bg-[#262626] rounded-full mb-6 flex items-center justify-center">
+                  <span className="text-2xl text-[#D4AF37] font-[family-name:var(--font-playfair)]">
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-[#D4AF37] text-sm mb-4">{member.title}</p>
+                <p className="text-[#A1A1AA] leading-relaxed">{member.bio}</p>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Notable Work */}
+      <section className="py-24 px-6 border-t border-[#262626] bg-[#141414]">
+        <div className="max-w-4xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            Notable Engagements
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
+          >
+            Work that shaped my perspective
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            {notableWork.map((work) => (
+              <div key={work.number} className="flex gap-6">
+                <span className="text-[#D4AF37] text-2xl font-[family-name:var(--font-playfair)] flex-shrink-0">
+                  {work.number}
+                </span>
+                <div>
+                  <h3 className="text-xl mb-2">{work.title}</h3>
+                  <p className="text-[#A1A1AA] leading-relaxed">
+                    {work.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -217,8 +374,9 @@ export default function WarburtonPage() {
             viewport={{ once: true }}
             className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-8"
           >
-            Industries We Serve
+            Industries I Serve
           </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -241,69 +399,8 @@ export default function WarburtonPage() {
         </div>
       </section>
 
-      {/* The Principal */}
-      <section className="py-24 px-6 border-t border-[#262626] bg-[#141414]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-[1fr_2fr] gap-12 items-start"
-          >
-            <div>
-              <p className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-4">
-                The Principal
-              </p>
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl">
-                Beth Haddock
-              </h2>
-            </div>
-            <div className="space-y-6 text-[#A1A1AA] text-lg leading-relaxed">
-              <p>
-                Beth brings{" "}
-                <span className="text-[#FAFAFA]">25+ years of financial services experience</span>{" "}
-                spanning compliance, legal, and governance roles at institutions including{" "}
-                <span className="text-[#FAFAFA]">AXA</span>,{" "}
-                <span className="text-[#FAFAFA]">Brown Brothers Harriman</span>, and{" "}
-                <span className="text-[#FAFAFA]">Guggenheim Investments</span>.
-              </p>
-              <p>
-                She currently serves as{" "}
-                <span className="text-[#FAFAFA]">Chair of the Compliance Committee</span>{" "}
-                at GMO-Z.com Trust Company, a NYDFS-regulated stablecoin issuer, and as{" "}
-                <span className="text-[#FAFAFA]">Global Policy Lead</span>{" "}
-                at the Stablecoin Standard.
-              </p>
-              <p>
-                Her advisory experience spans institutional digital asset managers, DeFi protocols, and tokenization platforms navigating complex regulatory environments.
-              </p>
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition mt-2"
-              >
-                <span>Learn more about Beth</span>
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Insights */}
-      <section className="py-24 px-6 border-t border-[#262626]">
+      <section className="py-24 px-6 border-t border-[#262626] bg-[#141414]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0 }}
@@ -360,7 +457,7 @@ export default function WarburtonPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 border-t border-[#262626] bg-[#141414]">
+      <section className="py-24 px-6 border-t border-[#262626]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -378,7 +475,8 @@ export default function WarburtonPage() {
             transition={{ delay: 0.1 }}
             className="text-[#A1A1AA] text-lg mb-10 max-w-xl mx-auto"
           >
-            Every engagement is tailored. Let&apos;s explore how Warburton Advisers can support your growth.
+            Every engagement is tailored. Let&apos;s explore how Warburton
+            Advisers can support your growth.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -409,10 +507,10 @@ export default function WarburtonPage() {
               </svg>
             </a>
             <Link
-              href="/practice"
+              href="/"
               className="inline-flex items-center justify-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition border border-[#262626] px-6 py-3 rounded"
             >
-              Learn about working with Beth
+              Learn more about Beth
               <svg
                 className="w-4 h-4"
                 fill="none"
@@ -432,7 +530,7 @@ export default function WarburtonPage() {
       </section>
 
       {/* Contact Bar */}
-      <section className="py-16 px-6 border-t border-[#262626]">
+      <section className="py-16 px-6 border-t border-[#262626] bg-[#141414]">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div>
             <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-2">
