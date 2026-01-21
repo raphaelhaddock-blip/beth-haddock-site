@@ -509,7 +509,7 @@ export default function Home() {
               </h2>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
                 Board seats at regulated stablecoin issuers. GC roles at companies raising institutional capital.
-                Advisory positions through enforcement actions and IPO preparations.
+                Advisory positions through enforcement actions and acquisitions.
                 <span className="text-[#FAFAFA]"> I&apos;ve built the infrastructure that survives scrutiny.</span>
               </p>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
@@ -556,7 +556,7 @@ export default function Home() {
                 Fractional GC
               </h3>
               <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
-                Institutional-grade legal leadership without full-time overhead. I embed with your team to build compliance infrastructure.
+                Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure.
               </p>
               <p className="text-xs text-[#71717A] italic mb-4">
                 Series A-C crypto/fintech companies
