@@ -107,7 +107,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
             >
-              25+ Years in Financial Services
+              Strategic Counsel for Tech Leaders
             </motion.p>
 
             {/* Semantic H1 for SEO - visually hidden */}
