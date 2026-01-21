@@ -24,17 +24,17 @@ const focusAreas = [
   {
     title: "Institutional Readiness",
     description:
-      "Preparing digital asset companies for the scrutiny of pension funds, endowments, and asset managers.",
+      "Preparing FinTech and digital asset innovators for the scrutiny of pension funds, endowments, and asset managers.",
   },
   {
     title: "Regulatory Strategy",
     description:
-      "Navigating SEC, NYDFS, and emerging global frameworks. Building compliance that anticipates rather than reacts.",
+      "Navigating SEC, OCC, FINRA, NYDFS, and global frameworks. Building compliance that anticipates rather than reacts.",
   },
   {
     title: "Board Governance",
     description:
-      "Structuring governance for companies at the intersection of traditional finance and decentralized systems.",
+      "Leading governance for companies at the intersection of traditional finance and technology.",
   },
 ];
 
@@ -157,7 +157,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-[#FAFAFA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed font-medium"
             >
-              General Counsel Services. Strategic Advisor. Board Member.
+              Strategic Advisor. General Counsel Services. Board Member.
             </motion.p>
 
             <motion.p
