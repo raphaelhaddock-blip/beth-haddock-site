@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 
 const services = [
   {
@@ -11,28 +13,24 @@ const services = [
     description:
       "Institutional-grade legal leadership without full-time overhead. I embed with your team to build compliance infrastructure that passes regulatory scrutiny and unlocks institutional capital.",
     idealFor: "Series A-C crypto/fintech companies",
-    calendlyType: "fractional-gc",
   },
   {
     title: "Board & Governance",
     description:
       "Independent governance for companies bridging traditional finance and decentralized systems. I bring operator experience to board-level oversight—not just a name on letterhead.",
     idealFor: "NYDFS licensing, IPO readiness, institutional adoption",
-    calendlyType: "board",
   },
   {
     title: "Strategic Advisory",
     description:
       "Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. For moments when you need someone who has been in the room before.",
     idealFor: "M&A, enforcement response, fundraising",
-    calendlyType: "advisory",
   },
   {
     title: "Special Projects",
     description:
       "Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements with defined scope.",
     idealFor: "Incident response, program builds, RegTech",
-    calendlyType: "special-projects",
   },
 ];
 
@@ -86,6 +84,8 @@ const industries = [
 ];
 
 export default function WarburtonPage() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
       <Nav active="warburton" alwaysVisible />
@@ -122,10 +122,8 @@ export default function WarburtonPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <a
-              href="https://calendly.com/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsContactOpen(true)}
               className="btn-gold inline-flex items-center gap-3"
             >
               Schedule a Conversation
@@ -142,7 +140,7 @@ export default function WarburtonPage() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>
@@ -221,16 +219,14 @@ export default function WarburtonPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <motion.a
+              <motion.button
                 key={service.title}
-                href={`https://calendly.com/beth-haddock?type=${service.calendlyType}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => setIsContactOpen(true)}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group p-8 bg-[#0A0A0A] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+                className="group p-8 bg-[#0A0A0A] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
               >
                 <h3 className="font-[family-name:var(--font-playfair)] text-2xl mb-4 group-hover:text-[#D4AF37] transition-colors">
                   {service.title}
@@ -257,7 +253,7 @@ export default function WarburtonPage() {
                     />
                   </svg>
                 </div>
-              </motion.a>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -485,10 +481,8 @@ export default function WarburtonPage() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <a
-              href="https://calendly.com/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsContactOpen(true)}
               className="btn-gold inline-flex items-center justify-center gap-3"
             >
               Schedule a Conversation
@@ -502,10 +496,10 @@ export default function WarburtonPage() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
+            </button>
             <Link
               href="/"
               className="inline-flex items-center justify-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition border border-[#262626] px-6 py-3 rounded"
@@ -560,6 +554,9 @@ export default function WarburtonPage() {
       </section>
 
       <Footer />
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 type NavProps = {
   active?: "warburton" | "guides" | "insights";
@@ -12,6 +13,7 @@ type NavProps = {
 export default function Nav({ active, alwaysVisible = false }: NavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(alwaysVisible);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     if (alwaysVisible) {
@@ -79,14 +81,12 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
                 >
                   Insights
                 </Link>
-                <a
-                  href="https://calendly.com/beth-haddock"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => setIsContactOpen(true)}
                   className="text-sm bg-[#D4AF37] text-[#0A0A0A] px-4 py-2 hover:bg-[#F5D77A] transition-colors"
                 >
                   Contact
-                </a>
+                </button>
               </div>
 
               {/* Mobile Hamburger */}
@@ -190,14 +190,15 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
               >
-                <a
-                  href="https://calendly.com/beth-haddock"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsContactOpen(true);
+                  }}
                   className="text-xl bg-[#D4AF37] text-[#0A0A0A] px-6 py-3 hover:bg-[#F5D77A] transition-colors"
                 >
                   Contact
-                </a>
+                </button>
               </motion.div>
             </div>
 
@@ -224,6 +225,9 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </>
   );
 }

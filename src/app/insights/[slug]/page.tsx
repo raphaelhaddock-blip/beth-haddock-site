@@ -6,6 +6,7 @@ import { POST_QUERY } from "@/sanity/lib/queries";
 import { PortableText } from "@portabletext/react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ContactButton from "@/components/ContactButton";
 
 type Post = {
   _id: string;
@@ -171,14 +172,7 @@ export default async function PostPage({
             <p className="text-[#A1A1AA] mb-6">
               Want to discuss how this applies to your situation?
             </p>
-            <a
-              href="https://calendly.com/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold inline-block"
-            >
-              Schedule a conversation
-            </a>
+            <ContactButton />
           </section>
         </div>
       </article>

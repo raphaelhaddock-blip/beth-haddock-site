@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 
 
 const credentials = [
@@ -88,6 +90,7 @@ const publications = [
 ];
 
 export default function Home() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
@@ -172,10 +175,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="mt-10"
             >
-              <a
-                href="https://calendly.com/beth-haddock"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setIsContactOpen(true)}
                 className="inline-flex items-center gap-3 text-[#D4AF37] hover:text-[#F5D77A] transition-colors group"
               >
                 <span className="text-sm tracking-wide">Start a conversation</span>
@@ -192,7 +193,7 @@ export default function Home() {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </a>
+              </button>
             </motion.div>
           </div>
 
@@ -544,15 +545,13 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Fractional GC Card */}
-            <motion.a
-              href="https://calendly.com/beth-haddock?type=fractional-gc"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={() => setIsContactOpen(true)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
             >
               <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
                 Fractional GC
@@ -579,18 +578,16 @@ export default function Home() {
                   />
                 </svg>
               </div>
-            </motion.a>
+            </motion.button>
 
             {/* Board Director Card */}
-            <motion.a
-              href="https://calendly.com/beth-haddock?type=board"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={() => setIsContactOpen(true)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
             >
               <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
                 Board Director
@@ -617,18 +614,16 @@ export default function Home() {
                   />
                 </svg>
               </div>
-            </motion.a>
+            </motion.button>
 
             {/* Strategic Advisor Card */}
-            <motion.a
-              href="https://calendly.com/beth-haddock?type=advisory"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={() => setIsContactOpen(true)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
             >
               <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
                 Strategic Advisor
@@ -655,18 +650,16 @@ export default function Home() {
                   />
                 </svg>
               </div>
-            </motion.a>
+            </motion.button>
 
             {/* Special Projects Card */}
-            <motion.a
-              href="https://calendly.com/beth-haddock?type=special-projects"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={() => setIsContactOpen(true)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block"
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
             >
               <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
                 Special Projects
@@ -693,7 +686,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-            </motion.a>
+            </motion.button>
           </div>
 
           {/* Qualification Statement */}
@@ -788,10 +781,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <a
-              href="https://calendly.com/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsContactOpen(true)}
               className="btn-gold inline-flex items-center gap-3"
             >
               Discuss Your Challenge
@@ -805,15 +796,18 @@ export default function Home() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>
 
       <Footer />
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 }

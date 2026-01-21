@@ -7,6 +7,7 @@ import { getRelatedGuides } from "@/data/guideRelationships";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import LeadCapture from "@/components/LeadCapture";
+import ContactButton from "@/components/ContactButton";
 
 export function generateStaticParams() {
   return getAllGuideSlugs().map((slug) => ({ slug }));
@@ -124,14 +125,7 @@ export default async function GuidePage({
             <p className="text-[#A1A1AA] leading-relaxed mb-6">
               {guide.cta.description}
             </p>
-            <a
-              href="https://calendly.com/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold inline-block"
-            >
-              Schedule a conversation
-            </a>
+            <ContactButton />
           </section>
 
           {/* Lead Capture */}
