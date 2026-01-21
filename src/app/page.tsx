@@ -36,24 +36,6 @@ const focusAreas = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Beth anticipated regulatory issues our internal team missed entirely. Her institutional perspective was invaluable during our Series B.",
-    attribution: "General Counsel",
-    company: "Series B Stablecoin Issuer",
-  },
-  {
-    quote: "We needed someone who understood both TradFi expectations and crypto realities. Beth helped us build a compliance framework that actually made us more competitive.",
-    attribution: "CEO",
-    company: "Digital Asset Custody Provider",
-  },
-  {
-    quote: "Her depth of experience shows in every conversation. She doesn't just know what regulators want—she knows how they think.",
-    attribution: "Chief Compliance Officer",
-    company: "DeFi Protocol",
-  },
-];
-
 const publications = [
   {
     outlet: "CoinDesk",
@@ -538,57 +520,6 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
-
-      {/* Testimonials */}
-      <section className="py-32 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-          >
-            What Clients Say
-          </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-16"
-          >
-            Results that speak for themselves.
-          </motion.h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative"
-              >
-                <svg
-                  className="w-8 h-8 text-[#D4AF37]/30 mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="text-[#FAFAFA] text-lg leading-relaxed mb-6">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div className="border-t border-[#262626] pt-4">
-                  <p className="text-[#D4AF37] font-medium">{testimonial.attribution}</p>
-                  <p className="text-[#71717A] text-sm">{testimonial.company}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* How I Work */}
       <section id="how-i-work" className="py-32 px-6 border-t border-[#262626]">
