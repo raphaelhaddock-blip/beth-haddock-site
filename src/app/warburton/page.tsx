@@ -177,8 +177,7 @@ export default function WarburtonPage() {
                 <span className="text-[#FAFAFA]">AXA</span>,{" "}
                 <span className="text-[#FAFAFA]">Brown Brothers Harriman</span>, and{" "}
                 <span className="text-[#FAFAFA]">Guggenheim Investments</span>—plus
-                board and advisory roles at regulated stablecoin issuers, DeFi
-                protocols, and institutional digital asset companies.
+                board and advisory roles at regulated stablecoin issuers, blockchain and DeFi innovators and FinTech companies.
               </p>
               <p>
                 I currently serve as Chair of the Compliance Committee at{" "}
