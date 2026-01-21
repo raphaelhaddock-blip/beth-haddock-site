@@ -10,14 +10,14 @@ import ContactForm from "@/components/ContactForm";
 
 const credentials = [
   { name: "Franklin Templeton", logo: "/logos/franklin-templeton.svg", width: 160, height: 40, url: "https://www.franklintempleton.com" },
-  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 140, height: 32, url: "https://www.guggenheimpartners.com" },
-  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 150, height: 42, url: "https://www.troweprice.com" },
+  { name: "Guggenheim", logo: "/logos/guggenheim.svg", width: 180, height: 36, url: "https://www.guggenheimpartners.com" },
+  { name: "T. Rowe Price", logo: "/logos/t-rowe-price.svg", width: 180, height: 44, url: "https://www.troweprice.com" },
   { name: "Brown Brothers Harriman", logo: "/logos/bbh.svg", width: 80, height: 40, url: "https://www.bbh.com" },
   { name: "Grayscale", logo: "/logos/grayscale.svg", width: 180, height: 32, url: "https://www.grayscale.com" },
   { name: "a16z", logo: "/logos/a16z.svg", width: 100, height: 32, url: "https://a16z.com" },
   { name: "Ondo", logo: "/logos/ondo.svg", width: 100, height: 32, url: "https://ondo.finance" },
-  { name: "Balancer", logo: "/logos/balancer.svg", width: 120, height: 32, url: "https://balancer.fi" },
-  { name: "Orca", logo: "/logos/orca.svg", width: 110, height: 38, url: "https://www.orca.so" },
+  { name: "Balancer", logo: "/logos/balancer.svg", width: 160, height: 30, url: "https://balancer.fi" },
+  { name: "Orca", logo: "/logos/orca.svg", width: 100, height: 32, url: "https://www.orca.so" },
 ];
 
 const focusAreas = [
@@ -166,7 +166,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="text-[#A1A1AA] text-lg md:text-xl mt-4 max-w-lg leading-relaxed"
             >
-              I&apos;ve built the operational foundations that let stablecoin issuers, DeFi protocols, and digital asset firms get licensed, raise institutional capital, and scale. Now I build them for others.
+              I&apos;ve built operational foundations that let stablecoin issuers, fintech and digital asset innovators, and DeFi teams get licensed, raise institutional capital, and scale. Now I build them for others.
             </motion.p>
 
             <motion.div
@@ -592,7 +592,7 @@ export default function Home() {
                 Board Director
               </h3>
               <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
-                Independent governance for companies bridging traditional finance and decentralized systems.
+                Independent governance for companies bridging traditional finance and blockchain innovation.
               </p>
               <p className="text-xs text-[#71717A] italic mb-4">
                 NYDFS licensing, IPO readiness
