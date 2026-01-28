@@ -39,6 +39,19 @@ const focusAreas = [
 ];
 
 const publications = [
+  // 2025
+  {
+    outlet: "Decrypt",
+    title: "StableCheck: An Independent Stablecoin Evaluation Framework",
+    date: "October 2025",
+    url: "https://decrypt.co/346337/stablecoin-standard-establishes-stablecheck-an-independent-stablecoin-evaluation-framework",
+  },
+  {
+    outlet: "Bell Curve",
+    title: "Live At Digital Asset Summit 2025",
+    date: "October 2025",
+    url: "https://x.com/i/broadcasts/1yoJMPYjpEwGQ",
+  },
   {
     outlet: "CoinDesk",
     title: "Crypto Week: What Does it Mean for Advisors?",
@@ -46,10 +59,47 @@ const publications = [
     url: "https://www.coindesk.com/coindesk-indices/2025/07/16/crypto-for-advisors-crypto-week-what-does-it-mean-for-advisors",
   },
   {
+    outlet: "Brew Markets",
+    title: "The Future of Crypto Regulation",
+    date: "July 2025",
+    url: "https://www.brewmarkets.com/stories/2025/07/01/crypto-regulation-stablecoin-law",
+  },
+  {
+    outlet: "Stablecoin Standard",
+    title: "Positioning for What's Next: The GENIUS Act and the Future of Stablecoins",
+    date: "June 2025",
+    url: "https://www.stablecoinstandard.com/thought-articles/positioning-for-whats-next-the-genius-act-and-the-future-of-stablecoins",
+  },
+  {
+    outlet: "CQ News",
+    title: "Backers See Stablecoins Locking in US Role in Global Commerce",
+    date: "March 2025",
+    url: "https://warburtonadvisers.com/wp-content/uploads/2025/03/Congressional-Quarterly-News-March-24-2025.pdf",
+  },
+  {
+    outlet: "CoinDesk",
+    title: "A New Golden Age For Crypto Assets?",
+    date: "March 2025",
+    url: "https://www.coindesk.com/coindesk-indices/2025/03/19/crypto-for-advisors-a-new-golden-age-for-crypto-assets",
+  },
+  {
+    outlet: "Crypto Prime",
+    title: "Stablecoin Fundamentals and Regulation",
+    date: "February 2025",
+    url: "https://cryptoprimepodcast.com/warburtons-beth-haddock-on-stablecoin-fundamentals-and-regulation/",
+  },
+  {
     outlet: "CoinDesk",
     title: "Trump: What's Changed for Crypto?",
     date: "February 2025",
     url: "https://www.coindesk.com/coindesk-indices/2025/02/19/crypto-for-advisors-trump-what-s-changed-for-crypto",
+  },
+  // 2024
+  {
+    outlet: "Stern Chats",
+    title: "Compliance Career Opportunities",
+    date: "October 2024",
+    url: "https://open.spotify.com/episode/4Lr4KXlvw4avI1ACMuDvpl",
   },
   {
     outlet: "CoinDesk",
@@ -58,10 +108,28 @@ const publications = [
     url: "https://www.coindesk.com/business/2024/10/16/planning-for-inevitable-regulatory-change",
   },
   {
+    outlet: "Blockchain Reporter",
+    title: "Stablecoin Standards and Their Role in Shaping the Global Financial Ecosystem",
+    date: "September 2024",
+    url: "https://blockchainreporter.net/beth-haddock-on-stablecoin-standards-and-their-role-in-shaping-the-global-financial-ecosystem/",
+  },
+  {
+    outlet: "Bitcoin World",
+    title: "An Interview With Stablecoin Standard",
+    date: "September 2024",
+    url: "https://bitcoinworld.co.in/an-interview-with-stablecoin-standard/",
+  },
+  {
+    outlet: "CoinDesk",
+    title: "Crypto and Compliance",
+    date: "July 2024",
+    url: "https://www.coindesk.com/opinion/2024/07/11/crypto-for-advisors-crypto-and-compliance/",
+  },
+  {
     outlet: "Morningstar",
     title: "How to Integrate AI to Your Practice",
     date: "June 2024",
-    url: "https://www.morningstar.com/",
+    url: "https://magazine.morningstar.com/preview/q2-2024",
   },
   {
     outlet: "Financial Planning",
@@ -69,6 +137,7 @@ const publications = [
     date: "May 2024",
     url: "https://www.financial-planning.com/opinion/3-need-to-know-ai-insights-for-advisory-firms",
   },
+  // 2023
   {
     outlet: "Nasdaq",
     title: "Crypto Had Reputational Issues. 2024 Will Change That",
@@ -81,16 +150,142 @@ const publications = [
     date: "July 2023",
     url: "https://www.coindesk.com/policy/2023/07/26/crypto-must-take-fraud-prevention-seriously-crypto-long-short",
   },
+  // 2022
+  {
+    outlet: "The Defiant",
+    title: "DeFi Debates DAO Governance After Vitalik's Critique",
+    date: "December 2022",
+    url: "https://thedefiant.io/buterin-criticizes-governance-tokens",
+  },
+  {
+    outlet: "Nasdaq",
+    title: "What if Crypto Was The Answer to Our Fraud Problem?",
+    date: "May 2022",
+    url: "https://www.nasdaq.com/articles/what-if-crypto-was-the-answer-to-our-fraud-problem",
+  },
   {
     outlet: "Forbes",
     title: "Is The Decentralized Crypto Case In Trouble?",
     date: "March 2022",
-    url: "https://www.forbes.com/",
+    url: "https://www.forbes.com/sites/kenrapoza/2022/03/08/is-the-decentralized-crypto-case-in-trouble/",
+  },
+  {
+    outlet: "NSCP Currents",
+    title: "Kick off 2022 with the NSCP Blockchain & FinTech Roundtable",
+    date: "January 2022",
+    url: "https://www.linkedin.com/posts/national-society-of-compliance-professionals_kick-off-2022-with-thenscp-blockchain-activity-6887028940393771008-M9K-",
+  },
+  // 2021
+  {
+    outlet: "AdvisorEngine",
+    title: "What Advisors Need to Know About the SEC, Robo-Advisors and Compliance",
+    date: "December 2021",
+    url: "https://www.advisorengine.com/blog-feed/what-advisors-need-to-know-about-the-sec-robo-advisors-and-compliance",
+  },
+  {
+    outlet: "NSCP Currents",
+    title: "Compliance in the Crypto-Sphere: A Call to Action",
+    date: "October 2021",
+    url: "https://warburtonadvisers.com/nscp-currents-october-2021/",
+  },
+  {
+    outlet: "NSCP Currents",
+    title: "What is the Role of Compliance in ESG Investing?",
+    date: "July 2021",
+    url: "https://warburtonadvisers.com/wp-content/uploads/2021/08/NSCP-Currents-July-2021-REPRINT-Haddock-1.pdf",
+  },
+  {
+    outlet: "AdvisorEngine",
+    title: "Marketing and Sales Compliance Tips for Financial Advisors",
+    date: "January 2021",
+    url: "https://www.advisorengine.com/blog-feed/marketing-and-sales-compliance-tips-for-financial-advisors-in-2021",
+  },
+  // 2020
+  {
+    outlet: "NSCP Currents",
+    title: "An Interview About Mentorships & Compliance Decisions",
+    date: "August 2020",
+    url: "http://warburtonadvisers.com/wp-content/uploads/2020/10/NSCP-Currents-August-2020-REPRINT-Haddock-Ellis.pdf",
+  },
+  {
+    outlet: "NSCP Currents",
+    title: "A Case for a Different Type of Computer Code: A Code of Data Ethics",
+    date: "May 2020",
+    url: "https://warburtonadvisers.com/a-case-for-a-different-type-of-computer-code-a-code-of-data-ethics/",
+  },
+  {
+    outlet: "Pillsbury Law",
+    title: "Data Governance and Ethics Best Practices Webinar",
+    date: "February 2020",
+    url: "https://notifications.pillsburylaw.com/14/2845/compose-email/data-governance-webinar---invite--co-sponsors-.asp",
+  },
+  // 2019
+  {
+    outlet: "AdvisorEngine",
+    title: "Compliance for Financial Advisors: A Regulatory Year in Review",
+    date: "December 2019",
+    url: "https://www.advisorengine.com/blog/a-regulatory-year-in-review",
+  },
+  {
+    outlet: "AdvisorEngine",
+    title: "Best Interests for Advisors: Your Compliance Program's Reality Check",
+    date: "August 2019",
+    url: "https://www.advisorengine.com/blog/financial-advisors-compliance-reality-check",
+  },
+  {
+    outlet: "NYU School of Law",
+    title: "Why Sustainable Governance Enables Regulation Best Interest Compliance",
+    date: "August 2019",
+    url: "https://wp.nyu.edu/compliance_enforcement/2019/08/21/why-sustainable-governance-enables-regulation-best-interest-compliance/",
+  },
+  {
+    outlet: "ThinkAdvisor",
+    title: "The Advisor Compliance Issue That's Bigger Than Reg BI",
+    date: "June 2019",
+    url: "https://www.thinkadvisor.com/2019/06/21/the-advisor-compliance-issue-thats-bigger-than-reg-bi/",
+  },
+  // 2018
+  {
+    outlet: "Hedge Fund Law Report",
+    title: "What Fund Managers Need to Know About Corporate Access",
+    date: "November 2018",
+    url: "https://www.hflawreport.com/2638276/what-fund-managers-need-to-know-about-corporate-access-the-risks-and-rewards-of-speaking-directly-with-issuer-management-partone-of-three.thtml",
+  },
+  {
+    outlet: "Fordham Environmental Law Review",
+    title: "Why Corporate Attorneys Should Consider ESG and Sustainability Principles",
+    date: "November 2018",
+    url: "https://ir.lawnet.fordham.edu/elr/vol30/iss1/1/",
+  },
+  {
+    outlet: "SCCE Podcast",
+    title: "Beth Haddock on Insider Trading",
+    date: "October 2018",
+    url: "http://complianceandethics.org/beth-haddock-on-insider-trading-podcast/",
+  },
+  {
+    outlet: "NSCP Currents",
+    title: "Why Compliance Officers Should Consider ESG and Sustainability Principles",
+    date: "July 2018",
+    url: "https://warburtonadvisers.com/wp-content/uploads/2018/08/02-nscp-currents-july-2018-reprint-haddock.pdf",
+  },
+  {
+    outlet: "Newsmax",
+    title: "Did Opening That Email Place Your Business in Legal Hot Water?",
+    date: "May 2018",
+    url: "https://www.newsmax.com/finance/streettalk/email-open-legal-hot/2018/05/17/id/861058/",
+  },
+  {
+    outlet: "Newsmax",
+    title: "3 Ways Facebook's Data Breach Provides Safety Lessons",
+    date: "May 2018",
+    url: "https://www.newsmax.com/finance/personal-finance/facebook-data-breach-safety/2018/05/01/id/857733/",
   },
 ];
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [showAllPublications, setShowAllPublications] = useState(false);
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
@@ -326,6 +521,37 @@ export default function Home() {
             </motion.h2>
           </div>
 
+          {/* Upcoming Event Banner - NIESR Jan 29, 2026 */}
+          <motion.a
+            href="https://niesr.ac.uk/event/digital-money-monetary-sovereignty-and-financial-fragmentation"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="group block mb-8 p-6 border border-[#D4AF37]/30 hover:border-[#D4AF37] rounded-xl bg-[#141414] transition-all"
+          >
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="flex-1">
+                <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-2">
+                  Upcoming · Jan 29, 2026
+                </p>
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl mb-3 group-hover:text-[#D4AF37] transition-colors">
+                  Digital Money, Monetary Sovereignty, and Financial Fragmentation
+                </h3>
+                <p className="text-[#A1A1AA] text-sm mb-4">
+                  Panel discussion at NIESR London · Virtual attendance available
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#D4AF37] text-sm">
+                  Register Free
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </motion.a>
+
           {/* 3-Photo Grid */}
           <div className="grid md:grid-cols-3 gap-4">
             {/* DC Blockchain Summit */}
@@ -423,7 +649,7 @@ export default function Home() {
           </motion.h2>
 
           <div className="grid gap-0">
-            {publications.map((pub, index) => (
+            {(showAllPublications ? publications : publications.slice(0, 8)).map((pub, index) => (
               <motion.a
                 key={`${pub.outlet}-${index}`}
                 href={pub.url}
@@ -459,31 +685,33 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-[#8B8B94] text-sm mt-8 text-center"
+            className="mt-8 text-center"
           >
-            View all publications on{" "}
-            <a
-              href="https://www.coindesk.com/author/beth-haddock"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#D4AF37] hover:underline"
+            <button
+              onClick={() => setShowAllPublications(!showAllPublications)}
+              className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-sm font-medium"
             >
-              CoinDesk
-            </a>{" "}
-            ·{" "}
-            <a
-              href="https://warburtonadvisers.com/media/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#D4AF37] hover:underline"
-            >
-              Warburton Advisers Media
-            </a>
-          </motion.p>
+              {showAllPublications ? (
+                <>
+                  Show Less
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  </svg>
+                </>
+              ) : (
+                <>
+                  Show All {publications.length} Publications
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </>
+              )}
+            </button>
+          </motion.div>
         </div>
       </section>
 
@@ -508,9 +736,13 @@ export default function Home() {
                 <span className="text-[#D4AF37] italic"> when it mattered.</span>
               </h2>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                Board seats at regulated stablecoin issuers. GC roles at companies raising institutional capital.
-                Advisory positions through enforcement actions and acquisitions.
-                <span className="text-[#FAFAFA]"> I&apos;ve built the infrastructure that survives scrutiny.</span>
+                Board seats at regulated stablecoin issuers.
+                <br />
+                GC leadership at companies raising institutional capital.
+                <br />
+                Advisory work through enforcement actions and acquisitions.
+                <br />
+                <span className="text-[#FAFAFA]">I build infrastructure that survives scrutiny.</span>
               </p>
               <p className="text-[#A1A1AA] text-xl leading-relaxed">
                 When you work with me, you get someone who has done the work—not just studied it.
@@ -595,7 +827,7 @@ export default function Home() {
                 Independent governance for companies bridging traditional finance and blockchain innovation.
               </p>
               <p className="text-xs text-[#8B8B94] italic mb-4">
-                NYDFS licensing, IPO readiness
+                NYDFS licensing, institutional adoption
               </p>
               <div className="flex items-center gap-2 text-[#D4AF37]">
                 <span className="text-sm">Discuss</span>
