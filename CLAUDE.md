@@ -164,3 +164,15 @@ Beth's content demonstrates expertise through analysis, not through revealing cl
 Her credibility = her roles + her track record + the quality of her analysis
 
 NOT = what she did inside specific companies
+
+---
+
+## STANDARD WEBSITE RULES
+
+**See `~/.claude/SITE_RULES.md` for standard operations rules including:**
+- Deployment (Vercel workflow, pre-deploy checklist)
+- Security (XSS prevention, headers, secrets)
+- SEO (technical requirements, Core Web Vitals)
+- Content quality (minimum standards)
+- Accessibility (WCAG 2.1 AA)
+- Performance budget
