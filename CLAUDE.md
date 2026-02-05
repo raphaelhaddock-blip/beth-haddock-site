@@ -24,6 +24,20 @@ This is absolute. The site exists to position Beth as an industry expert, NOT to
 - Board discussions or advisory conversations
 - "When I was at X..." or "At Company Y, we..." narratives
 
+### Cognitive Checkpoint — Domain Triggers
+
+**Before content generation:**
+- Client confidentiality: Does ANY sentence reference specific client work? If yes → STOP and rewrite.
+- Expertise level: Is this claim in Beth's "Deep Expertise", "Informed Perspective", or "Watching" tier? Match confidence to tier.
+- Fact check: Every regulatory claim backed by verified facts list below? If not verifiable → don't publish.
+- Voice check: Is authority coming from analysis, not insider access?
+
+**Before publishing:**
+- Run 5-point quality test: Client / Source / Expert / Actionable / Timing. All must pass.
+- LinkedIn format: If LinkedIn post, verify 1,200-1,300 char length.
+
+---
+
 ## Voice: Expert, Not Insider
 
 Beth writes as an industry expert with 25+ years of experience, NOT as someone revealing insider information from specific companies.
