@@ -18,7 +18,7 @@ const services = [
     title: "Board & Governance",
     description:
       "Independent governance for companies bridging traditional finance and decentralized systems. I bring operator experience to board-level oversight—not just a name on letterhead.",
-    idealFor: "NYDFS licensing, IPO readiness, institutional adoption",
+    idealFor: "NYDFS licensing, institutional adoption",
   },
   {
     title: "Strategic Advisory",
@@ -31,19 +31,6 @@ const services = [
     description:
       "Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements with defined scope.",
     idealFor: "Incident response, program builds, RegTech",
-  },
-];
-
-const team = [
-  {
-    name: "Mary Toumpas",
-    title: "Compliance Advisor",
-    bio: "Seasoned chief compliance officer providing practical, risk-managed guidance. Mary brings decades of experience building and running compliance programs at scale.",
-  },
-  {
-    name: "Mark Roszak",
-    title: "Legal Partner",
-    bio: "Specializes in structuring and corporate advisory work. Mark handles complex transaction structures and corporate governance matters.",
   },
 ];
 
@@ -115,7 +102,7 @@ export default function WarburtonPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#A1A1AA] text-xl md:text-2xl leading-relaxed max-w-3xl mb-10"
           >
-            Sustainable governance and compliance solutions for blockchain and financial services.
+            I&apos;ve built operational foundations that let stablecoin issuers, fintech and digital finance innovators get licensed, raise institutional capital, and scale. Now I build them for others.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,56 +128,6 @@ export default function WarburtonPage() {
                 />
               </svg>
             </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Philosophy */}
-      <section className="py-24 px-6 border-t border-[#262626]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-[1fr_2fr] gap-12 items-start"
-          >
-            <div>
-              <p className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-4">
-                How I Work
-              </p>
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl">
-                Deep Partnership,
-                <br />
-                <span className="italic text-[#D4AF37]">Not Surface Advice</span>
-              </h2>
-            </div>
-            <div className="space-y-6 text-[#A1A1AA] text-lg leading-relaxed">
-              <p>
-                I take on a{" "}
-                <span className="text-[#FAFAFA]">limited number of engagements</span>{" "}
-                each year. This isn&apos;t scarcity marketing—it&apos;s how I ensure every
-                client gets the depth of attention these challenges require.
-              </p>
-              <p>
-                My background includes leadership roles at{" "}
-                <span className="text-[#FAFAFA]">AXA</span>,{" "}
-                <span className="text-[#FAFAFA]">Brown Brothers Harriman</span>, and{" "}
-                <span className="text-[#FAFAFA]">Guggenheim Investments</span>—plus
-                board and advisory roles at regulated stablecoin issuers, blockchain and DeFi innovators and FinTech companies.
-              </p>
-              <p>
-                I currently serve as Chair of the Compliance Committee at{" "}
-                <span className="text-[#FAFAFA]">GMO-Z.com Trust Company</span> and
-                as Global Policy Lead at the{" "}
-                <span className="text-[#FAFAFA]">Stablecoin Standard</span>.
-              </p>
-              <p className="italic text-[#8B8B94] border-l-2 border-[#D4AF37] pl-6">
-                &ldquo;Governance isn&apos;t a checkbox—it&apos;s a strategic growth lever.
-                Done right, it helps you scale responsibly while anticipating
-                regulatory shifts and building stakeholder trust.&rdquo;
-              </p>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -253,64 +190,6 @@ export default function WarburtonPage() {
                   </svg>
                 </div>
               </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-24 px-6 border-t border-[#262626]">
-        <div className="max-w-4xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-          >
-            The Team
-          </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-4"
-          >
-            I work with trusted specialists
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[#A1A1AA] text-lg mb-12 max-w-2xl"
-          >
-            For certain engagements, I bring in experts who complement my
-            background. Together, we cover the full spectrum of governance,
-            compliance, and legal needs.
-          </motion.p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-8 bg-[#141414] border border-[#262626]"
-              >
-                <div className="w-16 h-16 bg-[#262626] rounded-full mb-6 flex items-center justify-center">
-                  <span className="text-2xl text-[#D4AF37] font-[family-name:var(--font-playfair)]">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-[#D4AF37] text-sm mb-4">{member.title}</p>
-                <p className="text-[#A1A1AA] leading-relaxed">{member.bio}</p>
-              </motion.div>
             ))}
           </div>
         </div>
@@ -534,12 +413,12 @@ export default function WarburtonPage() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-            <a
-              href="mailto:beth@warburtonadvisers.com"
+            <button
+              onClick={() => setIsContactOpen(true)}
               className="text-[#A1A1AA] hover:text-[#D4AF37] transition"
             >
-              beth@warburtonadvisers.com
-            </a>
+              Contact Us
+            </button>
             <a
               href="https://linkedin.com/in/bethhaddock"
               target="_blank"

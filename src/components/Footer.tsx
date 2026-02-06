@@ -13,6 +13,27 @@ export default function Footer() {
           >
             Warburton Advisers
           </Link>
+          <span className="hidden sm:inline text-[#262626]">·</span>
+          <Link
+            href="/privacy"
+            className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition"
+          >
+            Privacy
+          </Link>
+          <span className="hidden sm:inline text-[#262626]">·</span>
+          <Link
+            href="/terms"
+            className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition"
+          >
+            Terms
+          </Link>
+          <span className="hidden sm:inline text-[#262626]">·</span>
+          <Link
+            href="/sitemap.xml"
+            className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition"
+          >
+            Sitemap
+          </Link>
         </div>
         <div className="flex gap-8 text-sm">
           <a
@@ -23,12 +44,12 @@ export default function Footer() {
           >
             LinkedIn
           </a>
-          <a
-            href="mailto:beth@warburtonadvisers.com"
+          <Link
+            href="/"
             className="text-[#A1A1AA] hover:text-[#D4AF37] transition py-2"
           >
-            Email
-          </a>
+            Contact
+          </Link>
         </div>
       </div>
     </footer>

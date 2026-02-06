@@ -121,7 +121,9 @@ export default function LeadCapture({
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+        <label htmlFor="lead-email" className="sr-only">Email address (required)</label>
         <input
+          id="lead-email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

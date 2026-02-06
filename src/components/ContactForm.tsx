@@ -67,9 +67,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               {/* Close button */}
               <button
                 onClick={onClose}
+                aria-label="Close contact form"
                 className="absolute top-4 right-4 text-gray-400 hover:text-white"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -94,7 +95,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
+                    <label htmlFor="contact-name" className="sr-only">Name (required)</label>
                     <input
+                      id="contact-name"
                       type="text"
                       name="name"
                       placeholder="Name *"
@@ -106,7 +109,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   </div>
 
                   <div>
+                    <label htmlFor="contact-email" className="sr-only">Email (required)</label>
                     <input
+                      id="contact-email"
                       type="email"
                       name="email"
                       placeholder="Email *"
@@ -118,7 +123,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   </div>
 
                   <div>
+                    <label htmlFor="contact-company" className="sr-only">Company</label>
                     <input
+                      id="contact-company"
                       type="text"
                       name="company"
                       placeholder="Company"
@@ -129,7 +136,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   </div>
 
                   <div>
+                    <label htmlFor="contact-message" className="sr-only">Message (required)</label>
                     <textarea
+                      id="contact-message"
                       name="message"
                       placeholder="How can I help? *"
                       required
