@@ -521,36 +521,92 @@ export default function Home() {
             </motion.h2>
           </div>
 
-          {/* Upcoming Event Banner - NIESR Jan 29, 2026 */}
+          {/* NIESR Digital Money Panel - Watch Recording */}
           <motion.a
-            href="https://niesr.ac.uk/event/digital-money-monetary-sovereignty-and-financial-fragmentation"
+            href="https://youtu.be/n39iV4iSfn4?si=mJLDa6N-eILKGtJ0"
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="group block mb-8 p-6 border border-[#D4AF37]/30 hover:border-[#D4AF37] rounded-xl bg-[#141414] transition-all"
+            className="group block mb-8 relative rounded-2xl overflow-hidden"
           >
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-              <div className="flex-1">
+            <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/events/niesr-digital-money-2026.png"
+                alt="NIESR Digital Money & Financial Stability Panel"
+                fill
+                sizes="100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                 <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-2">
-                  Upcoming · Jan 29, 2026
+                  NIESR · January 2026
                 </p>
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl mb-3 group-hover:text-[#D4AF37] transition-colors">
-                  Digital Money, Monetary Sovereignty, and Financial Fragmentation
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl lg:text-4xl mb-3 text-white">
+                  Digital Money &amp; Financial Stability
                 </h3>
-                <p className="text-[#A1A1AA] text-sm mb-4">
-                  Panel discussion at NIESR London · Virtual attendance available
+                <p className="text-white/80 text-sm md:text-base mb-4 max-w-2xl">
+                  Panel hosted by the UK&apos;s National Institute of Economic and Social Research (NIESR) on &ldquo;Financing Growth, Safeguarding Stability: How Should the Financial System Evolve?&rdquo; — exploring the future of digital money, monetary sovereignty, and financial fragmentation.
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#D4AF37] text-sm">
-                  Register Free
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="inline-flex items-center gap-2 text-[#D4AF37] text-sm font-medium group-hover:gap-3 transition-all">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  Watch the Discussion
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
               </div>
             </div>
           </motion.a>
+
+          {/* Efi Pylarinou Interview - Programmable Compliance */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12 rounded-2xl bg-[#141414] border border-[#262626] p-8 md:p-10"
+          >
+            <p className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-3">
+              Stablecoin Standard · 2026
+            </p>
+            <h3 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl lg:text-4xl mb-4 text-white">
+              Programmable Compliance: Balancing Privacy and Enforcement
+            </h3>
+            <p className="text-white/80 text-sm md:text-base mb-6 max-w-2xl">
+              Interviewed by Dr. Efi Pylarinou to discuss the white paper with the Stablecoin Standard: Programmable Compliance for Digital Money and Assets — a framework to prevent illicit finance without compromising financial privacy.
+            </p>
+            <div className="flex flex-wrap items-center gap-6">
+              <a
+                href="https://youtu.be/irtlteRv3SA?si=VfnR5WkP37WZzTzC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/cta inline-flex items-center gap-2 text-[#D4AF37] text-sm font-medium hover:text-[#F5D77A] transition-colors"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Watch the Interview
+                <svg className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="https://www.stablecoinstandard.com/s/Whitepaper-Programmable-Compliance-for-Digital-Money-and-Assets.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/cta inline-flex items-center gap-2 text-[#D4AF37] text-sm font-medium hover:text-[#F5D77A] transition-colors"
+              >
+                Read the White Paper
+                <svg className="w-4 h-4 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
 
           {/* 3-Photo Grid */}
           <div className="grid md:grid-cols-3 gap-4">
