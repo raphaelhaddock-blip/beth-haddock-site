@@ -102,7 +102,7 @@ export default function WarburtonPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#A1A1AA] text-xl md:text-2xl leading-relaxed max-w-3xl mb-10"
           >
-            I&apos;ve built operational foundations that let stablecoin issuers, fintech and digital finance innovators get licensed, raise institutional capital, and scale. Now I build them for others.
+            We&apos;ve built operational foundations that let stablecoin issuers, fintech and digital finance innovators get licensed, raise institutional capital, and scale. Now we build them for others.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
