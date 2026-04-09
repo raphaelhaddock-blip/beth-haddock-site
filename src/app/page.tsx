@@ -39,6 +39,13 @@ const focusAreas = [
 ];
 
 const publications = [
+  // 2026
+  {
+    outlet: "CCN",
+    title: "Stablecoins Enter a New Era: Beth Haddock on DeFi Safety Standards",
+    date: "April 2026",
+    url: "https://www.ccn.com/education/crypto/stablecoins-new-era-beth-haddock-defi-safety-standards/",
+  },
   // 2025
   {
     outlet: "Decrypt",
