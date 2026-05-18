@@ -41,6 +41,12 @@ const focusAreas = [
 const publications = [
   // 2026
   {
+    outlet: "AdvisorEngine",
+    title: "AI Governance Is Not Just an IT Problem",
+    date: "May 2026",
+    url: "https://www.advisorengine.com/action-magazine/articles/ai-governance-is-not-just-an-it-problem",
+  },
+  {
     outlet: "CCN",
     title: "Stablecoins Enter a New Era: Beth Haddock on DeFi Safety Standards",
     date: "April 2026",
