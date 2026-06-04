@@ -41,6 +41,12 @@ const focusAreas = [
 const publications = [
   // 2026
   {
+    outlet: "CoinDesk",
+    title: "The Crypto Due Diligence Questions You Forgot to Ask",
+    date: "June 2026",
+    url: "https://www.coindesk.com/coindesk-indices/2026/06/03/crypto-for-advisors-the-crypto-due-diligence-questions-you-forgot-to-ask",
+  },
+  {
     outlet: "AdvisorEngine",
     title: "AI Governance Is Not Just an IT Problem",
     date: "May 2026",
