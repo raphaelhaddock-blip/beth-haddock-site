@@ -9,6 +9,13 @@ export default function Footer() {
           <p className="text-sm text-[#A1A1AA]">© 2026 Beth Haddock</p>
           <span className="hidden sm:inline text-[#262626]">·</span>
           <Link
+            href="/about"
+            className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition"
+          >
+            About
+          </Link>
+          <span className="hidden sm:inline text-[#262626]">·</span>
+          <Link
             href="/warburton"
             className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition"
           >

@@ -1,0 +1,238 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Beth Haddock" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: /about
+          - link "Warburton" [ref=e8] [cursor=pointer]:
+            - /url: /warburton
+          - link "Guides" [ref=e9] [cursor=pointer]:
+            - /url: /guides
+          - link "Insights" [ref=e10] [cursor=pointer]:
+            - /url: /insights
+          - button "Contact" [ref=e11]
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: Fractional General Counsel · Board Director · Strategic Advisor
+          - heading "I get stablecoin, fintech, and DeFi companies licensed, funded, and board-ready." [level=1] [ref=e16]
+          - paragraph [ref=e17]: I've built operational foundations that let stablecoin issuers, fintech and digital asset innovators, and DeFi teams get licensed, raise institutional capital, and scale. Now I build them for others.
+          - generic [ref=e18]:
+            - button "Start a conversation" [ref=e19] [cursor=pointer]:
+              - text: Start a conversation
+              - img [ref=e20]
+            - paragraph [ref=e22]: Former CLO, Franklin Templeton · CCO, Guggenheim · a16z portfolio companies
+        - img "Beth Haddock" [ref=e25]
+      - img [ref=e29]
+    - generic [ref=e32]:
+      - paragraph [ref=e33]: How I Work
+      - paragraph [ref=e34]: I take on a limited number of engagements each year to ensure deep partnership with every client.
+      - generic [ref=e35]:
+        - button "Fractional GC Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure. Series A-C crypto/fintech companies Discuss" [ref=e36]:
+          - heading "Fractional GC" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure.
+          - paragraph [ref=e39]: Series A-C crypto/fintech companies
+          - generic [ref=e40]:
+            - generic [ref=e41]: Discuss
+            - img [ref=e42]
+        - button "Board Director Independent governance for companies bridging traditional finance and blockchain innovation. NYDFS licensing, institutional adoption Discuss" [ref=e44]:
+          - heading "Board Director" [level=3] [ref=e45]
+          - paragraph [ref=e46]: Independent governance for companies bridging traditional finance and blockchain innovation.
+          - paragraph [ref=e47]: NYDFS licensing, institutional adoption
+          - generic [ref=e48]:
+            - generic [ref=e49]: Discuss
+            - img [ref=e50]
+        - button "Strategic Advisor Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. M&A, enforcement response Discuss" [ref=e52]:
+          - heading "Strategic Advisor" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Targeted guidance on regulatory strategy, deal structuring, or crisis navigation.
+          - paragraph [ref=e55]: M&A, enforcement response
+          - generic [ref=e56]:
+            - generic [ref=e57]: Discuss
+            - img [ref=e58]
+        - button "Special Projects Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements Discuss" [ref=e60]:
+          - heading "Special Projects" [level=3] [ref=e61]
+          - paragraph [ref=e62]: Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds.
+          - paragraph [ref=e63]: Complex, high-stakes engagements
+          - generic [ref=e64]:
+            - generic [ref=e65]: Discuss
+            - img [ref=e66]
+      - paragraph [ref=e68]: I work with founders, boards, and executives building infrastructure for digital finance, AI and FinTech. If you're navigating SEC, OCC, NYDFS, or emerging AI/crypto regulatory frameworks—we should talk.
+    - generic [ref=e70]:
+      - paragraph [ref=e71]: Trusted By
+      - generic [ref=e72]:
+        - link "Franklin Templeton" [ref=e73] [cursor=pointer]:
+          - /url: https://www.franklintempleton.com
+          - img "Franklin Templeton" [ref=e74]
+        - link "Guggenheim" [ref=e75] [cursor=pointer]:
+          - /url: https://www.guggenheimpartners.com
+          - img "Guggenheim" [ref=e76]
+        - link "T. Rowe Price" [ref=e77] [cursor=pointer]:
+          - /url: https://www.troweprice.com
+          - img "T. Rowe Price" [ref=e78]
+        - link "Brown Brothers Harriman" [ref=e79] [cursor=pointer]:
+          - /url: https://www.bbh.com
+          - img "Brown Brothers Harriman" [ref=e80]
+        - link "Grayscale" [ref=e81] [cursor=pointer]:
+          - /url: https://www.grayscale.com
+          - img "Grayscale" [ref=e82]
+        - link "a16z" [ref=e83] [cursor=pointer]:
+          - /url: https://a16z.com
+          - img "a16z" [ref=e84]
+        - link "Ondo" [ref=e85] [cursor=pointer]:
+          - /url: https://ondo.finance
+          - img "Ondo" [ref=e86]
+        - link "Balancer" [ref=e87] [cursor=pointer]:
+          - /url: https://balancer.fi
+          - img "Balancer" [ref=e88]
+        - link "Orca" [ref=e89] [cursor=pointer]:
+          - /url: https://www.orca.so
+          - img "Orca" [ref=e90]
+    - generic [ref=e92]:
+      - paragraph [ref=e93]: Published In
+      - heading "Industry analysis and regulatory perspectives—featured in leading publications." [level=2] [ref=e94]
+      - generic [ref=e95]:
+        - link "CoinDesk The Crypto Due Diligence Questions You Forgot to Ask June 2026" [ref=e96] [cursor=pointer]:
+          - /url: https://www.coindesk.com/coindesk-indices/2026/06/03/crypto-for-advisors-the-crypto-due-diligence-questions-you-forgot-to-ask
+          - generic [ref=e97]:
+            - paragraph [ref=e98]: CoinDesk
+            - paragraph [ref=e99]: The Crypto Due Diligence Questions You Forgot to Ask
+            - paragraph [ref=e100]: June 2026
+          - img [ref=e101]
+        - link "AdvisorEngine AI Governance Is Not Just an IT Problem May 2026" [ref=e103] [cursor=pointer]:
+          - /url: https://www.advisorengine.com/action-magazine/articles/ai-governance-is-not-just-an-it-problem
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: AdvisorEngine
+            - paragraph [ref=e106]: AI Governance Is Not Just an IT Problem
+            - paragraph [ref=e107]: May 2026
+          - img [ref=e108]
+        - 'link "CCN Stablecoins Enter a New Era: Beth Haddock on DeFi Safety Standards April 2026" [ref=e110] [cursor=pointer]':
+          - /url: https://www.ccn.com/education/crypto/stablecoins-new-era-beth-haddock-defi-safety-standards/
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: CCN
+            - paragraph [ref=e113]: "Stablecoins Enter a New Era: Beth Haddock on DeFi Safety Standards"
+            - paragraph [ref=e114]: April 2026
+          - img [ref=e115]
+      - button "Show All 42 Publications" [ref=e118]:
+        - text: Show All 42 Publications
+        - img [ref=e119]
+    - generic [ref=e121]:
+      - img "Beth Haddock TEDx talk" [ref=e123]
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - paragraph [ref=e126]: On the Stage
+          - heading "Building infrastructure isn't just boardroom work. It's sharing what I've learned." [level=2] [ref=e127]
+        - link "Beth Haddock featured on CCN — Stablecoins Enter a New Era CCN · April 2026 Stablecoins Enter a New Era On DeFi safety, transparency and voluntary standards — how the Stablecoin Standard's three pillars are pushing stablecoin issuers to self-correct before regulators intervene. Read the Interview" [ref=e128] [cursor=pointer]:
+          - /url: https://www.ccn.com/education/crypto/stablecoins-new-era-beth-haddock-defi-safety-standards/
+          - generic [ref=e129]:
+            - img "Beth Haddock featured on CCN — Stablecoins Enter a New Era" [ref=e130]
+            - generic [ref=e132]:
+              - paragraph [ref=e133]: CCN · April 2026
+              - heading "Stablecoins Enter a New Era" [level=3] [ref=e134]
+              - paragraph [ref=e135]: On DeFi safety, transparency and voluntary standards — how the Stablecoin Standard's three pillars are pushing stablecoin issuers to self-correct before regulators intervene.
+              - generic [ref=e136]:
+                - text: Read the Interview
+                - img [ref=e137]
+        - 'link "NIESR Digital Money & Financial Stability Panel NIESR · January 2026 Digital Money & Financial Stability Panel hosted by the UK''s National Institute of Economic and Social Research (NIESR) on “Financing Growth, Safeguarding Stability: How Should the Financial System Evolve?” — exploring the future of digital money, monetary sovereignty, and financial fragmentation. Watch the Discussion" [ref=e139] [cursor=pointer]':
+          - /url: https://youtu.be/n39iV4iSfn4?si=mJLDa6N-eILKGtJ0
+          - generic [ref=e140]:
+            - img "NIESR Digital Money & Financial Stability Panel" [ref=e141]
+            - generic [ref=e143]:
+              - paragraph [ref=e144]: NIESR · January 2026
+              - heading "Digital Money & Financial Stability" [level=3] [ref=e145]
+              - paragraph [ref=e146]: "Panel hosted by the UK's National Institute of Economic and Social Research (NIESR) on “Financing Growth, Safeguarding Stability: How Should the Financial System Evolve?” — exploring the future of digital money, monetary sovereignty, and financial fragmentation."
+              - generic [ref=e147]:
+                - img [ref=e148]
+                - text: Watch the Discussion
+                - img [ref=e150]
+        - generic [ref=e152]:
+          - paragraph [ref=e153]: Stablecoin Standard · 2026
+          - 'heading "Programmable Compliance: Balancing Privacy and Enforcement" [level=3] [ref=e154]'
+          - paragraph [ref=e155]: "Interviewed by Dr. Efi Pylarinou to discuss the white paper with the Stablecoin Standard: Programmable Compliance for Digital Money and Assets — a framework to prevent illicit finance without compromising financial privacy."
+          - generic [ref=e156]:
+            - link "Watch the Interview" [ref=e157] [cursor=pointer]:
+              - /url: https://youtu.be/irtlteRv3SA?si=VfnR5WkP37WZzTzC
+              - img [ref=e158]
+              - text: Watch the Interview
+              - img [ref=e160]
+            - link "Read the White Paper" [ref=e162] [cursor=pointer]:
+              - /url: https://www.stablecoinstandard.com/s/Whitepaper-Programmable-Compliance-for-Digital-Money-and-Assets.pdf
+              - text: Read the White Paper
+              - img [ref=e163]
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - img "Beth Haddock speaking at DC Blockchain Summit" [ref=e167]
+            - generic [ref=e169]:
+              - paragraph [ref=e170]: DC Blockchain Summit
+              - paragraph [ref=e171]: "2025"
+          - generic [ref=e172]:
+            - img "Beth Haddock at Stablecoin Standard with State Street and Solana" [ref=e173]
+            - generic [ref=e175]:
+              - paragraph [ref=e176]: Stablecoin Standard
+              - paragraph [ref=e177]: State Street · Solana
+          - generic [ref=e178]:
+            - img "Beth Haddock on main stage at Stablecon" [ref=e179]
+            - generic [ref=e181]:
+              - paragraph [ref=e182]: Stablecon
+              - paragraph [ref=e183]: Main Stage
+    - generic [ref=e185]:
+      - paragraph [ref=e186]: Areas of Focus
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - heading "Institutional Readiness" [level=3] [ref=e189]
+          - paragraph [ref=e190]: Preparing FinTech and digital asset innovators for the scrutiny of pension funds, endowments, and asset managers.
+          - img [ref=e192]
+        - generic [ref=e194]:
+          - heading "Regulatory Strategy" [level=3] [ref=e195]
+          - paragraph [ref=e196]: Navigating SEC, OCC, FINRA, NYDFS, and global frameworks. Building compliance that anticipates rather than reacts.
+          - img [ref=e198]
+        - generic [ref=e200]:
+          - heading "Board Governance" [level=3] [ref=e201]
+          - paragraph [ref=e202]: Leading governance for companies at the intersection of traditional finance and technology.
+          - img [ref=e204]
+    - generic [ref=e208]:
+      - paragraph [ref=e210]:
+        - text: Deep
+        - text: Experience
+      - generic [ref=e211]:
+        - heading "I've been in the room when it mattered." [level=2] [ref=e212]
+        - paragraph [ref=e213]:
+          - text: Board seats at regulated stablecoin issuers.
+          - text: GC leadership at companies raising institutional capital.
+          - text: Advisory work through enforcement actions and acquisitions.
+          - text: I build infrastructure that survives scrutiny.
+        - paragraph [ref=e214]: When you work with me, you get someone who has done the work—not just studied it. That's the difference between advice and execution.
+    - generic [ref=e216]:
+      - heading "Ready to navigate the future of regulated markets?" [level=2] [ref=e217]:
+        - text: Ready to navigate the
+        - text: future of regulated markets?
+      - paragraph [ref=e218]: Whether you need fractional legal leadership, board governance, or strategic advice—let's discuss your challenge.
+      - button "Discuss Your Challenge" [ref=e220] [cursor=pointer]:
+        - text: Discuss Your Challenge
+        - img [ref=e221]
+    - contentinfo [ref=e223]:
+      - generic [ref=e224]:
+        - generic [ref=e225]:
+          - paragraph [ref=e226]: © 2026 Beth Haddock
+          - generic [ref=e227]: ·
+          - link "About" [ref=e228] [cursor=pointer]:
+            - /url: /about
+          - generic [ref=e229]: ·
+          - link "Warburton Advisers" [ref=e230] [cursor=pointer]:
+            - /url: /warburton
+          - generic [ref=e231]: ·
+          - link "Privacy" [ref=e232] [cursor=pointer]:
+            - /url: /privacy
+          - generic [ref=e233]: ·
+          - link "Terms" [ref=e234] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e235]: ·
+          - link "Sitemap" [ref=e236] [cursor=pointer]:
+            - /url: /sitemap.xml
+        - generic [ref=e237]:
+          - link "LinkedIn" [ref=e238] [cursor=pointer]:
+            - /url: https://linkedin.com/in/bethhaddock
+          - button "Contact" [ref=e239]
+  - alert [ref=e240]

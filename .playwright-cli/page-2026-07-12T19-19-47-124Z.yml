@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Beth Haddock" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: /about
+          - link "Warburton" [ref=e8] [cursor=pointer]:
+            - /url: /warburton
+          - link "Guides" [ref=e9] [cursor=pointer]:
+            - /url: /guides
+          - link "Insights" [ref=e10] [cursor=pointer]:
+            - /url: /insights
+          - button "Contact" [ref=e11]
+    - generic [ref=e13]:
+      - paragraph [ref=e14]: About
+      - heading "I build the foundations that let companies at the frontier of finance stand up to scrutiny." [level=1] [ref=e15]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: I've spent 25+ years building the compliance and governance backbone that financial institutions run on. For the last several, that work has moved to the frontier — stablecoins, digital assets, DeFi, and the AI systems reshaping how finance operates.
+        - paragraph [ref=e18]: "I work with founders and boards at the moments that decide a company's trajectory: getting licensed, raising institutional capital, responding to an enforcement action, or standing up the legal function that lets the business scale. I've done this as an operator, not just an advisor — and that's the difference between telling someone what the rules are and building something that holds up under them."
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Roles
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - heading "Former Chief Legal Officer" [level=2] [ref=e24]
+          - paragraph [ref=e25]: Franklin Templeton
+        - generic [ref=e26]:
+          - heading "Former Chief Compliance Officer" [level=2] [ref=e27]
+          - paragraph [ref=e28]: Guggenheim
+        - generic [ref=e29]:
+          - heading "Advisor" [level=2] [ref=e30]
+          - paragraph [ref=e31]: Andreessen Horowitz (a16z) portfolio companies
+        - generic [ref=e32]:
+          - heading "Board Director" [level=2] [ref=e33]
+          - paragraph [ref=e34]: Regulated stablecoin issuers
+    - generic [ref=e36]:
+      - paragraph [ref=e37]: Areas of Expertise
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: —
+          - paragraph [ref=e41]: Financial services compliance architecture
+        - generic [ref=e42]:
+          - generic [ref=e43]: —
+          - paragraph [ref=e44]: Regulatory strategy for emerging technology
+        - generic [ref=e45]:
+          - generic [ref=e46]: —
+          - paragraph [ref=e47]: SEC, FINRA, and NYDFS frameworks
+        - generic [ref=e48]:
+          - generic [ref=e49]: —
+          - paragraph [ref=e50]: Institutional adoption of new asset classes
+        - generic [ref=e51]:
+          - generic [ref=e52]: —
+          - paragraph [ref=e53]: Stablecoin regulation
+        - generic [ref=e54]:
+          - generic [ref=e55]: —
+          - paragraph [ref=e56]: DeFi compliance
+    - generic [ref=e58]:
+      - paragraph [ref=e59]: Speaking & Press
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: TEDx
+          - paragraph [ref=e63]: Speaker
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: CCN
+          - paragraph [ref=e66]: Featured interview
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: NIESR
+          - paragraph [ref=e69]: Digital money panel
+        - generic [ref=e70]:
+          - paragraph [ref=e71]: Stablecoin Standard
+          - paragraph [ref=e72]: Advisor & contributor
+      - paragraph [ref=e73]:
+        - text: 42 published articles and interviews on crypto regulation, stablecoins, and compliance across outlets including CoinDesk, Decrypt, Nasdaq, and Forbes.
+        - link "Read the writing" [ref=e74] [cursor=pointer]:
+          - /url: /insights
+        - text: .
+    - generic [ref=e76]:
+      - heading "Building at the frontier of finance? Let's talk." [level=2] [ref=e77]
+      - paragraph [ref=e78]: I take on a limited number of engagements each year. If the timing and the problem are right, I'd like to hear about it.
+      - button "Book a conversation" [ref=e79] [cursor=pointer]
+    - contentinfo [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - paragraph [ref=e83]: © 2026 Beth Haddock
+          - generic [ref=e84]: ·
+          - link "About" [ref=e85] [cursor=pointer]:
+            - /url: /about
+          - generic [ref=e86]: ·
+          - link "Warburton Advisers" [ref=e87] [cursor=pointer]:
+            - /url: /warburton
+          - generic [ref=e88]: ·
+          - link "Privacy" [ref=e89] [cursor=pointer]:
+            - /url: /privacy
+          - generic [ref=e90]: ·
+          - link "Terms" [ref=e91] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e92]: ·
+          - link "Sitemap" [ref=e93] [cursor=pointer]:
+            - /url: /sitemap.xml
+        - generic [ref=e94]:
+          - link "LinkedIn" [ref=e95] [cursor=pointer]:
+            - /url: https://linkedin.com/in/bethhaddock
+          - button "Contact" [ref=e96]
+  - alert [ref=e97]

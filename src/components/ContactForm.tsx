@@ -173,7 +173,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full bg-[#a88b63] text-white py-3 font-medium tracking-wide hover:bg-[#8a7352] transition-colors disabled:opacity-50"
+                    className="w-full bg-[#D4AF37] text-[#0A0A0A] py-3 font-medium tracking-wide hover:bg-[#F5D77A] transition-colors disabled:opacity-50"
                   >
                     {status === "sending" ? "Sending..." : "Send Message"}
                   </button>
