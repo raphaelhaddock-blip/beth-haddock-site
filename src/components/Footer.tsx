@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactButton from "./ContactButton";
 
 export default function Footer() {
   return (
@@ -44,12 +45,9 @@ export default function Footer() {
           >
             LinkedIn
           </a>
-          <Link
-            href="/"
-            className="text-[#A1A1AA] hover:text-[#D4AF37] transition py-2"
-          >
+          <ContactButton className="text-[#A1A1AA] hover:text-[#D4AF37] transition py-2">
             Contact
-          </Link>
+          </ContactButton>
         </div>
       </div>
     </footer>

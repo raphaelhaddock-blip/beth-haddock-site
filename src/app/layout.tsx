@@ -17,6 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.bethhaddock.com"),
   title: "Beth Haddock | Strategic Leadership",
   description:
     "Board Director & Strategic Advisor. Bridging the gap between institutional Wall Street governance and the digital asset economy.",

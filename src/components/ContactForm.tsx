@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ContactFormProps {
@@ -16,6 +16,15 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, onClose]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,6 +70,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-form-title"
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
             <div className="bg-[#1a1a1a] border border-[#333] w-full max-w-md p-8 relative">
@@ -75,7 +87,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 </svg>
               </button>
 
-              <h2 className="font-playfair text-2xl text-white mb-2">Get in Touch</h2>
+              <h2 id="contact-form-title" className="font-playfair text-2xl text-white mb-2">Get in Touch</h2>
               <p className="text-gray-400 text-sm mb-6">
                 Tell me about your situation. I&apos;ll respond within 48 hours.
               </p>
