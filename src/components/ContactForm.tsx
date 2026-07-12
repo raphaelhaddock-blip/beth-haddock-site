@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -19,6 +20,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
   useEffect(() => {
     if (!isOpen) return;
+    track("contact_modal_open");
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
@@ -38,12 +40,15 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       });
 
       if (res.ok) {
+        track("contact_submit_success");
         setStatus("sent");
         setFormData({ name: "", email: "", company: "", message: "" });
       } else {
+        track("contact_submit_error");
         setStatus("error");
       }
     } catch {
+      track("contact_submit_error");
       setStatus("error");
     }
   };
