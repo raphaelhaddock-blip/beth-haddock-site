@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "Warburton Advisers" [ref=e6] [cursor=pointer]:
+            - /url: /warburton
+          - link "by Beth Haddock" [ref=e7] [cursor=pointer]:
+            - /url: /
+        - generic [ref=e8]:
+          - link "About" [ref=e9] [cursor=pointer]:
+            - /url: /about
+          - link "Warburton" [ref=e10] [cursor=pointer]:
+            - /url: /warburton
+          - link "Guides" [ref=e11] [cursor=pointer]:
+            - /url: /guides
+          - link "Insights" [ref=e12] [cursor=pointer]:
+            - /url: /insights
+          - button "Contact" [ref=e13]
+    - generic [ref=e15]:
+      - paragraph [ref=e16]: Governance & Compliance
+      - heading "Warburton Advisers" [level=1] [ref=e17]
+      - paragraph [ref=e18]: Warburton Advisers builds the compliance and governance foundations that stablecoin issuers, fintech, and digital-asset companies need to get licensed, raise institutional capital, and hold up under regulatory scrutiny. We've done this work from the inside, as operators, general counsel, and board members. That's the view we bring to every engagement.
+      - button "Schedule a Conversation" [ref=e20] [cursor=pointer]:
+        - text: Schedule a Conversation
+        - img [ref=e21]
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: Services
+      - heading "How we can work together" [level=2] [ref=e26]
+      - generic [ref=e27]:
+        - 'button "Fractional GC Institutional-grade legal leadership without full-time overhead. We embed with your team to build compliance infrastructure that passes regulatory scrutiny and opens the door to institutional capital. Ideal for: Series A-C crypto/fintech companies Discuss" [ref=e28]':
+          - heading "Fractional GC" [level=3] [ref=e29]
+          - paragraph [ref=e30]: Institutional-grade legal leadership without full-time overhead. We embed with your team to build compliance infrastructure that passes regulatory scrutiny and opens the door to institutional capital.
+          - paragraph [ref=e31]: "Ideal for: Series A-C crypto/fintech companies"
+          - generic [ref=e32]:
+            - generic [ref=e33]: Discuss
+            - img [ref=e34]
+        - 'button "Board & Governance Independent governance for companies bridging traditional finance and decentralized systems. I bring operator experience to board-level oversight—not just a name on letterhead. Ideal for: NYDFS licensing, institutional adoption Discuss" [ref=e36]':
+          - heading "Board & Governance" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Independent governance for companies bridging traditional finance and decentralized systems. I bring operator experience to board-level oversight—not just a name on letterhead.
+          - paragraph [ref=e39]: "Ideal for: NYDFS licensing, institutional adoption"
+          - generic [ref=e40]:
+            - generic [ref=e41]: Discuss
+            - img [ref=e42]
+        - 'button "Strategic Advisory Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. For moments when you need someone who has been in the room before. Ideal for: M&A, enforcement response, fundraising Discuss" [ref=e44]':
+          - heading "Strategic Advisory" [level=3] [ref=e45]
+          - paragraph [ref=e46]: Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. For moments when you need someone who has been in the room before.
+          - paragraph [ref=e47]: "Ideal for: M&A, enforcement response, fundraising"
+          - generic [ref=e48]:
+            - generic [ref=e49]: Discuss
+            - img [ref=e50]
+        - 'button "Special Projects Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements with defined scope. Ideal for: Incident response, program builds, RegTech Discuss" [ref=e52]':
+          - heading "Special Projects" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements with defined scope.
+          - paragraph [ref=e55]: "Ideal for: Incident response, program builds, RegTech"
+          - generic [ref=e56]:
+            - generic [ref=e57]: Discuss
+            - img [ref=e58]
+    - generic [ref=e61]:
+      - paragraph [ref=e62]: Notable Engagements
+      - heading "Work that shaped our perspective" [level=2] [ref=e63]
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: "01"
+          - generic [ref=e67]:
+            - heading "Cybersecurity Incident Response" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Led responses to cybersecurity incidents in digital assets, coordinating regulatory notifications, stakeholder communications, and remediation strategies under compressed timelines.
+        - generic [ref=e70]:
+          - generic [ref=e71]: "02"
+          - generic [ref=e72]:
+            - heading "Cross-Border M&A Integration" [level=3] [ref=e73]
+            - paragraph [ref=e74]: Guided cross-border M&A compliance integration for financial services and fintech companies, harmonizing regulatory frameworks across jurisdictions.
+        - generic [ref=e75]:
+          - generic [ref=e76]: "03"
+          - generic [ref=e77]:
+            - heading "RegTech Platform Development" [level=3] [ref=e78]
+            - paragraph [ref=e79]: Developed a patented RegTech platform for policy automation, streamlining compliance workflows and reducing manual oversight burden.
+        - generic [ref=e80]:
+          - generic [ref=e81]: "04"
+          - generic [ref=e82]:
+            - heading "Stablecoin Issuer Governance" [level=3] [ref=e83]
+            - paragraph [ref=e84]: Built compliance committee structure and governance framework for NYDFS-regulated stablecoin issuers, establishing institutional-grade oversight.
+    - generic [ref=e86]:
+      - paragraph [ref=e87]: Industries We Serve
+      - generic [ref=e88]:
+        - generic [ref=e89]: Stablecoins
+        - generic [ref=e90]: DeFi Protocols
+        - generic [ref=e91]: Digital Asset Custody
+        - generic [ref=e92]: Tokenization
+        - generic [ref=e93]: Fintech / WealthTech
+        - generic [ref=e94]: Institutional Crypto
+    - generic [ref=e96]:
+      - heading "Ready to discuss your challenge?" [level=2] [ref=e97]
+      - paragraph [ref=e98]: Every engagement is tailored. Let's explore how Warburton Advisers can support your growth.
+      - generic [ref=e99]:
+        - button "Schedule a Conversation" [ref=e100] [cursor=pointer]:
+          - text: Schedule a Conversation
+          - img [ref=e101]
+        - link "Learn more about Beth" [ref=e103] [cursor=pointer]:
+          - /url: /
+          - text: Learn more about Beth
+          - img [ref=e104]
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - heading "Warburton Advisers" [level=3] [ref=e109]
+        - paragraph [ref=e110]: Governance and compliance for blockchain and financial services
+      - generic [ref=e111]:
+        - button "Contact Us" [ref=e112]
+        - link "LinkedIn" [ref=e113] [cursor=pointer]:
+          - /url: https://linkedin.com/in/bethhaddock
+    - contentinfo [ref=e114]:
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - paragraph [ref=e117]: © 2026 Beth Haddock
+          - generic [ref=e118]: ·
+          - link "About" [ref=e119] [cursor=pointer]:
+            - /url: /about
+          - generic [ref=e120]: ·
+          - link "Warburton Advisers" [ref=e121] [cursor=pointer]:
+            - /url: /warburton
+          - generic [ref=e122]: ·
+          - link "Privacy" [ref=e123] [cursor=pointer]:
+            - /url: /privacy
+          - generic [ref=e124]: ·
+          - link "Terms" [ref=e125] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e126]: ·
+          - link "Sitemap" [ref=e127] [cursor=pointer]:
+            - /url: /sitemap.xml
+        - generic [ref=e128]:
+          - link "LinkedIn" [ref=e129] [cursor=pointer]:
+            - /url: https://linkedin.com/in/bethhaddock
+          - button "Contact" [ref=e130]
+  - alert [ref=e131]

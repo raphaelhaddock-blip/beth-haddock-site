@@ -19,7 +19,7 @@ const services = [
   {
     title: "Board & Governance",
     description:
-      "Independent governance for companies bridging traditional finance and decentralized systems. I bring operator experience to board-level oversight—not just a name on letterhead.",
+      "Independent governance for companies bridging traditional finance and decentralized systems. We bring operator experience to board-level oversight—not just a name on letterhead.",
     idealFor: "NYDFS licensing, institutional adoption",
   },
   {
