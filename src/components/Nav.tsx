@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ContactForm from "./ContactForm";
 
 type NavProps = {
-  active?: "warburton" | "guides" | "insights";
+  active?: "about" | "warburton" | "guides" | "insights";
   alwaysVisible?: boolean;
 };
 
@@ -16,10 +16,7 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
-    if (alwaysVisible) {
-      setIsVisible(true);
-      return;
-    }
+    if (alwaysVisible) return;
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -42,15 +39,42 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
             className="fixed w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-lg border-b border-[#262626] px-6 py-4"
           >
             <div className="max-w-5xl mx-auto flex justify-between items-center">
-              <Link
-                href="/"
-                className="font-[family-name:var(--font-playfair)] text-lg font-normal text-[#FAFAFA] hover:text-[#D4AF37] transition-colors"
-              >
-                Beth Haddock
-              </Link>
+              {active === "warburton" ? (
+                <div className="flex items-baseline gap-2">
+                  <Link
+                    href="/warburton"
+                    className="font-[family-name:var(--font-playfair)] text-lg font-normal text-[#FAFAFA] hover:text-[#D4AF37] transition-colors"
+                  >
+                    Warburton Advisers
+                  </Link>
+                  <Link
+                    href="/"
+                    className="text-xs text-[#A1A1AA] hover:text-[#D4AF37] transition-colors"
+                  >
+                    by Beth Haddock
+                  </Link>
+                </div>
+              ) : (
+                <Link
+                  href="/"
+                  className="font-[family-name:var(--font-playfair)] text-lg font-normal text-[#FAFAFA] hover:text-[#D4AF37] transition-colors"
+                >
+                  Beth Haddock
+                </Link>
+              )}
 
               {/* Desktop Nav */}
               <div className="hidden md:flex items-center gap-8">
+                <Link
+                  href="/about"
+                  className={`text-sm transition-colors link-gold ${
+                    active === "about"
+                      ? "text-[#D4AF37]"
+                      : "text-[#A1A1AA] hover:text-[#FAFAFA]"
+                  }`}
+                >
+                  About
+                </Link>
                 <Link
                   href="/warburton"
                   className={`text-sm transition-colors link-gold ${
@@ -134,6 +158,23 @@ export default function Nav({ active, alwaysVisible = false }: NavProps) {
             className="fixed inset-0 z-40 bg-[#0A0A0A] md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 }}
+              >
+                <Link
+                  href="/about"
+                  onClick={() => setIsOpen(false)}
+                  className={`text-3xl font-[family-name:var(--font-playfair)] transition-colors ${
+                    active === "about"
+                      ? "text-[#D4AF37]"
+                      : "text-[#FAFAFA] hover:text-[#D4AF37]"
+                  }`}
+                >
+                  About
+                </Link>
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

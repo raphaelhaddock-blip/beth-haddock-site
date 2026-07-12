@@ -7,6 +7,7 @@ import { track } from "@vercel/analytics";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import BookingCTA from "@/components/BookingCTA";
 
 
 const credentials = [
@@ -314,7 +315,7 @@ export default function Home() {
 
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
-      <Nav />
+      <Nav alwaysVisible />
 
       {/* Hero - Split Screen with Large Portrait */}
       <section className="min-h-screen relative">
@@ -325,66 +326,28 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-[#D4AF37] text-sm tracking-[0.3em] uppercase mb-8"
+              className="text-[#a88b63] text-sm tracking-[0.3em] uppercase mb-8"
             >
-              Strategic Counsel for Tech Leaders
+              Fractional General Counsel · Board Director · Strategic Advisor
             </motion.p>
 
-            {/* Semantic H1 for SEO - visually hidden */}
-            <h1 className="sr-only">
-              Bridging Institutional Finance and the Digital Frontier
-            </h1>
-
-            {/* Visual presentation of headline - hidden from screen readers */}
-            <div className="space-y-1 md:space-y-2" aria-hidden="true">
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
-              >
-                Bridging
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] text-[#A1A1AA]"
-              >
-                Institutional Finance
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
-              >
-                and the
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="block font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1] italic text-[#D4AF37]"
-              >
-                Digital Frontier.
-              </motion.span>
-            </div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-[#FAFAFA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed font-medium"
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
             >
-              Strategic Advisor. General Counsel Services. Board Member.
-            </motion.p>
+              I get stablecoin, fintech, and DeFi companies{" "}
+              <span className="italic text-[#D4AF37]">
+                licensed, funded, and board-ready.
+              </span>
+            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-[#A1A1AA] text-lg md:text-xl mt-4 max-w-lg leading-relaxed"
+              className="text-[#A1A1AA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed"
             >
               I&apos;ve built operational foundations that let stablecoin issuers, fintech and digital asset innovators, and DeFi teams get licensed, raise institutional capital, and scale. Now I build them for others.
             </motion.p>
@@ -395,13 +358,15 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="mt-10"
             >
-              <button
-                onClick={() => openContact("home-hero")}
-                className="inline-flex items-center gap-3 text-[#D4AF37] hover:text-[#F5D77A] transition-colors group"
+              <BookingCTA
+                location="home-hero"
+                onFallback={() => setIsContactOpen(true)}
+                bookingLabel="Book a 20-minute intro call"
+                className="btn-gold w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-3"
               >
-                <span className="text-sm tracking-wide">Start a conversation</span>
+                Start a conversation
                 <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -409,11 +374,15 @@ export default function Home() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </button>
+              </BookingCTA>
+
+              <p className="text-[#8B8B94] text-xs sm:text-sm mt-4 max-w-lg leading-relaxed">
+                Former CLO, Franklin Templeton · CCO, Guggenheim · a16z portfolio companies
+              </p>
             </motion.div>
           </div>
 
@@ -467,6 +436,186 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* How I Work */}
+      <section id="how-i-work" className="py-32 px-6 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            How I Work
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[#A1A1AA] text-xl mb-16 max-w-2xl"
+          >
+            I take on a limited number of engagements each year to ensure deep partnership with every client.
+          </motion.p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Fractional GC Card */}
+            <motion.button
+              onClick={() => openContact("home-card-fractional-gc")}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
+                Fractional GC
+              </h3>
+              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
+                Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure.
+              </p>
+              <p className="text-xs text-[#8B8B94] italic mb-4">
+                Series A-C crypto/fintech companies
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.button>
+
+            {/* Board Director Card */}
+            <motion.button
+              onClick={() => openContact("home-card-board-director")}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
+                Board Director
+              </h3>
+              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
+                Independent governance for companies bridging traditional finance and blockchain innovation.
+              </p>
+              <p className="text-xs text-[#8B8B94] italic mb-4">
+                NYDFS licensing, institutional adoption
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.button>
+
+            {/* Strategic Advisor Card */}
+            <motion.button
+              onClick={() => openContact("home-card-strategic-advisor")}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
+                Strategic Advisor
+              </h3>
+              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
+                Targeted guidance on regulatory strategy, deal structuring, or crisis navigation.
+              </p>
+              <p className="text-xs text-[#8B8B94] italic mb-4">
+                M&A, enforcement response
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.button>
+
+            {/* Special Projects Card */}
+            <motion.button
+              onClick={() => openContact("home-card-special-projects")}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
+            >
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
+                Special Projects
+              </h3>
+              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
+                Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds.
+              </p>
+              <p className="text-xs text-[#8B8B94] italic mb-4">
+                Complex, high-stakes engagements
+              </p>
+              <div className="flex items-center gap-2 text-[#D4AF37]">
+                <span className="text-sm">Discuss</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </motion.button>
+          </div>
+
+          {/* Qualification Statement */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[#A1A1AA] text-lg mt-16 max-w-3xl mx-auto text-center leading-relaxed"
+          >
+            I work with founders, boards, and executives building infrastructure for digital finance, AI and FinTech.
+            If you&apos;re navigating <span className="text-[#FAFAFA]">SEC, OCC, NYDFS, or emerging AI/crypto regulatory frameworks</span>—we should talk.
+          </motion.p>
+        </div>
+      </section>
+
       {/* Credentials */}
       <motion.section
         initial={{ opacity: 0 }}
@@ -504,6 +653,95 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+
+      {/* Published In */}
+      <section className="py-24 px-6 border-t border-[#262626]">
+        <div className="max-w-5xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
+          >
+            Published In
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
+          >
+            Industry analysis and regulatory perspectives—
+            <span className="italic text-[#D4AF37]">featured in leading publications.</span>
+          </motion.h2>
+
+          <div className="grid gap-0">
+            {(showAllPublications ? publications : publications.slice(0, 3)).map((pub, index) => (
+              <motion.a
+                key={`${pub.outlet}-${index}`}
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="group flex items-start justify-between gap-8 py-6 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
+              >
+                <div className="flex-1">
+                  <p className="text-[#D4AF37] text-sm font-medium mb-1">{pub.outlet}</p>
+                  <p className="font-[family-name:var(--font-playfair)] text-lg sm:text-xl group-hover:text-[#D4AF37] transition-colors">
+                    {pub.title}
+                  </p>
+                  <p className="text-[#8B8B94] text-sm mt-2">{pub.date}</p>
+                </div>
+                <svg
+                  className="w-5 h-5 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-1 transition-all mt-2 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </motion.a>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-8 text-center"
+          >
+            <button
+              onClick={() => setShowAllPublications(!showAllPublications)}
+              className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-sm font-medium"
+            >
+              {showAllPublications ? (
+                <>
+                  Show Less
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  </svg>
+                </>
+              ) : (
+                <>
+                  Show All {publications.length} Publications
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </>
+              )}
+            </button>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Speaking - 4 Events Collage */}
       <section className="border-t border-[#262626]">
@@ -746,313 +984,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Published In */}
-      <section className="py-24 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-          >
-            Published In
-          </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
-          >
-            Industry analysis and regulatory perspectives—
-            <span className="italic text-[#D4AF37]">featured in leading publications.</span>
-          </motion.h2>
-
-          <div className="grid gap-0">
-            {(showAllPublications ? publications : publications.slice(0, 8)).map((pub, index) => (
-              <motion.a
-                key={`${pub.outlet}-${index}`}
-                href={pub.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="group flex items-start justify-between gap-8 py-6 border-b border-[#262626] hover:border-[#D4AF37] transition-colors"
-              >
-                <div className="flex-1">
-                  <p className="text-[#D4AF37] text-sm font-medium mb-1">{pub.outlet}</p>
-                  <p className="font-[family-name:var(--font-playfair)] text-lg sm:text-xl group-hover:text-[#D4AF37] transition-colors">
-                    {pub.title}
-                  </p>
-                  <p className="text-[#8B8B94] text-sm mt-2">{pub.date}</p>
-                </div>
-                <svg
-                  className="w-5 h-5 text-[#A1A1AA] group-hover:text-[#D4AF37] group-hover:translate-x-1 transition-all mt-2 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </motion.a>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-8 text-center"
-          >
-            <button
-              onClick={() => setShowAllPublications(!showAllPublications)}
-              className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-sm font-medium"
-            >
-              {showAllPublications ? (
-                <>
-                  Show Less
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                  </svg>
-                </>
-              ) : (
-                <>
-                  Show All {publications.length} Publications
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </>
-              )}
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Value Proposition */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="py-32 px-6 border-t border-[#262626]"
-      >
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 items-start">
-            <div>
-              <p className="font-[family-name:var(--font-playfair)] text-5xl md:text-6xl text-[#D4AF37] italic leading-tight">
-                Deep<br />Experience
-              </p>
-            </div>
-            <div className="space-y-8">
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl leading-tight">
-                I&apos;ve been in the room
-                <span className="text-[#D4AF37] italic"> when it mattered.</span>
-              </h2>
-              <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                Board seats at regulated stablecoin issuers.
-                <br />
-                GC leadership at companies raising institutional capital.
-                <br />
-                Advisory work through enforcement actions and acquisitions.
-                <br />
-                <span className="text-[#FAFAFA]">I build infrastructure that survives scrutiny.</span>
-              </p>
-              <p className="text-[#A1A1AA] text-xl leading-relaxed">
-                When you work with me, you get someone who has done the work—not just studied it.
-                <span className="text-[#FAFAFA]"> That&apos;s the difference between advice and execution.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* How I Work */}
-      <section id="how-i-work" className="py-32 px-6 border-t border-[#262626]">
-        <div className="max-w-5xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-          >
-            How I Work
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[#A1A1AA] text-xl mb-16 max-w-2xl"
-          >
-            I take on a limited number of engagements each year to ensure deep partnership with every client.
-          </motion.p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Fractional GC Card */}
-            <motion.button
-              onClick={() => openContact("home-card-fractional-gc")}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
-                Fractional GC
-              </h3>
-              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
-                Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure.
-              </p>
-              <p className="text-xs text-[#8B8B94] italic mb-4">
-                Series A-C crypto/fintech companies
-              </p>
-              <div className="flex items-center gap-2 text-[#D4AF37]">
-                <span className="text-sm">Discuss</span>
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </motion.button>
-
-            {/* Board Director Card */}
-            <motion.button
-              onClick={() => openContact("home-card-board-director")}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
-                Board Director
-              </h3>
-              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
-                Independent governance for companies bridging traditional finance and blockchain innovation.
-              </p>
-              <p className="text-xs text-[#8B8B94] italic mb-4">
-                NYDFS licensing, institutional adoption
-              </p>
-              <div className="flex items-center gap-2 text-[#D4AF37]">
-                <span className="text-sm">Discuss</span>
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </motion.button>
-
-            {/* Strategic Advisor Card */}
-            <motion.button
-              onClick={() => openContact("home-card-strategic-advisor")}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
-                Strategic Advisor
-              </h3>
-              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
-                Targeted guidance on regulatory strategy, deal structuring, or crisis navigation.
-              </p>
-              <p className="text-xs text-[#8B8B94] italic mb-4">
-                M&A, enforcement response
-              </p>
-              <div className="flex items-center gap-2 text-[#D4AF37]">
-                <span className="text-sm">Discuss</span>
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </motion.button>
-
-            {/* Special Projects Card */}
-            <motion.button
-              onClick={() => openContact("home-card-special-projects")}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="group card-hover p-6 bg-[#141414] border border-[#262626] hover:border-[#D4AF37] transition-colors block text-left"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl mb-3 group-hover:text-[#D4AF37] transition-colors">
-                Special Projects
-              </h3>
-              <p className="text-[#A1A1AA] text-sm leading-relaxed mb-3">
-                Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds.
-              </p>
-              <p className="text-xs text-[#8B8B94] italic mb-4">
-                Complex, high-stakes engagements
-              </p>
-              <div className="flex items-center gap-2 text-[#D4AF37]">
-                <span className="text-sm">Discuss</span>
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </div>
-            </motion.button>
-          </div>
-
-          {/* Qualification Statement */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[#A1A1AA] text-lg mt-16 max-w-3xl mx-auto text-center leading-relaxed"
-          >
-            I work with founders, boards, and executives building infrastructure for digital finance, AI and FinTech.
-            If you&apos;re navigating <span className="text-[#FAFAFA]">SEC, OCC, NYDFS, or emerging AI/crypto regulatory frameworks</span>—we should talk.
-          </motion.p>
-        </div>
-      </section>
-
       {/* Focus Areas */}
       <section className="py-32 px-6 border-t border-[#262626]">
         <div className="max-w-5xl mx-auto">
@@ -1102,6 +1033,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Value Proposition */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="py-32 px-6 border-t border-[#262626]"
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 items-start">
+            <div>
+              <p className="font-[family-name:var(--font-playfair)] text-5xl md:text-6xl text-[#D4AF37] italic leading-tight">
+                Deep<br />Experience
+              </p>
+            </div>
+            <div className="space-y-8">
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl leading-tight">
+                I&apos;ve been in the room
+                <span className="text-[#D4AF37] italic"> when it mattered.</span>
+              </h2>
+              <p className="text-[#A1A1AA] text-xl leading-relaxed">
+                Board seats at regulated stablecoin issuers.
+                <br />
+                GC leadership at companies raising institutional capital.
+                <br />
+                Advisory work through enforcement actions and acquisitions.
+                <br />
+                <span className="text-[#FAFAFA]">I build infrastructure that survives scrutiny.</span>
+              </p>
+              <p className="text-[#A1A1AA] text-xl leading-relaxed">
+                When you work with me, you get someone who has done the work—not just studied it.
+                <span className="text-[#FAFAFA]"> That&apos;s the difference between advice and execution.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
       {/* CTA */}
       <section className="py-32 px-6 border-t border-[#262626]">
         <div className="max-w-5xl mx-auto text-center">
@@ -1132,8 +1101,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <button
-              onClick={() => openContact("home-footer-cta")}
+            <BookingCTA
+              location="home-footer-cta"
+              onFallback={() => setIsContactOpen(true)}
+              bookingLabel="Book a 20-minute intro call"
               className="btn-gold inline-flex items-center gap-3"
             >
               Discuss Your Challenge
@@ -1150,7 +1121,7 @@ export default function Home() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </BookingCTA>
           </motion.div>
         </div>
       </section>

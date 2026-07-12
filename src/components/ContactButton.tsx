@@ -4,6 +4,8 @@ import { useState } from "react";
 import { track } from "@vercel/analytics";
 import ContactForm from "./ContactForm";
 
+const BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_URL;
+
 interface ContactButtonProps {
   className?: string;
   children?: React.ReactNode;
@@ -16,6 +18,20 @@ export default function ContactButton({
   location = "unspecified"
 }: ContactButtonProps) {
   const [isContactOpen, setIsContactOpen] = useState(false);
+
+  if (BOOKING_URL) {
+    return (
+      <a
+        href={BOOKING_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => track("contact_cta_click", { location })}
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <>

@@ -6,13 +6,14 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import BookingCTA from "@/components/BookingCTA";
 import { track } from "@vercel/analytics";
 
 const services = [
   {
     title: "Fractional GC",
     description:
-      "Institutional-grade legal leadership without full-time overhead. I embed with your team to build compliance infrastructure that passes regulatory scrutiny and unlocks institutional capital.",
+      "Institutional-grade legal leadership without full-time overhead. We embed with your team to build compliance infrastructure that passes regulatory scrutiny and opens the door to institutional capital.",
     idealFor: "Series A-C crypto/fintech companies",
   },
   {
@@ -108,15 +109,17 @@ export default function WarburtonPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#A1A1AA] text-xl md:text-2xl leading-relaxed max-w-3xl mb-10"
           >
-            We&apos;ve built operational foundations that let stablecoin issuers, fintech and digital finance innovators get licensed, raise institutional capital, and scale. Now we build them for others.
+            Warburton Advisers builds the compliance and governance foundations that stablecoin issuers, fintech, and digital-asset companies need to get licensed, raise institutional capital, and hold up under regulatory scrutiny. We&apos;ve done this work from the inside, as operators, general counsel, and board members. That&apos;s the view we bring to every engagement.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <button
-              onClick={() => openContact("warburton-hero")}
+            <BookingCTA
+              location="warburton-hero"
+              onFallback={() => setIsContactOpen(true)}
+              bookingLabel="Book a 20-minute intro call"
               className="btn-gold inline-flex items-center gap-3"
             >
               Schedule a Conversation
@@ -133,7 +136,7 @@ export default function WarburtonPage() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </BookingCTA>
           </motion.div>
         </div>
       </section>
@@ -219,7 +222,7 @@ export default function WarburtonPage() {
             viewport={{ once: true }}
             className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-12"
           >
-            Work that shaped my perspective
+            Work that shaped our perspective
           </motion.h2>
 
           <motion.div
@@ -254,7 +257,7 @@ export default function WarburtonPage() {
             viewport={{ once: true }}
             className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-8"
           >
-            Industries I Serve
+            Industries We Serve
           </motion.p>
 
           <motion.div
@@ -275,63 +278,6 @@ export default function WarburtonPage() {
                 {industry}
               </motion.span>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Insights */}
-      <section className="py-24 px-6 border-t border-[#262626] bg-[#141414]">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-[#D4AF37] text-sm tracking-[0.2em] uppercase mb-6"
-          >
-            Perspectives
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl mb-6"
-          >
-            Latest Insights
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-[#A1A1AA] text-lg mb-10 max-w-xl mx-auto"
-          >
-            Perspectives on crypto regulation, fintech compliance, and the evolution of digital asset markets.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <Link
-              href="/insights"
-              className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition border border-[#D4AF37] hover:border-[#F5D77A] px-6 py-3 rounded"
-            >
-              <span>View All Insights</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
           </motion.div>
         </div>
       </section>
@@ -365,8 +311,10 @@ export default function WarburtonPage() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button
-              onClick={() => openContact("warburton-footer-cta")}
+            <BookingCTA
+              location="warburton-footer-cta"
+              onFallback={() => setIsContactOpen(true)}
+              bookingLabel="Book a 20-minute intro call"
               className="btn-gold inline-flex items-center justify-center gap-3"
             >
               Schedule a Conversation
@@ -383,7 +331,7 @@ export default function WarburtonPage() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </BookingCTA>
             <Link
               href="/"
               className="inline-flex items-center justify-center gap-2 text-[#A1A1AA] hover:text-[#D4AF37] transition border border-[#262626] px-6 py-3 rounded"
