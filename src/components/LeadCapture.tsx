@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 type LeadCaptureProps = {
   title?: string;
@@ -28,21 +29,20 @@ export default function LeadCapture({
 
     setStatus("loading");
 
-    // Simulate API call - replace with actual email service integration
-    // e.g., Mailchimp, ConvertKit, Buttondown, etc.
     try {
-      // For now, just simulate success after a brief delay
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, resource: title }),
+      });
 
-      // TODO: Replace with actual API call
-      // await fetch('/api/subscribe', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email }),
-      // });
-
-      setStatus("success");
-      setEmail("");
+      if (res.ok) {
+        track("lead_capture_submit", { resource: title });
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
@@ -80,7 +80,7 @@ export default function LeadCapture({
           </p>
         </div>
         <p className="text-[#A1A1AA]">
-          The checklist is on its way. Keep an eye out for regulatory insights and updates.
+          Request received — Beth will send the checklist to your inbox shortly.
         </p>
       </motion.div>
     );

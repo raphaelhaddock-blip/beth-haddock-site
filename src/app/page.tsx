@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -306,6 +307,11 @@ export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [showAllPublications, setShowAllPublications] = useState(false);
 
+  const openContact = (location: string) => {
+    track("contact_cta_click", { location });
+    setIsContactOpen(true);
+  };
+
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
       <Nav />
@@ -390,7 +396,7 @@ export default function Home() {
               className="mt-10"
             >
               <button
-                onClick={() => setIsContactOpen(true)}
+                onClick={() => openContact("home-hero")}
                 className="inline-flex items-center gap-3 text-[#D4AF37] hover:text-[#F5D77A] transition-colors group"
               >
                 <span className="text-sm tracking-wide">Start a conversation</span>
@@ -891,7 +897,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Fractional GC Card */}
             <motion.button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("home-card-fractional-gc")}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -927,7 +933,7 @@ export default function Home() {
 
             {/* Board Director Card */}
             <motion.button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("home-card-board-director")}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -963,7 +969,7 @@ export default function Home() {
 
             {/* Strategic Advisor Card */}
             <motion.button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("home-card-strategic-advisor")}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -999,7 +1005,7 @@ export default function Home() {
 
             {/* Special Projects Card */}
             <motion.button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("home-card-special-projects")}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -1127,7 +1133,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
           >
             <button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("home-footer-cta")}
               className="btn-gold inline-flex items-center gap-3"
             >
               Discuss Your Challenge

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -17,6 +18,16 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
+  useEffect(() => {
+    if (!isOpen) return;
+    track("contact_modal_open");
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, onClose]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
@@ -29,12 +40,15 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       });
 
       if (res.ok) {
+        track("contact_submit_success");
         setStatus("sent");
         setFormData({ name: "", email: "", company: "", message: "" });
       } else {
+        track("contact_submit_error");
         setStatus("error");
       }
     } catch {
+      track("contact_submit_error");
       setStatus("error");
     }
   };
@@ -61,6 +75,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-form-title"
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
             <div className="bg-[#1a1a1a] border border-[#333] w-full max-w-md p-8 relative">
@@ -75,7 +92,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 </svg>
               </button>
 
-              <h2 className="font-playfair text-2xl text-white mb-2">Get in Touch</h2>
+              <h2 id="contact-form-title" className="font-playfair text-2xl text-white mb-2">Get in Touch</h2>
               <p className="text-gray-400 text-sm mb-6">
                 Tell me about your situation. I&apos;ll respond within 48 hours.
               </p>

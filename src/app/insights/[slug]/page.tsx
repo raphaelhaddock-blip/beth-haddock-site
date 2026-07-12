@@ -172,7 +172,7 @@ export default async function PostPage({
             <p className="text-[#A1A1AA] mb-6">
               Want to discuss how this applies to your situation?
             </p>
-            <ContactButton />
+            <ContactButton location="insight-detail" />
           </section>
         </div>
       </article>

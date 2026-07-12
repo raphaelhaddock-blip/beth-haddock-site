@@ -125,7 +125,7 @@ export default async function GuidePage({
             <p className="text-[#A1A1AA] leading-relaxed mb-6">
               {guide.cta.description}
             </p>
-            <ContactButton />
+            <ContactButton location="guide-detail" />
           </section>
 
           {/* Lead Capture */}

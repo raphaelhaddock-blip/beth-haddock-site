@@ -6,6 +6,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { track } from "@vercel/analytics";
 
 const services = [
   {
@@ -73,6 +74,11 @@ const industries = [
 export default function WarburtonPage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
+  const openContact = (location: string) => {
+    track("contact_cta_click", { location });
+    setIsContactOpen(true);
+  };
+
   return (
     <div className="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen">
       <Nav active="warburton" alwaysVisible />
@@ -110,7 +116,7 @@ export default function WarburtonPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("warburton-hero")}
               className="btn-gold inline-flex items-center gap-3"
             >
               Schedule a Conversation
@@ -157,7 +163,7 @@ export default function WarburtonPage() {
             {services.map((service, index) => (
               <motion.button
                 key={service.title}
-                onClick={() => setIsContactOpen(true)}
+                onClick={() => openContact(`warburton-card-${service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`)}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -360,7 +366,7 @@ export default function WarburtonPage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("warburton-footer-cta")}
               className="btn-gold inline-flex items-center justify-center gap-3"
             >
               Schedule a Conversation
@@ -414,7 +420,7 @@ export default function WarburtonPage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
             <button
-              onClick={() => setIsContactOpen(true)}
+              onClick={() => openContact("warburton-contact-us")}
               className="text-[#A1A1AA] hover:text-[#D4AF37] transition"
             >
               Contact Us

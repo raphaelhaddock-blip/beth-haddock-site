@@ -1,0 +1,297 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e270]:
+      - generic [ref=e271]:
+        - link "Beth Haddock" [ref=e272] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e273]:
+          - link "Warburton" [ref=e274] [cursor=pointer]:
+            - /url: /warburton
+          - link "Guides" [ref=e275] [cursor=pointer]:
+            - /url: /guides
+          - link "Insights" [ref=e276] [cursor=pointer]:
+            - /url: /insights
+          - button "Contact" [ref=e277]
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - paragraph [ref=e6]: Strategic Counsel for Tech Leaders
+          - heading "Bridging Institutional Finance and the Digital Frontier" [level=1] [ref=e7]
+          - generic [ref=e8]:
+            - generic [ref=e9]: Bridging
+            - generic [ref=e10]: Institutional Finance
+            - generic [ref=e11]: and the
+            - generic [ref=e12]: Digital Frontier.
+          - paragraph [ref=e13]: Strategic Advisor. General Counsel Services. Board Member.
+          - paragraph [ref=e14]: I've built operational foundations that let stablecoin issuers, fintech and digital asset innovators, and DeFi teams get licensed, raise institutional capital, and scale. Now I build them for others.
+          - button "Start a conversation" [active] [ref=e16]:
+            - generic [ref=e17]: Start a conversation
+            - img [ref=e18]
+        - img "Beth Haddock" [ref=e22]
+      - img [ref=e26]
+    - generic [ref=e29]:
+      - paragraph [ref=e30]: Trusted By
+      - generic [ref=e31]:
+        - link "Franklin Templeton" [ref=e32] [cursor=pointer]:
+          - /url: https://www.franklintempleton.com
+          - img "Franklin Templeton" [ref=e33]
+        - link "Guggenheim" [ref=e34] [cursor=pointer]:
+          - /url: https://www.guggenheimpartners.com
+          - img "Guggenheim" [ref=e35]
+        - link "T. Rowe Price" [ref=e36] [cursor=pointer]:
+          - /url: https://www.troweprice.com
+          - img "T. Rowe Price" [ref=e37]
+        - link "Brown Brothers Harriman" [ref=e38] [cursor=pointer]:
+          - /url: https://www.bbh.com
+          - img "Brown Brothers Harriman" [ref=e39]
+        - link "Grayscale" [ref=e40] [cursor=pointer]:
+          - /url: https://www.grayscale.com
+          - img "Grayscale" [ref=e41]
+        - link "a16z" [ref=e42] [cursor=pointer]:
+          - /url: https://a16z.com
+          - img "a16z" [ref=e43]
+        - link "Ondo" [ref=e44] [cursor=pointer]:
+          - /url: https://ondo.finance
+          - img "Ondo" [ref=e45]
+        - link "Balancer" [ref=e46] [cursor=pointer]:
+          - /url: https://balancer.fi
+          - img "Balancer" [ref=e47]
+        - link "Orca" [ref=e48] [cursor=pointer]:
+          - /url: https://www.orca.so
+          - img "Orca" [ref=e49]
+    - generic [ref=e50]:
+      - img "Beth Haddock TEDx talk" [ref=e52]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: On the Stage
+          - heading "Building infrastructure isn't just boardroom work. It's sharing what I've learned." [level=2] [ref=e56]
+        - link "Beth Haddock featured on CCN — Stablecoins Enter a New Era CCN · April 2026 Stablecoins Enter a New Era On DeFi safety, transparency and voluntary standards — how the Stablecoin Standard's three pillars are pushing stablecoin issuers to self-correct before regulators intervene. Read the Interview" [ref=e57] [cursor=pointer]:
+          - /url: https://www.ccn.com/education/crypto/stablecoins-new-era-beth-haddock-defi-safety-standards/
+          - generic [ref=e58]:
+            - img "Beth Haddock featured on CCN — Stablecoins Enter a New Era" [ref=e59]
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: CCN · April 2026
+              - heading "Stablecoins Enter a New Era" [level=3] [ref=e63]
+              - paragraph [ref=e64]: On DeFi safety, transparency and voluntary standards — how the Stablecoin Standard's three pillars are pushing stablecoin issuers to self-correct before regulators intervene.
+              - generic [ref=e65]:
+                - text: Read the Interview
+                - img [ref=e66]
+        - 'link "NIESR Digital Money & Financial Stability Panel NIESR · January 2026 Digital Money & Financial Stability Panel hosted by the UK''s National Institute of Economic and Social Research (NIESR) on “Financing Growth, Safeguarding Stability: How Should the Financial System Evolve?” — exploring the future of digital money, monetary sovereignty, and financial fragmentation. Watch the Discussion" [ref=e68] [cursor=pointer]':
+          - /url: https://youtu.be/n39iV4iSfn4?si=mJLDa6N-eILKGtJ0
+          - generic [ref=e69]:
+            - img "NIESR Digital Money & Financial Stability Panel" [ref=e70]
+            - generic [ref=e72]:
+              - paragraph [ref=e73]: NIESR · January 2026
+              - heading "Digital Money & Financial Stability" [level=3] [ref=e74]
+              - paragraph [ref=e75]: "Panel hosted by the UK's National Institute of Economic and Social Research (NIESR) on “Financing Growth, Safeguarding Stability: How Should the Financial System Evolve?” — exploring the future of digital money, monetary sovereignty, and financial fragmentation."
+              - generic [ref=e76]:
+                - img [ref=e77]
+                - text: Watch the Discussion
+                - img [ref=e79]
+        - generic [ref=e81]:
+          - paragraph [ref=e82]: Stablecoin Standard · 2026
+          - 'heading "Programmable Compliance: Balancing Privacy and Enforcement" [level=3] [ref=e83]'
+          - paragraph [ref=e84]: "Interviewed by Dr. Efi Pylarinou to discuss the white paper with the Stablecoin Standard: Programmable Compliance for Digital Money and Assets — a framework to prevent illicit finance without compromising financial privacy."
+          - generic [ref=e85]:
+            - link "Watch the Interview" [ref=e86] [cursor=pointer]:
+              - /url: https://youtu.be/irtlteRv3SA?si=VfnR5WkP37WZzTzC
+              - img [ref=e87]
+              - text: Watch the Interview
+              - img [ref=e89]
+            - link "Read the White Paper" [ref=e91] [cursor=pointer]:
+              - /url: https://www.stablecoinstandard.com/s/Whitepaper-Programmable-Compliance-for-Digital-Money-and-Assets.pdf
+              - text: Read the White Paper
+              - img [ref=e92]
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - img "Beth Haddock speaking at DC Blockchain Summit" [ref=e96]
+            - generic [ref=e98]:
+              - paragraph [ref=e99]: DC Blockchain Summit
+              - paragraph [ref=e100]: "2025"
+          - generic [ref=e101]:
+            - img "Beth Haddock at Stablecoin Standard with State Street and Solana" [ref=e102]
+            - generic [ref=e104]:
+              - paragraph [ref=e105]: Stablecoin Standard
+              - paragraph [ref=e106]: State Street · Solana
+          - generic [ref=e107]:
+            - img "Beth Haddock on main stage at Stablecon" [ref=e108]
+            - generic [ref=e110]:
+              - paragraph [ref=e111]: Stablecon
+              - paragraph [ref=e112]: Main Stage
+    - generic [ref=e114]:
+      - paragraph [ref=e115]: Published In
+      - heading "Industry analysis and regulatory perspectives—featured in leading publications." [level=2] [ref=e116]
+      - generic [ref=e117]:
+        - link "CoinDesk The Crypto Due Diligence Questions You Forgot to Ask June 2026" [ref=e118] [cursor=pointer]:
+          - /url: https://www.coindesk.com/coindesk-indices/2026/06/03/crypto-for-advisors-the-crypto-due-diligence-questions-you-forgot-to-ask
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: CoinDesk
+            - paragraph [ref=e121]: The Crypto Due Diligence Questions You Forgot to Ask
+            - paragraph [ref=e122]: June 2026
+          - img [ref=e123]
+        - link "AdvisorEngine AI Governance Is Not Just an IT Problem May 2026" [ref=e125] [cursor=pointer]:
+          - /url: https://www.advisorengine.com/action-magazine/articles/ai-governance-is-not-just-an-it-problem
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: AdvisorEngine
+            - paragraph [ref=e128]: AI Governance Is Not Just an IT Problem
+            - paragraph [ref=e129]: May 2026
+          - img [ref=e130]
+        - 'link "CCN Stablecoins Enter a New Era: Beth Haddock on DeFi Safety Standards April 2026" [ref=e132] [cursor=pointer]':
+          - /url: https://www.ccn.com/education/crypto/stablecoins-new-era-beth-haddock-defi-safety-standards/
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: CCN
+            - paragraph [ref=e135]: "Stablecoins Enter a New Era: Beth Haddock on DeFi Safety Standards"
+            - paragraph [ref=e136]: April 2026
+          - img [ref=e137]
+        - 'link "Decrypt StableCheck: An Independent Stablecoin Evaluation Framework October 2025" [ref=e139] [cursor=pointer]':
+          - /url: https://decrypt.co/346337/stablecoin-standard-establishes-stablecheck-an-independent-stablecoin-evaluation-framework
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Decrypt
+            - paragraph [ref=e142]: "StableCheck: An Independent Stablecoin Evaluation Framework"
+            - paragraph [ref=e143]: October 2025
+          - img [ref=e144]
+        - link "Bell Curve Live At Digital Asset Summit 2025 October 2025" [ref=e146] [cursor=pointer]:
+          - /url: https://x.com/i/broadcasts/1yoJMPYjpEwGQ
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: Bell Curve
+            - paragraph [ref=e149]: Live At Digital Asset Summit 2025
+            - paragraph [ref=e150]: October 2025
+          - img [ref=e151]
+        - 'link "CoinDesk Crypto Week: What Does it Mean for Advisors? July 2025" [ref=e153] [cursor=pointer]':
+          - /url: https://www.coindesk.com/coindesk-indices/2025/07/16/crypto-for-advisors-crypto-week-what-does-it-mean-for-advisors
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: CoinDesk
+            - paragraph [ref=e156]: "Crypto Week: What Does it Mean for Advisors?"
+            - paragraph [ref=e157]: July 2025
+          - img [ref=e158]
+        - link "Brew Markets The Future of Crypto Regulation July 2025" [ref=e160] [cursor=pointer]:
+          - /url: https://www.brewmarkets.com/stories/2025/07/01/crypto-regulation-stablecoin-law
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: Brew Markets
+            - paragraph [ref=e163]: The Future of Crypto Regulation
+            - paragraph [ref=e164]: July 2025
+          - img [ref=e165]
+        - 'link "Stablecoin Standard Positioning for What''s Next: The GENIUS Act and the Future of Stablecoins June 2025" [ref=e167] [cursor=pointer]':
+          - /url: https://www.stablecoinstandard.com/thought-articles/positioning-for-whats-next-the-genius-act-and-the-future-of-stablecoins
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: Stablecoin Standard
+            - paragraph [ref=e170]: "Positioning for What's Next: The GENIUS Act and the Future of Stablecoins"
+            - paragraph [ref=e171]: June 2025
+          - img [ref=e172]
+      - button "Show All 42 Publications" [ref=e175]:
+        - text: Show All 42 Publications
+        - img [ref=e176]
+    - generic [ref=e180]:
+      - paragraph [ref=e182]:
+        - text: Deep
+        - text: Experience
+      - generic [ref=e183]:
+        - heading "I've been in the room when it mattered." [level=2] [ref=e184]
+        - paragraph [ref=e185]:
+          - text: Board seats at regulated stablecoin issuers.
+          - text: GC leadership at companies raising institutional capital.
+          - text: Advisory work through enforcement actions and acquisitions.
+          - text: I build infrastructure that survives scrutiny.
+        - paragraph [ref=e186]: When you work with me, you get someone who has done the work—not just studied it. That's the difference between advice and execution.
+    - generic [ref=e188]:
+      - paragraph [ref=e189]: How I Work
+      - paragraph [ref=e190]: I take on a limited number of engagements each year to ensure deep partnership with every client.
+      - generic [ref=e191]:
+        - button "Fractional GC Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure. Series A-C crypto/fintech companies Discuss" [ref=e192]:
+          - heading "Fractional GC" [level=3] [ref=e193]
+          - paragraph [ref=e194]: Institutional-grade legal leadership without full-time overhead. I embed with your team to build a legal and compliance infrastructure.
+          - paragraph [ref=e195]: Series A-C crypto/fintech companies
+          - generic [ref=e196]:
+            - generic [ref=e197]: Discuss
+            - img [ref=e198]
+        - button "Board Director Independent governance for companies bridging traditional finance and blockchain innovation. NYDFS licensing, institutional adoption Discuss" [ref=e200]:
+          - heading "Board Director" [level=3] [ref=e201]
+          - paragraph [ref=e202]: Independent governance for companies bridging traditional finance and blockchain innovation.
+          - paragraph [ref=e203]: NYDFS licensing, institutional adoption
+          - generic [ref=e204]:
+            - generic [ref=e205]: Discuss
+            - img [ref=e206]
+        - button "Strategic Advisor Targeted guidance on regulatory strategy, deal structuring, or crisis navigation. M&A, enforcement response Discuss" [ref=e208]:
+          - heading "Strategic Advisor" [level=3] [ref=e209]
+          - paragraph [ref=e210]: Targeted guidance on regulatory strategy, deal structuring, or crisis navigation.
+          - paragraph [ref=e211]: M&A, enforcement response
+          - generic [ref=e212]:
+            - generic [ref=e213]: Discuss
+            - img [ref=e214]
+        - button "Special Projects Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds. Complex, high-stakes engagements Discuss" [ref=e216]:
+          - heading "Special Projects" [level=3] [ref=e217]
+          - paragraph [ref=e218]: Cybersecurity incident response, cross-border M&A integration, RegTech development, and compliance program builds.
+          - paragraph [ref=e219]: Complex, high-stakes engagements
+          - generic [ref=e220]:
+            - generic [ref=e221]: Discuss
+            - img [ref=e222]
+      - paragraph [ref=e224]: I work with founders, boards, and executives building infrastructure for digital finance, AI and FinTech. If you're navigating SEC, OCC, NYDFS, or emerging AI/crypto regulatory frameworks—we should talk.
+    - generic [ref=e226]:
+      - paragraph [ref=e227]: Areas of Focus
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - heading "Institutional Readiness" [level=3] [ref=e230]
+          - paragraph [ref=e231]: Preparing FinTech and digital asset innovators for the scrutiny of pension funds, endowments, and asset managers.
+          - img [ref=e233]
+        - generic [ref=e235]:
+          - heading "Regulatory Strategy" [level=3] [ref=e236]
+          - paragraph [ref=e237]: Navigating SEC, OCC, FINRA, NYDFS, and global frameworks. Building compliance that anticipates rather than reacts.
+          - img [ref=e239]
+        - generic [ref=e241]:
+          - heading "Board Governance" [level=3] [ref=e242]
+          - paragraph [ref=e243]: Leading governance for companies at the intersection of traditional finance and technology.
+          - img [ref=e245]
+    - generic [ref=e248]:
+      - heading "Ready to navigate the future of regulated markets?" [level=2] [ref=e249]:
+        - text: Ready to navigate the
+        - text: future of regulated markets?
+      - paragraph [ref=e250]: Whether you need fractional legal leadership, board governance, or strategic advice—let's discuss your challenge.
+      - button "Discuss Your Challenge" [ref=e252] [cursor=pointer]:
+        - text: Discuss Your Challenge
+        - img [ref=e253]
+    - contentinfo [ref=e255]:
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - paragraph [ref=e258]: © 2026 Beth Haddock
+          - generic [ref=e259]: ·
+          - link "Warburton Advisers" [ref=e260] [cursor=pointer]:
+            - /url: /warburton
+          - generic [ref=e261]: ·
+          - link "Privacy" [ref=e262] [cursor=pointer]:
+            - /url: /privacy
+          - generic [ref=e263]: ·
+          - link "Terms" [ref=e264] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e265]: ·
+          - link "Sitemap" [ref=e266] [cursor=pointer]:
+            - /url: /sitemap.xml
+        - generic [ref=e267]:
+          - link "LinkedIn" [ref=e268] [cursor=pointer]:
+            - /url: https://linkedin.com/in/bethhaddock
+          - button "Contact" [ref=e269]
+    - dialog "Get in Touch" [ref=e279]:
+      - generic [ref=e280]:
+        - button "Close contact form" [ref=e281]:
+          - img [ref=e282]
+        - heading "Get in Touch" [level=2] [ref=e284]
+        - paragraph [ref=e285]: Tell me about your situation. I'll respond within 48 hours.
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - generic [ref=e288]: Name (required)
+            - textbox "Name (required)" [ref=e289]:
+              - /placeholder: Name *
+          - generic [ref=e290]:
+            - generic [ref=e291]: Email (required)
+            - textbox "Email (required)" [ref=e292]:
+              - /placeholder: Email *
+          - generic [ref=e293]:
+            - generic [ref=e294]: Company
+            - textbox "Company" [ref=e295]
+          - generic [ref=e296]:
+            - generic [ref=e297]: Message (required)
+            - textbox "Message (required)" [ref=e298]:
+              - /placeholder: How can I help? *
+          - button "Send Message" [ref=e299]
+  - button "Open Next.js Dev Tools" [ref=e305] [cursor=pointer]:
+    - img [ref=e306]
+  - alert [ref=e309]
