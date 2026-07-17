@@ -383,6 +383,18 @@ export default function Home() {
               <p className="text-[#8B8B94] text-xs sm:text-sm mt-4 max-w-lg leading-relaxed">
                 Former CLO, Franklin Templeton · CCO, Guggenheim · a16z portfolio companies
               </p>
+
+              <a
+                href="https://content.stablecon.com/stablecoins-most-influential-list"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-xs sm:text-sm mt-3"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 14.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2z" />
+                </svg>
+                Named to Stablecoins&apos; Most Influential · Stablecon 2026
+              </a>
             </motion.div>
           </div>
 
@@ -977,7 +989,9 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent" />
               <div className="absolute bottom-6 left-6">
                 <p className="text-white text-xl font-medium">Stablecon</p>
-                <p className="text-white/60 text-sm mt-1">Main Stage</p>
+                <p className="text-white/60 text-sm mt-1">
+                  Main Stage · Stablecoins&apos; Most Influential
+                </p>
               </div>
             </motion.div>
           </div>
