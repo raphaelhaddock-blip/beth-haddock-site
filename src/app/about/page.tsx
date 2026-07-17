@@ -56,7 +56,12 @@ const expertise = [
   "DeFi compliance",
 ];
 
-const press = [
+const press: { name: string; detail: string; url?: string }[] = [
+  {
+    name: "Stablecon",
+    detail: "Stablecoins' Most Influential list",
+    url: "https://content.stablecon.com/stablecoins-most-influential-list",
+  },
   { name: "TEDx", detail: "Speaker" },
   { name: "CCN", detail: "Featured interview" },
   { name: "NIESR", detail: "Digital money panel" },
@@ -144,17 +149,32 @@ export default function AboutPage() {
       <section className="py-20 px-6 border-t border-[#262626] bg-[#141414]">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#a88b63] text-sm tracking-[0.2em] uppercase mb-10">
-            Speaking &amp; Press
+            Recognition, Speaking &amp; Press
           </p>
           <div className="flex flex-wrap gap-x-8 gap-y-4 mb-10">
-            {press.map((p) => (
-              <div key={p.name}>
-                <p className="font-[family-name:var(--font-playfair)] text-lg text-[#FAFAFA]">
-                  {p.name}
-                </p>
-                <p className="text-[#8B8B94] text-sm">{p.detail}</p>
-              </div>
-            ))}
+            {press.map((p) =>
+              p.url ? (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <p className="font-[family-name:var(--font-playfair)] text-lg text-[#FAFAFA] group-hover:text-[#D4AF37] transition-colors">
+                    {p.name}
+                  </p>
+                  <p className="text-[#8B8B94] text-sm">{p.detail}</p>
+                </a>
+              ) : (
+                <div key={p.name}>
+                  <p className="font-[family-name:var(--font-playfair)] text-lg text-[#FAFAFA]">
+                    {p.name}
+                  </p>
+                  <p className="text-[#8B8B94] text-sm">{p.detail}</p>
+                </div>
+              )
+            )}
           </div>
           <p className="text-[#A1A1AA] text-lg leading-relaxed">
             42 published articles and interviews on crypto regulation, stablecoins,

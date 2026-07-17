@@ -383,6 +383,18 @@ export default function Home() {
               <p className="text-[#8B8B94] text-xs sm:text-sm mt-4 max-w-lg leading-relaxed">
                 Former CLO, Franklin Templeton · CCO, Guggenheim · a16z portfolio companies
               </p>
+
+              <a
+                href="https://content.stablecon.com/stablecoins-most-influential-list"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-xs sm:text-sm mt-3"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 14.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2z" />
+                </svg>
+                Named to Stablecoins&apos; Most Influential · Stablecon 2026
+              </a>
             </motion.div>
           </div>
 
@@ -784,6 +796,51 @@ export default function Home() {
             </motion.h2>
           </div>
 
+          {/* Stablecon Award - Stablecoins' Most Influential */}
+          <motion.a
+            href="https://content.stablecon.com/stablecoins-most-influential-list"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="group block mb-8 relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-colors"
+          >
+            <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/beth/speaking-stablecon.png"
+                alt="Beth Haddock on main stage at Stablecon — named to the Stablecoins' Most Influential list"
+                fill
+                sizes="100vw"
+                quality={95}
+                className="object-cover object-left transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <p className="inline-flex items-center gap-2 text-[#D4AF37] text-xs tracking-[0.2em] uppercase mb-2">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 14.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2z" />
+                  </svg>
+                  Stablecon · 2026 Honoree
+                </p>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl lg:text-4xl mb-3 text-white">
+                  Stablecoins&apos; Most Influential
+                </h3>
+                <p className="text-white/80 text-sm md:text-base mb-4 max-w-2xl">
+                  Named to Stablecon&apos;s list of the most influential people in
+                  stablecoins — recognizing the operators, policymakers, and
+                  builders shaping the future of digital money.
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#D4AF37] text-sm font-medium group-hover:gap-3 transition-all">
+                  View the List
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </motion.a>
+
           {/* CCN Feature - Stablecoins Enter a New Era */}
           <motion.a
             href="https://www.ccn.com/education/crypto/stablecoins-new-era-beth-haddock-defi-safety-standards/"
@@ -977,7 +1034,9 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent" />
               <div className="absolute bottom-6 left-6">
                 <p className="text-white text-xl font-medium">Stablecon</p>
-                <p className="text-white/60 text-sm mt-1">Main Stage</p>
+                <p className="text-white/60 text-sm mt-1">
+                  Main Stage · Stablecoins&apos; Most Influential
+                </p>
               </div>
             </motion.div>
           </div>
