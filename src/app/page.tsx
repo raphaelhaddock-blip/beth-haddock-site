@@ -337,9 +337,9 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal leading-[1.1]"
             >
-              I get stablecoin, fintech, and DeFi companies{" "}
+              I guide stablecoin, fintech, and DeFi companies through{" "}
               <span className="italic text-[#D4AF37]">
-                licensed, funded, and board-ready.
+                licensing, fundraising, and board readiness.
               </span>
             </motion.h1>
 
@@ -349,7 +349,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="text-[#A1A1AA] text-lg md:text-xl mt-10 max-w-lg leading-relaxed"
             >
-              I&apos;ve built operational foundations that let stablecoin issuers, fintech and digital asset innovators, and DeFi teams get licensed, raise institutional capital, and scale. Now I build them for others.
+              I&apos;ve built operational foundations that let stablecoin issuers, fintech and digital asset innovators get licensed, raise institutional capital, and scale. Now I build them for others.
             </motion.p>
 
             <motion.div
@@ -380,15 +380,11 @@ export default function Home() {
                 </svg>
               </BookingCTA>
 
-              <p className="text-[#8B8B94] text-xs sm:text-sm mt-4 max-w-lg leading-relaxed">
-                Former CLO, Franklin Templeton · CCO, Guggenheim · a16z portfolio companies
-              </p>
-
               <a
                 href="https://content.stablecon.com/stablecoins-most-influential-list"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-xs sm:text-sm mt-3"
+                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#F5D77A] transition-colors text-xs sm:text-sm mt-5"
               >
                 <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 14.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2z" />
