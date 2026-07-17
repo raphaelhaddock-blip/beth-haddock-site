@@ -393,7 +393,7 @@ export default function Home() {
                 <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 14.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2z" />
                 </svg>
-                Named to Stablecoins&apos; Most Influential · Stablecon 2026
+                Named to Stablecoins Most Influential 2026 · Stablecon
               </a>
             </motion.div>
           </div>
@@ -821,15 +821,16 @@ export default function Home() {
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 14.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2z" />
                   </svg>
-                  Stablecon · 2026 Honoree
+                  Stablecon · 2026 List
                 </p>
                 <h3 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl lg:text-4xl mb-3 text-white">
-                  Stablecoins&apos; Most Influential
+                  Stablecoins Most Influential 2026
                 </h3>
                 <p className="text-white/80 text-sm md:text-base mb-4 max-w-2xl">
-                  Named to Stablecon&apos;s list of the most influential people in
-                  stablecoins — recognizing the operators, policymakers, and
-                  builders shaping the future of digital money.
+                  Named to Stablecon&apos;s Stablecoins Most Influential 2026 list
+                  among &ldquo;Researchers, Standards &amp; Ecosystem Voices&rdquo; —
+                  recognizing leaders shaping the future of the global stablecoin
+                  ecosystem.
                 </p>
                 <span className="inline-flex items-center gap-2 text-[#D4AF37] text-sm font-medium group-hover:gap-3 transition-all">
                   View the List
@@ -1035,7 +1036,7 @@ export default function Home() {
               <div className="absolute bottom-6 left-6">
                 <p className="text-white text-xl font-medium">Stablecon</p>
                 <p className="text-white/60 text-sm mt-1">
-                  Main Stage · Stablecoins&apos; Most Influential
+                  Main Stage · Stablecoins Most Influential 2026
                 </p>
               </div>
             </motion.div>
