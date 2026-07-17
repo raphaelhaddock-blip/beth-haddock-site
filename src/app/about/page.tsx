@@ -59,7 +59,7 @@ const expertise = [
 const press: { name: string; detail: string; url?: string }[] = [
   {
     name: "Stablecon",
-    detail: "Stablecoins' Most Influential list",
+    detail: "Stablecoins Most Influential 2026",
     url: "https://content.stablecon.com/stablecoins-most-influential-list",
   },
   { name: "TEDx", detail: "Speaker" },
